@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html>
+	
+<!-- Mirrored from artofproblemsolving.com/wiki/index.php/2020_AMC_10A_Problems/Problem_24 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Apr 2025 05:00:51 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+				
+<script>AoPS = {
+	start_time : new Date().getTime()
+};</script>
+
+<script>
+	AoPS.bootstrap_data = [];
+	AoPS.bd = AoPS.bootstrap_data; // Alias!
+	AoPS.session = {"user_id":1,"platform_user_id":"","username":"Anonymous","avatar":"\/\/avatar.artofproblemsolving.com\/avatar_1.png?t=1","email":"","role":"","logged_in":false,"initialized":false,"needs_coppa_approval":false,"admin":false,"national_staff":false,"wikiname":""};
+	AoPS.bd.assetVersion = 1;
+	AoPS.bd.environment = 'production';
+	AoPS.protected_url = 'https://artofproblemsolving.com/';
+	AoPS.aops_url = 'https://artofproblemsolving.com/';
+	AoPS.academy_url = 'https://aopsacademy.org/';
+</script>
+		<!-- GA plugin and Enhanced Ecommerce -->
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','../../../../www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-1905305-1', 'auto', {allowLinker: true}); // GA Property ID
+		ga('send', 'pageview');
+		</script>
+		<!-- End GA plugin and Enhanced Ecommerce -->
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'../../../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer', 'GTM-59JWRGZ')</script>
+		<!-- End Google Tag Manager -->
+
+		<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1">
+		<meta name="referrer" content="origin">
+
+		<meta name="facebook-domain-verification" content="zmmwg7oqqsqvf8ihckwvzoo85b08gx" />
+
+		
+		<link rel="apple-touch-icon" href="../../../../assets.artofproblemsolving.com/images/apple-touch-icon.png">
+		<title>Art of Problem Solving</title>
+
+		
+		<link href="../../../assets/fonts/font-awesome/css/all.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="../../../assets/css/sharedsite.css">
+		<link rel="stylesheet" href="../../../assets/css/navheader.css">
+		<link rel="stylesheet" href="../../../assets/css/footer.css">
+		<link rel="stylesheet" href="../../../assets/css/main-head.css">
+
+					<link rel="icon" href="https://artofproblemsolving.com/online-favicon.ico?v=2">
+		
+		
+		<script>
+  if (!window.console) console = {log: function() {}, dir: function() {}};
+  $$ = function( selector ) { return document.getElementById( selector ); }
+</script>
+
+							<script src="../../../../assets.artofproblemsolving.com/js/jquery360.min.js"></script>
+							<script src="../../../assets/vendor/jquery/3.6.0/jquery-migrate.min.js"></script>
+					<link rel="stylesheet" href="../../../../cdn.jsdelivr.net/npm/katex%400.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+<script defer src="../../../../cdn.jsdelivr.net/npm/katex%400.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+<script defer src="../../../../cdn.jsdelivr.net/npm/katex%400.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '[katex]', right: '[/katex]', display: false},
+			  {left: '[katex display=true]', right: '[/katex]', display: true} 
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+    });
+</script>
+
+<script>
+MathJax = {
+  tex: {
+	inlineMath: [['[mathjax]', '[/mathjax]'], ['\\(', '\\)']],
+	displayMath: [['[mathjax display=true]', '[/mathjax]']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async src="../../../../cdn.jsdelivr.net/npm/mathjax%403/es5/tex-svg.js"> </script>
+
+				<meta charset="UTF-8"/>
+<title>2020 AMC 10A Problems/Problem 24 - AoPS Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"2020_AMC_10A_Problems/Problem_24","wgTitle":"2020 AMC 10A Problems/Problem 24","wgCurRevisionId":241986,"wgRevisionId":241986,"wgArticleId":18111,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Introductory Number Theory Problems"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"2020_AMC_10A_Problems/Problem_24","wgRelevantArticleId":18111,"wgRequestId":"17de2b35ecb3e0d014a1f28a","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.aopsp":"ready"});mw.loader.implement("user.tokens@09avpoe",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.aopsp.js"]);});</script>
+<link rel="stylesheet" href="https://artofproblemsolving.com/wiki/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cskins.aopsp&amp;only=styles&amp;skin=aopsp"/>
+<script async="" src="https://artofproblemsolving.com/wiki/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=aopsp"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="https://artofproblemsolving.com/wiki/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=aopsp"/>
+<meta name="generator" content="MediaWiki 1.31.1"/>
+<link rel="shortcut icon" href="https://artofproblemsolving.com/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://artofproblemsolving.com/wiki/opensearch_desc.php" title="AoPS Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://artofproblemsolving.com/wiki/api.php?action=rsd"/>
+<link rel="alternate" type="application/atom+xml" title="AoPS Wiki Atom feed" href="https://artofproblemsolving.com/wiki/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<!--[if lt IE 9]><script src="/wiki/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=aopsp&amp;sync=1"></script><![endif]-->
+			</head>
+		<body class="production mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-2020_AMC_10A_Problems_Problem_24 rootpage-2020_AMC_10A_Problems_Problem_24 skin-aopsp action-view resources">
+
+					<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59JWRGZ"
+			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		
+		<div id="page-wrapper">
+
+			<!-- search:off -->
+			
+			<!-- The gray bar at top -->
+			<!-- see shared-site.css -->
+			<div id="top-bar" class="sharedsite-wrapper no-select">
+				<div class="sharedsitebar">
+					<a href="https://artofproblemsolving.com/" class="mobile-title"></a>
+					<div class="sharedsite-links">
+											<a class="site-link main" href="https://artofproblemsolving.com/company">
+												Art of Problem Solving
+						</a>
+						<div class="site">
+													<a class="site-link selected" href="https://artofproblemsolving.com/">
+														<img src="https://artofproblemsolving.com/assets/images/logos/icon-online.svg" class="site-icon">
+								<span class="site-name">AoPS Online</span>
+							</a>
+							<!-- Rich dropdown -->
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-online.svg"/>
+										</div>
+										<div class="site-snippet">
+											Math texts, online classes, and more
+											<br/>for students in grades 5-12.
+										</div>
+										<a target="_blank" class="site-visit aops-primary" href="https://artofproblemsolving.com/">
+											Visit AoPS Online <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://artofproblemsolving.com/store" class="btn btn-primary aops-btn">
+											Books for Grades 5-12
+										</a>
+										<a target="_blank" href="https://artofproblemsolving.com/school" class="btn btn-primary aops-btn">
+											Online Courses
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- End rich dropdown -->
+						</div>
+						<div class="site">
+							<a class="site-link" href="https://beastacademy.com/">
+								<img src="https://artofproblemsolving.com/assets/images/logos/icon-ba.svg" class="site-icon">
+								<span class="site-name">Beast Academy</span>
+							</a>
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-ba.svg"/>
+										</div>
+										<div class="site-snippet">
+											Engaging math books and online learning
+											<br/>for students ages 6-13.
+										</div>
+										<a target="_blank" class="site-visit ba-primary" href="https://beastacademy.com/">
+											Visit Beast Academy <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://beastacademy.com/books" class="btn btn-primary ba-btn">
+											Books for Ages 6-13
+										</a>
+										<a target="_blank" href="https://beastacademy.com/online" class="btn btn-primary ba-btn">
+											Beast Academy Online
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="site">
+							<a class="site-link" href="https://aopsacademy.org/">
+								<img src="https://artofproblemsolving.com/assets/images/logos/icon-academy.svg" class="site-icon">
+								<span class="site-name">AoPS Academy</span>
+							</a>
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-academy.svg"/>
+										</div>
+										<div class="site-snippet">
+											Small live classes for advanced math
+											<br/>and language arts learners in grades 2-12.
+										</div>
+										<a target="_blank" class="site-visit academy-primary" href="https://aopsacademy.org/">
+											Visit AoPS Academy <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://aopsacademy.org/campuses" class="btn btn-primary academy-btn">
+											Find a Physical Campus
+										</a>
+										<a target="_blank" href="https://virtual.aopsacademy.org/" class="btn btn-primary academy-btn">
+											Visit the Virtual Campus
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="header-wrapper" class="no-select">
+				<div class="header-underlay">
+					<div id="header">
+
+						<!-- The white area where main menu options appear -->
+
+						<!-- The menu links -->
+													<div id="main-menubar">
+								<div class="menubar-content">
+									<div class="menubar-logo online">
+										<img class="menubar-hamburger" src="https://artofproblemsolving.com/assets/images/hamburger.svg"/>
+										<a class="logo-img-link" href="https://artofproblemsolving.com/online">
+											<img class="logo-img" src="https://artofproblemsolving.com/assets/images/logos/aops-online.svg"/>
+											<img class="logo-img-mobile" src="https://artofproblemsolving.com/assets/images/logos/aops-online-mobile.svg"/>
+											<img class="logo-img-small" src="https://artofproblemsolving.com/assets/images/logos/aops-online-mobile.svg"/>
+										</a>
+									</div>
+									<div class="menubar-links-outer">
+										<!-- The login links -->
+										<div class="menu-login-wrapper online">
+											
+											<div class="menu-login-item">
+															<div 
+		    id="header-login"
+			class="no-select not-signed-in"
+			style="display:flex">
+
+			<div class="online-login-button solid-rounded-button">Sign&nbsp;In</div><div class="online-register-button">Register</div>
+		</div>
+												</div>
+
+											
+										</div>
+										<div class="menubar-labels online">
+											<div class="menubar-label school">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/school">
+														online school
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+														<!-- These have IDs for A/B testing purposes. T27691 -->
+																												<a id="online-school-menu-schedule" href="https://artofproblemsolving.com/school/schedule"> Class Schedule </a>
+														<a id="online-school-menu-recommmendations" href="https://artofproblemsolving.com/school/recommendations"> Recommendations </a>
+														<a id="online-school-menu-woot-courses" href="https://artofproblemsolving.com/school/woot?gtmlist=School_Nav"> Olympiad Courses </a>
+														<a id="online-school-menu-mathjams" href="https://artofproblemsolving.com/school/mathjams"> Free Sessions </a>
+																																									</div>
+												</div>
+											</div>
+											<div class="menubar-label store">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/store">
+														books<span class="menubar-link-ext">tore </span>
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+																																																								<a href="https://artofproblemsolving.com/store/list/aops-curriculum">AoPS Curriculum</a>
+														<a href="https://artofproblemsolving.com/store/list/beast-academy">Beast Academy</a>
+														<a href="https://artofproblemsolving.com/store/online">Online Books</a>
+														<a href="https://artofproblemsolving.com/store/recommendations">Recommendations</a>
+														<a href="https://artofproblemsolving.com/store/list/other-products">Other Books &amp; Gear</a>
+														<a href="https://artofproblemsolving.com/store/list/all-products">All Products</a>
+														<a href="https://artofproblemsolving.com/store/gift-certificates?gtmlist=Bookstore_Nav">Gift Certificates</a>
+																											</div>
+												</div>
+											</div>
+											<div class="menubar-label community">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/community">
+														community
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+																												<a data-cmty href="https://artofproblemsolving.com/community">Forums</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/c13_contests">Contests</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/search">Search</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/faq">Help</a>
+																																									</div>
+												</div>
+											</div>
+											<div class="menubar-label resources">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/resources">
+														resources
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+														<div class="dropdown-columns">
+															<div class="dropdown-category">
+																<span class="dropdown-category-label">math training & tools</span>
+																<a href="https://artofproblemsolving.com/alcumus">Alcumus</a>
+																<a href="https://artofproblemsolving.com/videos">Videos</a>
+																<a href="https://artofproblemsolving.com/ftw">For the Win!</a>
+																<a href="https://artofproblemsolving.com/mathcounts_trainer">MATHCOUNTS Trainer</a>
+																<a href="https://artofproblemsolving.com/contests/practice">AoPS Practice Contests</a>
+																<a href="https://artofproblemsolving.com/wiki/index.php?title=Main_Page">AoPS Wiki</a>
+																<a href="https://artofproblemsolving.com/texer">LaTeX TeXeR</a>
+																<a href="https://artofproblemsolving.com/polymath">MIT PRIMES/CrowdMath</a>
+																<a href="https://artofproblemsolving.com/keeplearning">Keep Learning</a>
+																<a href="https://beastacademy.com/all-ten">All Ten</a>
+																															</div>
+															<div class="dropdown-column">
+																																<div class="dropdown-category category-in-column">
+																	<span class="dropdown-category-label">contests on aops</span>
+																	<a href="https://artofproblemsolving.com/contests/practice">Practice Math Contests</a>
+																	<a href="https://artofproblemsolving.com/contests/usabo">USABO</a>
+																</div>
+																<div class="dropdown-category category-in-column">
+                                                                                                                                        <span class="dropdown-category-label">news</span>
+                                                                                                                                        <a href="https://artofproblemsolving.com/blog">AoPS Blog</a>
+                                                                                                                                        <a href="https://artofproblemsolving.com/blog/webinars/aopswebinars">Webinars</a>
+                                                                                                                                </div>
+															</div>
+														</div>
+														<div class="dropdown-view-more-link-container">
+															<a href="https://artofproblemsolving.com/resources" class="dropdown-view-more-link">view all <span class="aops-icon">0</span></a>
+														</div>
+													</div>
+												</div>
+											</div>
+																						<div class="menubar-label menu-login-item">
+															<div 
+		    id="header-login"
+			class="no-select not-signed-in"
+			style="display:flex">
+
+			<div class="online-login-button solid-rounded-button">Sign&nbsp;In</div><div class="online-register-button">Register</div>
+		</div>
+												</div>
+																					</div>
+									</div>
+								</div>
+							</div>
+											</div>
+				</div>
+
+								<noscript>
+					<div class="infobar">JavaScript is not enabled. JavaScript is required to fully utilize the site.</div>
+				</noscript>
+
+
+									<div id="breadcrumbs-wrapper">
+						<div id="submenu-icon"></div>
+						<div id="breadcrumbs">
+														<!-- ignore-security-checks -->
+							<div class="title-wrapper"><div class="title"><a href="https://artofproblemsolving.com/wiki">AoPS Wiki</a></div></div>
+														<div class="crumb-wrapper">
+																										<span class="crumb crumb-1">
+																			<!-- ignore-security-checks -->
+										<a href="https://artofproblemsolving.com/resources">Resources</a>
+																		</span>
+																											<i class="aops-font aops-angle-double-right"></i>
+																		<span class="crumb crumb-2">
+																			<!-- ignore-security-checks -->
+										<a href="https://artofproblemsolving.com/wiki">Aops Wiki</a>
+																		</span>
+																											<i class="aops-font aops-angle-double-right"></i>
+																		<span class="crumb crumb-3">
+																			2020 AMC 10A Problems/Problem 24																		</span>
+															</div>
+						</div>
+					</div>
+							</div>
+
+			<!-- search icon script lives in footer.phtml-->
+
+			<!-- /search:off -->
+
+<div id="main-content" class="left-navigation wiki">
+	<div id="side-column-wrapper">
+		<div id="side-column">
+						<div id="content-actions" class="menu open">
+				<div class="submenu">
+					<h1>Page</h1>
+					<div class="submenu-wrapper">
+						<span id="ca-nstab-main" class="selected"><a href="Problem_24.html" title="View the content page " accesskey="c">Article</a></span><span id="ca-talk" class="new"><a href="https://artofproblemsolving.com/wiki/index.php?title=Talk:2020_AMC_10A_Problems/Problem_24&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) " accesskey="t">Discussion</a></span><span id="ca-viewsource"><a href="https://artofproblemsolving.com/wiki/index.php?title=2020_AMC_10A_Problems/Problem_24&amp;action=edit" title="This page is protected.&#10;You can view its source " accesskey="e">View source</a></span><span id="ca-history"><a href="https://artofproblemsolving.com/wiki/index.php?title=2020_AMC_10A_Problems/Problem_24&amp;action=history" title="Past revisions of this page " accesskey="h">History</a></span>					</div>
+				</div>
+			</div>
+			<div id="toolbox" class="menu open">
+				<div class="submenu">
+					<h1>Toolbox</h1>
+					<div class="submenu-wrapper">
+						<span id="n-recentchanges"><a href="../Special_RecentChanges.html" title="A list of recent changes in the wiki " accesskey="r">Recent changes</a></span><span id="n-randompage"><a href="https://artofproblemsolving.com/wiki/index.php/Special:Random" title="Load a random page " accesskey="x">Random page</a></span><span id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></span><span id="t-whatlinkshere"><a href="https://artofproblemsolving.com/wiki/index.php/Special:WhatLinksHere/2020_AMC_10A_Problems/Problem_24" title="A list of all wiki pages that link here " accesskey="j">What links here</a></span><span id="t-specialpages"><a href="../Special_SpecialPages.html" title="A list of all special pages " accesskey="q">Special pages</a></span>					</div>
+				</div>
+			</div>
+			
+			<div id="search" class="menu open">
+				<h1>Search</h1>
+				<div class="submenu-wrapper" style="margin-bottom:5px;">
+					<form action="https://artofproblemsolving.com/wiki/index.php" id="searchform" class="mw-search">
+						<input type="hidden" name="title" value="Special:Search">
+						<input type="search" name="search" placeholder="Search" value="" accesskey="f" id="searchInput">
+						<div style="margin:0 5px 5px 5px;text-align:right;"><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="btn btn-primary searchButton"/></div>
+					</form>
+				</div>
+			</div>
+
+			<!--
+			<div class="menu open">
+				<h1>Note</h1>
+				<div class="submenu-wrapper" style="padding:10px;color:#444;">
+					Please do not discuss the 2015 AMC 8 Competition on any website until November 25th.
+				</div>
+			</div>
+			-->
+		</div>
+	</div>
+
+	<div id="main-column" style="margin-top:10px">
+				<div class="page-wrapper">
+						<div id="mw-js-message" style="display:none;"></div>
+			<h1 id="firstHeading" class="firstHeading">2020 AMC 10A Problems/Problem 24</h1>
+
+						
+			<div class="mw-body">
+												
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Problem"><span class="tocnumber">1</span> <span class="toctext">Problem</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Solution_1"><span class="tocnumber">2</span> <span class="toctext">Solution 1</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Solution_2"><span class="tocnumber">3</span> <span class="toctext">Solution 2</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Solution_3"><span class="tocnumber">4</span> <span class="toctext">Solution 3</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Solution_4"><span class="tocnumber">5</span> <span class="toctext">Solution 4</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Solution_5"><span class="tocnumber">6</span> <span class="toctext">Solution 5</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Solution_6"><span class="tocnumber">7</span> <span class="toctext">Solution 6</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Solution_7"><span class="tocnumber">8</span> <span class="toctext">Solution 7</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Solution_8_.28Euclidean_Algorithm.29"><span class="tocnumber">9</span> <span class="toctext">Solution 8 (Euclidean Algorithm)</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Solution_9_.28Euclidean_Algorithm.29"><span class="tocnumber">10</span> <span class="toctext">Solution 9 (Euclidean Algorithm)</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Solution_10_.28Diophantine_Equations.29"><span class="tocnumber">11</span> <span class="toctext">Solution 10 (Diophantine Equations)</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Solution_11_.28Chinese_Remainder_Theorem.29"><span class="tocnumber">12</span> <span class="toctext">Solution 11 (Chinese Remainder Theorem)</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Solution_12_.28Logically_Bashing.29"><span class="tocnumber">13</span> <span class="toctext">Solution 12 (Logically Bashing)</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Video_Solutions"><span class="tocnumber">14</span> <span class="toctext">Video Solutions</span></a>
+<ul>
+<li class="toclevel-2 tocsection-15"><a href="#Video_Solution_1_.28Richard_Rusczyk.29"><span class="tocnumber">14.1</span> <span class="toctext">Video Solution 1 (Richard Rusczyk)</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Video_Solution_2"><span class="tocnumber">14.2</span> <span class="toctext">Video Solution 2</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Video_Solution_3_.28Quick_.26_Simple.29"><span class="tocnumber">14.3</span> <span class="toctext">Video Solution 3 (Quick &amp; Simple)</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Video_Solution_4"><span class="tocnumber">14.4</span> <span class="toctext">Video Solution 4</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Video_Solution_5"><span class="tocnumber">14.5</span> <span class="toctext">Video Solution 5</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-20"><a href="#See_Also"><span class="tocnumber">15</span> <span class="toctext">See Also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Problem">Problem</span></h2>
+<p>Let <img src="http://latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> be the least positive integer greater than <img src="http://latex.artofproblemsolving.com/6/e/e/6ee927e1332358c96c62c277441c907c4f51057f.png" class="latex" alt="$1000$" style="vertical-align: 0px" width="35" height="13" /> for which
+</p><p><img src="http://latex.artofproblemsolving.com/2/4/b/24b75faf4c360acf1ef1242479240dc41c6bf71e.png" class="latexcenter" alt="\[\gcd(63, n+120) =21\quad \text{and} \quad \gcd(n+63, 120)=60.\]" width="406" height="18" />
+</p><p>What is the sum of the digits of <img src="http://latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" />?
+</p><p><img src="http://latex.artofproblemsolving.com/0/3/2/032cd2febdb8a644d05733888920534568ba7fd0.png" class="latex" alt="$\textbf{(A) } 12 \qquad\textbf{(B) } 15 \qquad\textbf{(C) } 18 \qquad\textbf{(D) } 21\qquad\textbf{(E) } 24$" style="vertical-align: -4px" width="398" height="17" />
+</p>
+<h2><span class="mw-headline" id="Solution_1">Solution 1</span></h2>
+<p>We know that <img src="http://latex.artofproblemsolving.com/8/f/7/8f74ad016db02c1a73a29041ffc26b28f8acb946.png" class="latex" alt="$\gcd(n+57,63)=21$" style="vertical-align: -5px" width="163" height="20" /> and <img src="http://latex.artofproblemsolving.com/9/3/a/93a56b784ba3895a2f912524e6c4dc93257c9b66.png" class="latex" alt="$\gcd(n-57, 120)= 60$" style="vertical-align: -5px" width="172" height="20" /> by the Euclidean Algorithm. Hence, let <img src="http://latex.artofproblemsolving.com/8/a/e/8aec321b600ef9ce2d155e456c57739b00c90954.png" class="latex" alt="$n+57=21\alpha$" style="vertical-align: -2px" width="107" height="15" /> and <img src="http://latex.artofproblemsolving.com/4/d/1/4d1d6efe082eeaaf9beba96537cf4f845fd76e34.png" class="latex" alt="$n-57=60 \gamma$" style="vertical-align: -4px" width="106" height="17" />, where <img src="http://latex.artofproblemsolving.com/f/9/7/f9703ae61047629e344ed4c68745807235cbd558.png" class="latex" alt="$\gcd(\alpha,3)=1$" style="vertical-align: -5px" width="105" height="20" /> and <img src="http://latex.artofproblemsolving.com/e/f/c/efcacac47902a84479e3c90599ba69be814d0d5b.png" class="latex" alt="$\gcd(\gamma,2)=1$" style="vertical-align: -5px" width="104" height="20" />. Subtracting the two equations, <img src="http://latex.artofproblemsolving.com/d/d/5/dd5b0a6c93322a78e1bcfae123051c357545ff55.png" class="latex" alt="$38=7\alpha-20\gamma$" style="vertical-align: -3px" width="113" height="16" />. Letting <img src="http://latex.artofproblemsolving.com/3/5/b/35b82a607f5dcab8ef19f738eef1e789f43b82b3.png" class="latex" alt="$\gamma = 2s+1$" style="vertical-align: -3px" width="82" height="15" />, we get <img src="http://latex.artofproblemsolving.com/8/1/e/81e8a6bca655f94f92543dde4f903f935198062b.png" class="latex" alt="$58=7\alpha-40s$" style="vertical-align: 0px" width="111" height="13" />. Taking modulo <img src="http://latex.artofproblemsolving.com/7/8/7/78792fe4680a164f537ea72a4f900e4471433c3b.png" class="latex" alt="$40$" style="vertical-align: 0px" width="17" height="13" />, we have <img src="http://latex.artofproblemsolving.com/a/7/f/a7f0aaebd9ff6b0a0c801ae1dda7775e9b0a9aa7.png" class="latex" alt="$\alpha \equiv{14} \pmod{40}$" style="vertical-align: -5px" width="137" height="20" />. We are given that <img src="http://latex.artofproblemsolving.com/5/9/8/598ae8ca527db5df74f224ae5b36504284c4cfd3.png" class="latex" alt="$n=21\alpha -57 &gt;1000$" style="vertical-align: -2px" width="168" height="15" />, so <img src="http://latex.artofproblemsolving.com/0/3/0/030b58bbe27fa5112bb361f75dc340e8ff046451.png" class="latex" alt="$\alpha \geq 51$" style="vertical-align: -3px" width="56" height="16" />. Notice that if <img src="http://latex.artofproblemsolving.com/a/1/6/a169f157816c4032ecf1370db00b9fec90045935.png" class="latex" alt="$\alpha =54$" style="vertical-align: -1px" width="56" height="14" /> then the condition <img src="http://latex.artofproblemsolving.com/f/9/7/f9703ae61047629e344ed4c68745807235cbd558.png" class="latex" alt="$\gcd(\alpha,3)=1$" style="vertical-align: -5px" width="105" height="20" /> is violated. The next possible value of  <img src="http://latex.artofproblemsolving.com/e/1/0/e10f8e8a3ba252bea002b5fdf28dcb968999d413.png" class="latex" alt="$\alpha = 94$" style="vertical-align: 0px" width="54" height="13" /> satisfies the given condition, giving us <img src="http://latex.artofproblemsolving.com/2/b/e/2be557827517d524ed36aa675ef95593d6f803ae.png" class="latex" alt="$n=1917$" style="vertical-align: 0px" width="71" height="13" />.
+</p><p>Alternatively, we could have said <img src="http://latex.artofproblemsolving.com/6/2/e/62eb72f5d4a1fcdd44d5bd24ef78cd197887a904.png" class="latex" alt="$\alpha = 40k+14 \equiv{0} \pmod{3}$" style="vertical-align: -4px" width="208" height="18" /> for <img src="http://latex.artofproblemsolving.com/1/0/5/1055a8d6efe19b728e32f382584703c97fc44603.png" class="latex" alt="$k \equiv{1} \pmod{3}$" style="vertical-align: -5px" width="117" height="20" /> only, so <img src="http://latex.artofproblemsolving.com/e/5/9/e59184ff818771cdbad3e8baf026678663715311.png" class="latex" alt="$k \equiv{0,2} \pmod{3}$" style="vertical-align: -4px" width="131" height="18" />, giving us our answer. Since the problem asks for the sum of the digits of <img src="http://latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" />, our answer is <img src="http://latex.artofproblemsolving.com/a/8/e/a8eb94fa54d4a43c2293274bdc73e1f167de6879.png" class="latex" alt="$1+9+1+7=\boxed{\textbf{(C) } 18}$" style="vertical-align: -11px" width="194" height="30" />.
+</p><p>~Prabh1512
+</p>
+<h2><span class="mw-headline" id="Solution_2">Solution 2</span></h2>
+<p>The conditions of the problem reduce to the following: <img src="http://latex.artofproblemsolving.com/1/2/8/128b1a2512e24a983da4a66f6ccbc2d4622f1a06.png" class="latex" alt="$n+120 = 21k$" style="vertical-align: -1px" width="112" height="14" /> and <img src="http://latex.artofproblemsolving.com/5/5/3/55344ebd960dc6618bc65481b2169aa0907dec7e.png" class="latex" alt="$n+63 = 60\ell$" style="vertical-align: -2px" width="103" height="16" />, where <img src="http://latex.artofproblemsolving.com/c/a/5/ca51496e13e9d6b59811c7f369cf9857d05488a5.png" class="latex" alt="$\gcd(k,3) = 1$" style="vertical-align: -4px" width="101" height="18" /> and <img src="http://latex.artofproblemsolving.com/a/c/0/ac041c2f13412df7c3fd29867f5fc5425313ab04.png" class="latex" alt="$\gcd(\ell,2) = 1$" style="vertical-align: -5px" width="101" height="20" />. From these equations, we see that <img src="http://latex.artofproblemsolving.com/0/9/b/09bcf5876cd7a72f4b95c1470dc63de1b6fb5c64.png" class="latex" alt="$21k - 60\ell = 57$" style="vertical-align: -2px" width="120" height="16" />. Solving this Diophantine equation gives us that <img src="http://latex.artofproblemsolving.com/8/b/2/8b2103108194a07d6a25631ec021263afaf2c110.png" class="latex" alt="$k = 20a + 17$" style="vertical-align: -1px" width="102" height="14" /> and <img src="http://latex.artofproblemsolving.com/c/a/e/cae0661e9ce90952c9128785cc96b0f8a51d047e.png" class="latex" alt="$\ell = 7a + 5$" style="vertical-align: -2px" width="84" height="16" />. Since, <img src="http://latex.artofproblemsolving.com/d/7/5/d75ab56486993ac835cf57bc4aade730eab03d85.png" class="latex" alt="$n&gt;1000$" style="vertical-align: 0px" width="70" height="13" />, we can do some bounding and get that <img src="http://latex.artofproblemsolving.com/0/c/2/0c254dbd17fc2429344f06b99a285d457eebd41c.png" class="latex" alt="$k &gt; 53$" style="vertical-align: 0px" width="52" height="13" /> and <img src="http://latex.artofproblemsolving.com/8/1/2/812b9bdaa2d2cdc04c9ec79e0ebe7f1b97f721e4.png" class="latex" alt="$\ell &gt; 17$" style="vertical-align: -2px" width="52" height="15" />. Now we start bashing by plugging in numbers that satisfy these conditions: <img src="http://latex.artofproblemsolving.com/c/7/f/c7ffa3b8792f0170bce1ab6008e907343100d70e.png" class="latex" alt="$a=4$" style="vertical-align: 0px" width="43" height="12" /> is the first number that works so we get <img src="http://latex.artofproblemsolving.com/2/f/e/2fe5cb7e1a388606bd6e0e37b91b6eeda78dad11.png" class="latex" alt="$\ell = 33$" style="vertical-align: -1px" width="52" height="14" />, <img src="http://latex.artofproblemsolving.com/e/8/a/e8a4fd6133473b6b1010df08f959c3daa08bab80.png" class="latex" alt="$k = 97$" style="vertical-align: -1px" width="54" height="14" />. Therefore, we have <img src="http://latex.artofproblemsolving.com/7/0/1/70108b696695008c43b1b2958fcfc6cc6c5bd30f.png" class="latex" alt="$n=21(97)-120=60(33)-63=1917$" style="vertical-align: -4px" width="310" height="18" />, and our answer is <img src="http://latex.artofproblemsolving.com/a/8/e/a8eb94fa54d4a43c2293274bdc73e1f167de6879.png" class="latex" alt="$1+9+1+7=\boxed{\textbf{(C) } 18}$" style="vertical-align: -11px" width="194" height="30" />.
+</p>
+<h2><span class="mw-headline" id="Solution_3">Solution 3</span></h2>
+<p>We first find that <img src="http://latex.artofproblemsolving.com/4/e/5/4e5ede8ff17b12389fa69329f95c8ddda757262b.png" class="latex" alt="$n\equiv6\pmod{21}$" style="vertical-align: -5px" width="127" height="20" /> and <img src="http://latex.artofproblemsolving.com/3/2/8/328114b2066bf6f281c236eea2db5e15fe5bfb0f.png" class="latex" alt="$n\equiv57\pmod{60}$" style="vertical-align: -5px" width="136" height="20" />, then we get <img src="http://latex.artofproblemsolving.com/3/b/e/3be083e10f441bbafdfec0e511e40a792d42c5c4.png" class="latex" alt="$n=21x+6$" style="vertical-align: -1px" width="94" height="14" /> and <img src="http://latex.artofproblemsolving.com/1/5/7/157e06d235baf2fe5e7453eee19a675cf51ecc8b.png" class="latex" alt="$n=60y+57$" style="vertical-align: -3px" width="103" height="16" /> by definitions, where <img src="http://latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" /> and <img src="http://latex.artofproblemsolving.com/0/9/2/092e364e1d9d19ad5fffb0b46ef4cc7f2da02c1c.png" class="latex" alt="$y$" style="vertical-align: -4px" width="11" height="13" /> are integers. It follows that <img src="http://latex.artofproblemsolving.com/0/9/2/092e364e1d9d19ad5fffb0b46ef4cc7f2da02c1c.png" class="latex" alt="$y$" style="vertical-align: -4px" width="11" height="13" /> must be odd, since the GCD will be <img src="http://latex.artofproblemsolving.com/a/a/a/aaa4de95cc6371d125d5cf773cdd9f9913dd1d8e.png" class="latex" alt="$120$" style="vertical-align: -1px" width="29" height="14" /> instead of <img src="http://latex.artofproblemsolving.com/3/0/2/302e99c1c7cd91a6ae371139e5142ccef5977dca.png" class="latex" alt="$60$" width="17" height="12" /> if <img src="http://latex.artofproblemsolving.com/0/9/2/092e364e1d9d19ad5fffb0b46ef4cc7f2da02c1c.png" class="latex" alt="$y$" style="vertical-align: -4px" width="11" height="13" /> is even. Also, the unit digit of <img src="http://latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> must be <img src="http://latex.artofproblemsolving.com/e/0/a/e0a0db32027a732ac57d37ef2ae9bb150f65b108.png" class="latex" alt="$7$" width="9" height="12" />, since the unit digit of <img src="http://latex.artofproblemsolving.com/c/3/1/c31d57efbafac28f1a2822b54a14bb7f883ddf3d.png" class="latex" alt="$60y$" style="vertical-align: -4px" width="30" height="17" /> is always <img src="http://latex.artofproblemsolving.com/b/c/1/bc1f9d9bf8a1b606a4188b5ce9a2af1809e27a89.png" class="latex" alt="$0$" width="8" height="12" /> and the unit digit of <img src="http://latex.artofproblemsolving.com/4/b/1/4b14ef560acadba8244952e9a8d5481f494445dc.png" class="latex" alt="$57$" width="18" height="12" /> is <img src="http://latex.artofproblemsolving.com/e/0/a/e0a0db32027a732ac57d37ef2ae9bb150f65b108.png" class="latex" alt="$7$" width="9" height="12" />. Therefore, we find that <img src="http://latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" /> must end in <img src="../../../../latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png" class="latex" alt="$1$" style="vertical-align: -1px" width="11" height="14" /> to satisfy <img src="http://latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> having a unit digit of <img src="http://latex.artofproblemsolving.com/e/0/a/e0a0db32027a732ac57d37ef2ae9bb150f65b108.png" class="latex" alt="$7$" width="9" height="12" />. Also, we find that <img src="http://latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" /> must not be a multiple of <img src="http://latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png" class="latex" alt="$3$" width="8" height="12" /> or else the GCD will be <img src="http://latex.artofproblemsolving.com/8/4/8/848ec5b5f695afbacb864efead154761481780c0.png" class="latex" alt="$63$" style="vertical-align: -1px" width="20" height="14" />. Therefore, we test values for <img src="http://latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" /> and find that <img src="http://latex.artofproblemsolving.com/1/d/a/1da03dd492432536160e5c968dfb7026642e84b4.png" class="latex" alt="$x=91$" style="vertical-align: 0px" width="51" height="13" /> satisfies all these conditions. Therefore, <img src="http://latex.artofproblemsolving.com/2/b/e/2be557827517d524ed36aa675ef95593d6f803ae.png" class="latex" alt="$n=1917$" style="vertical-align: 0px" width="71" height="13" /> and <img src="http://latex.artofproblemsolving.com/d/a/d/dadbc577a2a934ababe487566068f52635cb9d6a.png" class="latex" alt="$1+9+1+7 = \boxed{\textbf{(C) } 18}$" style="vertical-align: -10px" width="192" height="28" />.
+</p><p>~happykeeper
+</p>
+<h2><span class="mw-headline" id="Solution_4">Solution 4</span></h2>
+<p>We are given that <img src="http://latex.artofproblemsolving.com/7/e/6/7e68fffa981dfa5b3aba7bd4794af310d4d474ab.png" class="latex" alt="$\gcd(63, n+120) =21$" style="vertical-align: -4px" width="169" height="18" /> and <img src="http://latex.artofproblemsolving.com/a/a/1/aa1e53ed1cec19f1fb9f1de8cf3ba3183b842b56.png" class="latex" alt="$\gcd(n+63, 120)=60.$" style="vertical-align: -5px" width="177" height="20" /> By applying the Euclidean algorithm in reverse, we have <img src="http://latex.artofproblemsolving.com/5/4/4/5445597b22f912c5022dd78db7ae57cb7b9f109b.png" class="latexcenter" alt="\[\gcd(63, n+120) = \gcd(63, n+120 + 63) = \gcd(63, n+183) = 21\]" width="481" height="18" /> and <img src="http://latex.artofproblemsolving.com/1/b/3/1b344388e46ee1665f8815510840b685f50ab23c.png" class="latexcenter" alt="\[\gcd(n+63, 120) = \gcd(n+63 + 120, 120) = \gcd(n+183, 120) = 60.\]" width="504" height="18" />
+</p><p>We now know that <img src="http://latex.artofproblemsolving.com/6/4/c/64c8fb07ca846adb1bea17b1776f76cd8374fe0f.png" class="latex" alt="$n+183$" style="vertical-align: -1px" width="59" height="14" /> must be divisible by <img src="http://latex.artofproblemsolving.com/f/2/5/f25d31faf472ddb4c698a14522fe8125c06f8dd8.png" class="latex" alt="$21$" style="vertical-align: 0px" width="17" height="12" /> and <img src="http://latex.artofproblemsolving.com/3/4/1/341685ebc3cc63427e5c50a01e8b8854d22b63fb.png" class="latex" alt="$60,$" style="vertical-align: -3px" width="22" height="16" /> so it is divisible by <img src="http://latex.artofproblemsolving.com/0/f/5/0f562bc758e12441fcaf53689e0686892dd95c36.png" class="latex" alt="$\text{lcm}(21, 60) = 420.$" style="vertical-align: -4px" width="139" height="18" /> Therefore, <img src="http://latex.artofproblemsolving.com/a/1/7/a17370cd163fd6d16dc1c0a33897f82443f6a2cc.png" class="latex" alt="$n+183 = 420k$" style="vertical-align: -2px" width="124" height="16" /> for some integer <img src="http://latex.artofproblemsolving.com/5/d/4/5d48e0968a64d782fe75bca620ce749938b7d0bb.png" class="latex" alt="$k.$" width="13" height="12" /> We know that <img src="http://latex.artofproblemsolving.com/7/8/f/78faa373c6c7747131461a5c3dcc9dd71cffa99e.png" class="latex" alt="$3 \nmid k,$" style="vertical-align: -4px" width="38" height="18" /> or else the first condition won't hold (<img src="http://latex.artofproblemsolving.com/5/9/6/5967c0096e6595ca1e47d71f5ebfbc47d8516ae7.png" class="latex" alt="$\gcd$" style="vertical-align: -3px" width="27" height="16" /> will be <img src="http://latex.artofproblemsolving.com/8/4/8/848ec5b5f695afbacb864efead154761481780c0.png" class="latex" alt="$63$" style="vertical-align: -1px" width="20" height="14" />) and <img src="http://latex.artofproblemsolving.com/5/9/f/59f1a45f8af3c4188ef89e928097b4f00ef9eb1b.png" class="latex" alt="$2 \nmid k,$" style="vertical-align: -4px" width="38" height="18" /> or else the second condition won't hold (<img src="http://latex.artofproblemsolving.com/5/9/6/5967c0096e6595ca1e47d71f5ebfbc47d8516ae7.png" class="latex" alt="$\gcd$" style="vertical-align: -3px" width="27" height="16" /> will be <img src="http://latex.artofproblemsolving.com/a/a/a/aaa4de95cc6371d125d5cf773cdd9f9913dd1d8e.png" class="latex" alt="$120$" style="vertical-align: -1px" width="29" height="14" />). Since <img src="http://latex.artofproblemsolving.com/0/0/f/00fab47c0b9d0ce398d03e57d6720129d53434f2.png" class="latex" alt="$k = 1$" style="vertical-align: 0px" width="42" height="13" /> gives us too small of an answer, then <img src="http://latex.artofproblemsolving.com/c/2/3/c233902aacaf113463d98c8a87a3c0d1f4b9e4b6.png" class="latex" alt="$k=5,$" style="vertical-align: -4px" width="50" height="18" /> from which <img src="http://latex.artofproblemsolving.com/f/3/7/f37e667ebfb0500678e05e18a882d11325031d10.png" class="latex" alt="$n = 1917.$" style="vertical-align: -1px" width="78" height="14" /> So, the answer is <img src="http://latex.artofproblemsolving.com/f/9/9/f99988bf0cc14c5f5788e848f078fc4e48542a6c.png" class="latex" alt="$1+9+1+7 = \boxed{\textbf{(C) } 18}.$" style="vertical-align: -10px" width="195" height="28" />
+</p>
+<h2><span class="mw-headline" id="Solution_5">Solution 5</span></h2>
+<p><img src="http://latex.artofproblemsolving.com/c/4/5/c45bd35af237feec36db88b2516aff4bcf265415.png" class="latex" alt="$\gcd(n+63,120)=60$" style="vertical-align: -4px" width="170" height="18" /> tells us <img src="http://latex.artofproblemsolving.com/4/c/d/4cdcd9c40eda7966f72a0dbb5a428d47771ef2fe.png" class="latex" alt="$n+63\equiv60\pmod {120}$" style="vertical-align: -4px" width="182" height="18" />. The smallest <img src="http://latex.artofproblemsolving.com/8/d/8/8d89996fb9047414ec8821ca6c2e800cfc78af15.png" class="latex" alt="$n+63$" style="vertical-align: -1px" width="50" height="14" /> that satisfies the previous condition and <img src="http://latex.artofproblemsolving.com/d/7/5/d75ab56486993ac835cf57bc4aade730eab03d85.png" class="latex" alt="$n&gt;1000$" style="vertical-align: 0px" width="70" height="13" /> is <img src="http://latex.artofproblemsolving.com/7/2/0/720862b8a7f8c1794ee437f996b0f8f3ed61465b.png" class="latex" alt="$1140$" style="vertical-align: 0px" width="35" height="13" />, so we start from there. If <img src="http://latex.artofproblemsolving.com/6/9/1/691ce27e043aa3e972772aeec89ac96733b6bbe8.png" class="latex" alt="$n+63=1140$" style="vertical-align: -1px" width="111" height="14" />, then <img src="http://latex.artofproblemsolving.com/8/c/0/8c054b9be7ef2ecd3948eb23d42990e61013cb56.png" class="latex" alt="$n+120=1197$" style="vertical-align: -1px" width="120" height="14" />. Because <img src="http://latex.artofproblemsolving.com/d/9/5/d95b126659af8b23c2279bbcff16ca7c462048e8.png" class="latex" alt="$\gcd(n+120,63)=21$" style="vertical-align: -4px" width="169" height="18" />, <img src="http://latex.artofproblemsolving.com/6/d/7/6d74a177e02b236a09d3d92fc5a4b072e570020c.png" class="latex" alt="$n+120\equiv21\pmod {63}$" style="vertical-align: -4px" width="182" height="18" /> or <img src="http://latex.artofproblemsolving.com/3/9/1/3915162d8aca581541930cfb1829a95264b41462.png" class="latex" alt="$n+120\equiv42\pmod {63}$" style="vertical-align: -4px" width="182" height="18" />. We see that <img src="http://latex.artofproblemsolving.com/4/6/a/46a47e93dc0e7cde8cd6e7abca3cc6fd924c87f2.png" class="latex" alt="$1197\equiv0\pmod {63}$" style="vertical-align: -4px" width="149" height="18" />, which does not fulfill the requirement for <img src="http://latex.artofproblemsolving.com/6/b/b/6bb31d026aee17c68c5bd01a525243b63048a524.png" class="latex" alt="$n+120$" style="vertical-align: -1px" width="59" height="14" />, so we continue by keep on adding <img src="http://latex.artofproblemsolving.com/a/a/a/aaa4de95cc6371d125d5cf773cdd9f9913dd1d8e.png" class="latex" alt="$120$" style="vertical-align: -1px" width="29" height="14" /> to <img src="http://latex.artofproblemsolving.com/c/d/e/cde9a4da3b6f4a70347556df8bc04b9eb9fac60c.png" class="latex" alt="$1197$" style="vertical-align: 0px" width="36" height="13" />, in order to also fulfill the requirement for <img src="http://latex.artofproblemsolving.com/8/d/8/8d89996fb9047414ec8821ca6c2e800cfc78af15.png" class="latex" alt="$n+63$" style="vertical-align: -1px" width="50" height="14" />. Soon, we see that <img src="http://latex.artofproblemsolving.com/d/1/9/d19da67ace477a7f82e9b3c6ae5d419811994af2.png" class="latex" alt="$n+120\pmod {63}$" style="vertical-align: -4px" width="140" height="18" /> decreases by <img src="http://latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png" class="latex" alt="$6$" width="8" height="12" /> every time we add <img src="http://latex.artofproblemsolving.com/a/a/a/aaa4de95cc6371d125d5cf773cdd9f9913dd1d8e.png" class="latex" alt="$120$" style="vertical-align: -1px" width="29" height="14" />, so we can quickly see that <img src="http://latex.artofproblemsolving.com/2/b/e/2be557827517d524ed36aa675ef95593d6f803ae.png" class="latex" alt="$n=1917$" style="vertical-align: 0px" width="71" height="13" /> because at that point <img src="http://latex.artofproblemsolving.com/6/d/7/6d74a177e02b236a09d3d92fc5a4b072e570020c.png" class="latex" alt="$n+120\equiv21\pmod {63}$" style="vertical-align: -4px" width="182" height="18" />. We add up all digits of <img src="http://latex.artofproblemsolving.com/9/2/e/92e5c05c5fbbd2f7772ad74f5e1669f80cbf58b7.png" class="latex" alt="$1917$" style="vertical-align: 0px" width="36" height="13" /> to get <img src="http://latex.artofproblemsolving.com/2/0/7/2072d8fc1840fae0f50c5db7b6a5781e08e62223.png" class="latex" alt="$\boxed{\textbf{(C) } 18}$" style="vertical-align: -10px" width="65" height="28" />.
+</p><p>~SmileKat32
+</p>
+<h2><span class="mw-headline" id="Solution_6">Solution 6</span></h2>
+<p>We are able to set up the following system of congruences: 
+<img src="http://latex.artofproblemsolving.com/1/8/2/182428a98365978b0cc7edec8f429477f0ff36ae.png" class="latexcenter" alt="\begin{align*} n &amp;\equiv 6 \pmod {21}, \\ n &amp;\equiv 57 \pmod {60}. \end{align*}" width="147" height="43" /> 
+Therefore, by definition, we are able to set-up the following system of equations: 
+<img src="http://latex.artofproblemsolving.com/3/8/d/38dd659c2e9e8de590ef3a8af1db24b69a96a6b3.png" class="latexcenter" alt="\begin{align*} n &amp;= 21a + 6, \\ n &amp;= 60b + 57. \end{align*}" width="104" height="38" /> 
+Thus, we have <img src="http://latex.artofproblemsolving.com/a/7/a/a7a3642d37592be3fa165347024185adad7f250f.png" class="latex" alt="$21a + 6 = 60b + 57,$" style="vertical-align: -4px" width="157" height="18" /> from which <img src="http://latex.artofproblemsolving.com/0/d/f/0df90814659ba36475d073bdd481a4a9a715004b.png" class="latexcenter" alt="\[7a + 2 = 20b + 19.\]" width="143" height="14" />
+We know <img src="http://latex.artofproblemsolving.com/2/f/3/2f3bdfd4da37f8bda44ba2c39100d34b3cc3769b.png" class="latex" alt="$7a \equiv 0 \pmod {7},$" style="vertical-align: -4px" width="128" height="18" /> and since <img src="http://latex.artofproblemsolving.com/e/6/8/e68c8fc901aaffc342ee4ecdd6ef12023c15b3ae.png" class="latex" alt="$7a = 20b + 17,$" style="vertical-align: -3px" width="113" height="16" /> therefore <img src="http://latex.artofproblemsolving.com/d/7/2/d720ae696f4f7b0170c35f845c1766eadba0a13a.png" class="latex" alt="$20b + 17 \equiv 0 \pmod{7}.$" style="vertical-align: -4px" width="175" height="18" /> Simplifying this congruence further, we have <img src="http://latex.artofproblemsolving.com/e/e/d/eedfb3cc6db33d958162d8a48b6cbe282b2c8f70.png" class="latexcenter" alt="\[b\equiv 3 \pmod{7}.\]" width="126" height="18" />
+Thus, by definition, <img src="http://latex.artofproblemsolving.com/7/e/5/7e5e45fc3c23f7c75ec33eecbf8a367709fff8e0.png" class="latex" alt="$b = 7x + 3.$" style="vertical-align: -1px" width="86" height="14" /> Substituting this back into our original equation, we get <img src="http://latex.artofproblemsolving.com/2/2/5/225f2284036df1260c529afc203ce674b5e586e4.png" class="latexcenter" alt="\[n = 60(7x + 3) + 57 = 420x + 237.\]" width="272" height="18" />
+By definition, we are able to set up the following congruence:
+<img src="http://latex.artofproblemsolving.com/5/1/a/51a84576cb05d0521d03ffe2ec7d04c156152dcc.png" class="latexcenter" alt="\[n \equiv 237 \pmod{420}.\]" width="165" height="18" />
+Thus, <img src="http://latex.artofproblemsolving.com/3/5/f/35f28494d91d2e3d4d464338179c1cb45e10dbf2.png" class="latex" alt="$n = 1917$" style="vertical-align: 0px" width="71" height="13" />, so our answer is simply <img src="http://latex.artofproblemsolving.com/a/8/e/a8eb94fa54d4a43c2293274bdc73e1f167de6879.png" class="latex" alt="$1+9+1+7=\boxed{\textbf{(C) } 18}$" style="vertical-align: -11px" width="194" height="30" />.
+</p><p><u><b>Remark</b></u>
+</p><p>Since <img src="http://latex.artofproblemsolving.com/9/8/5/985ccc5a2c2e637db9eac570089463a8bc9eef35.png" class="latex" alt="$n \equiv -120 \pmod{21},$" style="vertical-align: -4px" width="161" height="18" /> we conclude that <img src="http://latex.artofproblemsolving.com/7/e/f/7ef9d03bc75d27f83ce8f0fb73b15cb3be847cf0.png" class="latex" alt="$n \equiv 6 \pmod{21}.$" style="vertical-align: -5px" width="132" height="20" />
+</p><p>Since <img src="http://latex.artofproblemsolving.com/6/7/c/67cb277226fa6d9cb1ff427aa5e24b0c0c06e328.png" class="latex" alt="$n \equiv -63 \pmod{60},$" style="vertical-align: -4px" width="152" height="18" /> we conclude that <img src="http://latex.artofproblemsolving.com/4/a/f/4af0147c6b2ba39ddf3527653616155704276ee6.png" class="latex" alt="$n \equiv 57 \pmod{60}.$" style="vertical-align: -5px" width="142" height="20" />
+</p><p>Remember that  <img src="http://latex.artofproblemsolving.com/9/7/3/973e526e7b8701879e058c682dc8396442bb50ca.png" class="latex" alt="$b \equiv 3 \pmod{7}.$" style="vertical-align: -5px" width="120" height="20" />
+</p><p>Lastly, the reason why <img src="http://latex.artofproblemsolving.com/8/3/5/835aeac43a59d6b574c55635b2b5c05ee49a3ed9.png" class="latex" alt="$n \neq 1077$" style="vertical-align: -4px" width="71" height="17" /> is <img src="http://latex.artofproblemsolving.com/7/c/0/7c0e8287920ce5cdda50b87956887d34bffb6f92.png" class="latex" alt="$n + 120$" style="vertical-align: -1px" width="59" height="14" /> would be divisible by <img src="http://latex.artofproblemsolving.com/8/4/8/848ec5b5f695afbacb864efead154761481780c0.png" class="latex" alt="$63$" style="vertical-align: -1px" width="20" height="14" />, which is not possible due to the certain condition.
+</p><p>~nikenissan ~Midnight
+</p>
+<h2><span class="mw-headline" id="Solution_7">Solution 7</span></h2>
+<p>First, we find <img src="http://latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" />. We know that it is greater than <img src="http://latex.artofproblemsolving.com/6/e/e/6ee927e1332358c96c62c277441c907c4f51057f.png" class="latex" alt="$1000$" style="vertical-align: 0px" width="35" height="13" />, so we first input <img src="http://latex.artofproblemsolving.com/1/7/1/1712c68d8307d6b4c34a16a8cab9eea64f2c8094.png" class="latex" alt="$n = 1000$" style="vertical-align: 0px" width="70" height="13" />. From the first equation, <img src="http://latex.artofproblemsolving.com/f/f/2/ff2c9042d4c5f5024ca8c38256499dcd98b6ebab.png" class="latex" alt="$\gcd(63, n + 120) = 21$" style="vertical-align: -5px" width="172" height="20" />, we know that if <img src="http://latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> is correct, after we add <img src="http://latex.artofproblemsolving.com/a/a/a/aaa4de95cc6371d125d5cf773cdd9f9913dd1d8e.png" class="latex" alt="$120$" style="vertical-align: -1px" width="29" height="14" /> to it, it should be divisible by <img src="http://latex.artofproblemsolving.com/f/2/5/f25d31faf472ddb4c698a14522fe8125c06f8dd8.png" class="latex" alt="$21$" style="vertical-align: 0px" width="17" height="12" />, but not <img src="http://latex.artofproblemsolving.com/8/4/8/848ec5b5f695afbacb864efead154761481780c0.png" class="latex" alt="$63$" style="vertical-align: -1px" width="20" height="14" />: 
+<img src="http://latex.artofproblemsolving.com/f/a/4/fa484a9a51e104db95726a8ae1aed8f4c19caf52.png" class="latexcenter" alt="\[\frac{n + 120}{21} = \frac{1120}{21} = 53\text{ R }7.\]" width="205" height="37" />
+This does not work. To get to the nearest number divisible by <img src="http://latex.artofproblemsolving.com/f/2/5/f25d31faf472ddb4c698a14522fe8125c06f8dd8.png" class="latex" alt="$21$" style="vertical-align: 0px" width="17" height="12" />, we have to add <img src="http://latex.artofproblemsolving.com/8/2/0/820a20de2847dfdc1bc5cffc8d904933150032bd.png" class="latex" alt="$14$" style="vertical-align: 0px" width="18" height="12" /> to cancel out the remainder. (Note that we don't subtract <img src="http://latex.artofproblemsolving.com/e/0/a/e0a0db32027a732ac57d37ef2ae9bb150f65b108.png" class="latex" alt="$7$" width="9" height="12" /> to get to <img src="http://latex.artofproblemsolving.com/1/b/a/1ba318f7385187c693cb1859d9b4b1b587e649d9.png" class="latex" alt="$53$" width="17" height="12" />; <img src="http://latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> is already at its lowest possible value!)
+Adding <img src="http://latex.artofproblemsolving.com/8/2/0/820a20de2847dfdc1bc5cffc8d904933150032bd.png" class="latex" alt="$14$" style="vertical-align: 0px" width="18" height="12" /> to <img src="http://latex.artofproblemsolving.com/6/e/e/6ee927e1332358c96c62c277441c907c4f51057f.png" class="latex" alt="$1000$" style="vertical-align: 0px" width="35" height="13" /> gives us <img src="http://latex.artofproblemsolving.com/b/1/7/b176903ac710f435beac96cf7843f87e1171d77e.png" class="latex" alt="$n = 1014$" style="vertical-align: 0px" width="71" height="13" />. (Note: <img src="http://latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> is currently divisible by 63, but that's fine since we'll be changing it in the next step.)
+</p><p>Now using the second equation, <img src="http://latex.artofproblemsolving.com/8/a/9/8a92d7f08280cad7e03910b27a2868415181063c.png" class="latex" alt="$\gcd(n + 63, 120) = 60$" style="vertical-align: -5px" width="172" height="20" />, we know that if <img src="http://latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> is correct, then <img src="http://latex.artofproblemsolving.com/8/d/8/8d89996fb9047414ec8821ca6c2e800cfc78af15.png" class="latex" alt="$n+63$" style="vertical-align: -1px" width="50" height="14" /> is divisible by <img src="http://latex.artofproblemsolving.com/3/0/2/302e99c1c7cd91a6ae371139e5142ccef5977dca.png" class="latex" alt="$60$" width="17" height="12" /> but not <img src="http://latex.artofproblemsolving.com/a/a/a/aaa4de95cc6371d125d5cf773cdd9f9913dd1d8e.png" class="latex" alt="$120$" style="vertical-align: -1px" width="29" height="14" />:
+<img src="http://latex.artofproblemsolving.com/0/c/c/0cc9878f51c30d72d84abaacab0b5382d01c26c4.png" class="latexcenter" alt="\[\frac{n + 63}{60} = \frac{1077}{60} = 17\text{ R }57.\]" width="205" height="38" />
+Again, this does not work. This requires some guessing and checking. We can add <img src="http://latex.artofproblemsolving.com/f/2/5/f25d31faf472ddb4c698a14522fe8125c06f8dd8.png" class="latex" alt="$21$" style="vertical-align: 0px" width="17" height="12" /> over and over again until <img src="http://latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> is valid. This changes <img src="http://latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> while also maintaining that <img src="http://latex.artofproblemsolving.com/5/4/b/54bf08649db84675221b15da8ab4f9377eff2f83.png" class="latex" alt="$\frac{n + 120}{21}$" style="vertical-align: -13px" width="62" height="38" /> has no remainders. 
+After adding <img src="http://latex.artofproblemsolving.com/f/2/5/f25d31faf472ddb4c698a14522fe8125c06f8dd8.png" class="latex" alt="$21$" style="vertical-align: 0px" width="17" height="12" /> once, we get <img src="http://latex.artofproblemsolving.com/e/3/b/e3b5f4e64f90f47b2cdea19bdefcd362d3e07720.png" class="latex" alt="$18 r 18$" style="vertical-align: 0px" width="44" height="13" />. By pure luck, adding <img src="http://latex.artofproblemsolving.com/f/2/5/f25d31faf472ddb4c698a14522fe8125c06f8dd8.png" class="latex" alt="$21$" style="vertical-align: 0px" width="17" height="12" /> two more times gives us <img src="http://latex.artofproblemsolving.com/e/f/b/efbfe273946ff9f971c5eab331ca39caa6fdf7f4.png" class="latex" alt="$19$" style="vertical-align: 0px" width="17" height="13" /> with no remainders. 
+We now have <img src="http://latex.artofproblemsolving.com/3/b/5/3b5843a6e3ff72283899a9dc35926e360278f67a.png" class="latex" alt="$1077 + 21 + 21 + 21 = 1140$" style="vertical-align: -1px" width="217" height="14" />. However, this number is divisible by <img src="http://latex.artofproblemsolving.com/a/a/a/aaa4de95cc6371d125d5cf773cdd9f9913dd1d8e.png" class="latex" alt="$120$" style="vertical-align: -1px" width="29" height="14" />. To get the next possible number, we add the LCM of <img src="http://latex.artofproblemsolving.com/f/2/5/f25d31faf472ddb4c698a14522fe8125c06f8dd8.png" class="latex" alt="$21$" style="vertical-align: 0px" width="17" height="12" /> and <img src="http://latex.artofproblemsolving.com/3/0/2/302e99c1c7cd91a6ae371139e5142ccef5977dca.png" class="latex" alt="$60$" width="17" height="12" /> (once again, to maintain divisibility), which is <img src="http://latex.artofproblemsolving.com/d/f/b/dfb2fec2f1cde0059d8eb9c11bcb2bd63142401b.png" class="latex" alt="$420$" style="vertical-align: 0px" width="26" height="13" />. Unfortunately, <img src="http://latex.artofproblemsolving.com/c/f/6/cf6f0920127e4f2280f56ee86d0e7f3d8be9a0b7.png" class="latex" alt="$1140 + 420 = 1560$" style="vertical-align: -1px" width="145" height="14" /> is still divisible by <img src="http://latex.artofproblemsolving.com/a/a/a/aaa4de95cc6371d125d5cf773cdd9f9913dd1d8e.png" class="latex" alt="$120$" style="vertical-align: -1px" width="29" height="14" />. Adding <img src="http://latex.artofproblemsolving.com/d/f/b/dfb2fec2f1cde0059d8eb9c11bcb2bd63142401b.png" class="latex" alt="$420$" style="vertical-align: 0px" width="26" height="13" /> again gives us <img src="http://latex.artofproblemsolving.com/0/9/8/0987dc78864e4bfa39ea188378f155625e3fb231.png" class="latex" alt="$1980$" style="vertical-align: 0px" width="35" height="13" />, which is valid. However, remember that this is equal to <img src="http://latex.artofproblemsolving.com/b/f/c/bfc4ba861ab07157c86365c7205d06ff256cba0f.png" class="latex" alt="$n + 63$" style="vertical-align: -1px" width="50" height="14" />, so subtracting <img src="http://latex.artofproblemsolving.com/8/4/8/848ec5b5f695afbacb864efead154761481780c0.png" class="latex" alt="$63$" style="vertical-align: -1px" width="20" height="14" /> from <img src="http://latex.artofproblemsolving.com/0/9/8/0987dc78864e4bfa39ea188378f155625e3fb231.png" class="latex" alt="$1980$" style="vertical-align: 0px" width="35" height="13" /> gives us <img src="http://latex.artofproblemsolving.com/9/2/e/92e5c05c5fbbd2f7772ad74f5e1669f80cbf58b7.png" class="latex" alt="$1917$" style="vertical-align: 0px" width="36" height="13" />, which is <img src="http://latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" />. 
+</p><p>The sum of its digits are <img src="http://latex.artofproblemsolving.com/2/a/8/2a88f78765530ce60e353bf14e7bc69338b73ac3.png" class="latex" alt="$1 + 9 + 1 + 7 = \boxed{\textbf{(C) } 18}$" style="vertical-align: -11px" width="194" height="30" />.
+</p><p>~primegn
+</p>
+<h2><span id="Solution_8_(Euclidean_Algorithm)"></span><span class="mw-headline" id="Solution_8_.28Euclidean_Algorithm.29">Solution 8 (Euclidean Algorithm)</span></h2>
+<p>By the Euclidean Algorithm, we have
+<img src="http://latex.artofproblemsolving.com/a/7/f/a7f55d13a96d599d0263ab0b678c8a1a5b101ceb.png" class="latexcenter" alt="\begin{alignat*}{8} \gcd(63,n+120)&amp;=\hspace{1mm}&amp;&amp;\gcd(63,\phantom{ }\underbrace{n+120-63k_1}_{(n+120) \ \mathrm{mod} \ 63}\phantom{ })&amp;&amp;=21, \\  \gcd(n+63,120)&amp;=&amp;&amp;\gcd(\phantom{ }\underbrace{n+63-120k_2}_{(n+63) \ \mathrm{mod} \ 120}\phantom{ },120)&amp;&amp;=60.  \end{alignat*}" width="401" height="93" />
+Clearly, <img src="http://latex.artofproblemsolving.com/e/1/f/e1fb0b191d438a93c3acbd97896d674eeeae4a76.png" class="latex" alt="$n+120-63k_1$" style="vertical-align: -2px" width="115" height="15" /> must be either <img src="http://latex.artofproblemsolving.com/f/2/5/f25d31faf472ddb4c698a14522fe8125c06f8dd8.png" class="latex" alt="$21$" style="vertical-align: 0px" width="17" height="12" /> or <img src="http://latex.artofproblemsolving.com/c/c/3/cc3565157ec53e03f90f3d221f05b373850aafea.png" class="latex" alt="$42,$" style="vertical-align: -3px" width="22" height="15" /> and <img src="http://latex.artofproblemsolving.com/0/6/8/068593c3c6f3beeb17f8f60f21e8b881786090b3.png" class="latex" alt="$n+63-120k_2$" style="vertical-align: -2px" width="116" height="15" /> must be <img src="http://latex.artofproblemsolving.com/d/9/c/d9cc0e60360d27bb0d68fba6cd6fc1f5163aedd2.png" class="latex" alt="$60.$" width="21" height="12" />
+</p><p>More generally, let <img src="http://latex.artofproblemsolving.com/5/e/2/5e2c8fa6b1e06684f7f801685224e687f5030f8c.png" class="latex" alt="$t\in\{1,2\},$" style="vertical-align: -4px" width="77" height="18" /> so we get
+<img src="http://latex.artofproblemsolving.com/9/d/8/9d81a7dd462b7078bd1b886e884abcc340b5c436.png" class="latexcenter" alt="\begin{align*} n+120-63k_1&amp;=21t, &amp;\hspace{55.5mm}(1) \\ n+63-120k_2&amp;=60. &amp;\hspace{55.5mm}(2) \end{align*}" width="471" height="43" />
+Subtracting <img src="http://latex.artofproblemsolving.com/6/2/f/62f62a19f0425d8e6121ca0c1cfd3ce96e43c9c5.png" class="latex" alt="$(2)$" style="vertical-align: -4px" width="21" height="18" /> from <img src="http://latex.artofproblemsolving.com/0/d/9/0d9c3b1c142cbd3f8217dabc160c57e4750df241.png" class="latex" alt="$(1)$" style="vertical-align: -4px" width="21" height="18" /> and then simplifying give
+<img src="http://latex.artofproblemsolving.com/2/1/7/2171c817a79f6827a1147c98b5c8e89314295297.png" class="latexcenter" alt="\begin{align*} 57-63k_1+120k_2&amp;=21t-60 \\ 117-63k_1+120k_2&amp;=21t \\ 39-21k_1+40k_2&amp;=7t. \hspace{54mm}(\bigstar) \end{align*}" width="479" height="67" />
+Taking <img src="http://latex.artofproblemsolving.com/8/7/5/875816dba06e32edf79fcfbb793af13f73bdca9c.png" class="latex" alt="$(\bigstar)$" style="vertical-align: -4px" width="29" height="18" /> modulo <img src="http://latex.artofproblemsolving.com/e/0/a/e0a0db32027a732ac57d37ef2ae9bb150f65b108.png" class="latex" alt="$7$" width="9" height="12" /> produces
+<img src="http://latex.artofproblemsolving.com/5/f/d/5fdefc1af40853fc1f2803e0b8074b1613d83e78.png" class="latexcenter" alt="\begin{align*} 4+5k_2&amp;\equiv0\pmod{7} \\ k_2&amp;\equiv2\pmod{7}. \end{align*}" width="175" height="43" />
+Recall that <img src="http://latex.artofproblemsolving.com/5/b/1/5b119fe60243c373501aed5fc359400a70206b8a.png" class="latex" alt="$n&gt;1000.$" style="vertical-align: 0px" width="74" height="13" /> From <img src="http://latex.artofproblemsolving.com/e/d/f/edfab0dd6bac5131ab929c8459a0de0c4486dd27.png" class="latex" alt="$(2),$" style="vertical-align: -4px" width="27" height="18" /> it follows that <img src="http://latex.artofproblemsolving.com/6/b/4/6b4e891819cbfe0f6c680e55a461f95fa0b42885.png" class="latexcenter" alt="\[1063-120k_2&lt;n+63-120k_2=60,\]" width="289" height="16" /> from which <img src="http://latex.artofproblemsolving.com/5/c/9/5c9ad28e492b3de46adf939c2dea18bdf02d84ff.png" class="latex" alt="$k_2&gt;8.$" style="vertical-align: -2px" width="53" height="15" /> Therefore, the possible values for <img src="http://latex.artofproblemsolving.com/c/b/7/cb72004e1c6c7b0782bbf2c7e40dcaad72993c4f.png" class="latex" alt="$k_2$" style="vertical-align: -2px" width="15" height="15" /> are <img src="http://latex.artofproblemsolving.com/a/5/6/a562277a047ff7300ad33cbee751083f3597ff66.png" class="latex" alt="$9,16,23,\ldots.$" style="vertical-align: -4px" width="101" height="17" />
+</p><p>We need to check whether positive integers <img src="http://latex.artofproblemsolving.com/7/f/2/7f2f57887b2e2f63a617b6a4b7a7d466c26c4342.png" class="latex" alt="$k_1$" style="vertical-align: -2px" width="15" height="15" /> and <img src="http://latex.artofproblemsolving.com/e/0/d/e0d2bf360290fd61d1c1557e763f2622363b3d35.png" class="latex" alt="$t$" width="6" height="11" /> (where <img src="http://latex.artofproblemsolving.com/7/0/9/70919844b016770bf7345f25de01e1968f25a64b.png" class="latex" alt="$t\in\{1,2\}$" style="vertical-align: -4px" width="72" height="18" />) exist in <img src="http://latex.artofproblemsolving.com/c/f/6/cf62fa07ca11a13399d96f842fa011dfe5c6e3a2.png" class="latex" alt="$(1):$" style="vertical-align: -4px" width="32" height="18" />
+</p>
+<ul style="margin-left: 1.5em, list-style-type: square;">
+  <li>If <img src="http://latex.artofproblemsolving.com/4/c/e/4cecd0e07e1f568f33d4ebe5b3f8b9163dc242ff.png" class="latex" alt="$k_2=9,$" style="vertical-align: -3px" width="54" height="16" /> then substituting into <img src="http://latex.artofproblemsolving.com/6/2/f/62f62a19f0425d8e6121ca0c1cfd3ce96e43c9c5.png" class="latex" alt="$(2)$" style="vertical-align: -4px" width="21" height="18" /> gives <img src="http://latex.artofproblemsolving.com/8/7/2/872decdc7b3abf5cb82e4c2a713edd92e039fb6d.png" class="latex" alt="$n=1077.$" style="vertical-align: 0px" width="74" height="13" /> Next, substituting into <img src="http://latex.artofproblemsolving.com/0/d/9/0d9c3b1c142cbd3f8217dabc160c57e4750df241.png" class="latex" alt="$(1)$" style="vertical-align: -4px" width="21" height="18" /> produces <img src="http://latex.artofproblemsolving.com/c/6/7/c675cdabc57d5a0a4d1acda12d7cee014070af38.png" class="latex" alt="$1197-63k_1=21t,$" style="vertical-align: -3px" width="146" height="16" /> or <img src="http://latex.artofproblemsolving.com/5/a/a/5aa6f22ee89199b868952d2747cbd1f4350eba22.png" class="latex" alt="$57-3k_1=t.$" style="vertical-align: -2px" width="100" height="15" /> <p>
+There are no solutions <img src="http://latex.artofproblemsolving.com/0/a/d/0ad356077e8a90f4812889da26707550da3f277f.png" class="latex" alt="$(k_1,t).$" style="vertical-align: -4px" width="49" height="18" /></p></li><p class="mw-empty-elt">
+  </p><li>If <img src="http://latex.artofproblemsolving.com/7/8/0/7806781a528977332cc9c53a5e9f85b383bcfe65.png" class="latex" alt="$k_2=16,$" style="vertical-align: -3px" width="63" height="16" /> then substituting into <img src="http://latex.artofproblemsolving.com/6/2/f/62f62a19f0425d8e6121ca0c1cfd3ce96e43c9c5.png" class="latex" alt="$(2)$" style="vertical-align: -4px" width="21" height="18" /> gives <img src="http://latex.artofproblemsolving.com/8/e/9/8e9fef29c7b35cddebd85fec01ef46352b463536.png" class="latex" alt="$n=1917.$" style="vertical-align: 0px" width="74" height="13" /> Next, substituting into <img src="http://latex.artofproblemsolving.com/0/d/9/0d9c3b1c142cbd3f8217dabc160c57e4750df241.png" class="latex" alt="$(1)$" style="vertical-align: -4px" width="21" height="18" /> produces <img src="http://latex.artofproblemsolving.com/0/8/9/0897ec28b23a026de9cddb2503070e96877e6f39.png" class="latex" alt="$2037-63k_1=21t,$" style="vertical-align: -3px" width="146" height="16" /> or <img src="http://latex.artofproblemsolving.com/f/0/f/f0f28440b1e735d4b5fa1b9a3ff873be3ba19820.png" class="latex" alt="$97-3k_1=t.$" style="vertical-align: -2px" width="100" height="15" /> <p>
+The solution is <img src="http://latex.artofproblemsolving.com/a/1/0/a10be1f278d958f1aad3e9a7f92f9c89b7634388.png" class="latex" alt="$(k_1,t)=(32,1).$" style="vertical-align: -5px" width="126" height="20" /></p></li><p class="mw-empty-elt">
+</p></ul>
+<p>Finally, the least such positive integer <img src="http://latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> is <img src="http://latex.artofproblemsolving.com/e/e/f/eef30fe133d43858a67c74f6eaa8da2c86306740.png" class="latex" alt="$1917.$" style="vertical-align: 0px" width="39" height="13" /> The sum of its digits is <img src="http://latex.artofproblemsolving.com/d/f/4/df415c22339923b907a13f5d492d173a80d6f25f.png" class="latex" alt="$1+9+1+7=\boxed{\textbf{(C) } 18}.$" style="vertical-align: -10px" width="195" height="28" />
+</p><p>~MRENTHUSIASM
+</p>
+<h2><span id="Solution_9_(Euclidean_Algorithm)"></span><span class="mw-headline" id="Solution_9_.28Euclidean_Algorithm.29">Solution 9 (Euclidean Algorithm)</span></h2>
+<p>Because we are finding value of <img src="http://latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> for <img src="http://latex.artofproblemsolving.com/7/6/0/7607e5b388efd688f39364400b9b367b52d5067f.png" class="latex" alt="$n &gt; 1000$" style="vertical-align: 0px" width="70" height="13" />, let <img src="http://latex.artofproblemsolving.com/1/8/a/18a39e1c3710df11685b5ab10a3cbc7d9b39bc95.png" class="latex" alt="$n = 1000 + k$" style="vertical-align: -2px" width="106" height="16" />.
+</p><p>Using the Euclidean Algorithm, 
+<img src="http://latex.artofproblemsolving.com/1/e/0/1e00fcc0d1e862bd5c60c6e5ea3d0bdf4e59436e.png" class="latexcenter" alt="\begin{align*} \gcd(63, n+120) &amp;= \gcd(63, 1000 + k + 120) \\ &amp;= \gcd(63, k + 1120 - 63 \cdot 18) \\ &amp;= \gcd(63, k-14) \\ &amp;= 21, \\ \gcd(n+63, 120) &amp;= \gcd(k + 1000 + 63, 120) \\ &amp;= \gcd(k + 1000 + 63 - 120 \cdot 9, 120) \\ &amp;= \gcd(k-17, 120) \\ &amp;= 60. \end{align*}" width="407" height="188" />
+So, we have
+<img src="http://latex.artofproblemsolving.com/3/f/d/3fd1bc3a40f084e7e8df890bc5300bd94ff6913c.png" class="latexcenter" alt="\begin{align*} k &amp;\equiv 14 \pmod{21}, \\ k &amp;\equiv 17 \pmod{60}. \end{align*}" width="147" height="43" />
+Let <img src="http://latex.artofproblemsolving.com/8/e/2/8e231fe886937a18c257354147e236ad0490623f.png" class="latex" alt="$k = 21p + 14 = 60q + 17$" style="vertical-align: -4px" width="195" height="18" />, <img src="http://latex.artofproblemsolving.com/9/8/a/98a7d02f74b80f5ed151a93cb6f772a46eb8e884.png" class="latex" alt="$7p= 20q + 1$" style="vertical-align: -4px" width="103" height="17" /> (by the Division Algorithm), <img src="http://latex.artofproblemsolving.com/1/c/4/1c4dc4e5b72a06d37944026004eeb68b8a7e534d.png" class="latex" alt="$7p = 21q - (q - 1)$" style="vertical-align: -5px" width="148" height="20" />, <img src="http://latex.artofproblemsolving.com/2/7/0/270073fabf4a2dd83b1f6935c0907d7025a59820.png" class="latex" alt="$q - 1$" style="vertical-align: -3px" width="39" height="15" /> is a multiple of <img src="http://latex.artofproblemsolving.com/e/0/a/e0a0db32027a732ac57d37ef2ae9bb150f65b108.png" class="latex" alt="$7$" width="9" height="12" />.
+</p><p>Let <img src="http://latex.artofproblemsolving.com/3/0/0/300cb55787e3e427c713ccb134d06a8be0720fd9.png" class="latex" alt="$q-1 = 7r$" style="vertical-align: -4px" width="84" height="17" />, <img src="http://latex.artofproblemsolving.com/5/1/4/5144ed45ded0a315cf490a14b29241988cd04352.png" class="latex" alt="$q = 7r+1$" style="vertical-align: -4px" width="84" height="17" />, <img src="http://latex.artofproblemsolving.com/e/8/0/e809f4b7a9799267e50a2409f1bb9fac0c48394b.png" class="latex" alt="$k = 60(7r+1) + 17 = 420r + 77$" style="vertical-align: -5px" width="259" height="20" />.
+</p><p><img src="http://latex.artofproblemsolving.com/2/0/f/20fa71c0560cdc72d10f17f357a2d14c3d207033.png" class="latex" alt="$n = 1000 + k = 420r + 1077$" style="vertical-align: -2px" width="224" height="16" />, <img src="http://latex.artofproblemsolving.com/3/9/e/39ee0df585c9468797fbff790637f46096e046f0.png" class="latex" alt="$n = 1077, 1497, 1917$" style="vertical-align: -4px" width="162" height="17" />.
+</p><p>By substituting <img src="http://latex.artofproblemsolving.com/2/0/f/20f98501f03d015aa7049d1c0073b2e79fcafade.png" class="latex" alt="$1077$" style="vertical-align: 0px" width="36" height="13" />, <img src="http://latex.artofproblemsolving.com/7/3/b/73b061315f8fbed7988c625045bb7e6cc9223f08.png" class="latex" alt="$1497$" style="vertical-align: 0px" width="36" height="13" />, <img src="http://latex.artofproblemsolving.com/9/2/e/92e5c05c5fbbd2f7772ad74f5e1669f80cbf58b7.png" class="latex" alt="$1917$" style="vertical-align: 0px" width="36" height="13" /> into <img src="http://latex.artofproblemsolving.com/7/e/6/7e68fffa981dfa5b3aba7bd4794af310d4d474ab.png" class="latex" alt="$\gcd(63, n+120) =21$" style="vertical-align: -4px" width="169" height="18" /> and <img src="http://latex.artofproblemsolving.com/5/a/7/5a782b97741baaa24beb085467548d0ac434294a.png" class="latex" alt="$\gcd(n+63, 120)=60$" style="vertical-align: -5px" width="172" height="20" />, <img src="http://latex.artofproblemsolving.com/2/0/f/20f98501f03d015aa7049d1c0073b2e79fcafade.png" class="latex" alt="$1077$" style="vertical-align: 0px" width="36" height="13" /> and  <img src="http://latex.artofproblemsolving.com/7/3/b/73b061315f8fbed7988c625045bb7e6cc9223f08.png" class="latex" alt="$1497$" style="vertical-align: 0px" width="36" height="13" /> aren't valid answers, only <img src="http://latex.artofproblemsolving.com/9/2/e/92e5c05c5fbbd2f7772ad74f5e1669f80cbf58b7.png" class="latex" alt="$1917$" style="vertical-align: 0px" width="36" height="13" /> is. Therefore, the answer is <img src="http://latex.artofproblemsolving.com/a/8/e/a8eb94fa54d4a43c2293274bdc73e1f167de6879.png" class="latex" alt="$1+9+1+7=\boxed{\textbf{(C) } 18}$" style="vertical-align: -11px" width="194" height="30" />.
+</p><p>~<a rel="nofollow" class="external text" href="https://artofproblemsolving.com/wiki/index.php/User:Isabelchen">isabelchen</a> (Solution)
+</p><p>~<a rel="nofollow" class="external text" href="https://artofproblemsolving.com/wiki/index.php/User:Plainoldnumbertheory">Plainoldnumbertheory</a> (Minor Edits)
+</p><p>~<a rel="nofollow" class="external text" href="https://artofproblemsolving.com/wiki/index.php/User:Plainoldnumbertheory">Puck_0</a> (Formatting)
+</p>
+<h2><span id="Solution_10_(Diophantine_Equations)"></span><span class="mw-headline" id="Solution_10_.28Diophantine_Equations.29">Solution 10 (Diophantine Equations)</span></h2>
+<p>We know <img src="http://latex.artofproblemsolving.com/c/7/d/c7d103cae78a64564923a50fdfb3946ca73c3944.png" class="latex" alt="$63 = 3 \cdot 21$" style="vertical-align: -1px" width="85" height="14" />, and <img src="http://latex.artofproblemsolving.com/7/6/2/762a8632b2adc4cfbd7e67cb126bb8c2100a1c5b.png" class="latex" alt="$\gcd(63, n + 120) = 21 \Longrightarrow n + 120 = 21a$" style="vertical-align: -5px" width="324" height="20" />, where <img src="http://latex.artofproblemsolving.com/c/7/d/c7d457e388298246adb06c587bccd419ea67f7e8.png" class="latex" alt="$a$" style="vertical-align: -1px" width="11" height="10" /> is not a multiple of <img src="http://latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png" class="latex" alt="$3$" width="8" height="12" />.
+</p><p>Also, <img src="http://latex.artofproblemsolving.com/3/a/0/3a02723e7336f4e94bf1a8301b8037440814f5ed.png" class="latex" alt="$120 = 2 \cdot 60$" style="vertical-align: -1px" width="94" height="14" />, and <img src="http://latex.artofproblemsolving.com/d/6/6/d66630c6c1542108e97e93e5937dea55c4e75686.png" class="latex" alt="$gcd(n+63, 120) = 60 \Longrightarrow n + 63 = 60b$" style="vertical-align: -5px" width="313" height="20" />, where <img src="http://latex.artofproblemsolving.com/8/1/3/8136a7ef6a03334a7246df9097e5bcc31ba33fd2.png" class="latex" alt="$b$" style="vertical-align: -1px" width="10" height="14" /> is not a multiple of <img src="../../../../latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" />.
+</p><p>Let <img src="http://latex.artofproblemsolving.com/c/c/c/ccc2da9ffbee6c4547eb8bacea3b857fda82c5f3.png" class="latex" alt="$n+63 = 60b = x$" style="vertical-align: -2px" width="138" height="16" />, <img src="http://latex.artofproblemsolving.com/5/2/0/5203a2e20280b5ec8d22c31ce832a86cf3098e95.png" class="latex" alt="$n = x - 63$" style="vertical-align: -2px" width="88" height="15" />, <img src="http://latex.artofproblemsolving.com/d/b/9/db929ea7710356bef31cbad34964e296438594e3.png" class="latex" alt="$n+120 = x+57 = 21a$" style="vertical-align: -2px" width="189" height="15" />.
+</p><p>Now the problem becomes <img src="http://latex.artofproblemsolving.com/5/8/1/581c60c4d6ee45902ee5fc0d5bb03a5b67034aae.png" class="latex" alt="$\gcd(63, x+57) =21$" style="vertical-align: -5px" width="163" height="20" /> and <img src="http://latex.artofproblemsolving.com/f/6/b/f6b716bcdedd7ea8435a669701b26432598ea44d.png" class="latex" alt="$\gcd(x, 120)=60$" style="vertical-align: -5px" width="131" height="20" />.
+</p><p>Meaning <img src="http://latex.artofproblemsolving.com/d/a/6/da6f7c7c73ddbe5ef7b4f27e6f742ddf1a083cc9.png" class="latex" alt="$x + 57$" style="vertical-align: -2px" width="53" height="15" /> has to be a multiple of <img src="http://latex.artofproblemsolving.com/f/2/5/f25d31faf472ddb4c698a14522fe8125c06f8dd8.png" class="latex" alt="$21$" style="vertical-align: 0px" width="17" height="12" /> but not <img src="http://latex.artofproblemsolving.com/8/4/8/848ec5b5f695afbacb864efead154761481780c0.png" class="latex" alt="$63$" style="vertical-align: -1px" width="20" height="14" />, and <img src="http://latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" /> is a multiple of <img src="http://latex.artofproblemsolving.com/3/0/2/302e99c1c7cd91a6ae371139e5142ccef5977dca.png" class="latex" alt="$60$" width="17" height="12" /> but not <img src="http://latex.artofproblemsolving.com/a/a/a/aaa4de95cc6371d125d5cf773cdd9f9913dd1d8e.png" class="latex" alt="$120$" style="vertical-align: -1px" width="29" height="14" />.
+</p><p>Using trial and error, the least values are <img src="http://latex.artofproblemsolving.com/0/a/b/0abbdb3bafe06297aee292c92410c1c95bf89889.png" class="latex" alt="$x = 33\cdot60 = 1980$" style="vertical-align: -1px" width="147" height="14" /> and <img src="http://latex.artofproblemsolving.com/4/d/7/4d73f7d8ce1025f74ab660e827647479a6f7d936.png" class="latex" alt="$n = x-63 = 1917$" style="vertical-align: -2px" width="148" height="15" />.
+</p><p>Therefore, the answer is <img src="http://latex.artofproblemsolving.com/a/8/e/a8eb94fa54d4a43c2293274bdc73e1f167de6879.png" class="latex" alt="$1+9+1+7=\boxed{\textbf{(C) } 18}$" style="vertical-align: -11px" width="194" height="30" />.
+</p><p>~<a rel="nofollow" class="external text" href="https://artofproblemsolving.com/wiki/index.php/User:Isabelchen">isabelchen</a>
+</p>
+<h2><span id="Solution_11_(Chinese_Remainder_Theorem)"></span><span class="mw-headline" id="Solution_11_.28Chinese_Remainder_Theorem.29">Solution 11 (Chinese Remainder Theorem)</span></h2>
+<p>We have
+<img src="http://latex.artofproblemsolving.com/8/6/4/864f5f1ba12f34b51b8aaaa0ac8a6512ea57e6f9.png" class="latexcenter" alt="\begin{align*} \gcd(63, n+120) &amp;= 21 \Longrightarrow n + 120 \equiv 0 \pmod{21}, \text{ where } 9 \nmid n + 120, \\ \gcd(n+63, 120) &amp;= 60 \Longrightarrow n + 63 \equiv 0 \pmod{60}, \text{ where } 8 \nmid n + 63. \end{align*}" width="544" height="43" />
+So, we conclude that <img src="http://latex.artofproblemsolving.com/9/8/b/98be801f5c5eba9c9391b628326e18c4169b40ef.png" class="latex" alt="$n \equiv 6 \pmod{21}$" style="vertical-align: -4px" width="124" height="18" /> and <img src="http://latex.artofproblemsolving.com/b/9/1/b91aa0b7dd96da2d35ffa800e9d4ff05635863ca.png" class="latex" alt="$n \equiv 57 \pmod{60}$" style="vertical-align: -4px" width="133" height="18" />, respectively.
+</p><p>Because the <img src="../../../../latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" /> moduli <img src="http://latex.artofproblemsolving.com/f/2/5/f25d31faf472ddb4c698a14522fe8125c06f8dd8.png" class="latex" alt="$21$" style="vertical-align: 0px" width="17" height="12" /> and <img src="http://latex.artofproblemsolving.com/3/0/2/302e99c1c7cd91a6ae371139e5142ccef5977dca.png" class="latex" alt="$60$" width="17" height="12" /> are not relatively prime, namely <img src="http://latex.artofproblemsolving.com/b/4/4/b4410e6cdf033391e30b44d2e7d53423ee085024.png" class="latex" alt="$\gcd{(21, 60)} = 3$" style="vertical-align: -5px" width="124" height="20" />, <img src="http://latex.artofproblemsolving.com/3/a/1/3a1040ebceb0635e48b6363cb08f86704ceda385.png" class="latex" alt="$21 = 3 \cdot 7$" style="vertical-align: 0px" width="73" height="13" />, and <img src="http://latex.artofproblemsolving.com/c/0/b/c0b659057e1ebc3e3fa7fa59a199d42db431bc4e.png" class="latex" alt="$60 = 3 \cdot 20$" style="vertical-align: -1px" width="85" height="14" />, we convert the system of <img src="../../../../latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" /> linear congruences with non-coprime moduli into a system of <img src="http://latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png" class="latex" alt="$3$" width="8" height="12" /> linear congruences with coprime moduli:
+<img src="http://latex.artofproblemsolving.com/5/f/d/5fd277be310b0f03f456adeed4796190088d6b76.png" class="latexcenter" alt="\begin{align*} n &amp;\equiv 0 \pmod{3}, \\ n &amp;\equiv 6 \pmod{7}, \\ n &amp;\equiv 17 \pmod{20}. \end{align*}" width="147" height="68" />
+By <a rel="nofollow" class="external text" href="https://artofproblemsolving.com/wiki/index.php/Chinese_Remainder_Theorem">Chinese Remainder Theorem</a>, the general solution of system of <img src="http://latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png" class="latex" alt="$3$" width="8" height="12" /> linear congruences is <img src="http://latex.artofproblemsolving.com/2/8/2/2826f8edc131a038824bdf2e27242c87a4dca7ae.png" class="latexcenter" alt="\[n = 420k + 1077.\]" width="133" height="14" />
+We construct the following table:
+<img src="http://latex.artofproblemsolving.com/c/6/c/c6c02454d4935567d1a463428e9a4a426d68c214.png" class="latexcenter" alt="\[\begin{array}{c|c|c|c} n &amp; 1077 &amp; 1497 &amp; 1917\\ \hline n + 120 &amp; 1197 &amp; 1617 &amp; 2037\\ \hline n + 63 &amp; 1140 &amp; 1560 &amp; 1980\\ \end{array}\]" width="236" height="61" />
+Only <img src="http://latex.artofproblemsolving.com/3/5/f/35f28494d91d2e3d4d464338179c1cb45e10dbf2.png" class="latex" alt="$n = 1917$" style="vertical-align: 0px" width="71" height="13" /> satisfies <img src="http://latex.artofproblemsolving.com/6/d/c/6dc1161be2e43f3ddaff933918d651b8f7aa2d58.png" class="latex" alt="$9 \nmid n + 120$" style="vertical-align: -5px" width="86" height="20" /> and <img src="http://latex.artofproblemsolving.com/c/7/f/c7ff9853c034312dae5c74b46d217c33066dfc4a.png" class="latex" alt="$8 \nmid n + 63$" style="vertical-align: -5px" width="77" height="20" />. Therefore, the answer is <img src="http://latex.artofproblemsolving.com/a/8/e/a8eb94fa54d4a43c2293274bdc73e1f167de6879.png" class="latex" alt="$1+9+1+7=\boxed{\textbf{(C) } 18}$" style="vertical-align: -11px" width="194" height="30" />.
+</p><p>~<a rel="nofollow" class="external text" href="https://artofproblemsolving.com/wiki/index.php/User:Isabelchen">isabelchen</a>
+</p>
+<h2><span id="Solution_12_(Logically_Bashing)"></span><span class="mw-headline" id="Solution_12_.28Logically_Bashing.29">Solution 12 (Logically Bashing)</span></h2>
+<p>We know that <img src="http://latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> ends with the number <img src="http://latex.artofproblemsolving.com/e/0/a/e0a0db32027a732ac57d37ef2ae9bb150f65b108.png" class="latex" alt="$7$" width="9" height="12" />, since <img src="http://latex.artofproblemsolving.com/8/d/8/8d89996fb9047414ec8821ca6c2e800cfc78af15.png" class="latex" alt="$n+63$" style="vertical-align: -1px" width="50" height="14" /> is divisible by <img src="http://latex.artofproblemsolving.com/3/0/2/302e99c1c7cd91a6ae371139e5142ccef5977dca.png" class="latex" alt="$60$" width="17" height="12" />, and any number divisible by <img src="../../../../latex.artofproblemsolving.com/f/c/6/fc606f7f1e530731ab4f1cc364c01dc64a4455ee.png" class="latex" alt="$10$" style="vertical-align: 0px" width="17" height="13" /> (a factor of <img src="http://latex.artofproblemsolving.com/3/0/2/302e99c1c7cd91a6ae371139e5142ccef5977dca.png" class="latex" alt="$60$" width="17" height="12" />) must end with a <img src="http://latex.artofproblemsolving.com/b/c/1/bc1f9d9bf8a1b606a4188b5ce9a2af1809e27a89.png" class="latex" alt="$0$" width="8" height="12" />. As a result, <img src="http://latex.artofproblemsolving.com/6/b/b/6bb31d026aee17c68c5bd01a525243b63048a524.png" class="latex" alt="$n+120$" style="vertical-align: -1px" width="59" height="14" /> must also end in <img src="http://latex.artofproblemsolving.com/e/0/a/e0a0db32027a732ac57d37ef2ae9bb150f65b108.png" class="latex" alt="$7$" width="9" height="12" />. Because <img src="http://latex.artofproblemsolving.com/8/d/8/8d89996fb9047414ec8821ca6c2e800cfc78af15.png" class="latex" alt="$n+63$" style="vertical-align: -1px" width="50" height="14" /> must be divisible by <img src="http://latex.artofproblemsolving.com/f/8/3/f8366cd6196dd8a9da6d38a3e9eafb109e99d53e.png" class="latex" alt="$20$" width="17" height="12" />, as well (using the same gcd), the tens value of <img src="http://latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> must be odd. Also, <img src="http://latex.artofproblemsolving.com/6/b/b/6bb31d026aee17c68c5bd01a525243b63048a524.png" class="latex" alt="$n+120$" style="vertical-align: -1px" width="59" height="14" /> cannot be divisible by <img src="http://latex.artofproblemsolving.com/b/f/2/bf2c9074b396e3af0dea52d792660eea1c77f10f.png" class="latex" alt="$9$" width="8" height="12" />, otherwise, its gcd with <img src="http://latex.artofproblemsolving.com/8/4/8/848ec5b5f695afbacb864efead154761481780c0.png" class="latex" alt="$63$" style="vertical-align: -1px" width="20" height="14" /> will be <img src="http://latex.artofproblemsolving.com/8/4/8/848ec5b5f695afbacb864efead154761481780c0.png" class="latex" alt="$63$" style="vertical-align: -1px" width="20" height="14" />, instead of <img src="http://latex.artofproblemsolving.com/f/2/5/f25d31faf472ddb4c698a14522fe8125c06f8dd8.png" class="latex" alt="$21$" style="vertical-align: 0px" width="17" height="12" />.
+</p><p>Now, we can start bashing, using the <img src="http://latex.artofproblemsolving.com/7/e/6/7e68fffa981dfa5b3aba7bd4794af310d4d474ab.png" class="latex" alt="$\gcd(63, n+120) =21$" style="vertical-align: -4px" width="169" height="18" />. We are given that <img src="http://latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> must be greater than <img src="http://latex.artofproblemsolving.com/6/e/e/6ee927e1332358c96c62c277441c907c4f51057f.png" class="latex" alt="$1000$" style="vertical-align: 0px" width="35" height="13" />, so we can try <img src="http://latex.artofproblemsolving.com/6/b/b/6bb31d026aee17c68c5bd01a525243b63048a524.png" class="latex" alt="$n+120$" style="vertical-align: -1px" width="59" height="14" /> that is greater than <img src="http://latex.artofproblemsolving.com/5/4/8/5488790b7b51ff0c06b2c63624fdba37b6775379.png" class="latex" alt="$1120$" style="vertical-align: 0px" width="35" height="13" />.
+</p><p>We try <img src="http://latex.artofproblemsolving.com/4/f/7/4f7a82ea62d0bada5407faa056c338cdc5fd113e.png" class="latex" alt="$21 \cdot 67$" style="vertical-align: -1px" width="51" height="14" />, but it has an even tens digit. We then can try the next highest, using <img src="http://latex.artofproblemsolving.com/7/a/f/7af4b3f8897671e2879b10badf471e5deec8952e.png" class="latex" alt="$77$" width="18" height="12" />, but the <img src="http://latex.artofproblemsolving.com/c/c/5/cc531ae807db12241be6d702bbea9a7c6c6417e2.png" class="latex" alt="$\gcd(n+63, 120) =120$" style="vertical-align: -5px" width="181" height="20" />, instead of <img src="http://latex.artofproblemsolving.com/3/0/2/302e99c1c7cd91a6ae371139e5142ccef5977dca.png" class="latex" alt="$60$" width="17" height="12" />.
+</p><p>Since <img src="http://latex.artofproblemsolving.com/7/1/1/711f5fc6f8d53d2565cff62b15f932f02e0dbc58.png" class="latex" alt="$87$" width="18" height="12" /> is divisible by <img src="http://latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png" class="latex" alt="$3$" width="8" height="12" />, so when multiplied by <img src="http://latex.artofproblemsolving.com/f/2/5/f25d31faf472ddb4c698a14522fe8125c06f8dd8.png" class="latex" alt="$21$" style="vertical-align: 0px" width="17" height="12" />, it will be divisible by <img src="http://latex.artofproblemsolving.com/b/f/2/bf2c9074b396e3af0dea52d792660eea1c77f10f.png" class="latex" alt="$9$" width="8" height="12" />, we do not have to test it.
+</p><p>The next biggest is <img src="http://latex.artofproblemsolving.com/2/3/9/239430b0fc1c7fe38f296a8845ed7446198bda7e.png" class="latex" alt="$97$" width="18" height="12" />, which works and gives us <img src="http://latex.artofproblemsolving.com/2/b/e/2be557827517d524ed36aa675ef95593d6f803ae.png" class="latex" alt="$n=1917$" style="vertical-align: 0px" width="71" height="13" />, which, when the digits are added up, equals <img src="http://latex.artofproblemsolving.com/2/0/7/2072d8fc1840fae0f50c5db7b6a5781e08e62223.png" class="latex" alt="$\boxed{\textbf{(C) } 18}$" style="vertical-align: -10px" width="65" height="28" />.
+</p><p>~parmani
+</p>
+<h2><span class="mw-headline" id="Video_Solutions">Video Solutions</span></h2>
+<h3><span id="Video_Solution_1_(Richard_Rusczyk)"></span><span class="mw-headline" id="Video_Solution_1_.28Richard_Rusczyk.29">Video Solution 1 (Richard Rusczyk)</span></h3>
+<p><a rel="nofollow" class="external free" href="https://www.youtube.com/watch?v=tk3yOGG2K-s&amp;">https://www.youtube.com/watch?v=tk3yOGG2K-s&amp;</a>
+</p>
+<h3><span class="mw-headline" id="Video_Solution_2">Video Solution 2</span></h3>
+<p><a rel="nofollow" class="external free" href="https://youtu.be/8mNMKH0T9W0">https://youtu.be/8mNMKH0T9W0</a> - Happytwin
+</p>
+<h3><span id="Video_Solution_3_(Quick_&amp;_Simple)"></span><span class="mw-headline" id="Video_Solution_3_.28Quick_.26_Simple.29">Video Solution 3 (Quick &amp; Simple)</span></h3>
+<p><a rel="nofollow" class="external free" href="https://youtu.be/e5BJKMEIPEM">https://youtu.be/e5BJKMEIPEM</a>
+</p><p>Education The Study of Everything
+</p>
+<h3><span class="mw-headline" id="Video_Solution_4">Video Solution 4</span></h3>
+<p><a rel="nofollow" class="external free" href="https://www.youtube.com/watch?v=gdGmSyzR908&amp;list=PLLCzevlMcsWNcTZEaxHe8VaccrhubDOlQ&amp;index=5">https://www.youtube.com/watch?v=gdGmSyzR908&amp;list=PLLCzevlMcsWNcTZEaxHe8VaccrhubDOlQ&amp;index=5</a> ~ MathEx
+</p>
+<h3><span class="mw-headline" id="Video_Solution_5">Video Solution 5</span></h3>
+<p><a rel="nofollow" class="external free" href="https://youtu.be/R220vbM_my8?t=899">https://youtu.be/R220vbM_my8?t=899</a> ~ amritvignesh0719062.0
+</p>
+<h2><span class="mw-headline" id="See_Also">See Also</span></h2>
+<table class="wikitable" style="margin:0.5em auto; font-size:95%; border:1px solid black; width:80%;">
+<tbody><tr>
+<td style="background:#ccf;text-align:center;" colspan="3"><b><a href="../2020_AMC_10A.html" title="2020 AMC 10A">2020 AMC 10A</a></b> (<b><a href="../2020_AMC_10A_Problems.html" title="2020 AMC 10A Problems">Problems</a></b> • <b><a href="../2020_AMC_10A_Answer_Key.html" title="2020 AMC 10A Answer Key">Answer Key</a></b> • <a rel="nofollow" class="external text" href="https://artofproblemsolving.com/community/c13">Resources</a>)
+</td></tr>
+<tr>
+<td width="50%" align="center" rowspan="1">Preceded&#160;by<br /><b><a href="Problem_23.html" title="2020 AMC 10A Problems/Problem 23">Problem 23</a></b>
+</td>
+<td width="50%" align="center" rowspan="1">Followed&#160;by<br /><b><a href="Problem_25.html" title="2020 AMC 10A Problems/Problem 25">Problem 25</a></b>
+</td></tr>
+<tr>
+<td colspan="3" style="text-align:center;"><a href="Problem_1.html" title="2020 AMC 10A Problems/Problem 1">1</a> <b>•</b> <a href="Problem_2.html" title="2020 AMC 10A Problems/Problem 2">2</a> <b>•</b> <a href="Problem_3.html" title="2020 AMC 10A Problems/Problem 3">3</a> <b>•</b> <a href="Problem_4.html" title="2020 AMC 10A Problems/Problem 4">4</a> <b>•</b> <a href="Problem_5.html" title="2020 AMC 10A Problems/Problem 5">5</a> <b>•</b> <a href="Problem_6.html" title="2020 AMC 10A Problems/Problem 6">6</a> <b>•</b> <a href="Problem_7.html" title="2020 AMC 10A Problems/Problem 7">7</a> <b>•</b> <a href="Problem_8.html" title="2020 AMC 10A Problems/Problem 8">8</a> <b>•</b> <a href="Problem_9.html" title="2020 AMC 10A Problems/Problem 9">9</a> <b>•</b> <a href="Problem_10.html" title="2020 AMC 10A Problems/Problem 10">10</a> <b>•</b> <a href="Problem_11.html" title="2020 AMC 10A Problems/Problem 11">11</a> <b>•</b> <a href="Problem_12.html" title="2020 AMC 10A Problems/Problem 12">12</a> <b>•</b> <a href="Problem_13.html" title="2020 AMC 10A Problems/Problem 13">13</a> <b>•</b> <a href="Problem_14.html" title="2020 AMC 10A Problems/Problem 14">14</a> <b>•</b> <a href="Problem_15.html" title="2020 AMC 10A Problems/Problem 15">15</a> <b>•</b> <a href="Problem_16.html" title="2020 AMC 10A Problems/Problem 16">16</a> <b>•</b> <a href="Problem_17.html" title="2020 AMC 10A Problems/Problem 17">17</a> <b>•</b> <a href="Problem_18.html" title="2020 AMC 10A Problems/Problem 18">18</a> <b>•</b> <a href="Problem_19.html" title="2020 AMC 10A Problems/Problem 19">19</a> <b>•</b> <a href="Problem_20.html" title="2020 AMC 10A Problems/Problem 20">20</a> <b>•</b> <a href="Problem_21.html" title="2020 AMC 10A Problems/Problem 21">21</a> <b>•</b> <a href="Problem_22.html" title="2020 AMC 10A Problems/Problem 22">22</a> <b>•</b> <a href="Problem_23.html" title="2020 AMC 10A Problems/Problem 23">23</a> <b>•</b> <a class="mw-selflink selflink">24</a> <b>•</b> <a href="Problem_25.html" title="2020 AMC 10A Problems/Problem 25">25</a>
+</td></tr>
+<tr>
+<td colspan="3" style="text-align:center;"><b><a href="../AMC_10_Problems_and_Solutions.html" title="AMC 10 Problems and Solutions"> All AMC 10 Problems and Solutions</a></b>
+</td></tr></tbody></table>
+<p>The problems on this page are copyrighted by the <a rel="nofollow" class="external text" href="http://www.maa.org/">Mathematical Association of America</a>'s <a rel="nofollow" class="external text" href="https://maa.org/student-programs/amc/">American Mathematics Competitions</a>. <a href="../File_AMC_logo.html" class="image"><img alt="AMC logo.png" src="../../../../wiki-images.artofproblemsolving.com/thumb/8/8b/AMC_logo.png/50px-AMC_logo.png" width="50" height="43" style="vertical-align: middle" srcset="https://wiki-images.artofproblemsolving.com//thumb/8/8b/AMC_logo.png/75px-AMC_logo.png 1.5x, https://wiki-images.artofproblemsolving.com//8/8b/AMC_logo.png 2x" /></a>
+</p>
+<div style="clear:both;"></div>
+
+<!-- 
+NewPP limit report
+Cached time: 20250408101014
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.149 seconds
+Real time usage: 10.010 seconds
+Preprocessor visited node count: 3025/1000000
+Preprocessor generated node count: 6986/1000000
+Post‐expand include size: 2237/2097152 bytes
+Template argument size: 158/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 57048/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  531.392      1 -total
+ 60.09%  319.333      1 Template:AMC10_box
+ 39.87%  211.892      1 Template:MAA_Notice
+-->
+</div>
+<!-- Saved in parser cache with key wiki-wiki_:pcache:idhash:18111-0!canonical and timestamp 20250408101004 and revision id 241986
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://artofproblemsolving.com/wiki/index.php?title=2020_AMC_10A_Problems/Problem_24&amp;oldid=241986">https://artofproblemsolving.com/wiki/index.php?title=2020_AMC_10A_Problems/Problem_24&amp;oldid=241986</a>"</div>
+
+
+									<div class="catlinks"><div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="../Special_Categories.html" title="Special:Categories">Category</a>: <ul><li><a href="https://artofproblemsolving.com/wiki/index.php/Category:Introductory_Number_Theory_Problems" title="Category:Introductory Number Theory Problems">Introductory Number Theory Problems</a></li></ul></div></div></div>
+				
+
+							</div>
+		</div>
+	</div>
+</div>
+
+<!-- search:off -->
+	<div class="clearfix"></div>
+
+	
+	<div id="main-footer" class="no-print">
+		<div class="footer-container">
+			<div class="footer-topRow">
+											<a href="https://artofproblemsolving.com/online">
+							<img class="footer-mainLogo"
+							src="https://artofproblemsolving.com/assets/images/logos/aops-online-footer.svg"/>
+						</a>
+										<div class="footer-wasc">
+						<span>
+							Art of Problem Solving is an
+							<br class="wasc-break"/>
+							<span class="footer-accredited">ACS WASC Accredited School</span>
+						</span>
+						<img class="footer-wascLogo"
+						src="../../../assets/images/logos/wasc.png"/>
+					</div>
+			</div>
+			<div class="footer-links">
+				<div class="footer-col">
+					<div class="footer-colHeader">aops programs</div>
+					<div><a class="link" href="https://artofproblemsolving.comonline/">AoPS Online</a></div>
+					<div><a class="link" href="https://beastacademy.com/">Beast Academy</a></div>
+					<div><a class="link" href="https://aopsacademy.org/">AoPS Academy</a></div>
+				</div>
+
+				<div class="footer-col">
+					<div class="footer-colHeader">About</div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/about">About AoPS</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/staff">Our Team</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/history">Our History</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/careers">Jobs</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/blog">AoPS Blog</a></div>
+				</div>
+
+				<div class="footer-col">
+					<div class="footer-colHeader" style="left:-1px;">Site Info</div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/tos">Terms</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/privacy">Privacy</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/contact">Contact Us</a></div>
+				</div>
+
+				<div class="footer-col social">
+					<div class="footer-colHeader">follow us</div>
+					<div class="footer-social">
+													<a class="link" target="_blank" href="https://www.facebook.com/artofproblemsolving">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/facebook.svg" class="sm-icon"/>
+							</a>
+							<a class="link" target="_blank" href="http://twitter.com/AoPSNews">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/twitter.svg" class="sm-icon"/>
+							</a>
+							<a class="link" target="_blank" href="https://www.pinterest.com/artofproblemsolving/pins/">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/pinterest.svg" class="sm-icon"/>
+							</a>
+											</div>
+				</div>
+									<div class="footer-col subscribe">
+						<div class="footer-colHeader">
+							Subscribe for news and updates
+						</div>
+						<form method="post" action="https://artofproblemsolving.com/mailinglist">
+							<input type="email" class="footer-email" placeholder="Enter e-mail" name="subscribe-email">
+							<input type="hidden" name="new-books" value="on">
+							<input type="hidden" name="classes" value="on">
+							<input type="hidden" name="mathjams" value="on">
+							<input type="submit" class="footer-submit" value="">
+							<div class="footer-submit-arrow">
+								<svg x="0px" y="0px" viewBox="0 0 289 289" enable-background="new 0 0 289 289">
+									<g>
+										<path class="arrow-fill" d="M121.5,220.5c-2.6,0-5.1-1-7.1-2.9c-3.9-3.9-3.9-10.2,0-14.1l58.9-58.9l-58.9-58.9c-3.9-3.9-3.9-10.2,0-14.1c3.9-3.9,10.2-3.9,14.1,0l66,66c3.9,3.9,3.9,10.2,0,14.1l-66,66C126.6,219.5,124.1,220.5,121.5,220.5z"/>
+									</g>
+								</svg>
+							</div>
+						</form>
+					</div>
+							</div>
+			<div class="copyright">
+				<span>&copy; 2025 AoPS Incorporated
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div id="small-footer-wrapper">
+		<div class="footer-container">
+							<a href="https://artofproblemsolving.com/online">
+					<img class="footer-mainLogo"
+					src="https://artofproblemsolving.com/assets/images/logos/aops-online-footer.svg"/>
+				</a>
+						<div class="copyright">
+				&copy; 2025 Art of Problem Solving
+				<div class="copyright-links">
+					<a href="https://artofproblemsolving.com/company">About Us</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/contact">Contact Us</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/company/tos">Terms</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/company/privacy">Privacy</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<form id="registration-form" method="post" action="https://artofproblemsolving.com/user/register.php">
+	<input type="hidden" name="username" value="">
+	<input type="hidden" name="password" value="">
+	<input type="hidden" name="from-login" value="true">
+	</form>
+<div id="print-footer" class="printer">Copyright &copy; 2025 Art of Problem Solving</div>
+
+
+
+<div id="epicfail" class="aops-html-modal-epic-fail" style="display: none">
+	<div class="aops-html-modal-inner-epic-fail">
+		<div class="aops-html-modal-main-epic-fail">
+			<p>Something appears to not have loaded correctly.</p>
+		</div>
+		<div class="aops-html-modal-bottom-epic-fail">
+			<p><a onclick="location.reload(true);return false">Click to refresh</a>.</p>
+		</div>
+	</div>
+</div>
+<link rel="stylesheet" href="../../../assets/css/epic-fail.css">
+
+
+
+
+
+<!-- /search:off -->
+
+
+<!-- copied from contact page index, with edits -->
+<script id="footer-tpl-email-dialog" type="text/x-handlebars-template">
+	<div id="mail-dialog">
+		<h1>Email Art of Problem Solving</h1>
+		<p>
+			<input type="text" id="email" name="email" placeholder="Your email address">
+			<input type="text" id="subject" name="subject" placeholder="Subject of message">
+			<textarea id="message" name="message" placeholder="Enter your message"></textarea>
+			<div style="padding:5px 30px">
+				<input type="checkbox" id="email-copy" name="email_copy">
+				<label for="email-copy" id="email-copy-label">Send a copy to my email address.</label>
+			</div>
+			<div style="padding:5px 30px 20px">
+				<input id="footer-submit-btn" type="submit" class="btn btn-primary" value="Send">
+				<input id="footer-cancel-btn" type="submit" class="btn btn-default" value="Cancel">
+			</div>
+		</p>
+		<p id="email-error"></p>
+	</div>
+</script>
+
+
+<script id="footer-tpl-email-confirm" type="text/x-handlebars-template">
+	<div id="mail-dialog-confirm">
+		<h2>Email Sent</h2>
+		<p>Thank you for your email. We will respond to it soon.</p>
+	</div>
+</script>
+
+<!-- bing -->
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5105596"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","../../../../bat.bing.com/bat.js","uetq");</script><noscript><img src="http://bat.bing.com/action/0?ti=5105596&amp;Ver=2" height="0" width="0" style="display:none; visibility: hidden;" /></noscript>
+
+</body>
+<!-- Cached 20250409001926 -->
+
+<!-- Mirrored from artofproblemsolving.com/wiki/index.php/2020_AMC_10A_Problems/Problem_24 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Apr 2025 05:00:51 GMT -->
+</html>
+

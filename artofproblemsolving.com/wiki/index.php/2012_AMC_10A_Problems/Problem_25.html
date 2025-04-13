@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html>
+	
+<!-- Mirrored from artofproblemsolving.com/wiki/index.php/2012_AMC_10A_Problems/Problem_25 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Apr 2025 05:03:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+				
+<script>AoPS = {
+	start_time : new Date().getTime()
+};</script>
+
+<script>
+	AoPS.bootstrap_data = [];
+	AoPS.bd = AoPS.bootstrap_data; // Alias!
+	AoPS.session = {"user_id":1,"platform_user_id":"","username":"Anonymous","avatar":"\/\/avatar.artofproblemsolving.com\/avatar_1.png?t=1","email":"","role":"","logged_in":false,"initialized":false,"needs_coppa_approval":false,"admin":false,"national_staff":false,"wikiname":""};
+	AoPS.bd.assetVersion = 1;
+	AoPS.bd.environment = 'production';
+	AoPS.protected_url = 'https://artofproblemsolving.com/';
+	AoPS.aops_url = 'https://artofproblemsolving.com/';
+	AoPS.academy_url = 'https://aopsacademy.org/';
+</script>
+		<!-- GA plugin and Enhanced Ecommerce -->
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','../../../../www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-1905305-1', 'auto', {allowLinker: true}); // GA Property ID
+		ga('send', 'pageview');
+		</script>
+		<!-- End GA plugin and Enhanced Ecommerce -->
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'../../../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer', 'GTM-59JWRGZ')</script>
+		<!-- End Google Tag Manager -->
+
+		<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1">
+		<meta name="referrer" content="origin">
+
+		<meta name="facebook-domain-verification" content="zmmwg7oqqsqvf8ihckwvzoo85b08gx" />
+
+		
+		<link rel="apple-touch-icon" href="../../../../assets.artofproblemsolving.com/images/apple-touch-icon.png">
+		<title>Art of Problem Solving</title>
+
+		
+		<link href="../../../assets/fonts/font-awesome/css/all.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="../../../assets/css/sharedsite.css">
+		<link rel="stylesheet" href="../../../assets/css/navheader.css">
+		<link rel="stylesheet" href="../../../assets/css/footer.css">
+		<link rel="stylesheet" href="../../../assets/css/main-head.css">
+
+					<link rel="icon" href="https://artofproblemsolving.com/online-favicon.ico?v=2">
+		
+		
+		<script>
+  if (!window.console) console = {log: function() {}, dir: function() {}};
+  $$ = function( selector ) { return document.getElementById( selector ); }
+</script>
+
+							<script src="../../../../assets.artofproblemsolving.com/js/jquery360.min.js"></script>
+							<script src="../../../assets/vendor/jquery/3.6.0/jquery-migrate.min.js"></script>
+					<link rel="stylesheet" href="../../../../cdn.jsdelivr.net/npm/katex%400.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+<script defer src="../../../../cdn.jsdelivr.net/npm/katex%400.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+<script defer src="../../../../cdn.jsdelivr.net/npm/katex%400.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '[katex]', right: '[/katex]', display: false},
+			  {left: '[katex display=true]', right: '[/katex]', display: true} 
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+    });
+</script>
+
+<script>
+MathJax = {
+  tex: {
+	inlineMath: [['[mathjax]', '[/mathjax]'], ['\\(', '\\)']],
+	displayMath: [['[mathjax display=true]', '[/mathjax]']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async src="../../../../cdn.jsdelivr.net/npm/mathjax%403/es5/tex-svg.js"> </script>
+
+				<meta charset="UTF-8"/>
+<title>2012 AMC 10A Problems/Problem 25 - AoPS Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"2012_AMC_10A_Problems/Problem_25","wgTitle":"2012 AMC 10A Problems/Problem 25","wgCurRevisionId":229593,"wgRevisionId":229593,"wgArticleId":10664,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"2012_AMC_10A_Problems/Problem_25","wgRelevantArticleId":10664,"wgRequestId":"043d0760b6f44bc54c2edcbd","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.aopsp":"ready"});mw.loader.implement("user.tokens@09avpoe",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.aopsp.js"]);});</script>
+<link rel="stylesheet" href="https://artofproblemsolving.com/wiki/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cskins.aopsp&amp;only=styles&amp;skin=aopsp"/>
+<script async="" src="https://artofproblemsolving.com/wiki/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=aopsp"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="https://artofproblemsolving.com/wiki/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=aopsp"/>
+<meta name="generator" content="MediaWiki 1.31.1"/>
+<link rel="shortcut icon" href="https://artofproblemsolving.com/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://artofproblemsolving.com/wiki/opensearch_desc.php" title="AoPS Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://artofproblemsolving.com/wiki/api.php?action=rsd"/>
+<link rel="alternate" type="application/atom+xml" title="AoPS Wiki Atom feed" href="https://artofproblemsolving.com/wiki/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<!--[if lt IE 9]><script src="/wiki/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=aopsp&amp;sync=1"></script><![endif]-->
+			</head>
+		<body class="production mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-2012_AMC_10A_Problems_Problem_25 rootpage-2012_AMC_10A_Problems_Problem_25 skin-aopsp action-view resources">
+
+					<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59JWRGZ"
+			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		
+		<div id="page-wrapper">
+
+			<!-- search:off -->
+			
+			<!-- The gray bar at top -->
+			<!-- see shared-site.css -->
+			<div id="top-bar" class="sharedsite-wrapper no-select">
+				<div class="sharedsitebar">
+					<a href="https://artofproblemsolving.com/" class="mobile-title"></a>
+					<div class="sharedsite-links">
+											<a class="site-link main" href="https://artofproblemsolving.com/company">
+												Art of Problem Solving
+						</a>
+						<div class="site">
+													<a class="site-link selected" href="https://artofproblemsolving.com/">
+														<img src="https://artofproblemsolving.com/assets/images/logos/icon-online.svg" class="site-icon">
+								<span class="site-name">AoPS Online</span>
+							</a>
+							<!-- Rich dropdown -->
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-online.svg"/>
+										</div>
+										<div class="site-snippet">
+											Math texts, online classes, and more
+											<br/>for students in grades 5-12.
+										</div>
+										<a target="_blank" class="site-visit aops-primary" href="https://artofproblemsolving.com/">
+											Visit AoPS Online <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://artofproblemsolving.com/store" class="btn btn-primary aops-btn">
+											Books for Grades 5-12
+										</a>
+										<a target="_blank" href="https://artofproblemsolving.com/school" class="btn btn-primary aops-btn">
+											Online Courses
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- End rich dropdown -->
+						</div>
+						<div class="site">
+							<a class="site-link" href="https://beastacademy.com/">
+								<img src="https://artofproblemsolving.com/assets/images/logos/icon-ba.svg" class="site-icon">
+								<span class="site-name">Beast Academy</span>
+							</a>
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-ba.svg"/>
+										</div>
+										<div class="site-snippet">
+											Engaging math books and online learning
+											<br/>for students ages 6-13.
+										</div>
+										<a target="_blank" class="site-visit ba-primary" href="https://beastacademy.com/">
+											Visit Beast Academy <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://beastacademy.com/books" class="btn btn-primary ba-btn">
+											Books for Ages 6-13
+										</a>
+										<a target="_blank" href="https://beastacademy.com/online" class="btn btn-primary ba-btn">
+											Beast Academy Online
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="site">
+							<a class="site-link" href="https://aopsacademy.org/">
+								<img src="https://artofproblemsolving.com/assets/images/logos/icon-academy.svg" class="site-icon">
+								<span class="site-name">AoPS Academy</span>
+							</a>
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-academy.svg"/>
+										</div>
+										<div class="site-snippet">
+											Small live classes for advanced math
+											<br/>and language arts learners in grades 2-12.
+										</div>
+										<a target="_blank" class="site-visit academy-primary" href="https://aopsacademy.org/">
+											Visit AoPS Academy <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://aopsacademy.org/campuses" class="btn btn-primary academy-btn">
+											Find a Physical Campus
+										</a>
+										<a target="_blank" href="https://virtual.aopsacademy.org/" class="btn btn-primary academy-btn">
+											Visit the Virtual Campus
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="header-wrapper" class="no-select">
+				<div class="header-underlay">
+					<div id="header">
+
+						<!-- The white area where main menu options appear -->
+
+						<!-- The menu links -->
+													<div id="main-menubar">
+								<div class="menubar-content">
+									<div class="menubar-logo online">
+										<img class="menubar-hamburger" src="https://artofproblemsolving.com/assets/images/hamburger.svg"/>
+										<a class="logo-img-link" href="https://artofproblemsolving.com/online">
+											<img class="logo-img" src="https://artofproblemsolving.com/assets/images/logos/aops-online.svg"/>
+											<img class="logo-img-mobile" src="https://artofproblemsolving.com/assets/images/logos/aops-online-mobile.svg"/>
+											<img class="logo-img-small" src="https://artofproblemsolving.com/assets/images/logos/aops-online-mobile.svg"/>
+										</a>
+									</div>
+									<div class="menubar-links-outer">
+										<!-- The login links -->
+										<div class="menu-login-wrapper online">
+											
+											<div class="menu-login-item">
+															<div 
+		    id="header-login"
+			class="no-select not-signed-in"
+			style="display:flex">
+
+			<div class="online-login-button solid-rounded-button">Sign&nbsp;In</div><div class="online-register-button">Register</div>
+		</div>
+												</div>
+
+																							<a href="https://artofproblemsolving.com/store/checkout" class="menu-login-item cart">
+													<img class="menu-cart-icon" src="https://artofproblemsolving.com/assets/images/top/cart-icon.svg">
+													<div class="menu-cart-items">
+																													1																											</div>
+												</a>
+											
+										</div>
+										<div class="menubar-labels online">
+											<div class="menubar-label school">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/school">
+														online school
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+														<!-- These have IDs for A/B testing purposes. T27691 -->
+																												<a id="online-school-menu-schedule" href="https://artofproblemsolving.com/school/schedule"> Class Schedule </a>
+														<a id="online-school-menu-recommmendations" href="https://artofproblemsolving.com/school/recommendations"> Recommendations </a>
+														<a id="online-school-menu-woot-courses" href="https://artofproblemsolving.com/school/woot?gtmlist=School_Nav"> Olympiad Courses </a>
+														<a id="online-school-menu-mathjams" href="https://artofproblemsolving.com/school/mathjams"> Free Sessions </a>
+																																									</div>
+												</div>
+											</div>
+											<div class="menubar-label store">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/store">
+														books<span class="menubar-link-ext">tore </span>
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+																																																								<a href="https://artofproblemsolving.com/store/list/aops-curriculum">AoPS Curriculum</a>
+														<a href="https://artofproblemsolving.com/store/list/beast-academy">Beast Academy</a>
+														<a href="https://artofproblemsolving.com/store/online">Online Books</a>
+														<a href="https://artofproblemsolving.com/store/recommendations">Recommendations</a>
+														<a href="https://artofproblemsolving.com/store/list/other-products">Other Books &amp; Gear</a>
+														<a href="https://artofproblemsolving.com/store/list/all-products">All Products</a>
+														<a href="https://artofproblemsolving.com/store/gift-certificates?gtmlist=Bookstore_Nav">Gift Certificates</a>
+																											</div>
+												</div>
+											</div>
+											<div class="menubar-label community">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/community">
+														community
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+																												<a data-cmty href="https://artofproblemsolving.com/community">Forums</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/c13_contests">Contests</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/search">Search</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/faq">Help</a>
+																																									</div>
+												</div>
+											</div>
+											<div class="menubar-label resources">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/resources">
+														resources
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+														<div class="dropdown-columns">
+															<div class="dropdown-category">
+																<span class="dropdown-category-label">math training & tools</span>
+																<a href="https://artofproblemsolving.com/alcumus">Alcumus</a>
+																<a href="https://artofproblemsolving.com/videos">Videos</a>
+																<a href="https://artofproblemsolving.com/ftw">For the Win!</a>
+																<a href="https://artofproblemsolving.com/mathcounts_trainer">MATHCOUNTS Trainer</a>
+																<a href="https://artofproblemsolving.com/contests/practice">AoPS Practice Contests</a>
+																<a href="https://artofproblemsolving.com/wiki/index.php?title=Main_Page">AoPS Wiki</a>
+																<a href="https://artofproblemsolving.com/texer">LaTeX TeXeR</a>
+																<a href="https://artofproblemsolving.com/polymath">MIT PRIMES/CrowdMath</a>
+																<a href="https://artofproblemsolving.com/keeplearning">Keep Learning</a>
+																<a href="https://beastacademy.com/all-ten">All Ten</a>
+																															</div>
+															<div class="dropdown-column">
+																																<div class="dropdown-category category-in-column">
+																	<span class="dropdown-category-label">contests on aops</span>
+																	<a href="https://artofproblemsolving.com/contests/practice">Practice Math Contests</a>
+																	<a href="https://artofproblemsolving.com/contests/usabo">USABO</a>
+																</div>
+																<div class="dropdown-category category-in-column">
+                                                                                                                                        <span class="dropdown-category-label">news</span>
+                                                                                                                                        <a href="https://artofproblemsolving.com/blog">AoPS Blog</a>
+                                                                                                                                        <a href="https://artofproblemsolving.com/blog/webinars/aopswebinars">Webinars</a>
+                                                                                                                                </div>
+															</div>
+														</div>
+														<div class="dropdown-view-more-link-container">
+															<a href="https://artofproblemsolving.com/resources" class="dropdown-view-more-link">view all <span class="aops-icon">0</span></a>
+														</div>
+													</div>
+												</div>
+											</div>
+																							<a href="https://artofproblemsolving.com/store/checkout" class="menubar-label cart">
+													<img class="menu-cart-icon" src="https://artofproblemsolving.com/assets/images/top/cart-icon.svg">
+													<div class="menu-cart-items">
+																													1																											</div>
+												</a>
+																						<div class="menubar-label menu-login-item">
+															<div 
+		    id="header-login"
+			class="no-select not-signed-in"
+			style="display:flex">
+
+			<div class="online-login-button solid-rounded-button">Sign&nbsp;In</div><div class="online-register-button">Register</div>
+		</div>
+												</div>
+																					</div>
+									</div>
+								</div>
+							</div>
+											</div>
+				</div>
+
+								<noscript>
+					<div class="infobar">JavaScript is not enabled. JavaScript is required to fully utilize the site.</div>
+				</noscript>
+
+
+									<div id="breadcrumbs-wrapper">
+						<div id="submenu-icon"></div>
+						<div id="breadcrumbs">
+														<!-- ignore-security-checks -->
+							<div class="title-wrapper"><div class="title"><a href="https://artofproblemsolving.com/wiki">AoPS Wiki</a></div></div>
+														<div class="crumb-wrapper">
+																										<span class="crumb crumb-1">
+																			<!-- ignore-security-checks -->
+										<a href="https://artofproblemsolving.com/resources">Resources</a>
+																		</span>
+																											<i class="aops-font aops-angle-double-right"></i>
+																		<span class="crumb crumb-2">
+																			<!-- ignore-security-checks -->
+										<a href="https://artofproblemsolving.com/wiki">Aops Wiki</a>
+																		</span>
+																											<i class="aops-font aops-angle-double-right"></i>
+																		<span class="crumb crumb-3">
+																			2012 AMC 10A Problems/Problem 25																		</span>
+															</div>
+						</div>
+					</div>
+							</div>
+
+			<!-- search icon script lives in footer.phtml-->
+
+			<!-- /search:off -->
+
+<div id="main-content" class="left-navigation wiki">
+	<div id="side-column-wrapper">
+		<div id="side-column">
+						<div id="content-actions" class="menu open">
+				<div class="submenu">
+					<h1>Page</h1>
+					<div class="submenu-wrapper">
+						<span id="ca-nstab-main" class="selected"><a href="Problem_25.html" title="View the content page " accesskey="c">Article</a></span><span id="ca-talk" class="new"><a href="https://artofproblemsolving.com/wiki/index.php?title=Talk:2012_AMC_10A_Problems/Problem_25&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) " accesskey="t">Discussion</a></span><span id="ca-viewsource"><a href="https://artofproblemsolving.com/wiki/index.php?title=2012_AMC_10A_Problems/Problem_25&amp;action=edit" title="This page is protected.&#10;You can view its source " accesskey="e">View source</a></span><span id="ca-history"><a href="https://artofproblemsolving.com/wiki/index.php?title=2012_AMC_10A_Problems/Problem_25&amp;action=history" title="Past revisions of this page " accesskey="h">History</a></span>					</div>
+				</div>
+			</div>
+			<div id="toolbox" class="menu open">
+				<div class="submenu">
+					<h1>Toolbox</h1>
+					<div class="submenu-wrapper">
+						<span id="n-recentchanges"><a href="../Special_RecentChanges.html" title="A list of recent changes in the wiki " accesskey="r">Recent changes</a></span><span id="n-randompage"><a href="https://artofproblemsolving.com/wiki/index.php/Special:Random" title="Load a random page " accesskey="x">Random page</a></span><span id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></span><span id="t-whatlinkshere"><a href="https://artofproblemsolving.com/wiki/index.php/Special:WhatLinksHere/2012_AMC_10A_Problems/Problem_25" title="A list of all wiki pages that link here " accesskey="j">What links here</a></span><span id="t-specialpages"><a href="../Special_SpecialPages.html" title="A list of all special pages " accesskey="q">Special pages</a></span>					</div>
+				</div>
+			</div>
+			
+			<div id="search" class="menu open">
+				<h1>Search</h1>
+				<div class="submenu-wrapper" style="margin-bottom:5px;">
+					<form action="https://artofproblemsolving.com/wiki/index.php" id="searchform" class="mw-search">
+						<input type="hidden" name="title" value="Special:Search">
+						<input type="search" name="search" placeholder="Search" value="" accesskey="f" id="searchInput">
+						<div style="margin:0 5px 5px 5px;text-align:right;"><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="btn btn-primary searchButton"/></div>
+					</form>
+				</div>
+			</div>
+
+			<!--
+			<div class="menu open">
+				<h1>Note</h1>
+				<div class="submenu-wrapper" style="padding:10px;color:#444;">
+					Please do not discuss the 2015 AMC 8 Competition on any website until November 25th.
+				</div>
+			</div>
+			-->
+		</div>
+	</div>
+
+	<div id="main-column" style="margin-top:10px">
+				<div class="page-wrapper">
+						<div id="mw-js-message" style="display:none;"></div>
+			<h1 id="firstHeading" class="firstHeading">2012 AMC 10A Problems/Problem 25</h1>
+
+						
+			<div class="mw-body">
+												
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Problem"><span class="tocnumber">1</span> <span class="toctext">Problem</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Solution_1"><span class="tocnumber">2</span> <span class="toctext">Solution 1</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Solution_2"><span class="tocnumber">3</span> <span class="toctext">Solution 2</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Appendix"><span class="tocnumber">3.1</span> <span class="toctext">Appendix</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Solution_3"><span class="tocnumber">4</span> <span class="toctext">Solution 3</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Solution_4"><span class="tocnumber">5</span> <span class="toctext">Solution 4</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Video_Solution_by_Richard_Rusczyk"><span class="tocnumber">6</span> <span class="toctext">Video Solution by Richard Rusczyk</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#See_Also"><span class="tocnumber">7</span> <span class="toctext">See Also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Problem">Problem</span></h2>
+<p>Real numbers <img src="http://latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" />, <img src="http://latex.artofproblemsolving.com/0/9/2/092e364e1d9d19ad5fffb0b46ef4cc7f2da02c1c.png" class="latex" alt="$y$" style="vertical-align: -4px" width="11" height="13" />, and <img src="http://latex.artofproblemsolving.com/b/1/3/b13f21416d84e13708696f34dea81026cda583c9.png" class="latex" alt="$z$" style="vertical-align: -1px" width="11" height="10" /> are chosen independently and at random from the interval <img src="http://latex.artofproblemsolving.com/1/1/e/11ef480c3077b93f3ac006b998c520ece6100116.png" class="latex" alt="$[0,n]$" style="vertical-align: -5px" width="36" height="18" /> for some positive integer <img src="http://latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" />. The probability that no two of <img src="http://latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" />, <img src="http://latex.artofproblemsolving.com/0/9/2/092e364e1d9d19ad5fffb0b46ef4cc7f2da02c1c.png" class="latex" alt="$y$" style="vertical-align: -4px" width="11" height="13" />, and <img src="http://latex.artofproblemsolving.com/b/1/3/b13f21416d84e13708696f34dea81026cda583c9.png" class="latex" alt="$z$" style="vertical-align: -1px" width="11" height="10" /> are within 1 unit of each other is greater than <img src="http://latex.artofproblemsolving.com/7/b/6/7b6e1f3fb13ce14a224503cae0227779aca077ac.png" class="latex" alt="$\frac {1}{2}$" style="vertical-align: -12px" width="11" height="37" />. What is the smallest possible value of <img src="http://latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" />?
+</p><p><img src="http://latex.artofproblemsolving.com/3/a/f/3af1025237725763f525a2be317da1aefcf3c13e.png" class="latex" alt="$\textbf{(A)}\ 7\qquad\textbf{(B)}\ 8\qquad\textbf{(C)}\ 9\qquad\textbf{(D)}\ 10\qquad\textbf{(E)}\ 11$" style="vertical-align: -4px" width="366" height="17" />
+</p>
+<h2><span class="mw-headline" id="Solution_1">Solution 1</span></h2>
+<p>Since <img src="http://latex.artofproblemsolving.com/a/c/c/accc80fdf164cef264f56a82b6f9f6add320fe05.png" class="latex" alt="$x,y,z$" style="vertical-align: -4px" width="47" height="13" /> are all reals located in <img src="http://latex.artofproblemsolving.com/a/5/8/a585433224883cbcd304f34129a152b97d5ed96e.png" class="latex" alt="$[0, n]$" style="vertical-align: -5px" width="40" height="20" />, the number of choices for each one is continuous so we use geometric probability.
+</p><p>WLOG(<a href="https://artofproblemsolving.com/wiki/index.php/Without_loss_of_generality" title="Without loss of generality">Without loss of generality</a>), assume that <img src="http://latex.artofproblemsolving.com/d/c/c/dcc09c25c9a8840dfec63d217d2408f8390b035f.png" class="latex" alt="$n\geq x \geq y \geq z \geq 0$" style="vertical-align: -3px" width="145" height="16" />. Then the set of points <img src="http://latex.artofproblemsolving.com/c/7/3/c73ed093cc73a8d9a14185fa525e7067e5c3725d.png" class="latex" alt="$(x,y,z)$" style="vertical-align: -4px" width="58" height="18" /> is a tetrahedron, or a triangular pyramid. The point <img src="http://latex.artofproblemsolving.com/c/7/3/c73ed093cc73a8d9a14185fa525e7067e5c3725d.png" class="latex" alt="$(x,y,z)$" style="vertical-align: -4px" width="58" height="18" /> distributes uniformly in this region. If this is not easy to understand, read Solution II.
+</p><p>The altitude of the tetrahedron is <img src="http://latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> and the base is an isosceles right triangle with a leg length <img src="http://latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" />. The volume is <img src="http://latex.artofproblemsolving.com/f/1/9/f194bee79c7c7f83531d1c8e2ef52a294d9fa3e3.png" class="latex" alt="$V_1=\dfrac{n^3}{6}$" style="vertical-align: -12px" width="63" height="39" />, as shown in the first figure in red.
+</p><p><img src="http://latex.artofproblemsolving.com/2/2/8/2285b359bce768e16b84f3db50ed3115f55a9e9a.png" class="latexcenter" alt="[asy] import three; unitsize(10cm); size(150); currentprojection=orthographic(1/2,-1,2/3);  // three - currentprojection, orthographic draw((1,1,0)--(0,1,0)--(0,0,0),dashed); draw((0,0,0)--(0,0,1)); draw((0,1,0)--(0,1,1),dashed); draw((1,1,0)--(1,1,1)); draw((1,0,0)--(1,0,1)); draw((0,0,1)--(1,0,1)--(1,1,1)--(0,1,1)--cycle);  draw((0,0,0)--(1,0,0)--(1,1,0)--(1,1,1), red); draw((1,1,0)--(0,0,0)--(1,1,1), dashed+red); draw((1,1,1)--(1,0,0), red); [/asy]" width="218" height="252" />
+</p><p><br />
+Now we will find the region with points satisfying  <img src="http://latex.artofproblemsolving.com/7/6/f/76fcab0c36f380a1a8b9122d73622532f444123e.png" class="latex" alt="$|x-y|\geq1$" style="vertical-align: -4px" width="84" height="18" />, <img src="http://latex.artofproblemsolving.com/8/e/7/8e7b07e47aeefba233189cc84b2cfd0a23daec3a.png" class="latex" alt="$|y-z|\geq1$" style="vertical-align: -4px" width="83" height="18" />, <img src="http://latex.artofproblemsolving.com/3/8/3/3836268c0dffcc93878102173f4b51124cd5f6ac.png" class="latex" alt="$|z-x|\geq1$" style="vertical-align: -4px" width="84" height="18" />.
+</p><p>Since <img src="http://latex.artofproblemsolving.com/d/c/c/dcc09c25c9a8840dfec63d217d2408f8390b035f.png" class="latex" alt="$n\geq x \geq y \geq z \geq 0$" style="vertical-align: -3px" width="145" height="16" />, we have <img src="http://latex.artofproblemsolving.com/7/6/2/762a226d52f9480c1bce4a78ddc9ba97c9a46081.png" class="latex" alt="$x-y\geq1$" style="vertical-align: -3px" width="74" height="15" />, <img src="http://latex.artofproblemsolving.com/7/8/c/78c02a4076ad1e4bea54f5a832fe84366eea3d16.png" class="latex" alt="$y-z\geq1$" style="vertical-align: -3px" width="73" height="15" />.
+</p><p>The region of points <img src="http://latex.artofproblemsolving.com/c/7/3/c73ed093cc73a8d9a14185fa525e7067e5c3725d.png" class="latex" alt="$(x,y,z)$" style="vertical-align: -4px" width="58" height="18" /> satisfying the condition is shown in the second figure in black. It is a tetrahedron, too.
+</p><p><img src="http://latex.artofproblemsolving.com/4/8/4/484a13924e013fbd9bda886c8f6266ce9cbe639e.png" class="latexcenter" alt="[asy] import three; unitsize(10cm); size(150); currentprojection=orthographic(1/2, -1, 2/3);  // three - currentprojection,  orthographic draw((1, 1, 0)--(0, 1, 0)--(0, 0, 0), dashed+green); draw((0, 0, 0)--(0, 0, 1), green); draw((0, 1, 0)--(0, 1, 1), dashed+green);  draw((1, 0, 0)--(1, 0, 1), green); draw((0, 0, 1)--(1, 0, 1)--(1, 1, 1)--(0, 1, 1)--cycle, green);    draw((1,0,0)--(1,1,0)--(0,0,0)--(1,1,1), dashed+red); draw((0,0,0)--(1,0,0)--(1,1,1), red); draw((1,1,1)--(1,1,0)--(1,0.9,0), red);  draw((1, 0.1, 0)--(1, 0.9, 0)--(1, 0.9, 0.8)--cycle); draw((0.2, 0.1, 0)--(1, 0.9, 0.8),dashed); draw((1, 0.1, 0)--(0.2, 0.1, 0)--(1, 0.9, 0),dashed);  [/asy]" width="218" height="252" />
+</p><p>The volume of this region is <img src="http://latex.artofproblemsolving.com/d/f/c/dfce4e5c9a6900f6150b8c9c541d6c5a2b33dbe4.png" class="latex" alt="$V_2=\dfrac{(n-2)^3}{6}$" style="vertical-align: -12px" width="108" height="39" />.
+</p><p>So the probability is <img src="http://latex.artofproblemsolving.com/0/1/c/01c999d8dfacc159d9ecded869b82858f5872cd5.png" class="latex" alt="$p=\dfrac{V_2}{V_1}=\dfrac{(n-2)^3}{n^3}$" style="vertical-align: -15px" width="146" height="41" />.
+</p><p>Substituting <img src="http://latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> with the values in the choices, we find that when <img src="http://latex.artofproblemsolving.com/d/c/c/dcc1b21210db29332b1a7d9ce088fd457f23aeee.png" class="latex" alt="$n=10$" style="vertical-align: 0px" width="52" height="13" />, <img src="http://latex.artofproblemsolving.com/e/7/b/e7b1b8f065dfe6491448d53f0d688e207daa36d5.png" class="latex" alt="$p=\frac{512}{1000}&gt;\frac{1}{2}$" style="vertical-align: -13px" width="110" height="38" />, when <img src="http://latex.artofproblemsolving.com/1/8/f/18fb781bb0840e30c7a894eac0d3a0f67fcd3157.png" class="latex" alt="$n=9$" width="43" height="12" />, <img src="http://latex.artofproblemsolving.com/2/5/f/25ff65a061318064caca7f8df5d33c85162bef57.png" class="latex" alt="$p=\frac{343}{729}&lt;\frac{1}{2}$" style="vertical-align: -12px" width="101" height="37" />. So <img src="http://latex.artofproblemsolving.com/4/2/4/4248c755674c284535b17e56b89fae238ede16a0.png" class="latex" alt="$n\geq 10$" style="vertical-align: -2px" width="52" height="15" />.
+</p><p>So the answer is <img src="http://latex.artofproblemsolving.com/4/5/6/4569b1b9821ea1d1515707c2b1344399a0f98d46.png" class="latex" alt="$\boxed{\textbf{(D)}\ 10}$" style="vertical-align: -10px" width="65" height="28" />.
+</p>
+<h2><span class="mw-headline" id="Solution_2">Solution 2</span></h2>
+<p>Because <img src="http://latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" />, <img src="http://latex.artofproblemsolving.com/0/9/2/092e364e1d9d19ad5fffb0b46ef4cc7f2da02c1c.png" class="latex" alt="$y$" style="vertical-align: -4px" width="11" height="13" />, and <img src="http://latex.artofproblemsolving.com/b/1/3/b13f21416d84e13708696f34dea81026cda583c9.png" class="latex" alt="$z$" style="vertical-align: -1px" width="11" height="10" /> are chosen independently and at random from the interval <img src="http://latex.artofproblemsolving.com/1/1/e/11ef480c3077b93f3ac006b998c520ece6100116.png" class="latex" alt="$[0,n]$" style="vertical-align: -5px" width="36" height="18" />, which means that  <img src="http://latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" />, <img src="http://latex.artofproblemsolving.com/0/9/2/092e364e1d9d19ad5fffb0b46ef4cc7f2da02c1c.png" class="latex" alt="$y$" style="vertical-align: -4px" width="11" height="13" />, and <img src="http://latex.artofproblemsolving.com/b/1/3/b13f21416d84e13708696f34dea81026cda583c9.png" class="latex" alt="$z$" style="vertical-align: -1px" width="11" height="10" /> distributes uniformly and independently in the interval <img src="http://latex.artofproblemsolving.com/1/1/e/11ef480c3077b93f3ac006b998c520ece6100116.png" class="latex" alt="$[0,n]$" style="vertical-align: -5px" width="36" height="18" />. So the point <img src="http://latex.artofproblemsolving.com/3/1/b/31b1e1af4531148cbc079023f68c2b0102c4ee69.png" class="latex" alt="$(x, y, z)$" style="vertical-align: -4px" width="58" height="18" /> distributes uniformly in the cubic <img src="http://latex.artofproblemsolving.com/8/b/9/8b9f058c45b3ad8e5e3c4354aee27f33d11ea638.png" class="latex" alt="$0\leqslant x, y, z \leqslant n$" style="vertical-align: -3px" width="113" height="16" />, as shown in the figure below. The volume of this cubic is <img src="http://latex.artofproblemsolving.com/5/6/b/56b387cadff1b1ca445bdf1315ee783c21313530.png" class="latex" alt="$V_0=n^3$" style="vertical-align: -2px" width="59" height="17" />.
+</p><p><a href="https://artofproblemsolving.com/wiki/index.php/File:Cubic.png" class="image"><img alt="Cubic.png" src="https://wiki-images.artofproblemsolving.com//0/05/Cubic.png" width="286" height="243" /></a>
+</p><p>As we want to find the probablity of the incident 
+<img src="http://latex.artofproblemsolving.com/e/5/0/e50cf045c83f08e238a9337ba64dc0e390590e3e.png" class="latex" alt="$A=\big\{ |x-y| \geq 1, |y-z| \geq1, |z-x| \geq 1 \big\}$" style="vertical-align: -6px" width="328" height="22" />, 
+we should find the volume of the region of points such that <img src="http://latex.artofproblemsolving.com/b/6/c/b6cc60888e4d85efc5084fe1136dbd8704563bf4.png" class="latex" alt="$|x-y|\geq 1$" style="vertical-align: -4px" width="84" height="18" />, <img src="http://latex.artofproblemsolving.com/c/9/6/c9660fc951c584a5331917583fe302703a6ac1e3.png" class="latex" alt="$|y-z|\geq 1$" style="vertical-align: -4px" width="83" height="18" />, <img src="http://latex.artofproblemsolving.com/8/8/b/88bc3fe9e1bd18bf16d6195f210fc8afdfab62e4.png" class="latex" alt="$|z-x|\geq 1$" style="vertical-align: -4px" width="84" height="18" /> and <img src="http://latex.artofproblemsolving.com/2/c/c/2ccacfee2096f02c0cb37b7d9adc3be687df9698.png" class="latex" alt="$0\leq x, y, z \leq n$" style="vertical-align: -3px" width="113" height="16" />.
+</p><p>Now we will find the region  <img src="http://latex.artofproblemsolving.com/a/f/1/af1edfe6806e20f64fce2d0316305adb767bd64a.png" class="latex" alt="$\big\{ (x,y,z)\ | \ 0\leq x, y, z \leq n, |x-y|\geq 1, |y-z|\geq 1, |z-x|\geq 1 \big\}$" style="vertical-align: -7px" width="492" height="24" />.
+</p><p>The region can be generated by cutting off 3 slices corresponding to <img src="http://latex.artofproblemsolving.com/b/1/6/b16a121c5ae8a79e236c331e76f220c6945e66d2.png" class="latex" alt="$|x-y|&lt; 1$" style="vertical-align: -4px" width="84" height="18" />, <img src="http://latex.artofproblemsolving.com/6/1/4/614f1f19a1a2f9f7c7651e2d8e5a54c0f5b4ef5c.png" class="latex" alt="$|y-z|&lt; 1$" style="vertical-align: -4px" width="83" height="18" />, and <img src="http://latex.artofproblemsolving.com/1/3/4/134456b75a7057e8a56fdc164d4b3a3ba1bec8a3.png" class="latex" alt="$|z-x|&lt; 1$" style="vertical-align: -4px" width="84" height="18" />, respectively, from the cubic.
+</p><p>After cutting off a slice corresponding to <img src="http://latex.artofproblemsolving.com/b/1/6/b16a121c5ae8a79e236c331e76f220c6945e66d2.png" class="latex" alt="$|x-y|&lt; 1$" style="vertical-align: -4px" width="84" height="18" />, we get two triangular prisms, as shown in the figure.
+</p><p><a href="https://artofproblemsolving.com/wiki/index.php/File:2.png" class="image"><img alt="2.png" src="https://wiki-images.artofproblemsolving.com//f/fb/2.png" width="386" height="394" /></a>
+</p><p>In order to observe the object clearly, we rotate the object by the <img src="http://latex.artofproblemsolving.com/b/1/3/b13f21416d84e13708696f34dea81026cda583c9.png" class="latex" alt="$z$" style="vertical-align: -1px" width="11" height="10" /> axis, as shown.
+</p><p>We can draw the slice corresponding to <img src="http://latex.artofproblemsolving.com/6/1/4/614f1f19a1a2f9f7c7651e2d8e5a54c0f5b4ef5c.png" class="latex" alt="$|y-z|&lt; 1$" style="vertical-align: -4px" width="83" height="18" /> on the object.
+</p><p><a href="https://artofproblemsolving.com/wiki/index.php/File:4B.png" class="image"><img alt="4B.png" src="https://wiki-images.artofproblemsolving.com//f/f7/4B.png" width="500" height="486" /></a>
+</p><p>After cutting off the slice corresponding to <img src="http://latex.artofproblemsolving.com/6/1/4/614f1f19a1a2f9f7c7651e2d8e5a54c0f5b4ef5c.png" class="latex" alt="$|y-z|&lt; 1$" style="vertical-align: -4px" width="83" height="18" />, we have 4 pieces left.
+</p><p><a href="https://artofproblemsolving.com/wiki/index.php/File:5.png" class="image"><img alt="5.png" src="https://wiki-images.artofproblemsolving.com//8/82/5.png" width="484" height="487" /></a>
+</p><p>After cutting off the slice corresponding to <img src="http://latex.artofproblemsolving.com/1/3/4/134456b75a7057e8a56fdc164d4b3a3ba1bec8a3.png" class="latex" alt="$|z-x|&lt; 1$" style="vertical-align: -4px" width="84" height="18" />, we have 6 congruent triangular prisms. 
+</p><p><a href="https://artofproblemsolving.com/wiki/index.php/File:6B.png" class="image"><img alt="6B.png" src="https://wiki-images.artofproblemsolving.com//6/64/6B.png" width="450" height="471" /></a>
+</p><p>Here we draw all the pictures in colors in order to explain the solution clearly. That does not mean that the students should do it in the examination. They can draw a figure with lines only, as shown below.
+</p><p><a href="https://artofproblemsolving.com/wiki/index.php/File:7.png" class="image"><img alt="7.png" src="https://wiki-images.artofproblemsolving.com//9/9e/7.png" width="515" height="530" /></a>
+</p><p>Every triangular pyramid has an altitude <img src="http://latex.artofproblemsolving.com/e/f/9/ef9b02e32cfba0db0f9038a8d077596720f62e91.png" class="latex" alt="$n-2$" width="41" height="12" /> and a base of isoceless right triangle with leg length <img src="http://latex.artofproblemsolving.com/e/f/9/ef9b02e32cfba0db0f9038a8d077596720f62e91.png" class="latex" alt="$n-2$" width="41" height="12" />, so the volume is <img src="http://latex.artofproblemsolving.com/6/a/2/6a21938aeb74b816ddca11e4af77d078335bc4c7.png" class="latex" alt="$(n-2)^3/6$" style="vertical-align: -4px" width="81" height="19" />.
+Then the volume of the region <img src="http://latex.artofproblemsolving.com/c/d/f/cdf64006fe81ffa34f3d91b45adfa8b72ce9c46a.png" class="latex" alt="$\big\{ (x,y,z)\ | \ 0\leqslant x, y, z \leqslant n, |x-y|\geqslant 1, |y-z|\geqslant 1, |z-x|\geqslant 1 \big\}$" style="vertical-align: -6px" width="486" height="22" /> is <img src="http://latex.artofproblemsolving.com/5/6/0/5607d24aa96cc0bf9f301f4007d2180f6b95d399.png" class="latex" alt="$V_A=6\times(n-2)^3/6$" style="vertical-align: -4px" width="158" height="19" />=<img src="http://latex.artofproblemsolving.com/f/1/a/f1a89b0299cecd9ae215283272bf590aec449959.png" class="latex" alt="$(n-2)^3$" style="vertical-align: -4px" width="62" height="19" />.
+</p><p>So the probability of the incident <img src="../../../../latex.artofproblemsolving.com/0/1/9/019e9892786e493964e145e7c5cf7b700314e53b.png" class="latex" alt="$A$" width="13" height="13" /> is <img src="http://latex.artofproblemsolving.com/2/e/c/2ecc553bc352707eaeee1b9635bcc54c0f4056a9.png" class="latex" alt="$P(A)=\dfrac{V_A}{V_0}$" style="vertical-align: -15px" width="89" height="40" />=<img src="http://latex.artofproblemsolving.com/7/8/0/780f83cadb276375060edfcf4da7ee2978ca9267.png" class="latex" alt="$\dfrac{(n-2)^3}{n^3}$" style="vertical-align: -12px" width="66" height="39" />.
+</p><p>Then we can get the answer the same way as Solution I.
+</p><p>The answer is <img src="http://latex.artofproblemsolving.com/4/5/6/4569b1b9821ea1d1515707c2b1344399a0f98d46.png" class="latex" alt="$\boxed{\textbf{(D)}\ 10}$" style="vertical-align: -10px" width="65" height="28" />.
+</p><p><br />
+</p>
+<hr />
+<p><br />
+If there is no choice for selection, we can also find the minimum value of the integer <img src="http://latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> if we do not substitute <img src="http://latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> by the possible values one by one.
+</p><p>Let <img src="http://latex.artofproblemsolving.com/3/6/4/36463df1e7e1ab1aebb2a24494f62b86c0a05eb4.png" class="latex" alt="$P(A)&gt;1/2$" style="vertical-align: -4px" width="92" height="18" />, i.e., <img src="http://latex.artofproblemsolving.com/4/9/5/4958d446ba3b0f258c0906c4449b2f94d4c1fea0.png" class="latex" alt="$\dfrac{(n-2)^3}{n^3}&gt;\dfrac{1}{2}$" style="vertical-align: -12px" width="103" height="39" />,  so <img src="http://latex.artofproblemsolving.com/1/1/f/11fec8e3783cba7af712a35e119d0dfeb69eef8b.png" class="latex" alt="$\dfrac{n-2}{n}&gt;\dfrac{1}{\sqrt[^3\!]{2}}$" style="vertical-align: -17px" width="96" height="42" />, or <img src="http://latex.artofproblemsolving.com/e/8/0/e8028e3a65cb3254bc4dc22aff1e97bb68256798.png" class="latex" alt="$1-\dfrac{2}{n}&gt;\dfrac{1}{\sqrt[^3\!]{2}}$" style="vertical-align: -17px" width="96" height="42" />, hence <img src="http://latex.artofproblemsolving.com/1/2/e/12eb3424a5a1d13505ef93deac36407472d06b99.png" class="latex" alt="$n&gt;\dfrac{2\sqrt[^3\!]{2}}{\sqrt[^3\!]{2}-1}$" style="vertical-align: -17px" width="92" height="47" />.
+</p><p>Now we will estimate the value of <img src="http://latex.artofproblemsolving.com/a/6/b/a6b49fb18dc3f8000cf8081e58b1eadc8dfa606d.png" class="latex" alt="$\dfrac{2\sqrt[^3\!]{2}}{\sqrt[^3\!]{2}-1}$" style="vertical-align: -18px" width="61" height="49" /> without a calculator.
+</p><p>Since <img src="http://latex.artofproblemsolving.com/c/2/a/c2a65d05657e7043d31183821608815178bda35d.png" class="latex" alt="$a^3-1$" style="vertical-align: 0px" width="47" height="15" />=<img src="http://latex.artofproblemsolving.com/f/4/c/f4ccbf7a94d8e01dd984a66979294fb711160e11.png" class="latex" alt="$(a-1)(a^2+a+1)$" style="vertical-align: -4px" width="147" height="19" />, so
+<img src="http://latex.artofproblemsolving.com/a/6/b/a6b49fb18dc3f8000cf8081e58b1eadc8dfa606d.png" class="latex" alt="$\dfrac{2\sqrt[^3\!]{2}}{\sqrt[^3\!]{2}-1}$" style="vertical-align: -18px" width="61" height="49" />
+=<img src="http://latex.artofproblemsolving.com/3/3/d/33d8113e0e85f2e2b23412c66bacab2c8429507f.png" class="latex" alt="$\dfrac{2\sqrt[^3\!]{2}\times\left( \sqrt[^3\!]{2}^2+\sqrt[^3\!]{2}+1\right)}{\left( \sqrt[^3\!]{2}-1\right)\left( \sqrt[^3\!]{2}^2+\sqrt[^3\!]{2}+1\right)}$" style="vertical-align: -30px" width="211" height="69" />
+=<img src="http://latex.artofproblemsolving.com/c/0/0/c00f4d1a9b38664554af74b180c7c8949739de63.png" class="latex" alt="$\dfrac{2\times\left( 2+\sqrt[^3\!]{2}^2+\sqrt[^3\!]{2}\right)}{ \sqrt[^3\!]{2}^3-1}$" style="vertical-align: -21px" width="163" height="60" />
+=<img src="http://latex.artofproblemsolving.com/6/6/2/662861acac0e07a21d39833cc13df6b50380c024.png" class="latex" alt="$2\times\left( 2+\sqrt[^3\!]{4}+\sqrt[^3\!]{2}\right)$" style="vertical-align: -11px" width="150" height="32" />.
+</p><p>Now we would get the approximation of <img src="http://latex.artofproblemsolving.com/9/3/5/9359bf71f31b0fa16a4273903dabb9beea873d91.png" class="latex" alt="$\sqrt[^3\!]{4}$" style="vertical-align: -1px" width="24" height="20" /> and <img src="http://latex.artofproblemsolving.com/6/c/c/6ccf223be196a5a888abb32a3b0c7ce0a3284cbe.png" class="latex" alt="$\sqrt[^3\!]{2}$" style="vertical-align: -1px" width="24" height="20" />.
+</p><p>In order to avoid compicated computation, we get the approximation with one decimal digit only.
+</p><p>Estimation of <img src="http://latex.artofproblemsolving.com/6/c/c/6ccf223be196a5a888abb32a3b0c7ce0a3284cbe.png" class="latex" alt="$\sqrt[^3\!]{2}$" style="vertical-align: -1px" width="24" height="20" />.
+</p><p>Since <img src="http://latex.artofproblemsolving.com/2/d/5/2d54e8d8686d982766120dbd13c773c89aa14375.png" class="latex" alt="$1.5^3=2.25\times1.5&gt;2$" style="vertical-align: 0px" width="165" height="15" />, so <img src="http://latex.artofproblemsolving.com/4/2/b/42b9affe8946c3dc83e6786ffa7d6184a76bceb3.png" class="latex" alt="$1&lt;\sqrt[^3\!]{2}&lt;1.5$" style="vertical-align: -2px" width="106" height="22" />.
+</p><p>The mean of 1 and 1.5 with one decimal digit is about 1.3 .
+</p><p>As <img src="http://latex.artofproblemsolving.com/b/c/8/bc8b9238cf3523f244cc7aa66f9f047a7d7db6f3.png" class="latex" alt="$1.3^3=1.69\times 1.3=2.197&gt;2$" style="vertical-align: 0px" width="231" height="15" />, so <img src="http://latex.artofproblemsolving.com/a/9/e/a9e9fd0e18c95b3c31aa2dcbf551d55e2639ee6c.png" class="latex" alt="$1&lt;\sqrt[^3\!]{2}&lt;1.3$" style="vertical-align: -2px" width="106" height="22" />.
+</p><p>The mean of 1 and 1.3 with one decimal digit is about 1.2.
+</p><p>As <img src="http://latex.artofproblemsolving.com/1/4/8/1484efa700846bd791e646c47e68a0bba54f2050.png" class="latex" alt="$1.2^3=1.44\times 1.2=1.728&lt;2$" style="vertical-align: 0px" width="231" height="15" />, so <img src="http://latex.artofproblemsolving.com/7/f/2/7f2525880c36ca599b114f73972b8b1d6ae6a88a.png" class="latex" alt="$1.2&lt;\sqrt[^3\!]{2}&lt;1.3$" style="vertical-align: -1px" width="118" height="20" />.
+</p><p>Estimation of <img src="http://latex.artofproblemsolving.com/9/3/5/9359bf71f31b0fa16a4273903dabb9beea873d91.png" class="latex" alt="$\sqrt[^3\!]{4}$" style="vertical-align: -1px" width="24" height="20" />.
+</p><p>As <img src="http://latex.artofproblemsolving.com/8/6/9/869adf417fb791ceaaab3dadedca770d4e6619a6.png" class="latex" alt="$\sqrt[^3\!]{4}=\sqrt[^3\!]{2}^2$" style="vertical-align: -1px" width="77" height="23" />, so <img src="http://latex.artofproblemsolving.com/9/4/2/9429959f1fccd564f7f7c05a9a49e2999b53f7f0.png" class="latex" alt="$1.2^2&lt;\sqrt[^3\!]{4}&lt;1.3^2$" style="vertical-align: -1px" width="132" height="20" />,
+then <img src="http://latex.artofproblemsolving.com/3/4/c/34cd347087d3c5cb41d8811d53bfde3c465106fb.png" class="latex" alt="$1.24&lt;\sqrt[^3\!]{4}&lt;1.69$" style="vertical-align: -1px" width="136" height="20" />.
+</p><p>As <img src="http://latex.artofproblemsolving.com/b/6/4/b64ec401b22003f63519464223bc6bef23f179ce.png" class="latex" alt="$1.5^3=2.25\times 1.5=3.375&lt;4$" style="vertical-align: 0px" width="231" height="15" />, so <img src="http://latex.artofproblemsolving.com/5/c/6/5c6c00f0f52eac2f7ae87d4bb9ab903a2cfa39fb.png" class="latex" alt="$1.5&lt;\sqrt[^3\!]{4}&lt;1.69$" style="vertical-align: -1px" width="127" height="20" />.
+</p><p>The mean of 1.5 and 1.69 with one decimal digit is about 1.6.
+</p><p>As <img src="http://latex.artofproblemsolving.com/a/1/e/a1eec77eb1b1da231c7d6981bd3e2a51546a2c23.png" class="latex" alt="$1.6^3=(16/10)^3=(2^4/10)^3=2^{12}/10^3=4\times 2^10/10^3=4\times 1.024&gt;4$" style="vertical-align: -5px" width="542" height="21" />, so <img src="http://latex.artofproblemsolving.com/2/2/5/225143b294aa305700ea4bb7e7ebc8be717a9e7c.png" class="latex" alt="$1.5&lt;\sqrt[^3\!]{4}&lt;1.6$" style="vertical-align: -1px" width="118" height="20" />.
+</p><p><br />
+Then <img src="http://latex.artofproblemsolving.com/e/3/3/e330484ce536a0cefb377be4a69650ff99f1f2e1.png" class="latex" alt="$2\times(2+1.5+1.2)&lt;2\times\left(2+\sqrt[^3\!]{4}+\sqrt[^3\!]{2}\right)&lt;2\times(2+1.6+1.3)$" style="vertical-align: -11px" width="491" height="32" />, i.e., 
+<img src="http://latex.artofproblemsolving.com/c/c/0/cc0eca3f36be9d5b90624e729d409cbc062234e3.png" class="latex" alt="$9.4&lt;2\times\left(2+\sqrt[^3\!]{4}+\sqrt[^3\!]{2}\right)&lt;9.8$" style="vertical-align: -11px" width="247" height="32" />,
+</p><p>As <img src="http://latex.artofproblemsolving.com/7/2/9/729305982c516bd5e02fbd0848338e48090a1e15.png" class="latex" alt="$n&gt;2\times\left(2+\sqrt[^3\!]{4}+\sqrt[^3\!]{2}\right)$" style="vertical-align: -11px" width="185" height="32" />, So the minimal value of integer <img src="http://latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> is 10.
+</p>
+<h3><span class="mw-headline" id="Appendix">Appendix</span></h3>
+<p>This solution is motivated by the suggestive formula <img src="http://latex.artofproblemsolving.com/2/1/1/211f65e59f48169923d3f2d3f6a5ea0e6e370678.png" class="latex" alt="$\frac{(n-2)^{3}}{n^{3}}$" style="vertical-align: -12px" width="66" height="39" />.
+</p><p>The problem generalizes easily to <img src="http://latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" />-dimensional real space <img src="http://latex.artofproblemsolving.com/9/7/5/975f25cec3f734fc0a7ae109b149e246c05fb55a.png" class="latex" alt="$\mathbb{R}^{k}$" width="20" height="15" />. In the general <img src="http://latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" />-dimensional case, we are asked to find the probability that a randomly chosen <img src="http://latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" />-tuple <img src="http://latex.artofproblemsolving.com/9/8/9/9899e7ecf12eb45ef007fe8a3246126aa01d5dc6.png" class="latex" alt="$(x_{1},\dotsc,x_{k}) \in [0,n]^{k}$" style="vertical-align: -5px" width="158" height="20" /> satisfies <img src="http://latex.artofproblemsolving.com/1/f/3/1f37bb8b4e18cc0907df068619e9bcb78ba2c416.png" class="latex" alt="$|x_{i} - x_{j}| &gt; 1$" style="vertical-align: -4px" width="98" height="18" /> for all <img src="http://latex.artofproblemsolving.com/3/5/1/351d7a57c3c465e3e62c32332232067e2ebe1cf3.png" class="latex" alt="$i \ne j$" style="vertical-align: -4px" width="38" height="17" />. To avoid repetition, let us say that <img src="http://latex.artofproblemsolving.com/4/3/8/4386d554e944d2676fadb7cb921185caf51af0a3.png" class="latex" alt="$(x_{1},\dotsc,x_{k})$" style="vertical-align: -4px" width="89" height="18" /> is <i>spaced-out</i> if <img src="http://latex.artofproblemsolving.com/1/f/3/1f37bb8b4e18cc0907df068619e9bcb78ba2c416.png" class="latex" alt="$|x_{i} - x_{j}| &gt; 1$" style="vertical-align: -4px" width="98" height="18" /> for all <img src="http://latex.artofproblemsolving.com/3/5/1/351d7a57c3c465e3e62c32332232067e2ebe1cf3.png" class="latex" alt="$i \ne j$" style="vertical-align: -4px" width="38" height="17" />.
+</p><p>Let <img src="http://latex.artofproblemsolving.com/c/3/3/c3355896da590fc491a10150a50416687626d7cc.png" class="latex" alt="$C$" width="14" height="12" /> be the <img src="http://latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" />-dimensional hyper-cube of side length <img src="http://latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" />: 
+<img src="http://latex.artofproblemsolving.com/4/3/1/4318a3e8e4265e773d00105d516ab16354d9ff75.png" class="latexcenter" alt="\[C = [0,n]^{k} = \big\{(x_{1},\dotsc,x_{k}) \in \mathbb{R}^{k} \;:\; 0 \leqslant x_{i} \leqslant n \text{ for all }i \big\} \;.\]" width="441" height="22" /> 
+Then <img src="http://latex.artofproblemsolving.com/c/3/3/c3355896da590fc491a10150a50416687626d7cc.png" class="latex" alt="$C$" width="14" height="12" /> has volume <img src="http://latex.artofproblemsolving.com/8/1/a/81af71a610980e08bd0db26c3638e0a97d734dfc.png" class="latex" alt="$n^{k}$" width="18" height="15" />. Let <img src="http://latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> be the set of spaced-out <img src="http://latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" />-tuples <img src="http://latex.artofproblemsolving.com/4/3/8/4386d554e944d2676fadb7cb921185caf51af0a3.png" class="latex" alt="$(x_{1},\dotsc,x_{k})$" style="vertical-align: -4px" width="89" height="18" />. The desired probability is Vol<img src="http://latex.artofproblemsolving.com/a/c/f/acf4298778cc4d6bd0cc5716ba8f1cd8d26f8f30.png" class="latex" alt="$(S)/n^{k}$" style="vertical-align: -5px" width="56" height="22" />. 
+</p><p>The set of <img src="http://latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" />-tuples <img src="http://latex.artofproblemsolving.com/4/3/8/4386d554e944d2676fadb7cb921185caf51af0a3.png" class="latex" alt="$(x_{1},\dotsc,x_{k})$" style="vertical-align: -4px" width="89" height="18" /> such that there exist distinct indices <img src="http://latex.artofproblemsolving.com/3/b/1/3b1be2340079411dac99664d3857725babacc96e.png" class="latex" alt="$i, j$" style="vertical-align: -3px" width="22" height="16" /> such that <img src="http://latex.artofproblemsolving.com/b/9/7/b97d646615ecbe584dd107139365f8a5d2c74e56.png" class="latex" alt="$x_{i} = x_{j}$" style="vertical-align: -4px" width="56" height="12" /> has volume <img src="http://latex.artofproblemsolving.com/b/c/1/bc1f9d9bf8a1b606a4188b5ce9a2af1809e27a89.png" class="latex" alt="$0$" width="8" height="12" />, so we may restrict our attention to <img src="http://latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" />-tuples such that <img src="http://latex.artofproblemsolving.com/6/b/1/6b128be4c1892e146b9ed1fde16fe55c08c90db6.png" class="latex" alt="$x_{i} \ne x_{j}$" style="vertical-align: -4px" width="56" height="18" /> for all <img src="http://latex.artofproblemsolving.com/3/5/1/351d7a57c3c465e3e62c32332232067e2ebe1cf3.png" class="latex" alt="$i \ne j$" style="vertical-align: -4px" width="38" height="17" />. 
+</p><p>Further, the condition that <img src="http://latex.artofproblemsolving.com/4/3/8/4386d554e944d2676fadb7cb921185caf51af0a3.png" class="latex" alt="$(x_{1},\dotsc,x_{k})$" style="vertical-align: -4px" width="89" height="18" /> is spaced-out is "invariant upon permuting the indices"; in other words, if <img src="http://latex.artofproblemsolving.com/f/a/3/fa35d9fc104207e09a712110ac81612c5b279a6c.png" class="latex" alt="$\sigma$" width="10" height="8" /> is a permutation of the set of indices <img src="http://latex.artofproblemsolving.com/4/2/e/42ebdb80ca8301d3f33fb780b5fc77ee5e7945e7.png" class="latex" alt="$\{1,\dotsc,k\}$" style="vertical-align: -4px" width="76" height="18" />, then <img src="http://latex.artofproblemsolving.com/4/3/8/4386d554e944d2676fadb7cb921185caf51af0a3.png" class="latex" alt="$(x_{1},\dotsc,x_{k})$" style="vertical-align: -4px" width="89" height="18" /> is spaced-out if and only if <img src="http://latex.artofproblemsolving.com/4/c/a/4ca39041c49eaac332cbfdebf0e4c7434c0405c3.png" class="latex" alt="$(x_{\sigma(1)},\dotsc,x_{\sigma(k)})$" style="vertical-align: -5px" width="126" height="19" /> is spaced-out. Therefore, we may consider the set of spaced-out <img src="http://latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" />-tuples <img src="http://latex.artofproblemsolving.com/4/3/8/4386d554e944d2676fadb7cb921185caf51af0a3.png" class="latex" alt="$(x_{1},\dotsc,x_{k})$" style="vertical-align: -4px" width="89" height="18" /> which additionally satisfy <img src="http://latex.artofproblemsolving.com/3/b/4/3b4fb841f95e021524a96982a4614537a9e88a15.png" class="latex" alt="$x_{1} &lt; \dotsb &lt; x_{k}$" style="vertical-align: -2px" width="105" height="12" />. Let us denote this set by <img src="http://latex.artofproblemsolving.com/2/5/5/2554b6496c3b678897e9b060ef00aa9f0a7d7ece.png" class="latex" alt="$T$" width="13" height="12" />. This condition is equivalent to <img src="http://latex.artofproblemsolving.com/a/2/7/a27d870c5567c3bc8df2567d11b8c38e6d3f070f.png" class="latexcenter" alt="\[0 \leqslant x_{1} &lt; x_{2} - 1 &lt; \dotsb &lt; x_{i}-(i-1) &lt; \dotsb &lt; x_{k}-(k-1) \leqslant n-(k-1) \;.\]" width="538" height="18" />
+Let us choose new variables <img src="http://latex.artofproblemsolving.com/8/2/b/82b37db1d6a5d585d5a142adf1fac149278e6ad3.png" class="latex" alt="$y_{i} = x_{i} - (i-1)$" style="vertical-align: -4px" width="127" height="18" /> for <img src="http://latex.artofproblemsolving.com/9/b/a/9baa4e58ec59c84e11fecb32881144867a225ffc.png" class="latex" alt="$i = 1,\dotsc,k$" style="vertical-align: -3px" width="89" height="16" />. This change of variables is just a translation of each <img src="http://latex.artofproblemsolving.com/4/3/8/4386d554e944d2676fadb7cb921185caf51af0a3.png" class="latex" alt="$(x_{1},\dotsc,x_{k})$" style="vertical-align: -4px" width="89" height="18" /> by the vector <img src="http://latex.artofproblemsolving.com/c/e/1/ce1ded103330792bf5ac8d461237f6f39df17cf9.png" class="latex" alt="$(0,1,\dots,k-1)$" style="vertical-align: -4px" width="120" height="18" />; in the above solutions, it corresponds to taking the 6 tetrahedrons and gluing them together to form a cube. 
+</p><p>We now compute the volume of the set of <img src="http://latex.artofproblemsolving.com/2/f/7/2f7731a0cc3bb2619addd6c74692ff0825d54371.png" class="latex" alt="$(y_{1},\dotsc,y_{k}) \in [0,n-(k-1)]^{k}$" style="vertical-align: -5px" width="233" height="20" /> which satisfy <img src="http://latex.artofproblemsolving.com/c/6/4/c649e1a94f1d670208c00ddd4bf32a3751ef46bc.png" class="latex" alt="$y_{1} &lt; \dotsb &lt; y_{k}$" style="vertical-align: -3px" width="102" height="13" />. As above, we can disregard any <img src="http://latex.artofproblemsolving.com/9/1/5/915903bb92eaceb51e806d5f489dd1e154190c22.png" class="latex" alt="$(y_{1},\dotsc,y_{k})$" style="vertical-align: -4px" width="86" height="18" /> such that <img src="http://latex.artofproblemsolving.com/b/3/c/b3c36ad8d14d4cb31d1d6d7a61b9e326e6ceb1d5.png" class="latex" alt="$y_{i} = y_{j}$" style="vertical-align: -4px" width="53" height="12" /> for some <img src="http://latex.artofproblemsolving.com/3/5/1/351d7a57c3c465e3e62c32332232067e2ebe1cf3.png" class="latex" alt="$i \ne j$" style="vertical-align: -4px" width="38" height="17" />. Given any <img src="http://latex.artofproblemsolving.com/9/1/5/915903bb92eaceb51e806d5f489dd1e154190c22.png" class="latex" alt="$(y_{1},\dotsc,y_{k})$" style="vertical-align: -4px" width="86" height="18" /> such that <img src="http://latex.artofproblemsolving.com/d/3/4/d344d9ec49f74f1c11d59b6de3e068210d2c9d1e.png" class="latex" alt="$y_{i} \ne y_{j}$" style="vertical-align: -4px" width="53" height="18" /> for all <img src="http://latex.artofproblemsolving.com/3/5/1/351d7a57c3c465e3e62c32332232067e2ebe1cf3.png" class="latex" alt="$i \ne j$" style="vertical-align: -4px" width="38" height="17" />, there exists exactly one permutation <img src="http://latex.artofproblemsolving.com/f/a/3/fa35d9fc104207e09a712110ac81612c5b279a6c.png" class="latex" alt="$\sigma$" width="10" height="8" /> of the indices <img src="http://latex.artofproblemsolving.com/4/2/e/42ebdb80ca8301d3f33fb780b5fc77ee5e7945e7.png" class="latex" alt="$\{1,\dotsc,k\}$" style="vertical-align: -4px" width="76" height="18" /> such that <img src="http://latex.artofproblemsolving.com/3/9/3/3933497d117cd77bbfbd120ad26f763b5d90f2b1.png" class="latex" alt="$y_{\sigma(1)} &lt; \dotsb &lt; y_{\sigma(k)}$" style="vertical-align: -5px" width="138" height="15" />. Since there are <img src="http://latex.artofproblemsolving.com/1/f/f/1ffdb5b35c742c42d24bca4c0f8d5c800f61ad92.png" class="latex" alt="$k!$" width="13" height="13" /> permutations of <img src="http://latex.artofproblemsolving.com/4/2/e/42ebdb80ca8301d3f33fb780b5fc77ee5e7945e7.png" class="latex" alt="$\{1,\dotsc,k\}$" style="vertical-align: -4px" width="76" height="18" />, the desired volume is equal to <img src="http://latex.artofproblemsolving.com/9/e/1/9e133f02c275596338e319756c7fdc5d2c76a704.png" class="latex" alt="$\frac{1}{k!}$" style="vertical-align: -12px" width="17" height="37" /> times the volume of the <img src="http://latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png" class="latex" alt="$k$" width="9" height="12" />-dimensional hyper-cube of side length <img src="http://latex.artofproblemsolving.com/f/3/7/f372b048660160edab13ae1ac56c8eaf1f79553c.png" class="latex" alt="$n-(k-1)$" style="vertical-align: -4px" width="87" height="18" />, which is <img src="http://latex.artofproblemsolving.com/a/e/8/ae8cd4597731ec39e0b01a1911d430d93bea30fc.png" class="latex" alt="$\frac{1}{k!}(n-(k-1))^{k}$" style="vertical-align: -13px" width="132" height="38" />. Hence <img src="http://latex.artofproblemsolving.com/2/5/5/2554b6496c3b678897e9b060ef00aa9f0a7d7ece.png" class="latex" alt="$T$" width="13" height="12" /> has volume <img src="http://latex.artofproblemsolving.com/a/e/8/ae8cd4597731ec39e0b01a1911d430d93bea30fc.png" class="latex" alt="$\frac{1}{k!}(n-(k-1))^{k}$" style="vertical-align: -13px" width="132" height="38" /> as well and <img src="http://latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> has volume <img src="http://latex.artofproblemsolving.com/4/e/3/4e31a1674b9346dd83d6da962979907c4517b2b0.png" class="latex" alt="$(n-(k-1))^{k}$" style="vertical-align: -4px" width="109" height="20" />. Hence the desired probability is <img src="http://latex.artofproblemsolving.com/0/5/3/053db4f7a76d152c7191b8887a6ae66890e93455.png" class="latex" alt="$\frac{(n-(k-1))^{k}}{n^{k}}$" style="vertical-align: -12px" width="113" height="39" />.
+</p>
+<h2><span class="mw-headline" id="Solution_3">Solution 3</span></h2>
+<p>If <img src="http://latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" />, <img src="http://latex.artofproblemsolving.com/0/9/2/092e364e1d9d19ad5fffb0b46ef4cc7f2da02c1c.png" class="latex" alt="$y$" style="vertical-align: -4px" width="11" height="13" />, and <img src="http://latex.artofproblemsolving.com/b/1/3/b13f21416d84e13708696f34dea81026cda583c9.png" class="latex" alt="$z$" style="vertical-align: -1px" width="11" height="10" /> are separated by at least one, then by subtracting the minimum space between the three variables (which is <img src="../../../../latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" />), <img src="http://latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" />, <img src="http://latex.artofproblemsolving.com/0/9/2/092e364e1d9d19ad5fffb0b46ef4cc7f2da02c1c.png" class="latex" alt="$y$" style="vertical-align: -4px" width="11" height="13" />, and <img src="http://latex.artofproblemsolving.com/b/1/3/b13f21416d84e13708696f34dea81026cda583c9.png" class="latex" alt="$z$" style="vertical-align: -1px" width="11" height="10" /> can be chosen randomly in the interval <img src="http://latex.artofproblemsolving.com/e/e/5/ee50dec3bc707d6f4d664257fab9820c0d5a8ce0.png" class="latex" alt="$[0,n-2]$" style="vertical-align: -5px" width="67" height="18" />. The probability is hence <img src="http://latex.artofproblemsolving.com/d/6/1/d612a891cad83102c15acfdfb356ff18eb932eed.png" class="latex" alt="$\dfrac{(n-2)^3}{n^3} &gt; \dfrac{1}{2}.$" style="vertical-align: -12px" width="108" height="39" /> <img src="http://latex.artofproblemsolving.com/c/d/a/cda44f89af303e685406ffd87dd8fe23ff21c084.png" class="latex" alt="$\boxed{\textbf{(D)} 10}$" style="vertical-align: -10px" width="59" height="28" /> is the minimum value in the answer choices that satisfies this inequality.
+</p>
+<h2><span class="mw-headline" id="Solution_4">Solution 4</span></h2>
+<p>Imagine Points <img src="http://latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" />, <img src="http://latex.artofproblemsolving.com/0/9/2/092e364e1d9d19ad5fffb0b46ef4cc7f2da02c1c.png" class="latex" alt="$y$" style="vertical-align: -4px" width="11" height="13" />, <img src="http://latex.artofproblemsolving.com/b/1/3/b13f21416d84e13708696f34dea81026cda583c9.png" class="latex" alt="$z$" style="vertical-align: -1px" width="11" height="10" /> as the "starting points" of three "blocks" of real numbers that have length <img src="../../../../latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png" class="latex" alt="$1$" style="vertical-align: -1px" width="11" height="14" />. We are just trying to find the probability that those three "blocks" do not overlap. To do this we can set each unit of <img src="../../../../latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png" class="latex" alt="$1$" style="vertical-align: -1px" width="11" height="14" /> into <img src="http://latex.artofproblemsolving.com/2/d/8/2d8c833ed800824727cd7bd2fb9de1a12ad7e674.png" class="latex" alt="$\mu$" style="vertical-align: -3px" width="10" height="11" /> equal little increments, and take the limit of the probability as <img src="http://latex.artofproblemsolving.com/2/d/8/2d8c833ed800824727cd7bd2fb9de1a12ad7e674.png" class="latex" alt="$\mu$" style="vertical-align: -3px" width="10" height="11" /> approaches <img src="http://latex.artofproblemsolving.com/b/6/7/b671f1bb7e4ee86584347d5d22f1dc8abdb5bef2.png" class="latex" alt="$\infty$" style="vertical-align: 0px" width="17" height="9" />. (This is because there are indefinitely many real numbers in a given interval.) We see that the total number of arrangements for the three blocks of <img src="../../../../latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png" class="latex" alt="$1$" style="vertical-align: -1px" width="11" height="14" />, without considering the rule that no two blocks shall overlap is <img src="http://latex.artofproblemsolving.com/4/8/7/4879a68384581b508a69df5212c42630457e2d78.png" class="latex" alt="$(n\mu + 1)^3$" style="vertical-align: -4px" width="73" height="19" />. We see that the number of ways to arrange the three blocks such that no three of them are overlapping is simply <img src="http://latex.artofproblemsolving.com/0/d/4/0d42e34edf372cd13c23435c8b0885dab89214c9.png" class="latex" alt="$\dbinom{(n-2)\mu + 3}{3}$" style="vertical-align: -22px" width="122" height="53" />. Taking the limit as <img src="http://latex.artofproblemsolving.com/2/d/8/2d8c833ed800824727cd7bd2fb9de1a12ad7e674.png" class="latex" alt="$\mu$" style="vertical-align: -3px" width="10" height="11" /> approaches infinity, we obtain our closed form to be <img src="http://latex.artofproblemsolving.com/4/f/0/4f098cb86df479bbb2eb0f5005636c88059177af.png" class="latex" alt="$\lim_{\mu \to \infty} \frac{\dbinom{(n-2)\mu + 3}{3}}{ (n\mu + 1)^3  }.$" style="vertical-align: -17px" width="172" height="77" /> Dividing leading coefficients, we obtain <img src="http://latex.artofproblemsolving.com/1/6/4/16432267ccc087c0e8b02371613409d851db7c2b.png" class="latex" alt="$\lim_{\mu \to \infty} \frac{\dbinom{(n-2)\mu + 3}{3}}{ (n\mu + 1)^3  } =   \frac{\mu(n-2)^3}{\mu n^3} = \frac{(n-2)^3}{n^3}$" style="vertical-align: -17px" width="361" height="77" />. Solving the inequality <img src="http://latex.artofproblemsolving.com/d/f/a/dfa5b5581a35291f251e45cd4c4f4a565b356b74.png" class="latex" alt="$\frac{(n-2)^3}{n^3} &gt; \frac{1}{2}$" style="vertical-align: -12px" width="103" height="39" />, we get the least value of <img src="http://latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> as <img src="http://latex.artofproblemsolving.com/c/1/d/c1de00ae8807459e7211b573ff1bf11d8b268fa6.png" class="latex" alt="$n=\boxed{10}$" style="vertical-align: -5px" width="65" height="23" />.
+</p><p>-fidgetboss_4000
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="Video_Solution_by_Richard_Rusczyk">Video Solution by Richard Rusczyk</span></h2>
+<p><a rel="nofollow" class="external free" href="https://www.youtube.com/watch?v=HOtyh9qycrI">https://www.youtube.com/watch?v=HOtyh9qycrI</a>
+</p>
+<h2><span class="mw-headline" id="See_Also">See Also</span></h2>
+<table class="wikitable" style="margin:0.5em auto; font-size:95%; border:1px solid black; width:80%;">
+<tbody><tr>
+<td style="background:#ccf;text-align:center;" colspan="3"><b><a href="../2012_AMC_10A.html" title="2012 AMC 10A">2012 AMC 10A</a></b> (<b><a href="../2012_AMC_10A_Problems.html" title="2012 AMC 10A Problems">Problems</a></b> • <b><a href="../2012_AMC_10A_Answer_Key.html" title="2012 AMC 10A Answer Key">Answer Key</a></b> • <a rel="nofollow" class="external text" href="https://artofproblemsolving.com/community/c13">Resources</a>)
+</td></tr>
+<tr>
+<td width="50%" align="center" rowspan="1">Preceded&#160;by<br /><b><a href="Problem_24.html" title="2012 AMC 10A Problems/Problem 24">Problem 24</a></b>
+</td>
+<td width="50%" align="center" rowspan="1">Followed&#160;by<br /><b>Last Problem</b>
+</td></tr>
+<tr>
+<td colspan="3" style="text-align:center;"><a href="Problem_1.html" title="2012 AMC 10A Problems/Problem 1">1</a> <b>•</b> <a href="Problem_2.html" title="2012 AMC 10A Problems/Problem 2">2</a> <b>•</b> <a href="Problem_3.html" title="2012 AMC 10A Problems/Problem 3">3</a> <b>•</b> <a href="Problem_4.html" title="2012 AMC 10A Problems/Problem 4">4</a> <b>•</b> <a href="Problem_5.html" title="2012 AMC 10A Problems/Problem 5">5</a> <b>•</b> <a href="Problem_6.html" title="2012 AMC 10A Problems/Problem 6">6</a> <b>•</b> <a href="Problem_7.html" title="2012 AMC 10A Problems/Problem 7">7</a> <b>•</b> <a href="Problem_8.html" title="2012 AMC 10A Problems/Problem 8">8</a> <b>•</b> <a href="Problem_9.html" title="2012 AMC 10A Problems/Problem 9">9</a> <b>•</b> <a href="Problem_10.html" title="2012 AMC 10A Problems/Problem 10">10</a> <b>•</b> <a href="Problem_11.html" title="2012 AMC 10A Problems/Problem 11">11</a> <b>•</b> <a href="Problem_12.html" title="2012 AMC 10A Problems/Problem 12">12</a> <b>•</b> <a href="Problem_13.html" title="2012 AMC 10A Problems/Problem 13">13</a> <b>•</b> <a href="Problem_14.html" title="2012 AMC 10A Problems/Problem 14">14</a> <b>•</b> <a href="Problem_15.html" title="2012 AMC 10A Problems/Problem 15">15</a> <b>•</b> <a href="Problem_16.html" title="2012 AMC 10A Problems/Problem 16">16</a> <b>•</b> <a href="Problem_17.html" title="2012 AMC 10A Problems/Problem 17">17</a> <b>•</b> <a href="Problem_18.html" title="2012 AMC 10A Problems/Problem 18">18</a> <b>•</b> <a href="Problem_19.html" title="2012 AMC 10A Problems/Problem 19">19</a> <b>•</b> <a href="Problem_20.html" title="2012 AMC 10A Problems/Problem 20">20</a> <b>•</b> <a href="Problem_21.html" title="2012 AMC 10A Problems/Problem 21">21</a> <b>•</b> <a href="Problem_22.html" title="2012 AMC 10A Problems/Problem 22">22</a> <b>•</b> <a href="Problem_23.html" title="2012 AMC 10A Problems/Problem 23">23</a> <b>•</b> <a href="Problem_24.html" title="2012 AMC 10A Problems/Problem 24">24</a> <b>•</b> <a class="mw-selflink selflink">25</a>
+</td></tr>
+<tr>
+<td colspan="3" style="text-align:center;"><b><a href="../AMC_10_Problems_and_Solutions.html" title="AMC 10 Problems and Solutions"> All AMC 10 Problems and Solutions</a></b>
+</td></tr></tbody></table>
+<p>The problems on this page are copyrighted by the <a rel="nofollow" class="external text" href="http://www.maa.org/">Mathematical Association of America</a>'s <a rel="nofollow" class="external text" href="https://maa.org/student-programs/amc/">American Mathematics Competitions</a>. <a href="../File_AMC_logo.html" class="image"><img alt="AMC logo.png" src="../../../../wiki-images.artofproblemsolving.com/thumb/8/8b/AMC_logo.png/50px-AMC_logo.png" width="50" height="43" style="vertical-align: middle" srcset="https://wiki-images.artofproblemsolving.com//thumb/8/8b/AMC_logo.png/75px-AMC_logo.png 1.5x, https://wiki-images.artofproblemsolving.com//8/8b/AMC_logo.png 2x" /></a>
+</p>
+<div style="clear:both;"></div>
+
+<!-- 
+NewPP limit report
+Cached time: 20250407214352
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.130 seconds
+Real time usage: 10.000 seconds
+Preprocessor visited node count: 1901/1000000
+Preprocessor generated node count: 4556/1000000
+Post‐expand include size: 2202/2097152 bytes
+Template argument size: 161/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 37657/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  691.479      1 -total
+ 83.53%  577.613      1 Template:AMC10_box
+ 16.43%  113.589      1 Template:MAA_Notice
+-->
+</div>
+<!-- Saved in parser cache with key wiki-wiki_:pcache:idhash:10664-0!canonical and timestamp 20250407214342 and revision id 229593
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://artofproblemsolving.com/wiki/index.php?title=2012_AMC_10A_Problems/Problem_25&amp;oldid=229593">https://artofproblemsolving.com/wiki/index.php?title=2012_AMC_10A_Problems/Problem_25&amp;oldid=229593</a>"</div>
+
+
+									<div class="catlinks"><div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div></div>
+				
+
+							</div>
+		</div>
+	</div>
+</div>
+
+<!-- search:off -->
+	<div class="clearfix"></div>
+
+	
+	<div id="main-footer" class="no-print">
+		<div class="footer-container">
+			<div class="footer-topRow">
+											<a href="https://artofproblemsolving.com/online">
+							<img class="footer-mainLogo"
+							src="https://artofproblemsolving.com/assets/images/logos/aops-online-footer.svg"/>
+						</a>
+										<div class="footer-wasc">
+						<span>
+							Art of Problem Solving is an
+							<br class="wasc-break"/>
+							<span class="footer-accredited">ACS WASC Accredited School</span>
+						</span>
+						<img class="footer-wascLogo"
+						src="../../../assets/images/logos/wasc.png"/>
+					</div>
+			</div>
+			<div class="footer-links">
+				<div class="footer-col">
+					<div class="footer-colHeader">aops programs</div>
+					<div><a class="link" href="https://artofproblemsolving.comonline/">AoPS Online</a></div>
+					<div><a class="link" href="https://beastacademy.com/">Beast Academy</a></div>
+					<div><a class="link" href="https://aopsacademy.org/">AoPS Academy</a></div>
+				</div>
+
+				<div class="footer-col">
+					<div class="footer-colHeader">About</div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/about">About AoPS</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/staff">Our Team</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/history">Our History</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/careers">Jobs</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/blog">AoPS Blog</a></div>
+				</div>
+
+				<div class="footer-col">
+					<div class="footer-colHeader" style="left:-1px;">Site Info</div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/tos">Terms</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/privacy">Privacy</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/contact">Contact Us</a></div>
+				</div>
+
+				<div class="footer-col social">
+					<div class="footer-colHeader">follow us</div>
+					<div class="footer-social">
+													<a class="link" target="_blank" href="https://www.facebook.com/artofproblemsolving">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/facebook.svg" class="sm-icon"/>
+							</a>
+							<a class="link" target="_blank" href="http://twitter.com/AoPSNews">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/twitter.svg" class="sm-icon"/>
+							</a>
+							<a class="link" target="_blank" href="https://www.pinterest.com/artofproblemsolving/pins/">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/pinterest.svg" class="sm-icon"/>
+							</a>
+											</div>
+				</div>
+									<div class="footer-col subscribe">
+						<div class="footer-colHeader">
+							Subscribe for news and updates
+						</div>
+						<form method="post" action="https://artofproblemsolving.com/mailinglist">
+							<input type="email" class="footer-email" placeholder="Enter e-mail" name="subscribe-email">
+							<input type="hidden" name="new-books" value="on">
+							<input type="hidden" name="classes" value="on">
+							<input type="hidden" name="mathjams" value="on">
+							<input type="submit" class="footer-submit" value="">
+							<div class="footer-submit-arrow">
+								<svg x="0px" y="0px" viewBox="0 0 289 289" enable-background="new 0 0 289 289">
+									<g>
+										<path class="arrow-fill" d="M121.5,220.5c-2.6,0-5.1-1-7.1-2.9c-3.9-3.9-3.9-10.2,0-14.1l58.9-58.9l-58.9-58.9c-3.9-3.9-3.9-10.2,0-14.1c3.9-3.9,10.2-3.9,14.1,0l66,66c3.9,3.9,3.9,10.2,0,14.1l-66,66C126.6,219.5,124.1,220.5,121.5,220.5z"/>
+									</g>
+								</svg>
+							</div>
+						</form>
+					</div>
+							</div>
+			<div class="copyright">
+				<span>&copy; 2025 AoPS Incorporated
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div id="small-footer-wrapper">
+		<div class="footer-container">
+							<a href="https://artofproblemsolving.com/online">
+					<img class="footer-mainLogo"
+					src="https://artofproblemsolving.com/assets/images/logos/aops-online-footer.svg"/>
+				</a>
+						<div class="copyright">
+				&copy; 2025 Art of Problem Solving
+				<div class="copyright-links">
+					<a href="https://artofproblemsolving.com/company">About Us</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/contact">Contact Us</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/company/tos">Terms</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/company/privacy">Privacy</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<form id="registration-form" method="post" action="https://artofproblemsolving.com/user/register.php">
+	<input type="hidden" name="username" value="">
+	<input type="hidden" name="password" value="">
+	<input type="hidden" name="from-login" value="true">
+	</form>
+<div id="print-footer" class="printer">Copyright &copy; 2025 Art of Problem Solving</div>
+
+
+
+<div id="epicfail" class="aops-html-modal-epic-fail" style="display: none">
+	<div class="aops-html-modal-inner-epic-fail">
+		<div class="aops-html-modal-main-epic-fail">
+			<p>Something appears to not have loaded correctly.</p>
+		</div>
+		<div class="aops-html-modal-bottom-epic-fail">
+			<p><a onclick="location.reload(true);return false">Click to refresh</a>.</p>
+		</div>
+	</div>
+</div>
+<link rel="stylesheet" href="../../../assets/css/epic-fail.css">
+
+
+
+
+
+<!-- /search:off -->
+
+
+<!-- copied from contact page index, with edits -->
+<script id="footer-tpl-email-dialog" type="text/x-handlebars-template">
+	<div id="mail-dialog">
+		<h1>Email Art of Problem Solving</h1>
+		<p>
+			<input type="text" id="email" name="email" placeholder="Your email address">
+			<input type="text" id="subject" name="subject" placeholder="Subject of message">
+			<textarea id="message" name="message" placeholder="Enter your message"></textarea>
+			<div style="padding:5px 30px">
+				<input type="checkbox" id="email-copy" name="email_copy">
+				<label for="email-copy" id="email-copy-label">Send a copy to my email address.</label>
+			</div>
+			<div style="padding:5px 30px 20px">
+				<input id="footer-submit-btn" type="submit" class="btn btn-primary" value="Send">
+				<input id="footer-cancel-btn" type="submit" class="btn btn-default" value="Cancel">
+			</div>
+		</p>
+		<p id="email-error"></p>
+	</div>
+</script>
+
+
+<script id="footer-tpl-email-confirm" type="text/x-handlebars-template">
+	<div id="mail-dialog-confirm">
+		<h2>Email Sent</h2>
+		<p>Thank you for your email. We will respond to it soon.</p>
+	</div>
+</script>
+
+<!-- bing -->
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5105596"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","../../../../bat.bing.com/bat.js","uetq");</script><noscript><img src="http://bat.bing.com/action/0?ti=5105596&amp;Ver=2" height="0" width="0" style="display:none; visibility: hidden;" /></noscript>
+
+</body>
+<!-- Cached 20250408182732 -->
+
+<!-- Mirrored from artofproblemsolving.com/wiki/index.php/2012_AMC_10A_Problems/Problem_25 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Apr 2025 05:03:23 GMT -->
+</html>
+

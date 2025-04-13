@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html>
+	
+<!-- Mirrored from artofproblemsolving.com/wiki/index.php/2018_AMC_10A_Problems/Problem_18 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Apr 2025 05:01:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+				
+<script>AoPS = {
+	start_time : new Date().getTime()
+};</script>
+
+<script>
+	AoPS.bootstrap_data = [];
+	AoPS.bd = AoPS.bootstrap_data; // Alias!
+	AoPS.session = {"user_id":1,"platform_user_id":"","username":"Anonymous","avatar":"\/\/avatar.artofproblemsolving.com\/avatar_1.png?t=1","email":"","role":"","logged_in":false,"initialized":false,"needs_coppa_approval":false,"admin":false,"national_staff":false,"wikiname":""};
+	AoPS.bd.assetVersion = 1;
+	AoPS.bd.environment = 'production';
+	AoPS.protected_url = 'https://artofproblemsolving.com/';
+	AoPS.aops_url = 'https://artofproblemsolving.com/';
+	AoPS.academy_url = 'https://aopsacademy.org/';
+</script>
+		<!-- GA plugin and Enhanced Ecommerce -->
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','../../../../www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-1905305-1', 'auto', {allowLinker: true}); // GA Property ID
+		ga('send', 'pageview');
+		</script>
+		<!-- End GA plugin and Enhanced Ecommerce -->
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'../../../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer', 'GTM-59JWRGZ')</script>
+		<!-- End Google Tag Manager -->
+
+		<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1">
+		<meta name="referrer" content="origin">
+
+		<meta name="facebook-domain-verification" content="zmmwg7oqqsqvf8ihckwvzoo85b08gx" />
+
+		
+		<link rel="apple-touch-icon" href="../../../../assets.artofproblemsolving.com/images/apple-touch-icon.png">
+		<title>Art of Problem Solving</title>
+
+		
+		<link href="../../../assets/fonts/font-awesome/css/all.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="../../../assets/css/sharedsite.css">
+		<link rel="stylesheet" href="../../../assets/css/navheader.css">
+		<link rel="stylesheet" href="../../../assets/css/footer.css">
+		<link rel="stylesheet" href="../../../assets/css/main-head.css">
+
+					<link rel="icon" href="https://artofproblemsolving.com/online-favicon.ico?v=2">
+		
+		
+		<script>
+  if (!window.console) console = {log: function() {}, dir: function() {}};
+  $$ = function( selector ) { return document.getElementById( selector ); }
+</script>
+
+							<script src="../../../../assets.artofproblemsolving.com/js/jquery360.min.js"></script>
+							<script src="../../../assets/vendor/jquery/3.6.0/jquery-migrate.min.js"></script>
+					<link rel="stylesheet" href="../../../../cdn.jsdelivr.net/npm/katex%400.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+<script defer src="../../../../cdn.jsdelivr.net/npm/katex%400.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+<script defer src="../../../../cdn.jsdelivr.net/npm/katex%400.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '[katex]', right: '[/katex]', display: false},
+			  {left: '[katex display=true]', right: '[/katex]', display: true} 
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+    });
+</script>
+
+<script>
+MathJax = {
+  tex: {
+	inlineMath: [['[mathjax]', '[/mathjax]'], ['\\(', '\\)']],
+	displayMath: [['[mathjax display=true]', '[/mathjax]']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async src="../../../../cdn.jsdelivr.net/npm/mathjax%403/es5/tex-svg.js"> </script>
+
+				<meta charset="UTF-8"/>
+<title>2018 AMC 10A Problems/Problem 18 - AoPS Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"2018_AMC_10A_Problems/Problem_18","wgTitle":"2018 AMC 10A Problems/Problem 18","wgCurRevisionId":231055,"wgRevisionId":231055,"wgArticleId":15951,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Intermediate Number Theory Problems"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"2018_AMC_10A_Problems/Problem_18","wgRelevantArticleId":15951,"wgRequestId":"40f8d6fac23ed75cb0d15a06","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.aopsp":"ready"});mw.loader.implement("user.tokens@09avpoe",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.aopsp.js"]);});</script>
+<link rel="stylesheet" href="https://artofproblemsolving.com/wiki/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cskins.aopsp&amp;only=styles&amp;skin=aopsp"/>
+<script async="" src="https://artofproblemsolving.com/wiki/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=aopsp"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="https://artofproblemsolving.com/wiki/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=aopsp"/>
+<meta name="generator" content="MediaWiki 1.31.1"/>
+<link rel="shortcut icon" href="https://artofproblemsolving.com/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://artofproblemsolving.com/wiki/opensearch_desc.php" title="AoPS Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://artofproblemsolving.com/wiki/api.php?action=rsd"/>
+<link rel="alternate" type="application/atom+xml" title="AoPS Wiki Atom feed" href="https://artofproblemsolving.com/wiki/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<!--[if lt IE 9]><script src="/wiki/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=aopsp&amp;sync=1"></script><![endif]-->
+			</head>
+		<body class="production mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-2018_AMC_10A_Problems_Problem_18 rootpage-2018_AMC_10A_Problems_Problem_18 skin-aopsp action-view resources">
+
+					<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59JWRGZ"
+			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		
+		<div id="page-wrapper">
+
+			<!-- search:off -->
+			
+			<!-- The gray bar at top -->
+			<!-- see shared-site.css -->
+			<div id="top-bar" class="sharedsite-wrapper no-select">
+				<div class="sharedsitebar">
+					<a href="https://artofproblemsolving.com/" class="mobile-title"></a>
+					<div class="sharedsite-links">
+											<a class="site-link main" href="https://artofproblemsolving.com/company">
+												Art of Problem Solving
+						</a>
+						<div class="site">
+													<a class="site-link selected" href="https://artofproblemsolving.com/">
+														<img src="https://artofproblemsolving.com/assets/images/logos/icon-online.svg" class="site-icon">
+								<span class="site-name">AoPS Online</span>
+							</a>
+							<!-- Rich dropdown -->
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-online.svg"/>
+										</div>
+										<div class="site-snippet">
+											Math texts, online classes, and more
+											<br/>for students in grades 5-12.
+										</div>
+										<a target="_blank" class="site-visit aops-primary" href="https://artofproblemsolving.com/">
+											Visit AoPS Online <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://artofproblemsolving.com/store" class="btn btn-primary aops-btn">
+											Books for Grades 5-12
+										</a>
+										<a target="_blank" href="https://artofproblemsolving.com/school" class="btn btn-primary aops-btn">
+											Online Courses
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- End rich dropdown -->
+						</div>
+						<div class="site">
+							<a class="site-link" href="https://beastacademy.com/">
+								<img src="https://artofproblemsolving.com/assets/images/logos/icon-ba.svg" class="site-icon">
+								<span class="site-name">Beast Academy</span>
+							</a>
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-ba.svg"/>
+										</div>
+										<div class="site-snippet">
+											Engaging math books and online learning
+											<br/>for students ages 6-13.
+										</div>
+										<a target="_blank" class="site-visit ba-primary" href="https://beastacademy.com/">
+											Visit Beast Academy <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://beastacademy.com/books" class="btn btn-primary ba-btn">
+											Books for Ages 6-13
+										</a>
+										<a target="_blank" href="https://beastacademy.com/online" class="btn btn-primary ba-btn">
+											Beast Academy Online
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="site">
+							<a class="site-link" href="https://aopsacademy.org/">
+								<img src="https://artofproblemsolving.com/assets/images/logos/icon-academy.svg" class="site-icon">
+								<span class="site-name">AoPS Academy</span>
+							</a>
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-academy.svg"/>
+										</div>
+										<div class="site-snippet">
+											Small live classes for advanced math
+											<br/>and language arts learners in grades 2-12.
+										</div>
+										<a target="_blank" class="site-visit academy-primary" href="https://aopsacademy.org/">
+											Visit AoPS Academy <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://aopsacademy.org/campuses" class="btn btn-primary academy-btn">
+											Find a Physical Campus
+										</a>
+										<a target="_blank" href="https://virtual.aopsacademy.org/" class="btn btn-primary academy-btn">
+											Visit the Virtual Campus
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="header-wrapper" class="no-select">
+				<div class="header-underlay">
+					<div id="header">
+
+						<!-- The white area where main menu options appear -->
+
+						<!-- The menu links -->
+													<div id="main-menubar">
+								<div class="menubar-content">
+									<div class="menubar-logo online">
+										<img class="menubar-hamburger" src="https://artofproblemsolving.com/assets/images/hamburger.svg"/>
+										<a class="logo-img-link" href="https://artofproblemsolving.com/online">
+											<img class="logo-img" src="https://artofproblemsolving.com/assets/images/logos/aops-online.svg"/>
+											<img class="logo-img-mobile" src="https://artofproblemsolving.com/assets/images/logos/aops-online-mobile.svg"/>
+											<img class="logo-img-small" src="https://artofproblemsolving.com/assets/images/logos/aops-online-mobile.svg"/>
+										</a>
+									</div>
+									<div class="menubar-links-outer">
+										<!-- The login links -->
+										<div class="menu-login-wrapper online">
+											
+											<div class="menu-login-item">
+															<div 
+		    id="header-login"
+			class="no-select not-signed-in"
+			style="display:flex">
+
+			<div class="online-login-button solid-rounded-button">Sign&nbsp;In</div><div class="online-register-button">Register</div>
+		</div>
+												</div>
+
+											
+										</div>
+										<div class="menubar-labels online">
+											<div class="menubar-label school">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/school">
+														online school
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+														<!-- These have IDs for A/B testing purposes. T27691 -->
+																												<a id="online-school-menu-schedule" href="https://artofproblemsolving.com/school/schedule"> Class Schedule </a>
+														<a id="online-school-menu-recommmendations" href="https://artofproblemsolving.com/school/recommendations"> Recommendations </a>
+														<a id="online-school-menu-woot-courses" href="https://artofproblemsolving.com/school/woot?gtmlist=School_Nav"> Olympiad Courses </a>
+														<a id="online-school-menu-mathjams" href="https://artofproblemsolving.com/school/mathjams"> Free Sessions </a>
+																																									</div>
+												</div>
+											</div>
+											<div class="menubar-label store">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/store">
+														books<span class="menubar-link-ext">tore </span>
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+																																																								<a href="https://artofproblemsolving.com/store/list/aops-curriculum">AoPS Curriculum</a>
+														<a href="https://artofproblemsolving.com/store/list/beast-academy">Beast Academy</a>
+														<a href="https://artofproblemsolving.com/store/online">Online Books</a>
+														<a href="https://artofproblemsolving.com/store/recommendations">Recommendations</a>
+														<a href="https://artofproblemsolving.com/store/list/other-products">Other Books &amp; Gear</a>
+														<a href="https://artofproblemsolving.com/store/list/all-products">All Products</a>
+														<a href="https://artofproblemsolving.com/store/gift-certificates?gtmlist=Bookstore_Nav">Gift Certificates</a>
+																											</div>
+												</div>
+											</div>
+											<div class="menubar-label community">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/community">
+														community
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+																												<a data-cmty href="https://artofproblemsolving.com/community">Forums</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/c13_contests">Contests</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/search">Search</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/faq">Help</a>
+																																									</div>
+												</div>
+											</div>
+											<div class="menubar-label resources">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/resources">
+														resources
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+														<div class="dropdown-columns">
+															<div class="dropdown-category">
+																<span class="dropdown-category-label">math training & tools</span>
+																<a href="https://artofproblemsolving.com/alcumus">Alcumus</a>
+																<a href="https://artofproblemsolving.com/videos">Videos</a>
+																<a href="https://artofproblemsolving.com/ftw">For the Win!</a>
+																<a href="https://artofproblemsolving.com/mathcounts_trainer">MATHCOUNTS Trainer</a>
+																<a href="https://artofproblemsolving.com/contests/practice">AoPS Practice Contests</a>
+																<a href="https://artofproblemsolving.com/wiki/index.php?title=Main_Page">AoPS Wiki</a>
+																<a href="https://artofproblemsolving.com/texer">LaTeX TeXeR</a>
+																<a href="https://artofproblemsolving.com/polymath">MIT PRIMES/CrowdMath</a>
+																<a href="https://artofproblemsolving.com/keeplearning">Keep Learning</a>
+																<a href="https://beastacademy.com/all-ten">All Ten</a>
+																															</div>
+															<div class="dropdown-column">
+																																<div class="dropdown-category category-in-column">
+																	<span class="dropdown-category-label">contests on aops</span>
+																	<a href="https://artofproblemsolving.com/contests/practice">Practice Math Contests</a>
+																	<a href="https://artofproblemsolving.com/contests/usabo">USABO</a>
+																</div>
+																<div class="dropdown-category category-in-column">
+                                                                                                                                        <span class="dropdown-category-label">news</span>
+                                                                                                                                        <a href="https://artofproblemsolving.com/blog">AoPS Blog</a>
+                                                                                                                                        <a href="https://artofproblemsolving.com/blog/webinars/aopswebinars">Webinars</a>
+                                                                                                                                </div>
+															</div>
+														</div>
+														<div class="dropdown-view-more-link-container">
+															<a href="https://artofproblemsolving.com/resources" class="dropdown-view-more-link">view all <span class="aops-icon">0</span></a>
+														</div>
+													</div>
+												</div>
+											</div>
+																						<div class="menubar-label menu-login-item">
+															<div 
+		    id="header-login"
+			class="no-select not-signed-in"
+			style="display:flex">
+
+			<div class="online-login-button solid-rounded-button">Sign&nbsp;In</div><div class="online-register-button">Register</div>
+		</div>
+												</div>
+																					</div>
+									</div>
+								</div>
+							</div>
+											</div>
+				</div>
+
+								<noscript>
+					<div class="infobar">JavaScript is not enabled. JavaScript is required to fully utilize the site.</div>
+				</noscript>
+
+
+									<div id="breadcrumbs-wrapper">
+						<div id="submenu-icon"></div>
+						<div id="breadcrumbs">
+														<!-- ignore-security-checks -->
+							<div class="title-wrapper"><div class="title"><a href="https://artofproblemsolving.com/wiki">AoPS Wiki</a></div></div>
+														<div class="crumb-wrapper">
+																										<span class="crumb crumb-1">
+																			<!-- ignore-security-checks -->
+										<a href="https://artofproblemsolving.com/resources">Resources</a>
+																		</span>
+																											<i class="aops-font aops-angle-double-right"></i>
+																		<span class="crumb crumb-2">
+																			<!-- ignore-security-checks -->
+										<a href="https://artofproblemsolving.com/wiki">Aops Wiki</a>
+																		</span>
+																											<i class="aops-font aops-angle-double-right"></i>
+																		<span class="crumb crumb-3">
+																			2018 AMC 10A Problems/Problem 18																		</span>
+															</div>
+						</div>
+					</div>
+							</div>
+
+			<!-- search icon script lives in footer.phtml-->
+
+			<!-- /search:off -->
+
+<div id="main-content" class="left-navigation wiki">
+	<div id="side-column-wrapper">
+		<div id="side-column">
+						<div id="content-actions" class="menu open">
+				<div class="submenu">
+					<h1>Page</h1>
+					<div class="submenu-wrapper">
+						<span id="ca-nstab-main" class="selected"><a href="Problem_18.html" title="View the content page " accesskey="c">Article</a></span><span id="ca-talk" class="new"><a href="https://artofproblemsolving.com/wiki/index.php?title=Talk:2018_AMC_10A_Problems/Problem_18&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) " accesskey="t">Discussion</a></span><span id="ca-viewsource"><a href="https://artofproblemsolving.com/wiki/index.php?title=2018_AMC_10A_Problems/Problem_18&amp;action=edit" title="This page is protected.&#10;You can view its source " accesskey="e">View source</a></span><span id="ca-history"><a href="https://artofproblemsolving.com/wiki/index.php?title=2018_AMC_10A_Problems/Problem_18&amp;action=history" title="Past revisions of this page " accesskey="h">History</a></span>					</div>
+				</div>
+			</div>
+			<div id="toolbox" class="menu open">
+				<div class="submenu">
+					<h1>Toolbox</h1>
+					<div class="submenu-wrapper">
+						<span id="n-recentchanges"><a href="../Special_RecentChanges.html" title="A list of recent changes in the wiki " accesskey="r">Recent changes</a></span><span id="n-randompage"><a href="https://artofproblemsolving.com/wiki/index.php/Special:Random" title="Load a random page " accesskey="x">Random page</a></span><span id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></span><span id="t-whatlinkshere"><a href="https://artofproblemsolving.com/wiki/index.php/Special:WhatLinksHere/2018_AMC_10A_Problems/Problem_18" title="A list of all wiki pages that link here " accesskey="j">What links here</a></span><span id="t-specialpages"><a href="../Special_SpecialPages.html" title="A list of all special pages " accesskey="q">Special pages</a></span>					</div>
+				</div>
+			</div>
+			
+			<div id="search" class="menu open">
+				<h1>Search</h1>
+				<div class="submenu-wrapper" style="margin-bottom:5px;">
+					<form action="https://artofproblemsolving.com/wiki/index.php" id="searchform" class="mw-search">
+						<input type="hidden" name="title" value="Special:Search">
+						<input type="search" name="search" placeholder="Search" value="" accesskey="f" id="searchInput">
+						<div style="margin:0 5px 5px 5px;text-align:right;"><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="btn btn-primary searchButton"/></div>
+					</form>
+				</div>
+			</div>
+
+			<!--
+			<div class="menu open">
+				<h1>Note</h1>
+				<div class="submenu-wrapper" style="padding:10px;color:#444;">
+					Please do not discuss the 2015 AMC 8 Competition on any website until November 25th.
+				</div>
+			</div>
+			-->
+		</div>
+	</div>
+
+	<div id="main-column" style="margin-top:10px">
+				<div class="page-wrapper">
+						<div id="mw-js-message" style="display:none;"></div>
+			<h1 id="firstHeading" class="firstHeading">2018 AMC 10A Problems/Problem 18</h1>
+
+						
+			<div class="mw-body">
+												
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><dl><dd><i>The following problem is from both the <a class="mw-selflink selflink">2018 AMC 10A #18</a> and <a href="https://artofproblemsolving.com/wiki/index.php/2018_AMC_12A_Problems/Problem_13" class="mw-redirect" title="2018 AMC 12A Problems/Problem 13">2018 AMC 12A #13</a>, so both problems redirect to this page.</i></dd></dl>
+<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Problem"><span class="tocnumber">1</span> <span class="toctext">Problem</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Solution_1"><span class="tocnumber">2</span> <span class="toctext">Solution 1</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Solution_2"><span class="tocnumber">3</span> <span class="toctext">Solution 2</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Solution_3_.28Answer_choices.29"><span class="tocnumber">4</span> <span class="toctext">Solution 3 (Answer choices)</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Solution_4"><span class="tocnumber">5</span> <span class="toctext">Solution 4</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Solution_5_.28Casework_and_Recursion.29"><span class="tocnumber">6</span> <span class="toctext">Solution 5 (Casework and Recursion)</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Solution_6"><span class="tocnumber">7</span> <span class="toctext">Solution 6</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Solution_7"><span class="tocnumber">8</span> <span class="toctext">Solution 7</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Solution_8"><span class="tocnumber">9</span> <span class="toctext">Solution 8</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Solution_9"><span class="tocnumber">10</span> <span class="toctext">Solution 9</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Solution_10"><span class="tocnumber">11</span> <span class="toctext">Solution 10</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Solution_11_.282_seconds.29"><span class="tocnumber">12</span> <span class="toctext">Solution 11 (2 seconds)</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Video_Solution_by_Pi_Academy_.28FAST_and_easy.29"><span class="tocnumber">13</span> <span class="toctext">Video Solution by Pi Academy (FAST and easy)</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Video_Solution"><span class="tocnumber">14</span> <span class="toctext">Video Solution</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#See_Also"><span class="tocnumber">15</span> <span class="toctext">See Also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Problem">Problem</span></h2>
+<p>How many nonnegative integers can be written in the form <img src="http://latex.artofproblemsolving.com/1/2/e/12e09c391eb94ff988e6dcfc490ddb6c72e79342.png" class="latexcenter" alt="\[a_7\cdot3^7+a_6\cdot3^6+a_5\cdot3^5+a_4\cdot3^4+a_3\cdot3^3+a_2\cdot3^2+a_1\cdot3^1+a_0\cdot3^0,\]" width="478" height="18" />
+where <img src="http://latex.artofproblemsolving.com/f/3/c/f3c5e8424e376d02b3e116ed42e8c526821771ea.png" class="latex" alt="$a_i\in \{-1,0,1\}$" style="vertical-align: -4px" width="112" height="18" /> for <img src="http://latex.artofproblemsolving.com/d/5/5/d55b4a57fcff346516e9bbec7f578395ac5fa341.png" class="latex" alt="$0\le i \le 7$" style="vertical-align: -2px" width="73" height="15" />?
+</p><p><img src="http://latex.artofproblemsolving.com/1/7/8/1782e14685bd389b46aaf81a667d765119877f32.png" class="latex" alt="$\textbf{(A) } 512 \qquad  \textbf{(B) } 729 \qquad  \textbf{(C) } 1094 \qquad  \textbf{(D) } 3281 \qquad  \textbf{(E) } 59,048$" style="vertical-align: -4px" width="488" height="17" />
+</p>
+<h2><span class="mw-headline" id="Solution_1">Solution 1</span></h2>
+<p>This looks like balanced ternary, in which all the integers with absolute values less than <img src="http://latex.artofproblemsolving.com/4/2/9/429dd9fafbfe90517395bcf24da8c701b421d206.png" class="latex" alt="$\frac{3^n}{2}$" style="vertical-align: -12px" width="20" height="37" /> are represented in <img src="http://latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> digits. There are 8 digits. Plugging in 8 into the formula for the balanced ternary gives a maximum bound of <img src="http://latex.artofproblemsolving.com/5/a/c/5ac5ab68188daef0841e72f757a4a564f5281a06.png" class="latex" alt="$|x|=3280.5$" style="vertical-align: -4px" width="94" height="18" />, which means there are 3280 positive integers, 0, and 3280 negative integers. Since we want all nonnegative integers, there are <img src="http://latex.artofproblemsolving.com/2/9/c/29c5394714396c550db44bbd57b18180906c56bc.png" class="latex" alt="$3280+1=\boxed{3281}$" style="vertical-align: -5px" width="140" height="23" /> integers or <img src="http://latex.artofproblemsolving.com/3/7/c/37cfb0d12967a18f3020a605b42d458edc87eea8.png" class="latex" alt="$\boxed{\textbf{D}}$" style="vertical-align: -5px" width="26" height="23" />.
+</p>
+<h2><span class="mw-headline" id="Solution_2">Solution 2</span></h2>
+<p>Note that all numbers formed from this sum are either positive, negative or zero. The number of positive numbers formed by this sum is equal to the number of negative numbers formed by this sum, because of symmetry. There is only one way to achieve a sum of zero, if all <img src="http://latex.artofproblemsolving.com/e/2/1/e21bbcc8b1a1db90a76c7cda79b37d049509a5a8.png" class="latex" alt="$a_i=0$" style="vertical-align: -2px" width="48" height="15" />. The total number of ways to pick <img src="http://latex.artofproblemsolving.com/4/1/2/412787c048e28774dc63fc27db42dc52ca858de7.png" class="latex" alt="$a_i$" style="vertical-align: -2px" width="14" height="10" /> from <img src="http://latex.artofproblemsolving.com/1/8/3/183dca59bc4e62bde64657608c38729dfe473b25.png" class="latex" alt="$i=0, 1, 2, 3, ... 7$" style="vertical-align: -3px" width="123" height="16" /> is <img src="http://latex.artofproblemsolving.com/8/a/d/8adc91b1d25a0aa8298fb168f12b1a150c7dfcdd.png" class="latex" alt="$3^8=6561$" style="vertical-align: 0px" width="76" height="15" />. <img src="http://latex.artofproblemsolving.com/0/7/2/0724261cc90561b3e42949be902019459e9e8ff0.png" class="latex" alt="$\frac{6561-1}{2}=3280$" style="vertical-align: -12px" width="131" height="37" /> gives the number of possible negative integers. The question asks for the number of non-negative integers, so subtracting from the total gives <img src="http://latex.artofproblemsolving.com/b/3/5/b35f2a2454e4686de3f2f4369d3304dce77938f4.png" class="latex" alt="$6561-3280=\boxed{\textbf{(D) } 3281}$" style="vertical-align: -10px" width="203" height="28" />. (RegularHexagon, KLBBC minor changes)
+</p>
+<h2><span id="Solution_3_(Answer_choices)"></span><span class="mw-headline" id="Solution_3_.28Answer_choices.29">Solution 3 (Answer choices)</span></h2>
+<p>Note that the number of total possibilities (ignoring the conditions set by the problem) is <img src="http://latex.artofproblemsolving.com/8/a/d/8adc91b1d25a0aa8298fb168f12b1a150c7dfcdd.png" class="latex" alt="$3^8=6561$" style="vertical-align: 0px" width="76" height="15" />. So, E is clearly unrealistic. 
+</p><p>Note that if <img src="http://latex.artofproblemsolving.com/0/1/2/012aa2573a77f1bfe01a31fdebe941ee94b10808.png" class="latex" alt="$a_7$" style="vertical-align: -2px" width="16" height="10" /> is 1, then it's impossible for <img src="http://latex.artofproblemsolving.com/1/2/e/12e09c391eb94ff988e6dcfc490ddb6c72e79342.png" class="latexcenter" alt="\[a_7\cdot3^7+a_6\cdot3^6+a_5\cdot3^5+a_4\cdot3^4+a_3\cdot3^3+a_2\cdot3^2+a_1\cdot3^1+a_0\cdot3^0,\]" width="478" height="18" /> to be negative. Therefore, if <img src="http://latex.artofproblemsolving.com/0/1/2/012aa2573a77f1bfe01a31fdebe941ee94b10808.png" class="latex" alt="$a_7$" style="vertical-align: -2px" width="16" height="10" /> is 1, there are <img src="http://latex.artofproblemsolving.com/1/8/7/187205554f8300782a03d878a07c61ad13890cc3.png" class="latex" alt="$3^7=2187$" style="vertical-align: 0px" width="77" height="15" /> possibilities. (We also must convince ourselves that these <img src="http://latex.artofproblemsolving.com/c/8/3/c83e3f84869c291f33c93bd87bc6df516503d67b.png" class="latex" alt="$2187$" style="vertical-align: 0px" width="36" height="13" /> different sets of coefficients must necessarily yield <img src="http://latex.artofproblemsolving.com/c/8/3/c83e3f84869c291f33c93bd87bc6df516503d67b.png" class="latex" alt="$2187$" style="vertical-align: 0px" width="36" height="13" /> different integer results.)
+</p><p>As A, B, and C are all less than 2187, the answer must be <img src="http://latex.artofproblemsolving.com/f/0/b/f0bcfe6f20bc928c07859e857cb44a6d242ad1dc.png" class="latex" alt="$\boxed{\textbf{(D) } 3281}$" style="vertical-align: -10px" width="84" height="28" />
+</p>
+<h2><span class="mw-headline" id="Solution_4">Solution 4</span></h2>
+<p>Note that we can do some simple casework:
+If <img src="http://latex.artofproblemsolving.com/8/6/1/861aada2fc8eb3dabf32c68c9304b278142f5f5e.png" class="latex" alt="$a_7=1$" style="vertical-align: -2px" width="49" height="14" />, then we can choose anything for the other 7 variables, so this give us <img src="http://latex.artofproblemsolving.com/b/0/7/b07648d6e77e40902829c261a2e6d8e1a897e4bb.png" class="latex" alt="$3^7$" width="15" height="15" />.
+If <img src="http://latex.artofproblemsolving.com/e/2/0/e20d86cf427a30914414f2440dc73156914b6ea6.png" class="latex" alt="$a_7=0$" style="vertical-align: -2px" width="50" height="15" /> and <img src="http://latex.artofproblemsolving.com/1/6/0/1602323fa7d98399a2cf750d6f539e0956a1c59d.png" class="latex" alt="$a_6=1$" style="vertical-align: -2px" width="49" height="14" />, then we can choose anything for the other 6 variables, giving us <img src="http://latex.artofproblemsolving.com/7/d/4/7d440ada8a3f3b7ea6f5beb66cb1834ededc2399.png" class="latex" alt="$3^6$" width="15" height="15" />.
+If <img src="http://latex.artofproblemsolving.com/e/2/0/e20d86cf427a30914414f2440dc73156914b6ea6.png" class="latex" alt="$a_7=0$" style="vertical-align: -2px" width="50" height="15" />, <img src="http://latex.artofproblemsolving.com/c/3/d/c3df30155252acb6d7eceb86efb3fa3aa3026d00.png" class="latex" alt="$a_6=0$" style="vertical-align: -2px" width="50" height="15" />, and <img src="http://latex.artofproblemsolving.com/0/e/7/0e77466c6d502ce2d990ddde7b6ae90ea57f5762.png" class="latex" alt="$a_5=1$" style="vertical-align: -2px" width="49" height="14" />, then we have <img src="http://latex.artofproblemsolving.com/e/f/8/ef89940c9d0d4b76ae12725c459ab738decd42d4.png" class="latex" alt="$3^5$" width="15" height="15" />.
+Continuing in this vein, we have <img src="http://latex.artofproblemsolving.com/d/7/c/d7ca225a1ba06d85c90de1ba317fb7692d8e004e.png" class="latex" alt="$3^7+3^6+\cdots+3^1+3^0$" style="vertical-align: -1px" width="174" height="16" /> ways to choose the variables' values, except we have to add 1
+because we haven't counted the case where all variables are 0. So our total sum is <img src="http://latex.artofproblemsolving.com/f/0/b/f0bcfe6f20bc928c07859e857cb44a6d242ad1dc.png" class="latex" alt="$\boxed{\textbf{(D) } 3281}$" style="vertical-align: -10px" width="84" height="28" />.
+Note that we have counted all possibilities, because the largest positive positive power of 3 must be greater than or equal to the largest negative positive power of 3, for the number to be nonnegative.
+</p>
+<h2><span id="Solution_5_(Casework_and_Recursion)"></span><span class="mw-headline" id="Solution_5_.28Casework_and_Recursion.29">Solution 5 (Casework and Recursion)</span></h2>
+<p>This solution has a similar idea to that of above.
+We will start off with casework on <img src="http://latex.artofproblemsolving.com/1/4/7/14750b9b1e0ccccf2b2acc2b0f13e0eddd75936d.png" class="latex" alt="$a_{7}$" style="vertical-align: -2px" width="16" height="10" />:
+If <img src="http://latex.artofproblemsolving.com/b/3/a/b3a3c5ba04eb8b719c49d9cd85648e5c793266c2.png" class="latex" alt="$a_7 = -1$" style="vertical-align: -2px" width="63" height="14" />, we can show that there is no way to assign the values of <img src="http://latex.artofproblemsolving.com/7/8/f/78fedfb212ba26c4f699a86b8059642721a52ca6.png" class="latex" alt="$-1, 0, 1$" style="vertical-align: -3px" width="56" height="16" /> to the other <img src="http://latex.artofproblemsolving.com/2/a/7/2a772bd794fbedb2976268c491686644aefc02e8.png" class="latex" alt="$a_{i}$" style="vertical-align: -2px" width="14" height="10" />'s for <img src="http://latex.artofproblemsolving.com/8/0/9/80974eb34de691a4bb708f618ffe72a0db430bd8.png" class="latex" alt="$0 \leq i \leq 6$" style="vertical-align: -2px" width="72" height="15" />. This is because even if we make all of the other <img src="http://latex.artofproblemsolving.com/2/a/7/2a772bd794fbedb2976268c491686644aefc02e8.png" class="latex" alt="$a_{i}$" style="vertical-align: -2px" width="14" height="10" /> equal to <img src="../../../../latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png" class="latex" alt="$1$" style="vertical-align: -1px" width="11" height="14" />, we will have that our number is <img src="http://latex.artofproblemsolving.com/7/d/b/7db1fbc44b1e4582de7587bdc23dccd04c4d7af9.png" class="latex" alt="$(-1)(3^{7}) + (3^{6}+3^{5}+...+3^{0}) = -3^{7} + \frac{3^{7}-1}{3-1}$" style="vertical-align: -13px" width="363" height="39" />. However, note that since <img src="http://latex.artofproblemsolving.com/a/d/8/ad8e6fe44d63601c9a9fff65abfe5a235e92547d.png" class="latex" alt="$\frac{3^{7}-1}{3-1} &lt; 3^{7}$" style="vertical-align: -15px" width="94" height="42" />, <img src="http://latex.artofproblemsolving.com/8/3/1/8312c4010f09e27cee5ec11edbd6232894bf2d9e.png" class="latex" alt="$-3^{7} + \frac{3^{7}-1}{3-1} &lt; 0$" style="vertical-align: -13px" width="137" height="39" />.
+If <img src="http://latex.artofproblemsolving.com/5/f/3/5f3fcf18523c9d8b69ef807d08f2b32174d5efec.png" class="latex" alt="$a_{7}=0$" style="vertical-align: -2px" width="50" height="15" />, we can ignore <img src="http://latex.artofproblemsolving.com/1/4/7/14750b9b1e0ccccf2b2acc2b0f13e0eddd75936d.png" class="latex" alt="$a_{7}$" style="vertical-align: -2px" width="16" height="10" /> and pretend like it never even existed. This then simplifies the problem: the question remains the same, except that instead of having <img src="http://latex.artofproblemsolving.com/6/9/a/69ad367420359238988136a9f94981626f776303.png" class="latex" alt="$a_{0}...a_{7}$" style="vertical-align: -2px" width="48" height="10" />, we only have <img src="http://latex.artofproblemsolving.com/9/d/f/9dfe0cb9ac5f1ffdded5d01201fd7438476577ac.png" class="latex" alt="$a_{0}...a_{6}$" style="vertical-align: -2px" width="47" height="10" />. Now, we introduce some notation: let the number of nonnegative integers that can be written in the form of <img src="http://latex.artofproblemsolving.com/4/8/6/4862353df72a4ea40f098240a901713ad77fe4a5.png" class="latex" alt="$a_{n} \cdot 3^{n} + ... + a_{0} \cdot 3^{0}$" style="vertical-align: -2px" width="154" height="17" /> be denoted as <img src="http://latex.artofproblemsolving.com/3/b/d/3bde7059c6b5b207061a12fbd17380fbdff0ea6f.png" class="latex" alt="$S_{n}$" style="vertical-align: -2px" width="19" height="15" />. Then, the problem is asking us for <img src="http://latex.artofproblemsolving.com/1/7/8/1787ea255d90ebc4ce3ece6c6544b4412f584e84.png" class="latex" alt="$S_{7}$" style="vertical-align: -2px" width="17" height="15" />, and the total number of nonnegative integers we get from this case is <img src="http://latex.artofproblemsolving.com/d/b/8/db8b8b6839f4c427870ba5d768da2fb1234d1c28.png" class="latex" alt="$S_{6}$" style="vertical-align: -2px" width="17" height="15" />. Let's keep this in mind and revisit this idea later.
+If <img src="http://latex.artofproblemsolving.com/3/b/c/3bc049272d226a88499e34b3c179551b1b836eae.png" class="latex" alt="$a_{7}=1$" style="vertical-align: -2px" width="49" height="14" />, we can show that no matter what values we assign to the rest of the <img src="http://latex.artofproblemsolving.com/2/a/7/2a772bd794fbedb2976268c491686644aefc02e8.png" class="latex" alt="$a_{i}$" style="vertical-align: -2px" width="14" height="10" />, we will always get a nonnegative integer (we can make this even stricter and say positive integer). This is because of something we figured out in the first case: <img src="http://latex.artofproblemsolving.com/a/d/8/ad8e6fe44d63601c9a9fff65abfe5a235e92547d.png" class="latex" alt="$\frac{3^{7}-1}{3-1} &lt; 3^{7}$" style="vertical-align: -15px" width="94" height="42" />. So, even if we let <img src="http://latex.artofproblemsolving.com/8/c/8/8c8bbcabd026a6d5d55c77ecc9b4698a2577f79f.png" class="latex" alt="$a_{i}=-1$" style="vertical-align: -4px" width="64" height="17" /> for <img src="http://latex.artofproblemsolving.com/8/0/9/80974eb34de691a4bb708f618ffe72a0db430bd8.png" class="latex" alt="$0 \leq i \leq 6$" style="vertical-align: -2px" width="72" height="15" />, we will still have <img src="http://latex.artofproblemsolving.com/5/a/b/5ab158fbf75dcefb68bd656e434dc90d58c602c9.png" class="latex" alt="$3^{7} - (3^{6}+...+3^{0}) &gt; 0$" style="vertical-align: -4px" width="178" height="19" />. So, for this case, we have <img src="http://latex.artofproblemsolving.com/b/0/7/b07648d6e77e40902829c261a2e6d8e1a897e4bb.png" class="latex" alt="$3^7$" width="15" height="15" /> possible nonnegative integers.
+Totalling up our values from the three cases, we see that <img src="http://latex.artofproblemsolving.com/5/d/1/5d1787742d81c1c3f637f94fe376963af2705645.png" class="latex" alt="$S_{7} = 0 + S_{6} + 3^{7}$" style="vertical-align: -2px" width="130" height="17" />. In fact, using the reasoning from the three cases above, we can deduce that, for all positive integers <img src="http://latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" />, <img src="http://latex.artofproblemsolving.com/1/0/e/10e2fc8b263168a48d97edac05e82b5bec85429a.png" class="latex" alt="$S_{n} = 3^{n} + S_{n-1}$" style="vertical-align: -5px" width="124" height="18" />. We can now start building up our values for <img src="http://latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" />: <img src="http://latex.artofproblemsolving.com/d/d/2/dd2970743c05ebd7390f896dcff947ac6c68cf09.png" class="latex" alt="$S_{0} = 2$" style="vertical-align: -2px" width="51" height="15" /> (<img src="http://latex.artofproblemsolving.com/e/b/4/eb4235d349e1b595b07013fb2e92f8148cf79e5e.png" class="latex" alt="$a_{0} = 0, 1$" style="vertical-align: -3px" width="66" height="16" />), <img src="http://latex.artofproblemsolving.com/6/1/b/61b5086420065acbfde018e3cf2fc0c36b55ce66.png" class="latex" alt="$S_{1} = 3^{1}+S_{0} = 5, S_{2} = 14, ..., S_{6}=1094$" style="vertical-align: -3px" width="313" height="18" />. So, we have <img src="http://latex.artofproblemsolving.com/d/8/d/d8d4b979fac91a073dee186b44f1e900c6547b69.png" class="latex" alt="$S_{7} = 2187 + 1094 = \boxed{3281}$" style="vertical-align: -5px" width="210" height="23" />, which is answer choice <img src="http://latex.artofproblemsolving.com/9/4/b/94bf9089f3c0ad5ee9fca030cfb06b487e559902.png" class="latex" alt="$\boxed{\text{D}}$" style="vertical-align: -5px" width="24" height="23" />.
+~advanture
+</p>
+<h2><span class="mw-headline" id="Solution_6">Solution 6</span></h2>
+<p>The key is to realize that this question is basically taking place in <img src="http://latex.artofproblemsolving.com/3/3/6/33665451b98f2ff73b72782ddedfbc9ba7c5922a.png" class="latex" alt="$a\in\{0,1,2\}$" style="vertical-align: -4px" width="92" height="18" /> if each value of <img src="http://latex.artofproblemsolving.com/c/7/d/c7d457e388298246adb06c587bccd419ea67f7e8.png" class="latex" alt="$a$" style="vertical-align: -1px" width="11" height="10" /> was increased by <img src="../../../../latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png" class="latex" alt="$1$" style="vertical-align: -1px" width="11" height="14" />, essentially making it into base <img src="http://latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png" class="latex" alt="$3$" width="8" height="12" />. Then the range would be from <img src="http://latex.artofproblemsolving.com/8/3/b/83b53675652e79ae52295bb44ce91fd1e998bde6.png" class="latex" alt="$0\cdot3^7+$" style="vertical-align: -1px" width="52" height="16" /> <img src="http://latex.artofproblemsolving.com/5/5/b/55b143769aa34afe6e7d3b4fc001a10d38b86e47.png" class="latex" alt="$0\cdot3^6+$" style="vertical-align: -1px" width="52" height="16" /> <img src="http://latex.artofproblemsolving.com/3/2/3/323367c82ad5f5582c0a14b5a415f3c5de087daf.png" class="latex" alt="$0\cdot3^5+$" style="vertical-align: -1px" width="52" height="16" /> <img src="http://latex.artofproblemsolving.com/b/a/f/baf8cd2ab522e18b66c700250e0f8fe8ebf76b74.png" class="latex" alt="$0\cdot3^4+$" style="vertical-align: -1px" width="52" height="16" /> <img src="http://latex.artofproblemsolving.com/f/f/3/ff3bcd35bffdd1f08f88139616b23486816fd29f.png" class="latex" alt="$0\cdot3^3+$" style="vertical-align: -1px" width="52" height="16" /> <img src="http://latex.artofproblemsolving.com/0/0/9/0096ccbe58b449424f6145ccb619a8824d621ef0.png" class="latex" alt="$0\cdot3^2+$" style="vertical-align: -1px" width="52" height="16" /> <img src="http://latex.artofproblemsolving.com/c/2/d/c2d9edbf8edbd766e0e3f1a886520acbebb4f5cc.png" class="latex" alt="$0\cdot3^1+$" style="vertical-align: -1px" width="52" height="16" /> <img src="http://latex.artofproblemsolving.com/4/d/6/4d6a981374c5333ced8b886ea1f8edabe5a225b2.png" class="latex" alt="$0\cdot3^0=$" width="57" height="15" /> <img src="http://latex.artofproblemsolving.com/b/c/1/bc1f9d9bf8a1b606a4188b5ce9a2af1809e27a89.png" class="latex" alt="$0$" width="8" height="12" /> to <img src="http://latex.artofproblemsolving.com/3/8/5/38550ec1814ba3bcbdb47bd578f20829425e839c.png" class="latex" alt="$2\cdot3^7+$" style="vertical-align: -1px" width="52" height="16" /> <img src="http://latex.artofproblemsolving.com/1/e/3/1e3142bf69f6b7c02b31ddf75cdfe6d3f4c9ab5a.png" class="latex" alt="$2\cdot3^6+$" style="vertical-align: -1px" width="52" height="16" /> <img src="http://latex.artofproblemsolving.com/6/7/9/67931251836f7321cb36d9476b2aa5c8a1248979.png" class="latex" alt="$2\cdot3^5+$" style="vertical-align: -1px" width="52" height="16" /> <img src="http://latex.artofproblemsolving.com/e/2/1/e21b5410292d55760a0176f8e4143b3cac6997dc.png" class="latex" alt="$2\cdot3^4+$" style="vertical-align: -1px" width="52" height="16" /> <img src="http://latex.artofproblemsolving.com/c/3/1/c315f2bf47f893529abcde7025f01e98b6f7318d.png" class="latex" alt="$2\cdot3^3+$" style="vertical-align: -1px" width="52" height="16" /> <img src="http://latex.artofproblemsolving.com/f/d/6/fd69def9586f5d37f093c3635a89575577670fe5.png" class="latex" alt="$2\cdot3^2+$" style="vertical-align: -1px" width="52" height="16" /> <img src="http://latex.artofproblemsolving.com/b/8/1/b813d85d4f0947a7a4e4b3369a22ccbd86366e2d.png" class="latex" alt="$2\cdot3^1+$" style="vertical-align: -1px" width="52" height="16" /> <img src="http://latex.artofproblemsolving.com/8/c/c/8cc127368398d07445c387bde458f27e92aef3c1.png" class="latex" alt="$2\cdot3^0=$" width="57" height="15" /> <img src="http://latex.artofproblemsolving.com/9/a/5/9a5673b4edc7a3f06752855842142ab301f4544e.png" class="latex" alt="$3^8-1=$" style="vertical-align: 0px" width="66" height="15" /> <img src="http://latex.artofproblemsolving.com/0/d/2/0d245607001ee2053112a267881433318baded02.png" class="latex" alt="$6561-1=$" style="vertical-align: 0px" width="86" height="13" /> <img src="http://latex.artofproblemsolving.com/a/a/2/aa2786fbfb519bc1c1338e387b0431a1992cfbd1.png" class="latex" alt="$6560$" style="vertical-align: -1px" width="38" height="14" />, yielding <img src="http://latex.artofproblemsolving.com/9/7/b/97bbab35ca53cdc42e0ec60944fb3a3016e9cc63.png" class="latex" alt="$6561$" style="vertical-align: 0px" width="35" height="13" /> different values. Since the distribution for all <img src="http://latex.artofproblemsolving.com/f/3/c/f3c5e8424e376d02b3e116ed42e8c526821771ea.png" class="latex" alt="$a_i\in \{-1,0,1\}$" style="vertical-align: -4px" width="112" height="18" /> the question originally gave is symmetrical, we retain the <img src="http://latex.artofproblemsolving.com/a/a/8/aa8bcd4497764d3afb022b1f2f0f6409b28f36e2.png" class="latex" alt="$3280$" style="vertical-align: -1px" width="38" height="14" /> positive integers and one <img src="http://latex.artofproblemsolving.com/b/c/1/bc1f9d9bf8a1b606a4188b5ce9a2af1809e27a89.png" class="latex" alt="$0$" width="8" height="12" /> but discard the <img src="http://latex.artofproblemsolving.com/a/a/8/aa8bcd4497764d3afb022b1f2f0f6409b28f36e2.png" class="latex" alt="$3280$" style="vertical-align: -1px" width="38" height="14" /> negative integers. Thus, we are left with the answer, <img src="http://latex.artofproblemsolving.com/c/7/1/c71a929f9d4118554bd5a5f4db02ea373c0b37c3.png" class="latex" alt="$\boxed{\textbf{(D)} 3281}\qquad$" style="vertical-align: -10px" width="77" height="28" />.  --anna0kear
+</p>
+<h2><span class="mw-headline" id="Solution_7">Solution 7</span></h2>
+<p>First, set <img src="http://latex.artofproblemsolving.com/e/2/1/e21bbcc8b1a1db90a76c7cda79b37d049509a5a8.png" class="latex" alt="$a_i=0$" style="vertical-align: -2px" width="48" height="15" /> for all <img src="http://latex.artofproblemsolving.com/c/c/1/cc1006fef8bc3114c888e4a008ba3049894e08ce.png" class="latex" alt="$i\geq1$" style="vertical-align: -2px" width="38" height="15" />. The range would be the integers for which <img src="http://latex.artofproblemsolving.com/3/9/f/39f506ebeeeb72f62147990614a67f4e30b7c751.png" class="latex" alt="$[-1,1]$" style="vertical-align: -5px" width="48" height="18" />. If <img src="http://latex.artofproblemsolving.com/e/2/1/e21bbcc8b1a1db90a76c7cda79b37d049509a5a8.png" class="latex" alt="$a_i=0$" style="vertical-align: -2px" width="48" height="15" /> for all <img src="http://latex.artofproblemsolving.com/c/4/8/c48e2f9ea34289dfb33d3ecd2a951cd2c722ba17.png" class="latex" alt="$i\geq2$" style="vertical-align: -2px" width="39" height="15" />, our set expands to include all integers such that <img src="http://latex.artofproblemsolving.com/4/e/1/4e17b8ccae0745d110c06b51b349f47cba2e20ae.png" class="latex" alt="$-4\leq\mathbb{Z}\leq4$" style="vertical-align: -2px" width="92" height="14" />. Similarly, when <img src="http://latex.artofproblemsolving.com/d/8/3/d837376591788ca9bf23fb51eb37be0325a59d79.png" class="latex" alt="$i\geq3$" style="vertical-align: -2px" width="39" height="15" /> we get <img src="http://latex.artofproblemsolving.com/7/b/c/7bc1e6634d1ac284f296773d250220bf7583e644.png" class="latex" alt="$-13\leq\mathbb{Z}\leq13$" style="vertical-align: -2px" width="110" height="15" />, and when <img src="http://latex.artofproblemsolving.com/0/2/e/02e00935fcec28a5c3831b832cf6d5936330a45c.png" class="latex" alt="$i\geq4$" style="vertical-align: -2px" width="39" height="15" /> the range is <img src="http://latex.artofproblemsolving.com/2/9/c/29ccb7b1428c587539e02c2a2528700df67023b2.png" class="latex" alt="$-40\leq\mathbb{Z}\leq40$" style="vertical-align: -2px" width="110" height="15" />. The pattern continues until we reach <img src="http://latex.artofproblemsolving.com/1/0/6/1062d042ecf84ecaa3fd6c7fe3ccbc7ba5b91a29.png" class="latex" alt="$i=7$" style="vertical-align: -1px" width="41" height="14" />, where <img src="http://latex.artofproblemsolving.com/a/9/8/a98298a84144022cd72ab2f0ebe3f109ae069eb5.png" class="latex" alt="$-3280\leq\mathbb{Z}\leq3280$" style="vertical-align: -3px" width="149" height="17" />. Because we are only looking for positive integers, we filter out all <img src="http://latex.artofproblemsolving.com/4/c/7/4c734b4bdabf30bd636a2cfdebf865a119f0407b.png" class="latex" alt="$\mathbb{Z}&lt;0$" style="vertical-align: 0px" width="44" height="13" />, leaving us with all integers between <img src="http://latex.artofproblemsolving.com/d/8/4/d84bfc670ff66a0b81b05baddf0129e26f10b178.png" class="latex" alt="$0\leq\mathbb{Z}\leq3280$" style="vertical-align: -2px" width="105" height="15" />, inclusive. The answer becomes <img src="http://latex.artofproblemsolving.com/f/0/b/f0bcfe6f20bc928c07859e857cb44a6d242ad1dc.png" class="latex" alt="$\boxed{\textbf{(D) } 3281}$" style="vertical-align: -10px" width="84" height="28" />.  --anna0kear
+</p>
+<h2><span class="mw-headline" id="Solution_8">Solution 8</span></h2>
+<p>To get the number of integers, we can get the highest positive integer that can be represented using <img src="http://latex.artofproblemsolving.com/1/2/e/12e09c391eb94ff988e6dcfc490ddb6c72e79342.png" class="latexcenter" alt="\[a_7\cdot3^7+a_6\cdot3^6+a_5\cdot3^5+a_4\cdot3^4+a_3\cdot3^3+a_2\cdot3^2+a_1\cdot3^1+a_0\cdot3^0,\]" width="478" height="18" />
+where <img src="http://latex.artofproblemsolving.com/f/3/c/f3c5e8424e376d02b3e116ed42e8c526821771ea.png" class="latex" alt="$a_i\in \{-1,0,1\}$" style="vertical-align: -4px" width="112" height="18" /> for <img src="http://latex.artofproblemsolving.com/d/5/5/d55b4a57fcff346516e9bbec7f578395ac5fa341.png" class="latex" alt="$0\le i \le 7$" style="vertical-align: -2px" width="73" height="15" />.
+</p><p>Note that the least nonnegative integer that can be represented is <img src="http://latex.artofproblemsolving.com/b/c/1/bc1f9d9bf8a1b606a4188b5ce9a2af1809e27a89.png" class="latex" alt="$0$" width="8" height="12" />, when all <img src="http://latex.artofproblemsolving.com/e/2/1/e21bbcc8b1a1db90a76c7cda79b37d049509a5a8.png" class="latex" alt="$a_i=0$" style="vertical-align: -2px" width="48" height="15" />. The highest number will be the number when all <img src="http://latex.artofproblemsolving.com/0/2/a/02a0de723250e2686dcdb17afbd7eb09655b5fce.png" class="latex" alt="$a_i=1$" style="vertical-align: -2px" width="47" height="14" />. That will be <img src="http://latex.artofproblemsolving.com/f/c/e/fcef1da1dd20c68f1f3b4cd00b9b3329ca6bd8c0.png" class="latexcenter" alt="\[3^7+3^6+3^5+3^4+3^3+3^2+3^1+3^0=\frac{3^8-1}{3-1}\]" width="361" height="39" /> <img src="http://latex.artofproblemsolving.com/f/3/3/f33c5652cd7bf4a6ef184d0f2b072c3c0f8b57a5.png" class="latexcenter" alt="\[=3280\]" width="54" height="12" />
+</p><p>Therefore, there are <img src="http://latex.artofproblemsolving.com/a/a/8/aa8bcd4497764d3afb022b1f2f0f6409b28f36e2.png" class="latex" alt="$3280$" style="vertical-align: -1px" width="38" height="14" /> positive integers and <img src="http://latex.artofproblemsolving.com/7/9/0/790cb880303c38a93cfcdca3df801f3d3381bb4b.png" class="latex" alt="$(3280+1)$" style="vertical-align: -4px" width="80" height="18" /> nonnegative integers (while including <img src="http://latex.artofproblemsolving.com/b/c/1/bc1f9d9bf8a1b606a4188b5ce9a2af1809e27a89.png" class="latex" alt="$0$" width="8" height="12" />) that can be represented. Our answer is <img src="http://latex.artofproblemsolving.com/f/0/b/f0bcfe6f20bc928c07859e857cb44a6d242ad1dc.png" class="latex" alt="$\boxed{\textbf{(D) } 3281}$" style="vertical-align: -10px" width="84" height="28" />
+</p><p>~OlutosinNGA
+</p>
+<h2><span class="mw-headline" id="Solution_9">Solution 9</span></h2>
+<p>Notice that there are <img src="http://latex.artofproblemsolving.com/3/8/7/387be85c97b527ddd652f307ed502f32ad0c79c7.png" class="latex" alt="$3^8$" width="15" height="15" /> options for <img src="http://latex.artofproblemsolving.com/7/7/3/77360a01a2e43db68b8cf264c8dba7a66c25c02b.png" class="latex" alt="$a_7, a_6, \cdots a_0$" style="vertical-align: -3px" width="90" height="11" /> since each <img src="http://latex.artofproblemsolving.com/4/1/2/412787c048e28774dc63fc27db42dc52ca858de7.png" class="latex" alt="$a_i$" style="vertical-align: -2px" width="14" height="10" /> can take on the value <img src="http://latex.artofproblemsolving.com/b/a/e/bae5aba07d37ff6ff813107e76260fb31ad5794e.png" class="latex" alt="$-1$" style="vertical-align: 0px" width="22" height="12" />, <img src="http://latex.artofproblemsolving.com/b/c/1/bc1f9d9bf8a1b606a4188b5ce9a2af1809e27a89.png" class="latex" alt="$0$" width="8" height="12" />, or <img src="../../../../latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png" class="latex" alt="$1$" style="vertical-align: -1px" width="11" height="14" />. Now we want to find how many of them are positive and then we can add one in the end to account for <img src="http://latex.artofproblemsolving.com/b/c/1/bc1f9d9bf8a1b606a4188b5ce9a2af1809e27a89.png" class="latex" alt="$0$" width="8" height="12" /> (they are asking for non-negative). 
+</p><p>By symmetry (look out for these on the contest), we see that exactly half of them are positive. So <img src="http://latex.artofproblemsolving.com/7/d/2/7d28cdfefe7b86e221716e356ab30fe1977990b1.png" class="latex" alt="$\lfloor{\tfrac{3^8}{2}}\rfloor = 3280.$" style="vertical-align: -6px" width="97" height="24" /> Now we will add <img src="../../../../latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png" class="latex" alt="$1$" style="vertical-align: -1px" width="11" height="14" /> because of the <img src="http://latex.artofproblemsolving.com/b/c/1/bc1f9d9bf8a1b606a4188b5ce9a2af1809e27a89.png" class="latex" alt="$0$" width="8" height="12" /> to account for the non-negative solutions. 
+</p><p>So our final answer is <img src="http://latex.artofproblemsolving.com/f/2/7/f2794c1e82d3619277972a992f1a3dbc08299e39.png" class="latex" alt="$3280 + 1 = 3281$" style="vertical-align: -1px" width="127" height="14" /> which is <img src="http://latex.artofproblemsolving.com/f/0/b/f0bcfe6f20bc928c07859e857cb44a6d242ad1dc.png" class="latex" alt="$\boxed{\textbf{(D) } 3281}$" style="vertical-align: -10px" width="84" height="28" />.
+</p>
+<h2><span class="mw-headline" id="Solution_10">Solution 10</span></h2>
+<p>Obviously, there are <img src="http://latex.artofproblemsolving.com/d/3/9/d3974b2c1ae4102f44d9d7b87a82ad1ed727e877.png" class="latex" alt="$3^8 = 6561$" style="vertical-align: -1px" width="79" height="17" /> possible, and one of them is 0, so other <img src="http://latex.artofproblemsolving.com/a/a/2/aa2786fbfb519bc1c1338e387b0431a1992cfbd1.png" class="latex" alt="$6560$" style="vertical-align: -1px" width="38" height="14" /> are either positive or negative. By the symmetry, we can get the answer is <img src="http://latex.artofproblemsolving.com/4/a/2/4a2865167c0a75089299021ed11837c28cc5d114.png" class="latex" alt="$6560/2 + 1$" style="vertical-align: -5px" width="88" height="20" /> which is <img src="http://latex.artofproblemsolving.com/f/0/b/f0bcfe6f20bc928c07859e857cb44a6d242ad1dc.png" class="latex" alt="$\boxed{\textbf{(D) } 3281}$" style="vertical-align: -10px" width="84" height="28" />.
+</p><p>~ Little
+</p>
+<h2><span id="Solution_11_(2_seconds)"></span><span class="mw-headline" id="Solution_11_.282_seconds.29">Solution 11 (2 seconds)</span></h2>
+<p>The solution has to obviously be smaller than <img src="http://latex.artofproblemsolving.com/f/d/7/fd7e007fa16f69e9e0e87350c37d831755c7a96b.png" class="latex" alt="$3^{7-0+1}=3^8$" style="vertical-align: -1px" width="93" height="17" /> but larger than <img src="http://latex.artofproblemsolving.com/5/4/b/54ba201123b80520ce94be8aa4cf7d7bd34ec7f5.png" class="latex" alt="$3^{(7-0+1)-1} = 3^7.$" style="vertical-align: -1px" width="125" height="18" /> The only remaining answer is <img src="http://latex.artofproblemsolving.com/7/5/8/7581c32f75a6642b636d514cf7413722a35d10d0.png" class="latex" alt="$\boxed{\textbf{(D) } 3281}.$" style="vertical-align: -11px" width="90" height="30" />
+~mathboy282
+</p>
+<h2><span id="Video_Solution_by_Pi_Academy_(FAST_and_easy)"></span><span class="mw-headline" id="Video_Solution_by_Pi_Academy_.28FAST_and_easy.29">Video Solution by Pi Academy (FAST and easy)</span></h2>
+<p><a rel="nofollow" class="external free" href="https://youtu.be/cTb6AMpit5o?si=dKGnTcQlNHGLLJlD">https://youtu.be/cTb6AMpit5o?si=dKGnTcQlNHGLLJlD</a>
+</p><p>~ Pi Academy
+</p>
+<h2><span class="mw-headline" id="Video_Solution">Video Solution</span></h2>
+<p><a rel="nofollow" class="external free" href="https://youtu.be/0xmbHDcUI2w">https://youtu.be/0xmbHDcUI2w</a>
+</p><p>~IceMatrix
+</p>
+<h2><span class="mw-headline" id="See_Also">See Also</span></h2>
+<table class="wikitable" style="margin:0.5em auto; font-size:95%; border:1px solid black; width:80%;">
+<tbody><tr>
+<td style="background:#ccf;text-align:center;" colspan="3"><b><a href="../2018_AMC_10A.html" title="2018 AMC 10A">2018 AMC 10A</a></b> (<b><a href="../2018_AMC_10A_Problems.html" title="2018 AMC 10A Problems">Problems</a></b> • <b><a href="../2018_AMC_10A_Answer_Key.html" title="2018 AMC 10A Answer Key">Answer Key</a></b> • <a rel="nofollow" class="external text" href="https://artofproblemsolving.com/community/c13">Resources</a>)
+</td></tr>
+<tr>
+<td width="50%" align="center" rowspan="1">Preceded&#160;by<br /><b><a href="Problem_17.html" title="2018 AMC 10A Problems/Problem 17">Problem 17</a></b>
+</td>
+<td width="50%" align="center" rowspan="1">Followed&#160;by<br /><b><a href="Problem_19.html" title="2018 AMC 10A Problems/Problem 19">Problem 19</a></b>
+</td></tr>
+<tr>
+<td colspan="3" style="text-align:center;"><a href="Problem_1.html" title="2018 AMC 10A Problems/Problem 1">1</a> <b>•</b> <a href="Problem_2.html" title="2018 AMC 10A Problems/Problem 2">2</a> <b>•</b> <a href="Problem_3.html" title="2018 AMC 10A Problems/Problem 3">3</a> <b>•</b> <a href="Problem_4.html" title="2018 AMC 10A Problems/Problem 4">4</a> <b>•</b> <a href="Problem_5.html" title="2018 AMC 10A Problems/Problem 5">5</a> <b>•</b> <a href="Problem_6.html" title="2018 AMC 10A Problems/Problem 6">6</a> <b>•</b> <a href="Problem_7.html" title="2018 AMC 10A Problems/Problem 7">7</a> <b>•</b> <a href="Problem_8.html" title="2018 AMC 10A Problems/Problem 8">8</a> <b>•</b> <a href="Problem_9.html" title="2018 AMC 10A Problems/Problem 9">9</a> <b>•</b> <a href="Problem_10.html" title="2018 AMC 10A Problems/Problem 10">10</a> <b>•</b> <a href="Problem_11.html" title="2018 AMC 10A Problems/Problem 11">11</a> <b>•</b> <a href="Problem_12.html" title="2018 AMC 10A Problems/Problem 12">12</a> <b>•</b> <a href="Problem_13.html" title="2018 AMC 10A Problems/Problem 13">13</a> <b>•</b> <a href="Problem_14.html" title="2018 AMC 10A Problems/Problem 14">14</a> <b>•</b> <a href="Problem_15.html" title="2018 AMC 10A Problems/Problem 15">15</a> <b>•</b> <a href="Problem_16.html" title="2018 AMC 10A Problems/Problem 16">16</a> <b>•</b> <a href="Problem_17.html" title="2018 AMC 10A Problems/Problem 17">17</a> <b>•</b> <a class="mw-selflink selflink">18</a> <b>•</b> <a href="Problem_19.html" title="2018 AMC 10A Problems/Problem 19">19</a> <b>•</b> <a href="Problem_20.html" title="2018 AMC 10A Problems/Problem 20">20</a> <b>•</b> <a href="Problem_21.html" title="2018 AMC 10A Problems/Problem 21">21</a> <b>•</b> <a href="Problem_22.html" title="2018 AMC 10A Problems/Problem 22">22</a> <b>•</b> <a href="Problem_23.html" title="2018 AMC 10A Problems/Problem 23">23</a> <b>•</b> <a href="Problem_24.html" title="2018 AMC 10A Problems/Problem 24">24</a> <b>•</b> <a href="Problem_25.html" title="2018 AMC 10A Problems/Problem 25">25</a>
+</td></tr>
+<tr>
+<td colspan="3" style="text-align:center;"><b><a href="../AMC_10_Problems_and_Solutions.html" title="AMC 10 Problems and Solutions"> All AMC 10 Problems and Solutions</a></b>
+</td></tr></tbody></table>
+<table class="wikitable" style="margin:0.5em auto; font-size:95%; border:1px solid black; width:80%;">
+<tbody><tr>
+<td style="background:#ccf;text-align:center;" colspan="2"><b><a href="https://artofproblemsolving.com/wiki/index.php/2018_AMC_12A" title="2018 AMC 12A">2018 AMC 12A</a></b> (<b><a href="https://artofproblemsolving.com/wiki/index.php/2018_AMC_12A_Problems" title="2018 AMC 12A Problems">Problems</a></b> • <b><a href="https://artofproblemsolving.com/wiki/index.php/2018_AMC_12A_Answer_Key" title="2018 AMC 12A Answer Key">Answer Key</a></b> • <a rel="nofollow" class="external text" href="http://www.artofproblemsolving.com/community/c13">Resources</a>)
+</td></tr>
+<tr>
+<td width="50%" align="center" rowspan="1">Preceded&#160;by<br /><b><a href="https://artofproblemsolving.com/wiki/index.php/2018_AMC_12A_Problems/Problem_12" class="mw-redirect" title="2018 AMC 12A Problems/Problem 12">Problem 12</a></b>
+</td>
+<td width="50%" align="center" rowspan="1">Followed&#160;by<br /><b><a href="https://artofproblemsolving.com/wiki/index.php/2018_AMC_12A_Problems/Problem_14" title="2018 AMC 12A Problems/Problem 14">Problem 14</a></b>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align:center;"><a href="https://artofproblemsolving.com/wiki/index.php/2018_AMC_12A_Problems/Problem_1" title="2018 AMC 12A Problems/Problem 1">1</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2018_AMC_12A_Problems/Problem_2" title="2018 AMC 12A Problems/Problem 2">2</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2018_AMC_12A_Problems/Problem_3" class="mw-redirect" title="2018 AMC 12A Problems/Problem 3">3</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2018_AMC_12A_Problems/Problem_4" class="mw-redirect" title="2018 AMC 12A Problems/Problem 4">4</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2018_AMC_12A_Problems/Problem_5" title="2018 AMC 12A Problems/Problem 5">5</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2018_AMC_12A_Problems/Problem_6" title="2018 AMC 12A Problems/Problem 6">6</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2018_AMC_12A_Problems/Problem_7" class="mw-redirect" title="2018 AMC 12A Problems/Problem 7">7</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2018_AMC_12A_Problems/Problem_8" class="mw-redirect" title="2018 AMC 12A Problems/Problem 8">8</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2018_AMC_12A_Problems/Problem_9" title="2018 AMC 12A Problems/Problem 9">9</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2018_AMC_12A_Problems/Problem_10" class="mw-redirect" title="2018 AMC 12A Problems/Problem 10">10</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2018_AMC_12A_Problems/Problem_11" class="mw-redirect" title="2018 AMC 12A Problems/Problem 11">11</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2018_AMC_12A_Problems/Problem_12" class="mw-redirect" title="2018 AMC 12A Problems/Problem 12">12</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2018_AMC_12A_Problems/Problem_13" class="mw-redirect" title="2018 AMC 12A Problems/Problem 13">13</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2018_AMC_12A_Problems/Problem_14" title="2018 AMC 12A Problems/Problem 14">14</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2018_AMC_12A_Problems/Problem_15" class="mw-redirect" title="2018 AMC 12A Problems/Problem 15">15</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2018_AMC_12A_Problems/Problem_16" class="mw-redirect" title="2018 AMC 12A Problems/Problem 16">16</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2018_AMC_12A_Problems/Problem_17" class="mw-redirect" title="2018 AMC 12A Problems/Problem 17">17</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2018_AMC_12A_Problems/Problem_18" class="mw-redirect" title="2018 AMC 12A Problems/Problem 18">18</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2018_AMC_12A_Problems/Problem_19" title="2018 AMC 12A Problems/Problem 19">19</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2018_AMC_12A_Problems/Problem_20" title="2018 AMC 12A Problems/Problem 20">20</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2018_AMC_12A_Problems/Problem_21" title="2018 AMC 12A Problems/Problem 21">21</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2018_AMC_12A_Problems/Problem_22" title="2018 AMC 12A Problems/Problem 22">22</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2018_AMC_12A_Problems/Problem_23" title="2018 AMC 12A Problems/Problem 23">23</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2018_AMC_12A_Problems/Problem_24" title="2018 AMC 12A Problems/Problem 24">24</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2018_AMC_12A_Problems/Problem_25" class="mw-redirect" title="2018 AMC 12A Problems/Problem 25">25</a>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align:center;"><b><a href="../AMC_12_Problems_and_Solutions.html" title="AMC 12 Problems and Solutions"> All AMC 12 Problems and Solutions</a></b>
+</td></tr></tbody></table>
+<p>The problems on this page are copyrighted by the <a rel="nofollow" class="external text" href="http://www.maa.org/">Mathematical Association of America</a>'s <a rel="nofollow" class="external text" href="https://maa.org/student-programs/amc/">American Mathematics Competitions</a>. <a href="../File_AMC_logo.html" class="image"><img alt="AMC logo.png" src="../../../../wiki-images.artofproblemsolving.com/thumb/8/8b/AMC_logo.png/50px-AMC_logo.png" width="50" height="43" style="vertical-align: middle" srcset="https://wiki-images.artofproblemsolving.com//thumb/8/8b/AMC_logo.png/75px-AMC_logo.png 1.5x, https://wiki-images.artofproblemsolving.com//8/8b/AMC_logo.png 2x" /></a>
+</p>
+<div style="clear:both;"></div>
+
+<!-- 
+NewPP limit report
+Cached time: 20250408061705
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.113 seconds
+Real time usage: 7.736 seconds
+Preprocessor visited node count: 1524/1000000
+Preprocessor generated node count: 4034/1000000
+Post‐expand include size: 4397/2097152 bytes
+Template argument size: 427/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 26025/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 2715.353      1 -total
+ 16.73%  454.218      1 Template:AMC12_box
+  6.78%  184.143      1 Template:Duplicate
+  6.72%  182.527      1 Template:AMC10_box
+  3.43%   93.194      1 Template:MAA_Notice
+-->
+</div>
+<!-- Saved in parser cache with key wiki-wiki_:pcache:idhash:15951-0!canonical and timestamp 20250408061657 and revision id 231055
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://artofproblemsolving.com/wiki/index.php?title=2018_AMC_10A_Problems/Problem_18&amp;oldid=231055">https://artofproblemsolving.com/wiki/index.php?title=2018_AMC_10A_Problems/Problem_18&amp;oldid=231055</a>"</div>
+
+
+									<div class="catlinks"><div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="../Special_Categories.html" title="Special:Categories">Category</a>: <ul><li><a href="https://artofproblemsolving.com/wiki/index.php/Category:Intermediate_Number_Theory_Problems" title="Category:Intermediate Number Theory Problems">Intermediate Number Theory Problems</a></li></ul></div></div></div>
+				
+
+							</div>
+		</div>
+	</div>
+</div>
+
+<!-- search:off -->
+	<div class="clearfix"></div>
+
+	
+	<div id="main-footer" class="no-print">
+		<div class="footer-container">
+			<div class="footer-topRow">
+											<a href="https://artofproblemsolving.com/online">
+							<img class="footer-mainLogo"
+							src="https://artofproblemsolving.com/assets/images/logos/aops-online-footer.svg"/>
+						</a>
+										<div class="footer-wasc">
+						<span>
+							Art of Problem Solving is an
+							<br class="wasc-break"/>
+							<span class="footer-accredited">ACS WASC Accredited School</span>
+						</span>
+						<img class="footer-wascLogo"
+						src="../../../assets/images/logos/wasc.png"/>
+					</div>
+			</div>
+			<div class="footer-links">
+				<div class="footer-col">
+					<div class="footer-colHeader">aops programs</div>
+					<div><a class="link" href="https://artofproblemsolving.comonline/">AoPS Online</a></div>
+					<div><a class="link" href="https://beastacademy.com/">Beast Academy</a></div>
+					<div><a class="link" href="https://aopsacademy.org/">AoPS Academy</a></div>
+				</div>
+
+				<div class="footer-col">
+					<div class="footer-colHeader">About</div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/about">About AoPS</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/staff">Our Team</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/history">Our History</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/careers">Jobs</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/blog">AoPS Blog</a></div>
+				</div>
+
+				<div class="footer-col">
+					<div class="footer-colHeader" style="left:-1px;">Site Info</div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/tos">Terms</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/privacy">Privacy</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/contact">Contact Us</a></div>
+				</div>
+
+				<div class="footer-col social">
+					<div class="footer-colHeader">follow us</div>
+					<div class="footer-social">
+													<a class="link" target="_blank" href="https://www.facebook.com/artofproblemsolving">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/facebook.svg" class="sm-icon"/>
+							</a>
+							<a class="link" target="_blank" href="http://twitter.com/AoPSNews">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/twitter.svg" class="sm-icon"/>
+							</a>
+							<a class="link" target="_blank" href="https://www.pinterest.com/artofproblemsolving/pins/">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/pinterest.svg" class="sm-icon"/>
+							</a>
+											</div>
+				</div>
+									<div class="footer-col subscribe">
+						<div class="footer-colHeader">
+							Subscribe for news and updates
+						</div>
+						<form method="post" action="https://artofproblemsolving.com/mailinglist">
+							<input type="email" class="footer-email" placeholder="Enter e-mail" name="subscribe-email">
+							<input type="hidden" name="new-books" value="on">
+							<input type="hidden" name="classes" value="on">
+							<input type="hidden" name="mathjams" value="on">
+							<input type="submit" class="footer-submit" value="">
+							<div class="footer-submit-arrow">
+								<svg x="0px" y="0px" viewBox="0 0 289 289" enable-background="new 0 0 289 289">
+									<g>
+										<path class="arrow-fill" d="M121.5,220.5c-2.6,0-5.1-1-7.1-2.9c-3.9-3.9-3.9-10.2,0-14.1l58.9-58.9l-58.9-58.9c-3.9-3.9-3.9-10.2,0-14.1c3.9-3.9,10.2-3.9,14.1,0l66,66c3.9,3.9,3.9,10.2,0,14.1l-66,66C126.6,219.5,124.1,220.5,121.5,220.5z"/>
+									</g>
+								</svg>
+							</div>
+						</form>
+					</div>
+							</div>
+			<div class="copyright">
+				<span>&copy; 2025 AoPS Incorporated
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div id="small-footer-wrapper">
+		<div class="footer-container">
+							<a href="https://artofproblemsolving.com/online">
+					<img class="footer-mainLogo"
+					src="https://artofproblemsolving.com/assets/images/logos/aops-online-footer.svg"/>
+				</a>
+						<div class="copyright">
+				&copy; 2025 Art of Problem Solving
+				<div class="copyright-links">
+					<a href="https://artofproblemsolving.com/company">About Us</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/contact">Contact Us</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/company/tos">Terms</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/company/privacy">Privacy</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<form id="registration-form" method="post" action="https://artofproblemsolving.com/user/register.php">
+	<input type="hidden" name="username" value="">
+	<input type="hidden" name="password" value="">
+	<input type="hidden" name="from-login" value="true">
+	</form>
+<div id="print-footer" class="printer">Copyright &copy; 2025 Art of Problem Solving</div>
+
+
+
+<div id="epicfail" class="aops-html-modal-epic-fail" style="display: none">
+	<div class="aops-html-modal-inner-epic-fail">
+		<div class="aops-html-modal-main-epic-fail">
+			<p>Something appears to not have loaded correctly.</p>
+		</div>
+		<div class="aops-html-modal-bottom-epic-fail">
+			<p><a onclick="location.reload(true);return false">Click to refresh</a>.</p>
+		</div>
+	</div>
+</div>
+<link rel="stylesheet" href="../../../assets/css/epic-fail.css">
+
+
+
+
+
+<!-- /search:off -->
+
+
+<!-- copied from contact page index, with edits -->
+<script id="footer-tpl-email-dialog" type="text/x-handlebars-template">
+	<div id="mail-dialog">
+		<h1>Email Art of Problem Solving</h1>
+		<p>
+			<input type="text" id="email" name="email" placeholder="Your email address">
+			<input type="text" id="subject" name="subject" placeholder="Subject of message">
+			<textarea id="message" name="message" placeholder="Enter your message"></textarea>
+			<div style="padding:5px 30px">
+				<input type="checkbox" id="email-copy" name="email_copy">
+				<label for="email-copy" id="email-copy-label">Send a copy to my email address.</label>
+			</div>
+			<div style="padding:5px 30px 20px">
+				<input id="footer-submit-btn" type="submit" class="btn btn-primary" value="Send">
+				<input id="footer-cancel-btn" type="submit" class="btn btn-default" value="Cancel">
+			</div>
+		</p>
+		<p id="email-error"></p>
+	</div>
+</script>
+
+
+<script id="footer-tpl-email-confirm" type="text/x-handlebars-template">
+	<div id="mail-dialog-confirm">
+		<h2>Email Sent</h2>
+		<p>Thank you for your email. We will respond to it soon.</p>
+	</div>
+</script>
+
+<!-- bing -->
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5105596"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","../../../../bat.bing.com/bat.js","uetq");</script><noscript><img src="http://bat.bing.com/action/0?ti=5105596&amp;Ver=2" height="0" width="0" style="display:none; visibility: hidden;" /></noscript>
+
+</body>
+<!-- Cached 20250409010258 -->
+
+<!-- Mirrored from artofproblemsolving.com/wiki/index.php/2018_AMC_10A_Problems/Problem_18 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Apr 2025 05:01:26 GMT -->
+</html>
+

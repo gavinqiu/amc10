@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html>
+	
+<!-- Mirrored from artofproblemsolving.com/wiki/index.php/2023_AMC_10A_Problems/Problem_25 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Apr 2025 04:59:35 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+				
+<script>AoPS = {
+	start_time : new Date().getTime()
+};</script>
+
+<script>
+	AoPS.bootstrap_data = [];
+	AoPS.bd = AoPS.bootstrap_data; // Alias!
+	AoPS.session = {"user_id":1,"platform_user_id":"","username":"Anonymous","avatar":"\/\/avatar.artofproblemsolving.com\/avatar_1.png?t=1","email":"","role":"","logged_in":false,"initialized":false,"needs_coppa_approval":false,"admin":false,"national_staff":false,"wikiname":""};
+	AoPS.bd.assetVersion = 1;
+	AoPS.bd.environment = 'production';
+	AoPS.protected_url = 'https://artofproblemsolving.com/';
+	AoPS.aops_url = 'https://artofproblemsolving.com/';
+	AoPS.academy_url = 'https://aopsacademy.org/';
+</script>
+		<!-- GA plugin and Enhanced Ecommerce -->
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','../../../../www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-1905305-1', 'auto', {allowLinker: true}); // GA Property ID
+		ga('send', 'pageview');
+		</script>
+		<!-- End GA plugin and Enhanced Ecommerce -->
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'../../../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer', 'GTM-59JWRGZ')</script>
+		<!-- End Google Tag Manager -->
+
+		<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1">
+		<meta name="referrer" content="origin">
+
+		<meta name="facebook-domain-verification" content="zmmwg7oqqsqvf8ihckwvzoo85b08gx" />
+
+		
+		<link rel="apple-touch-icon" href="../../../../assets.artofproblemsolving.com/images/apple-touch-icon.png">
+		<title>Art of Problem Solving</title>
+
+		
+		<link href="../../../assets/fonts/font-awesome/css/all.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="../../../assets/css/sharedsite.css">
+		<link rel="stylesheet" href="../../../assets/css/navheader.css">
+		<link rel="stylesheet" href="../../../assets/css/footer.css">
+		<link rel="stylesheet" href="../../../assets/css/main-head.css">
+
+					<link rel="icon" href="https://artofproblemsolving.com/online-favicon.ico?v=2">
+		
+		
+		<script>
+  if (!window.console) console = {log: function() {}, dir: function() {}};
+  $$ = function( selector ) { return document.getElementById( selector ); }
+</script>
+
+							<script src="../../../../assets.artofproblemsolving.com/js/jquery360.min.js"></script>
+							<script src="../../../assets/vendor/jquery/3.6.0/jquery-migrate.min.js"></script>
+					<link rel="stylesheet" href="../../../../cdn.jsdelivr.net/npm/katex%400.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+<script defer src="../../../../cdn.jsdelivr.net/npm/katex%400.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+<script defer src="../../../../cdn.jsdelivr.net/npm/katex%400.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '[katex]', right: '[/katex]', display: false},
+			  {left: '[katex display=true]', right: '[/katex]', display: true} 
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+    });
+</script>
+
+<script>
+MathJax = {
+  tex: {
+	inlineMath: [['[mathjax]', '[/mathjax]'], ['\\(', '\\)']],
+	displayMath: [['[mathjax display=true]', '[/mathjax]']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async src="../../../../cdn.jsdelivr.net/npm/mathjax%403/es5/tex-svg.js"> </script>
+
+				<meta charset="UTF-8"/>
+<title>2023 AMC 12A Problems/Problem 21 - AoPS Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"2023_AMC_12A_Problems/Problem_21","wgTitle":"2023 AMC 12A Problems/Problem 21","wgCurRevisionId":231702,"wgRevisionId":231702,"wgArticleId":25667,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"2023_AMC_12A_Problems/Problem_21","wgRelevantArticleId":25667,"wgRequestId":"414a11ee6f7b66a5ea9da4af","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"2023_AMC_10A_Problems/Problem_25","wgInternalRedirectTargetUrl":"/wiki/index.php/2023_AMC_12A_Problems/Problem_21"});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.aopsp":"ready"});mw.loader.implement("user.tokens@09avpoe",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.action.view.redirect","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.aopsp.js"]);});</script>
+<link rel="stylesheet" href="https://artofproblemsolving.com/wiki/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cskins.aopsp&amp;only=styles&amp;skin=aopsp"/>
+<script async="" src="https://artofproblemsolving.com/wiki/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=aopsp"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="https://artofproblemsolving.com/wiki/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=aopsp"/>
+<meta name="generator" content="MediaWiki 1.31.1"/>
+<link rel="shortcut icon" href="https://artofproblemsolving.com/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://artofproblemsolving.com/wiki/opensearch_desc.php" title="AoPS Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://artofproblemsolving.com/wiki/api.php?action=rsd"/>
+<link rel="alternate" type="application/atom+xml" title="AoPS Wiki Atom feed" href="https://artofproblemsolving.com/wiki/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://artofproblemsolving.com/wiki/index.php/2023_AMC_12A_Problems/Problem_21"/>
+<!--[if lt IE 9]><script src="/wiki/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=aopsp&amp;sync=1"></script><![endif]-->
+			</head>
+		<body class="production mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-2023_AMC_12A_Problems_Problem_21 rootpage-2023_AMC_12A_Problems_Problem_21 skin-aopsp action-view resources">
+
+					<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59JWRGZ"
+			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		
+		<div id="page-wrapper">
+
+			<!-- search:off -->
+			
+			<!-- The gray bar at top -->
+			<!-- see shared-site.css -->
+			<div id="top-bar" class="sharedsite-wrapper no-select">
+				<div class="sharedsitebar">
+					<a href="https://artofproblemsolving.com/" class="mobile-title"></a>
+					<div class="sharedsite-links">
+											<a class="site-link main" href="https://artofproblemsolving.com/company">
+												Art of Problem Solving
+						</a>
+						<div class="site">
+													<a class="site-link selected" href="https://artofproblemsolving.com/">
+														<img src="https://artofproblemsolving.com/assets/images/logos/icon-online.svg" class="site-icon">
+								<span class="site-name">AoPS Online</span>
+							</a>
+							<!-- Rich dropdown -->
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-online.svg"/>
+										</div>
+										<div class="site-snippet">
+											Math texts, online classes, and more
+											<br/>for students in grades 5-12.
+										</div>
+										<a target="_blank" class="site-visit aops-primary" href="https://artofproblemsolving.com/">
+											Visit AoPS Online <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://artofproblemsolving.com/store" class="btn btn-primary aops-btn">
+											Books for Grades 5-12
+										</a>
+										<a target="_blank" href="https://artofproblemsolving.com/school" class="btn btn-primary aops-btn">
+											Online Courses
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- End rich dropdown -->
+						</div>
+						<div class="site">
+							<a class="site-link" href="https://beastacademy.com/">
+								<img src="https://artofproblemsolving.com/assets/images/logos/icon-ba.svg" class="site-icon">
+								<span class="site-name">Beast Academy</span>
+							</a>
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-ba.svg"/>
+										</div>
+										<div class="site-snippet">
+											Engaging math books and online learning
+											<br/>for students ages 6-13.
+										</div>
+										<a target="_blank" class="site-visit ba-primary" href="https://beastacademy.com/">
+											Visit Beast Academy <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://beastacademy.com/books" class="btn btn-primary ba-btn">
+											Books for Ages 6-13
+										</a>
+										<a target="_blank" href="https://beastacademy.com/online" class="btn btn-primary ba-btn">
+											Beast Academy Online
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="site">
+							<a class="site-link" href="https://aopsacademy.org/">
+								<img src="https://artofproblemsolving.com/assets/images/logos/icon-academy.svg" class="site-icon">
+								<span class="site-name">AoPS Academy</span>
+							</a>
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-academy.svg"/>
+										</div>
+										<div class="site-snippet">
+											Small live classes for advanced math
+											<br/>and language arts learners in grades 2-12.
+										</div>
+										<a target="_blank" class="site-visit academy-primary" href="https://aopsacademy.org/">
+											Visit AoPS Academy <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://aopsacademy.org/campuses" class="btn btn-primary academy-btn">
+											Find a Physical Campus
+										</a>
+										<a target="_blank" href="https://virtual.aopsacademy.org/" class="btn btn-primary academy-btn">
+											Visit the Virtual Campus
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="header-wrapper" class="no-select">
+				<div class="header-underlay">
+					<div id="header">
+
+						<!-- The white area where main menu options appear -->
+
+						<!-- The menu links -->
+													<div id="main-menubar">
+								<div class="menubar-content">
+									<div class="menubar-logo online">
+										<img class="menubar-hamburger" src="https://artofproblemsolving.com/assets/images/hamburger.svg"/>
+										<a class="logo-img-link" href="https://artofproblemsolving.com/online">
+											<img class="logo-img" src="https://artofproblemsolving.com/assets/images/logos/aops-online.svg"/>
+											<img class="logo-img-mobile" src="https://artofproblemsolving.com/assets/images/logos/aops-online-mobile.svg"/>
+											<img class="logo-img-small" src="https://artofproblemsolving.com/assets/images/logos/aops-online-mobile.svg"/>
+										</a>
+									</div>
+									<div class="menubar-links-outer">
+										<!-- The login links -->
+										<div class="menu-login-wrapper online">
+											
+											<div class="menu-login-item">
+															<div 
+		    id="header-login"
+			class="no-select not-signed-in"
+			style="display:flex">
+
+			<div class="online-login-button solid-rounded-button">Sign&nbsp;In</div><div class="online-register-button">Register</div>
+		</div>
+												</div>
+
+											
+										</div>
+										<div class="menubar-labels online">
+											<div class="menubar-label school">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/school">
+														online school
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+														<!-- These have IDs for A/B testing purposes. T27691 -->
+																												<a id="online-school-menu-schedule" href="https://artofproblemsolving.com/school/schedule"> Class Schedule </a>
+														<a id="online-school-menu-recommmendations" href="https://artofproblemsolving.com/school/recommendations"> Recommendations </a>
+														<a id="online-school-menu-woot-courses" href="https://artofproblemsolving.com/school/woot?gtmlist=School_Nav"> Olympiad Courses </a>
+														<a id="online-school-menu-mathjams" href="https://artofproblemsolving.com/school/mathjams"> Free Sessions </a>
+																																									</div>
+												</div>
+											</div>
+											<div class="menubar-label store">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/store">
+														books<span class="menubar-link-ext">tore </span>
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+																																																								<a href="https://artofproblemsolving.com/store/list/aops-curriculum">AoPS Curriculum</a>
+														<a href="https://artofproblemsolving.com/store/list/beast-academy">Beast Academy</a>
+														<a href="https://artofproblemsolving.com/store/online">Online Books</a>
+														<a href="https://artofproblemsolving.com/store/recommendations">Recommendations</a>
+														<a href="https://artofproblemsolving.com/store/list/other-products">Other Books &amp; Gear</a>
+														<a href="https://artofproblemsolving.com/store/list/all-products">All Products</a>
+														<a href="https://artofproblemsolving.com/store/gift-certificates?gtmlist=Bookstore_Nav">Gift Certificates</a>
+																											</div>
+												</div>
+											</div>
+											<div class="menubar-label community">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/community">
+														community
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+																												<a data-cmty href="https://artofproblemsolving.com/community">Forums</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/c13_contests">Contests</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/search">Search</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/faq">Help</a>
+																																									</div>
+												</div>
+											</div>
+											<div class="menubar-label resources">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/resources">
+														resources
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+														<div class="dropdown-columns">
+															<div class="dropdown-category">
+																<span class="dropdown-category-label">math training & tools</span>
+																<a href="https://artofproblemsolving.com/alcumus">Alcumus</a>
+																<a href="https://artofproblemsolving.com/videos">Videos</a>
+																<a href="https://artofproblemsolving.com/ftw">For the Win!</a>
+																<a href="https://artofproblemsolving.com/mathcounts_trainer">MATHCOUNTS Trainer</a>
+																<a href="https://artofproblemsolving.com/contests/practice">AoPS Practice Contests</a>
+																<a href="https://artofproblemsolving.com/wiki/index.php?title=Main_Page">AoPS Wiki</a>
+																<a href="https://artofproblemsolving.com/texer">LaTeX TeXeR</a>
+																<a href="https://artofproblemsolving.com/polymath">MIT PRIMES/CrowdMath</a>
+																<a href="https://artofproblemsolving.com/keeplearning">Keep Learning</a>
+																<a href="https://beastacademy.com/all-ten">All Ten</a>
+																															</div>
+															<div class="dropdown-column">
+																																<div class="dropdown-category category-in-column">
+																	<span class="dropdown-category-label">contests on aops</span>
+																	<a href="https://artofproblemsolving.com/contests/practice">Practice Math Contests</a>
+																	<a href="https://artofproblemsolving.com/contests/usabo">USABO</a>
+																</div>
+																<div class="dropdown-category category-in-column">
+                                                                                                                                        <span class="dropdown-category-label">news</span>
+                                                                                                                                        <a href="https://artofproblemsolving.com/blog">AoPS Blog</a>
+                                                                                                                                        <a href="https://artofproblemsolving.com/blog/webinars/aopswebinars">Webinars</a>
+                                                                                                                                </div>
+															</div>
+														</div>
+														<div class="dropdown-view-more-link-container">
+															<a href="https://artofproblemsolving.com/resources" class="dropdown-view-more-link">view all <span class="aops-icon">0</span></a>
+														</div>
+													</div>
+												</div>
+											</div>
+																						<div class="menubar-label menu-login-item">
+															<div 
+		    id="header-login"
+			class="no-select not-signed-in"
+			style="display:flex">
+
+			<div class="online-login-button solid-rounded-button">Sign&nbsp;In</div><div class="online-register-button">Register</div>
+		</div>
+												</div>
+																					</div>
+									</div>
+								</div>
+							</div>
+											</div>
+				</div>
+
+								<noscript>
+					<div class="infobar">JavaScript is not enabled. JavaScript is required to fully utilize the site.</div>
+				</noscript>
+
+
+									<div id="breadcrumbs-wrapper">
+						<div id="submenu-icon"></div>
+						<div id="breadcrumbs">
+														<!-- ignore-security-checks -->
+							<div class="title-wrapper"><div class="title"><a href="https://artofproblemsolving.com/wiki">AoPS Wiki</a></div></div>
+														<div class="crumb-wrapper">
+																										<span class="crumb crumb-1">
+																			<!-- ignore-security-checks -->
+										<a href="https://artofproblemsolving.com/resources">Resources</a>
+																		</span>
+																											<i class="aops-font aops-angle-double-right"></i>
+																		<span class="crumb crumb-2">
+																			<!-- ignore-security-checks -->
+										<a href="https://artofproblemsolving.com/wiki">Aops Wiki</a>
+																		</span>
+																											<i class="aops-font aops-angle-double-right"></i>
+																		<span class="crumb crumb-3">
+																			2023 AMC 12A Problems/Problem 21																		</span>
+															</div>
+						</div>
+					</div>
+							</div>
+
+			<!-- search icon script lives in footer.phtml-->
+
+			<!-- /search:off -->
+
+<div id="main-content" class="left-navigation wiki">
+	<div id="side-column-wrapper">
+		<div id="side-column">
+						<div id="content-actions" class="menu open">
+				<div class="submenu">
+					<h1>Page</h1>
+					<div class="submenu-wrapper">
+						<span id="ca-nstab-main" class="selected"><a href="https://artofproblemsolving.com/wiki/index.php/2023_AMC_12A_Problems/Problem_21" title="View the content page " accesskey="c">Article</a></span><span id="ca-talk" class="new"><a href="https://artofproblemsolving.com/wiki/index.php?title=Talk:2023_AMC_12A_Problems/Problem_21&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) " accesskey="t">Discussion</a></span><span id="ca-viewsource"><a href="https://artofproblemsolving.com/wiki/index.php?title=2023_AMC_12A_Problems/Problem_21&amp;action=edit" title="This page is protected.&#10;You can view its source " accesskey="e">View source</a></span><span id="ca-history"><a href="https://artofproblemsolving.com/wiki/index.php?title=2023_AMC_12A_Problems/Problem_21&amp;action=history" title="Past revisions of this page " accesskey="h">History</a></span>					</div>
+				</div>
+			</div>
+			<div id="toolbox" class="menu open">
+				<div class="submenu">
+					<h1>Toolbox</h1>
+					<div class="submenu-wrapper">
+						<span id="n-recentchanges"><a href="../Special_RecentChanges.html" title="A list of recent changes in the wiki " accesskey="r">Recent changes</a></span><span id="n-randompage"><a href="https://artofproblemsolving.com/wiki/index.php/Special:Random" title="Load a random page " accesskey="x">Random page</a></span><span id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></span><span id="t-whatlinkshere"><a href="https://artofproblemsolving.com/wiki/index.php/Special:WhatLinksHere/2023_AMC_12A_Problems/Problem_21" title="A list of all wiki pages that link here " accesskey="j">What links here</a></span><span id="t-specialpages"><a href="../Special_SpecialPages.html" title="A list of all special pages " accesskey="q">Special pages</a></span>					</div>
+				</div>
+			</div>
+			
+			<div id="search" class="menu open">
+				<h1>Search</h1>
+				<div class="submenu-wrapper" style="margin-bottom:5px;">
+					<form action="https://artofproblemsolving.com/wiki/index.php" id="searchform" class="mw-search">
+						<input type="hidden" name="title" value="Special:Search">
+						<input type="search" name="search" placeholder="Search" value="" accesskey="f" id="searchInput">
+						<div style="margin:0 5px 5px 5px;text-align:right;"><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="btn btn-primary searchButton"/></div>
+					</form>
+				</div>
+			</div>
+
+			<!--
+			<div class="menu open">
+				<h1>Note</h1>
+				<div class="submenu-wrapper" style="padding:10px;color:#444;">
+					Please do not discuss the 2015 AMC 8 Competition on any website until November 25th.
+				</div>
+			</div>
+			-->
+		</div>
+	</div>
+
+	<div id="main-column" style="margin-top:10px">
+				<div class="page-wrapper">
+						<div id="mw-js-message" style="display:none;"></div>
+			<h1 id="firstHeading" class="firstHeading">2023 AMC 12A Problems/Problem 21</h1>
+
+						
+			<div class="mw-body">
+													<div id="contentSub"><span class="mw-redirectedfrom">(Redirected from <a href="https://artofproblemsolving.com/wiki/index.php?title=2023_AMC_10A_Problems/Problem_25&amp;redirect=no" class="mw-redirect" title="2023 AMC 10A Problems/Problem 25">2023 AMC 10A Problems/Problem 25</a>)</span></div>
+								
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><dl><dd><i>The following problem is from both the <a href="Problem_25.html" class="mw-redirect" title="2023 AMC 10A Problems/Problem 25">2023 AMC 10A #25</a> and <a class="mw-selflink selflink">2023 AMC 12A #21</a>, so both problems redirect to this page.</i></dd></dl>
+<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Problem"><span class="tocnumber">1</span> <span class="toctext">Problem</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Diagram"><span class="tocnumber">2</span> <span class="toctext">Diagram</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Solution_1"><span class="tocnumber">3</span> <span class="toctext">Solution 1</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Solution_2_.28Cheese_.2B_Actual_way.29"><span class="tocnumber">4</span> <span class="toctext">Solution 2 (Cheese + Actual way)</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Solution_3"><span class="tocnumber">5</span> <span class="toctext">Solution 3</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Solution_4"><span class="tocnumber">6</span> <span class="toctext">Solution 4</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Solution_5"><span class="tocnumber">7</span> <span class="toctext">Solution 5</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Solution_6_.28Case_Work.28similar_to_3.29.29"><span class="tocnumber">8</span> <span class="toctext">Solution 6 (Case Work(similar to 3))</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#Supplement"><span class="tocnumber">8.1</span> <span class="toctext">Supplement</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Solution_7_.28efficient.29"><span class="tocnumber">9</span> <span class="toctext">Solution 7 (efficient)</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Solution_8_.28Dodecahedron_Schlegel_.28Planar_Graph.29_Diagram.29"><span class="tocnumber">10</span> <span class="toctext">Solution 8 (Dodecahedron Schlegel (Planar Graph) Diagram)</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Solution_9_.28Symmetry.29"><span class="tocnumber">11</span> <span class="toctext">Solution 9 (Symmetry)</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Video_Solution_by_Little_Fermat"><span class="tocnumber">12</span> <span class="toctext">Video Solution by Little Fermat</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Video_Solution_by_Math-X"><span class="tocnumber">13</span> <span class="toctext">Video Solution by Math-X</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#Video_Solution"><span class="tocnumber">14</span> <span class="toctext">Video Solution</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#Video_Solution_by_OmegaLearn"><span class="tocnumber">15</span> <span class="toctext">Video Solution by OmegaLearn</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#Video_solution_by_MegaMath"><span class="tocnumber">16</span> <span class="toctext">Video solution by MegaMath</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#Video_Solution_by_epicbird08"><span class="tocnumber">17</span> <span class="toctext">Video Solution by epicbird08</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#Vide_Solution_by_SpreadTheMathLove.28Casework_and_Complementary.29"><span class="tocnumber">18</span> <span class="toctext">Vide Solution by SpreadTheMathLove(Casework and Complementary)</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#Video_Solution_2"><span class="tocnumber">19</span> <span class="toctext">Video Solution</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="#Video_Solution_by_TheBeautyofMath"><span class="tocnumber">20</span> <span class="toctext">Video Solution by TheBeautyofMath</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="#See_also"><span class="tocnumber">21</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Problem">Problem</span></h2>
+<p>If <img src="../../../../latex.artofproblemsolving.com/0/1/9/019e9892786e493964e145e7c5cf7b700314e53b.png" class="latex" alt="$A$" width="13" height="13" /> and <img src="../../../../latex.artofproblemsolving.com/f/f/5/ff5fb3d775862e2123b007eb4373ff6cc1a34d4e.png" class="latex" alt="$B$" width="14" height="12" /> are vertices of a polyhedron, define the distance <img src="http://latex.artofproblemsolving.com/9/f/3/9f3a2cfbf27f65e23f86ce720525fafdf2ed8ba0.png" class="latex" alt="$d(A,B)$" style="vertical-align: -5px" width="62" height="20" /> to be the minimum number of edges of the polyhedron one must traverse in order to connect <img src="../../../../latex.artofproblemsolving.com/0/1/9/019e9892786e493964e145e7c5cf7b700314e53b.png" class="latex" alt="$A$" width="13" height="13" /> and <img src="../../../../latex.artofproblemsolving.com/f/f/5/ff5fb3d775862e2123b007eb4373ff6cc1a34d4e.png" class="latex" alt="$B$" width="14" height="12" />. For example, if <img src="http://latex.artofproblemsolving.com/8/4/0/840e2b592390eb6ec918fa6f3292716ce170de66.png" class="latex" alt="$\overline{AB}$" style="vertical-align: -1px" width="30" height="18" /> is an edge of the polyhedron, then <img src="http://latex.artofproblemsolving.com/4/8/6/486f07042dcbf25f1bab8a859c3053cf4ae43dc2.png" class="latex" alt="$d(A, B) = 1$" style="vertical-align: -5px" width="95" height="20" />, but if <img src="http://latex.artofproblemsolving.com/1/2/5/12517bbc31cb9026c71299b7a0d232d07e60f284.png" class="latex" alt="$\overline{AC}$" style="vertical-align: -1px" width="30" height="18" /> and <img src="http://latex.artofproblemsolving.com/8/4/a/84ae51dd95ca59139201d0895df8311e612782fb.png" class="latex" alt="$\overline{CB}$" style="vertical-align: -1px" width="31" height="18" /> are edges and <img src="http://latex.artofproblemsolving.com/8/4/0/840e2b592390eb6ec918fa6f3292716ce170de66.png" class="latex" alt="$\overline{AB}$" style="vertical-align: -1px" width="30" height="18" /> is not an edge, then <img src="http://latex.artofproblemsolving.com/6/4/2/642ddadb67fc2f4d1f25919049a2cce662228973.png" class="latex" alt="$d(A, B) = 2$" style="vertical-align: -5px" width="95" height="20" />. Let <img src="http://latex.artofproblemsolving.com/9/8/6/9866e3a998d628ba0941eb4fea0666ac391d149a.png" class="latex" alt="$Q$" style="vertical-align: -3px" width="13" height="16" />, <img src="http://latex.artofproblemsolving.com/e/f/f/eff43e84f8a3bcf7b6965f0a3248bc4d3a9d0cd4.png" class="latex" alt="$R$" width="14" height="12" />, and <img src="http://latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> be randomly chosen distinct vertices of a regular icosahedron (regular polyhedron made up of 20 equilateral triangles). What is the probability that <img src="http://latex.artofproblemsolving.com/8/3/d/83d0a04da733cf467532ace6b499f95ee217adb7.png" class="latex" alt="$d(Q, R) &gt; d(R, S)$" style="vertical-align: -5px" width="144" height="20" />?
+</p><p><img src="http://latex.artofproblemsolving.com/b/8/4/b84411cc8ba4a757ce0f8d15c313a8b5535417a5.png" class="latex" alt="$\textbf{(A) } \frac{7}{22} \qquad \textbf{(B) } \frac{1}{3} \qquad \textbf{(C) } \frac{3}{8} \qquad \textbf{(D) } \frac{5}{12} \qquad \textbf{(E) } \frac{1}{2}$" style="vertical-align: -13px" width="393" height="38" />
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="Diagram">Diagram</span></h2>
+<p><a href="../File_AMC_logo.html" class="image"><img alt="AMC logo.png" src="https://wiki-images.artofproblemsolving.com//8/8b/AMC_logo.png" width="97" height="84" /></a>
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="Solution_1">Solution 1</span></h2>
+<p>To find the total amount of vertices we first find the amount of edges, and that is <img src="http://latex.artofproblemsolving.com/3/1/5/315de105fbebdb10ced5410074076ca21753f312.png" class="latex" alt="$\frac{20 \times 3}{2}$" style="vertical-align: -13px" width="55" height="38" />. Next, to find the amount of vertices we can use Euler's characteristic, <img src="http://latex.artofproblemsolving.com/8/8/9/889249fe9140a0665e221b6f2c08f14d78f823de.png" class="latex" alt="$V - E + F = 2$" style="vertical-align: -1px" width="120" height="14" />, and therefore the amount of vertices is <img src="http://latex.artofproblemsolving.com/e/d/f/edf074831eb5bc9e61d6d6e09f525a86e3068f6a.png" class="latex" alt="$12$" style="vertical-align: 0px" width="17" height="12" /> 
+</p><p>So there are <img src="http://latex.artofproblemsolving.com/e/8/3/e8369c8c36f9bf5561d7d4fbb93266d35e272ddf.png" class="latex" alt="$P(12,3) = 1320$" style="vertical-align: -5px" width="126" height="20" /> ways to choose 3 distinct points.
+</p><p>Now, the furthest distance we can get from one point to another point in an icosahedron is 3. Which gives us a range of <img src="http://latex.artofproblemsolving.com/8/8/3/8839687d40207f6f6475777e9bf67a4f3e56092c.png" class="latex" alt="$1 \leq d(Q, R), d(R, S) \leq 3$" style="vertical-align: -5px" width="194" height="20" />
+</p><p>With some case work, we get two cases:
+</p><p>Case 1: <img src="http://latex.artofproblemsolving.com/c/e/9/ce981723f8ef2b019ccd69b74aef7609e71cf35d.png" class="latex" alt="$d(Q, R) = 3; d(R, S) = 1, 2$" style="vertical-align: -5px" width="212" height="20" />
+</p><p>Since we have only one way to choose Q, that is, the opposite point from R, we have one option for Q and any of the other points could work for S.
+</p><p>Then, we get <img src="http://latex.artofproblemsolving.com/b/9/1/b91eb43a296b39173064372ed2f061c7972c20a3.png" class="latex" alt="$12 \times 1 \times 10 = 120$" style="vertical-align: -2px" width="143" height="15" /> (ways to choose R × ways to choose Q × ways to choose S)
+</p><p>Case 2: <img src="http://latex.artofproblemsolving.com/3/4/9/3491b890996997a3525f39e6689a862232f45c5d.png" class="latex" alt="$d(Q, R) = 2; d(R, S) = 1$" style="vertical-align: -5px" width="194" height="20" />
+</p><p>We can visualize the icosahedron as 4 rows, first row with 1 vertex, second row with 5 vertices, third row with 5 vertices and fourth row with 1 vertex. We set R as the one vertex on the first row, and we have 12 options for R. Then, Q can be any of the 5 points on the third row and finally S can be one of the 5 points on the second row.
+</p><p>Therefore, we have <img src="http://latex.artofproblemsolving.com/6/6/4/664feccc4c1b5a9b5591c95c384bfd568f2eab19.png" class="latex" alt="$12 \times 5 \times 5 = 300$" style="vertical-align: -2px" width="134" height="15" /> (ways to choose R × ways to choose Q × ways to choose S)
+</p><p>Hence, <img src="http://latex.artofproblemsolving.com/2/b/0/2b0b5f2a030ef762c741cf372b1a8b1696add8be.png" class="latex" alt="$P(d(Q, R)&gt;d(R, S)) = \frac{120+300}{1320} = \boxed{\textbf{(A) } \frac{7}{22}}$" style="vertical-align: -19px" width="371" height="49" />
+</p><p>~lptoggled, edited by ESAOPS and trevian1
+</p>
+<h2><span id="Solution_2_(Cheese_+_Actual_way)"></span><span class="mw-headline" id="Solution_2_.28Cheese_.2B_Actual_way.29">Solution 2 (Cheese + Actual way)</span></h2>
+<p>In total, there are <img src="http://latex.artofproblemsolving.com/d/8/1/d81df18aecc6ca3f9361691e923ef2cfa7b47a96.png" class="latex" alt="$\binom{12}{3}=220$" style="vertical-align: -22px" width="97" height="53" /> ways to select the points. However, if we look at the denominators of <img src="http://latex.artofproblemsolving.com/4/5/a/45afdfe7dc19810483377b2a24679deb5d9bea5a.png" class="latex" alt="$B,C,D$" style="vertical-align: -3px" width="59" height="16" />, they are <img src="http://latex.artofproblemsolving.com/c/1/f/c1f6ffcaa1f974be0b0fb1b0c908b75be051e13a.png" class="latex" alt="$3,8,12$" style="vertical-align: -4px" width="54" height="17" /> which are not divisors of <img src="http://latex.artofproblemsolving.com/2/c/6/2c6f941fab390e81243e1cd2b40c6178f03ab3f1.png" class="latex" alt="$220$" width="26" height="12" />. Also <img src="http://latex.artofproblemsolving.com/2/f/9/2f960094315d60883495f9b74148e17487ee9584.png" class="latex" alt="$\frac{1}{2}$" style="vertical-align: -12px" width="11" height="37" /> is impossible as cases like <img src="http://latex.artofproblemsolving.com/7/f/4/7f45c0be074b42b3d5107960ab95ffcb0d644353.png" class="latex" alt="$d(Q, R) = d(R, S)$" style="vertical-align: -5px" width="144" height="20" /> exist. The only answer choice left is <img src="http://latex.artofproblemsolving.com/e/1/0/e10e76ccf21bcf5c32e623c35f96eb222c7bf978.png" class="latex" alt="$\boxed{\textbf{(A) } \frac{7}{22}}$" style="vertical-align: -19px" width="71" height="49" />
+</p><p>Note: this cheese is actually wrong because the total number of ways to select the points is actually <img src="http://latex.artofproblemsolving.com/6/d/6/6d6c91cb063e7612f8858275803a44102fa3e382.png" class="latex" alt="$12 \times 11 \times 10 = 1320$" style="vertical-align: -2px" width="161" height="15" /> as order matters, so all denominators are possible. Rather, you can arrive at the same conclusion by fixing R WLOG, leading to <img src="http://latex.artofproblemsolving.com/f/7/3/f730e195537e56bc571dce2c3a7fd31212c1d042.png" class="latex" alt="$11 \times 10 = 110$" style="vertical-align: -2px" width="112" height="15" /> ways in total, which works for the original cheese. ~awesomeguy856
+</p><p>(Actual way)
+</p><p>Fix an arbitrary point, to select the rest <img src="../../../../latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" /> points, there are <img src="http://latex.artofproblemsolving.com/e/4/1/e417c6fbe5663c8e46d907f9c65cf386f9a31069.png" class="latex" alt="$11\cdot 10 =110$" style="vertical-align: -1px" width="103" height="14" /> ways. To make <img src="http://latex.artofproblemsolving.com/d/3/8/d38a075747e146d567e7def9719a508a18e413a5.png" class="latex" alt="$d(Q, R)=d(R, S), d=1/2$" style="vertical-align: -5px" width="213" height="20" />. Which means there are in total <img src="http://latex.artofproblemsolving.com/f/5/a/f5a8d52cb8ae357a85ef32f3cd295f9bea560641.png" class="latex" alt="$2\cdot 5 \cdot 4 = 40$" style="vertical-align: -1px" width="98" height="14" /> ways to make the distance the same. <img src="http://latex.artofproblemsolving.com/1/2/b/12bfa56d482c91810dd37c94577ffdc546159484.png" class="latex" alt="$\frac{1}{2}(1-\frac{40}{110})= \boxed{\textbf{(A) } \frac{7}{22}}$" style="vertical-align: -19px" width="185" height="49" />
+~bluesoul
+</p>
+<h2><span class="mw-headline" id="Solution_3">Solution 3</span></h2>
+<p>We can imagine the icosahedron as having 4 layers. 1 vertex at the top, 5 vertices below connected to the top vertex, 5 vertices below that which are 2 edges away from the top vertex, and one vertex at the bottom that is 3 edges away. WLOG because the icosahedron is symmetric around all vertices, we can say that R is the vertex at the top. So now, we just need to find the probability that S is on a layer closer to the top than Q. We can do casework on the layer S is on to get 
+<img src="http://latex.artofproblemsolving.com/9/6/c/96c3b154b3701a8bcdb566691a65802edbb3eb58.png" class="latexcenter" alt="\[\frac{5}{11} \cdot \frac{6}{10} + \frac{5}{11} \cdot \frac{1}{10} = \frac{35}{110} = \frac{7}{22}\]" width="235" height="38" />
+So the answer is <img src="http://latex.artofproblemsolving.com/9/8/7/987a68bd5aea7945e5544b2802f510a75d1f2ead.png" class="latex" alt="$\boxed{\textbf{(A) }\frac{7}{22}}$" style="vertical-align: -19px" width="71" height="49" />. 
+</p><p>-awesomeparrot
+</p>
+<h2><span class="mw-headline" id="Solution_4">Solution 4</span></h2>
+<p>We can actually see that the probability that <img src="http://latex.artofproblemsolving.com/8/3/d/83d0a04da733cf467532ace6b499f95ee217adb7.png" class="latex" alt="$d(Q, R) &gt; d(R, S)$" style="vertical-align: -5px" width="144" height="20" /> is the exact same as <img src="http://latex.artofproblemsolving.com/0/2/d/02d4c8bc73d99fa75ded1eaeee459ca386849ff4.png" class="latex" alt="$d(Q, R) &lt; d(R, S)$" style="vertical-align: -5px" width="144" height="20" /> because <img src="http://latex.artofproblemsolving.com/9/3/4/934bbd1527012db06f729dc207b899d6c899d3d4.png" class="latex" alt="$d(Q, R)$" style="vertical-align: -5px" width="62" height="20" /> and <img src="http://latex.artofproblemsolving.com/0/0/6/006c25a4797809a0b83e373c1f986b9467bed262.png" class="latex" alt="$d(R, S)$" style="vertical-align: -5px" width="60" height="20" /> have no difference. (In other words, we can just swap Q and S, meaning that can be called the same probability-wise.) Therefore, we want to find the probability that <img src="http://latex.artofproblemsolving.com/7/f/4/7f45c0be074b42b3d5107960ab95ffcb0d644353.png" class="latex" alt="$d(Q, R) = d(R, S)$" style="vertical-align: -5px" width="144" height="20" />.
+</p><p>WLOG, we can rotate the icosahedron so that R is the top of the icosahedron. Then we can divide this into 2 cases:
+</p><p>1. They are on the second layer
+</p><p>There are 5 ways to put one point, and 4 ways to put the other point such that <img src="http://latex.artofproblemsolving.com/1/2/6/126b6a438cd9295d4da1e6b6b9d63233196e0bc3.png" class="latex" alt="$d(Q, R) = d(R, S) = 1$" style="vertical-align: -5px" width="177" height="20" />. So, there are <img src="http://latex.artofproblemsolving.com/c/4/7/c47fdae2d201b1a7f51ca66646dabc8acf0ab832.png" class="latex" alt="$5 \cdot 4 = 20$" style="vertical-align: 0px" width="73" height="13" /> ways to put them on the second layer.
+</p><p>2. They are on the third layer
+</p><p>There are 5 ways to put one point, and 4 ways to put the other point such that <img src="http://latex.artofproblemsolving.com/2/c/5/2c531c4088bb26791161fd8170dcfb769ec7bf25.png" class="latex" alt="$d(Q, R) = d(R, S) = 2$" style="vertical-align: -5px" width="177" height="20" />. So, there are <img src="http://latex.artofproblemsolving.com/c/4/7/c47fdae2d201b1a7f51ca66646dabc8acf0ab832.png" class="latex" alt="$5 \cdot 4 = 20$" style="vertical-align: 0px" width="73" height="13" /> ways to put them on the third layer.
+</p><p>The total number of ways to choose P and S are <img src="http://latex.artofproblemsolving.com/c/7/5/c75a9f90d6885a273f3df38025c883c2db557aca.png" class="latex" alt="$11 \cdot 10 = 110$" style="vertical-align: -1px" width="103" height="14" /> (because there are 12 vertices), so the probability that <img src="http://latex.artofproblemsolving.com/7/f/4/7f45c0be074b42b3d5107960ab95ffcb0d644353.png" class="latex" alt="$d(Q, R) = d(R, S)$" style="vertical-align: -5px" width="144" height="20" /> is <img src="http://latex.artofproblemsolving.com/b/6/f/b6f1b5fbbca479c142bc37fae361098cb51c1b6e.png" class="latex" alt="$\frac{20+20}{110} = \frac{4}{11}$" style="vertical-align: -13px" width="111" height="38" />.
+</p><p>Therefore, the probability that <img src="http://latex.artofproblemsolving.com/8/3/d/83d0a04da733cf467532ace6b499f95ee217adb7.png" class="latex" alt="$d(Q, R) &gt; d(R, S)$" style="vertical-align: -5px" width="144" height="20" /> is <img src="http://latex.artofproblemsolving.com/0/b/1/0b187c1aab625fed5da91ac117bd596ef364fa99.png" class="latex" alt="$\frac{1 - \frac{4}{11}}{2} = \boxed{\textbf{(A) }\frac{7}{22}}$" style="vertical-align: -19px" width="148" height="49" />
+</p><p>~Ethanzhang1001
+</p>
+<h2><span class="mw-headline" id="Solution_5">Solution 5</span></h2>
+<p>We know that there are <img src="http://latex.artofproblemsolving.com/f/8/3/f8366cd6196dd8a9da6d38a3e9eafb109e99d53e.png" class="latex" alt="$20$" width="17" height="12" /> faces. Each of those faces has <img src="http://latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png" class="latex" alt="$3$" width="8" height="12" /> borders (since each is a triangle), and each edge is used as a border twice (for each face on either side). Thus, there are <img src="http://latex.artofproblemsolving.com/1/5/5/155b6d77b247a69b26eb476967e3d2fdf8e91360.png" class="latex" alt="$\dfrac{20\cdot3}2=30$" style="vertical-align: -13px" width="89" height="38" /> edges. 
+</p><p>Euler's formula states that <img src="http://latex.artofproblemsolving.com/0/1/e/01e200162741a1e1a98813eb54ef51ffc8f0eb40.png" class="latex" alt="$V-E+F=2$" style="vertical-align: -1px" width="120" height="14" /> for all convex polyhedra, so we know that <img src="http://latex.artofproblemsolving.com/a/f/c/afcaccc7d6c8cdffe31c364d6d1993a684d94bb1.png" class="latex" alt="$2-F+E=12$" style="vertical-align: -2px" width="126" height="16" /> vertices. 
+</p><p>The answer can be counted by first counting the number of possible paths that will yield <img src="http://latex.artofproblemsolving.com/8/3/d/83d0a04da733cf467532ace6b499f95ee217adb7.png" class="latex" alt="$d(Q, R) &gt; d(R, S)$" style="vertical-align: -5px" width="144" height="20" /> and dividing it by <img src="http://latex.artofproblemsolving.com/4/b/0/4b0a968552c3aae4f3d57d1f6871bb7b54a26cdb.png" class="latex" alt="$12\cdot11\cdot10$" style="vertical-align: -1px" width="83" height="14" /> (or <img src="http://latex.artofproblemsolving.com/a/6/3/a6309467aa13a24250f175703e282bf988a10abe.png" class="latex" alt="$\dbinom{12}3$" style="vertical-align: -23px" width="48" height="55" />, depending on the approach). In either case, one will divide by <img src="http://latex.artofproblemsolving.com/c/6/8/c6878713578626763c38433b3f4c8c2205ad0c15.png" class="latex" alt="$11$" style="vertical-align: 0px" width="17" height="12" /> somewhere in the denominator. We can then hope that there will be no factor of <img src="http://latex.artofproblemsolving.com/c/6/8/c6878713578626763c38433b3f4c8c2205ad0c15.png" class="latex" alt="$11$" style="vertical-align: 0px" width="17" height="12" /> in the numerator (which would cancel the <img src="http://latex.artofproblemsolving.com/c/6/8/c6878713578626763c38433b3f4c8c2205ad0c15.png" class="latex" alt="$11$" style="vertical-align: 0px" width="17" height="12" /> in the denominator out), and answer the only option that has an <img src="http://latex.artofproblemsolving.com/c/6/8/c6878713578626763c38433b3f4c8c2205ad0c15.png" class="latex" alt="$11$" style="vertical-align: 0px" width="17" height="12" /> in the denominator: <img src="http://latex.artofproblemsolving.com/9/8/7/987a68bd5aea7945e5544b2802f510a75d1f2ead.png" class="latex" alt="$\boxed{\textbf{(A) }\frac{7}{22}}$" style="vertical-align: -19px" width="71" height="49" />. 
+</p><p>~Technodoggo(minor edits by Gannit)
+</p><p>Additional note by "Fruitz": One can eliminate <img src="http://latex.artofproblemsolving.com/1/f/3/1f3cc0ad966b3e637cd199607cbf0d1befc0e491.png" class="latex" alt="$1/2$" style="vertical-align: -4px" width="26" height="18" /> by symmetry if you swap the new sign.
+</p><p>Another note by "andliu766": A shorter way to find the number of vertices and edges is to use the fact that the MAA logo is an icosahedron.&#160;:)
+</p>
+<h2><span id="Solution_6_(Case_Work(similar_to_3))"></span><span class="mw-headline" id="Solution_6_.28Case_Work.28similar_to_3.29.29">Solution 6 (Case Work(similar to 3))</span></h2>
+<div class="center"><div class="floatnone"><a href="https://artofproblemsolving.com/wiki/index.php/File:2023AMC12AP21.png" class="image"><img alt="2023AMC12AP21.png" src="https://wiki-images.artofproblemsolving.com//thumb/5/53/2023AMC12AP21.png/200px-2023AMC12AP21.png" width="200" height="200" srcset="https://wiki-images.artofproblemsolving.com//thumb/5/53/2023AMC12AP21.png/300px-2023AMC12AP21.png 1.5x, https://wiki-images.artofproblemsolving.com//5/53/2023AMC12AP21.png 2x" /></a></div></div>
+<p>WLOG, let R be at the top-most vertex of the icosahedron. There are <img src="../../../../latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" /> cases where <img src="http://latex.artofproblemsolving.com/8/3/d/83d0a04da733cf467532ace6b499f95ee217adb7.png" class="latex" alt="$d(Q, R) &gt; d(R, S)$" style="vertical-align: -5px" width="144" height="20" />.
+</p><p>Case 1: <img src="http://latex.artofproblemsolving.com/9/8/6/9866e3a998d628ba0941eb4fea0666ac391d149a.png" class="latex" alt="$Q$" style="vertical-align: -3px" width="13" height="16" /> is at the bottom-most vertex
+</p><p>If <img src="http://latex.artofproblemsolving.com/9/8/6/9866e3a998d628ba0941eb4fea0666ac391d149a.png" class="latex" alt="$Q$" style="vertical-align: -3px" width="13" height="16" /> is at the bottom-most vertex, no matter where <img src="http://latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> is, <img src="http://latex.artofproblemsolving.com/8/3/d/83d0a04da733cf467532ace6b499f95ee217adb7.png" class="latex" alt="$d(Q, R) &gt; d(R, S)$" style="vertical-align: -5px" width="144" height="20" />. The probability that <img src="http://latex.artofproblemsolving.com/9/8/6/9866e3a998d628ba0941eb4fea0666ac391d149a.png" class="latex" alt="$Q$" style="vertical-align: -3px" width="13" height="16" /> is at the bottom-most vertex is <img src="http://latex.artofproblemsolving.com/9/5/1/95187b90a61ece6bde465b8f0d9c2432c63539cc.png" class="latex" alt="$\frac{1}{11}$" style="vertical-align: -13px" width="20" height="37" />
+</p><p>Case 2: <img src="http://latex.artofproblemsolving.com/9/8/6/9866e3a998d628ba0941eb4fea0666ac391d149a.png" class="latex" alt="$Q$" style="vertical-align: -3px" width="13" height="16" /> is at the second layer
+</p><p>If <img src="http://latex.artofproblemsolving.com/9/8/6/9866e3a998d628ba0941eb4fea0666ac391d149a.png" class="latex" alt="$Q$" style="vertical-align: -3px" width="13" height="16" /> is at the second layer, <img src="http://latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> must be at the first layer, for <img src="http://latex.artofproblemsolving.com/8/3/d/83d0a04da733cf467532ace6b499f95ee217adb7.png" class="latex" alt="$d(Q, R) &gt; d(R, S)$" style="vertical-align: -5px" width="144" height="20" /> to be true. The probability that <img src="http://latex.artofproblemsolving.com/9/8/6/9866e3a998d628ba0941eb4fea0666ac391d149a.png" class="latex" alt="$Q$" style="vertical-align: -3px" width="13" height="16" /> is at the second layer, and <img src="http://latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> is at the first layer is <img src="http://latex.artofproblemsolving.com/b/b/7/bb7f24bfea9ad7035cbab6aebac0ec93647b26cb.png" class="latex" alt="$\frac{5}{11} \cdot \frac{5}{10} = \frac{5}{22}$" style="vertical-align: -13px" width="106" height="38" />
+</p><p><img src="http://latex.artofproblemsolving.com/0/b/b/0bb374b460d630f1bb4a757299f8212f0baa380a.png" class="latexcenter" alt="\[\frac{1}{11} + \frac{5}{22} = \boxed{\textbf{(A) }\frac{7}{22}}\]" width="158" height="48" />
+</p><p>~<a rel="nofollow" class="external text" href="https://artofproblemsolving.com/wiki/index.php/User:Isabelchen">isabelchen</a>
+</p>
+<h3><span class="mw-headline" id="Supplement">Supplement</span></h3>
+<p>First, we have 20 faces of equilateral triangles. But each edge is shared by two faces hence there are thus <img src="http://latex.artofproblemsolving.com/8/2/e/82e8f25806e5ba02136f8c2dcbf0440f4fa367a5.png" class="latex" alt="$\frac{20 \cdot 3}{2}=30$" style="vertical-align: -13px" width="89" height="38" /> edges. 
+</p><p>Now by Euler's formula <img src="http://latex.artofproblemsolving.com/a/a/a/aaa697e46ddb1223d621b4bac8f624d632032088.png" class="latex" alt="$V-E+F=2 \Rightarrow V-30+20=2 \Rightarrow V=12.$" style="vertical-align: -2px" width="370" height="16" /> 
+</p><p>Furthermore, the number of triangles (<img src="http://latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" />) that meet at one vertex can be found as follows. Note that there are <img src="http://latex.artofproblemsolving.com/e/d/f/edf074831eb5bc9e61d6d6e09f525a86e3068f6a.png" class="latex" alt="$12$" style="vertical-align: 0px" width="17" height="12" /> total vertices. Without accounting for overcounting, <img src="http://latex.artofproblemsolving.com/5/7/3/573b235f3bca15eda78248e7ad26512c19edd490.png" class="latex" alt="$\text{total number of vertices} = \text{number of faces} \cdot \text{vertices per face} = 20 \cdot 3 = 60.$" style="vertical-align: -4px" width="556" height="17" /> But since we now know that there are only <img src="http://latex.artofproblemsolving.com/e/d/f/edf074831eb5bc9e61d6d6e09f525a86e3068f6a.png" class="latex" alt="$12$" style="vertical-align: 0px" width="17" height="12" /> vertices and that each vertex is shared by <img src="http://latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" class="latex" alt="$n$" width="10" height="8" /> triangles, you find that there are 5 triangles that meet at one vertex.
+</p><p>Once we pick R as the topmost vertex, there are 11 possible vertices remaining for <img src="http://latex.artofproblemsolving.com/2/6/b/26b727b773d199f4fa0d684957a720f9c3e9750c.png" class="latex" alt="$Q.$" style="vertical-align: -3px" width="18" height="16" /> Continue as follows in this solution.
+</p><p>~mathboy282
+</p>
+<h2><span id="Solution_7_(efficient)"></span><span class="mw-headline" id="Solution_7_.28efficient.29">Solution 7 (efficient)</span></h2>
+<p>Since the icosahedron is symmetric polyhedron, we can rotate it so that R is on the topmost vertex. Since Q and 
+S basically the same, we can first count the probability that <img src="http://latex.artofproblemsolving.com/7/6/3/763630e65dd86529af73eb63b12da880b8163248.png" class="latex" alt="$d(Q,R) = d(R,S)$" style="vertical-align: -5px" width="144" height="20" />.
+</p><p><img src="http://latex.artofproblemsolving.com/3/d/9/3d91d1e947c2c3586330829f3eb93ab632342f41.png" class="latex" alt="$\mathfrak{Case} \ \mathfrak{1}: d(Q,R) = d(R,S) = 1$" style="vertical-align: -5px" width="242" height="20" />
+</p><p>There are 5 points <img src="http://latex.artofproblemsolving.com/4/b/4/4b4cade9ca8a2c8311fafcf040bc5b15ca507f52.png" class="latex" alt="$P$" width="14" height="12" /> such that <img src="http://latex.artofproblemsolving.com/d/2/e/d2ecf4643a7d856712aa39a57444464f8716b2ba.png" class="latex" alt="$d(Q,P) = 1$" style="vertical-align: -5px" width="95" height="20" />. There is <img src="http://latex.artofproblemsolving.com/7/4/7/7471c1a9d1b5257c5aba71e938adcc0743f4a110.png" class="latex" alt="$5 \times 4 = \boxed{20}$" style="vertical-align: -5px" width="94" height="23" /> ways to choose Q and S in this case.
+</p><p><img src="http://latex.artofproblemsolving.com/6/0/6/6065f013d8960c4f6f4b36a73c8cc4f616980e70.png" class="latex" alt="$\mathfrak{Case} \ \mathfrak{2}: d(Q,R) = d(R,S) = 2$" style="vertical-align: -5px" width="242" height="20" />
+</p><p>There are 5 points <img src="http://latex.artofproblemsolving.com/4/b/4/4b4cade9ca8a2c8311fafcf040bc5b15ca507f52.png" class="latex" alt="$P$" width="14" height="12" /> such that <img src="http://latex.artofproblemsolving.com/0/d/1/0d13371df1e2e8ef1a750e575c3caef888e628f5.png" class="latex" alt="$d(Q,P) = 2$" style="vertical-align: -5px" width="95" height="20" />. There is <img src="http://latex.artofproblemsolving.com/7/4/7/7471c1a9d1b5257c5aba71e938adcc0743f4a110.png" class="latex" alt="$5 \times 4 = \boxed{20}$" style="vertical-align: -5px" width="94" height="23" /> ways to choose Q and S in this case.
+</p><p><img src="http://latex.artofproblemsolving.com/d/4/7/d47c27e4be52e8af4ffe1026a7110b5e0216b6c5.png" class="latex" alt="$\mathfrak{Case} \ \mathfrak{3}: d(Q,R) = d(R,S) = 3$" style="vertical-align: -5px" width="242" height="20" />
+</p><p>There is 1 point <img src="http://latex.artofproblemsolving.com/4/b/4/4b4cade9ca8a2c8311fafcf040bc5b15ca507f52.png" class="latex" alt="$P$" width="14" height="12" /> such that <img src="http://latex.artofproblemsolving.com/c/1/1/c11ccff35a143a510eac219bce2cd09c31028b1f.png" class="latex" alt="$d(Q,P) = 3$" style="vertical-align: -5px" width="95" height="20" />. There is <img src="http://latex.artofproblemsolving.com/f/2/c/f2c6bc0e9451276effcd3ce9aefbf8a8b93132db.png" class="latex" alt="$1 \times 0 = \boxed{0}$" style="vertical-align: -6px" width="87" height="25" /> ways to choose Q and S in this case.
+</p><p><img src="http://latex.artofproblemsolving.com/9/c/b/9cb97e4fd69327cc43d3842dad0ec4aad44f1c70.png" class="latex" alt="$\mathfrak{Final} \ \mathfrak{solution}$" style="vertical-align: -3px" width="106" height="17" />
+</p><p>There are 11 points <img src="http://latex.artofproblemsolving.com/4/b/4/4b4cade9ca8a2c8311fafcf040bc5b15ca507f52.png" class="latex" alt="$P$" width="14" height="12" /> that are distinct from R. There is <img src="http://latex.artofproblemsolving.com/8/4/a/84a0846afe2804a91385abe3080873e8d8b99bc3.png" class="latex" alt="$11 \times 10 = \boxed{110}$" style="vertical-align: -6px" width="123" height="25" /> ways to choose Q and S. There is <img src="http://latex.artofproblemsolving.com/e/7/5/e7545124f1bc328ce33d37ecff3a222e0e4bfa27.png" class="latex" alt="$20 + 20 + 0 = \boxed{40}$" style="vertical-align: -6px" width="145" height="25" /> ways to choose Q and S such that <img src="http://latex.artofproblemsolving.com/7/6/3/763630e65dd86529af73eb63b12da880b8163248.png" class="latex" alt="$d(Q,R) = d(R,S)$" style="vertical-align: -5px" width="144" height="20" />. There is <img src="http://latex.artofproblemsolving.com/e/7/e/e7e9633c0ce98698c8e0f57bc8fdf4c2cf3aeaed.png" class="latex" alt="$\frac{110-40}{2} = 35$" style="vertical-align: -13px" width="116" height="38" /> ways to choose Q and S such that <img src="http://latex.artofproblemsolving.com/8/3/d/83d0a04da733cf467532ace6b499f95ee217adb7.png" class="latex" alt="$d(Q, R) &gt; d(R, S)$" style="vertical-align: -5px" width="144" height="20" />. The probability that <img src="http://latex.artofproblemsolving.com/8/3/d/83d0a04da733cf467532ace6b499f95ee217adb7.png" class="latex" alt="$d(Q, R) &gt; d(R, S)$" style="vertical-align: -5px" width="144" height="20" /> is therefore <img src="http://latex.artofproblemsolving.com/c/7/1/c710c93fd465ae39a1b014b07c8c53dd24ecc457.png" class="latex" alt="$\frac{35}{110} = \frac{7}{22}$" style="vertical-align: -13px" width="79" height="38" /> which corresponds to answer choice <img src="http://latex.artofproblemsolving.com/f/6/e/f6eb65962292d994ce2f9a8af63728883f256b18.png" class="latex" alt="$\boxed{A}$" style="vertical-align: -5px" width="25" height="24" />
+</p><p>~~<a rel="nofollow" class="external text" href="https://artofproblemsolving.com/wiki/index.php/User:Afly">afly</a>
+</p>
+<h2><span id="Solution_8_(Dodecahedron_Schlegel_(Planar_Graph)_Diagram)"></span><span class="mw-headline" id="Solution_8_.28Dodecahedron_Schlegel_.28Planar_Graph.29_Diagram.29">Solution 8 (Dodecahedron Schlegel (Planar Graph) Diagram)</span></h2>
+<p><a href="https://artofproblemsolving.com/wiki/index.php/File:A-plane-representation-of-the-dodecahedron.png" class="image"><img alt="A-plane-representation-of-the-dodecahedron.png" src="https://wiki-images.artofproblemsolving.com//d/d7/A-plane-representation-of-the-dodecahedron.png" width="367" height="351" /></a>
+</p><p>Instead of thinking this problem as vertices of a icosahedron, think of it as faces of a dodecahedron. Our middle face is <img src="http://latex.artofproblemsolving.com/e/f/f/eff43e84f8a3bcf7b6965f0a3248bc4d3a9d0cd4.png" class="latex" alt="$R$" width="14" height="12" /> and we first choose <img src="http://latex.artofproblemsolving.com/9/8/6/9866e3a998d628ba0941eb4fea0666ac391d149a.png" class="latex" alt="$Q$" style="vertical-align: -3px" width="13" height="16" /> and <img src="http://latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> to be the faces with distance <img src="../../../../latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png" class="latex" alt="$1$" style="vertical-align: -1px" width="11" height="14" /> from the middle face. There are <img src="http://latex.artofproblemsolving.com/5/3/1/53130d1c08583295cd18d9042920935e82bae549.png" class="latex" alt="$\binom{5}{2}$" style="vertical-align: -22px" width="33" height="53" /> ways of doing that. Then we choose <img src="http://latex.artofproblemsolving.com/9/8/6/9866e3a998d628ba0941eb4fea0666ac391d149a.png" class="latex" alt="$Q$" style="vertical-align: -3px" width="13" height="16" /> and <img src="http://latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> to be the faces with distance <img src="../../../../latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" /> from the middle face. There are <img src="http://latex.artofproblemsolving.com/5/3/1/53130d1c08583295cd18d9042920935e82bae549.png" class="latex" alt="$\binom{5}{2}$" style="vertical-align: -22px" width="33" height="53" /> ways of doing that. Our answer is therefore <img src="http://latex.artofproblemsolving.com/e/4/c/e4ceb12601fb010d23c370e87c20c4f0e9fbd758.png" class="latex" alt="$\frac{1}{2}\left(1-\frac{2\binom{5}{2}}{\binom{11}{2}}\right)=\boxed{\textbf{(A) }\frac{7}{22}}$" style="vertical-align: -23px" width="207" height="55" />
+</p><p>~lopkiloinm
+</p><p><br />
+Note: You can do the same analysis on the vertices of the icosahedron using its diagram, which is less to draw because it has fewer (12) vertices and the same number (30) of edges. But this diagram is either less symmetrical or non-planar. (There's no good place to put the last vertex (diametrically opposite the first/central vertex), except in the same place as the first vertex.)
+</p>
+<h2><span id="Solution_9_(Symmetry)"></span><span class="mw-headline" id="Solution_9_.28Symmetry.29">Solution 9 (Symmetry)</span></h2>
+<p>Note that the vertices of an icosahedron are in a <img src="http://latex.artofproblemsolving.com/e/3/2/e32392a746ea62d657e9a0937b80725535192041.png" class="latex" alt="$1-5-5-1$" style="vertical-align: -2px" width="105" height="15" /> configuration.
+</p><p>We will denote the probability of event <img src="../../../../latex.artofproblemsolving.com/0/1/9/019e9892786e493964e145e7c5cf7b700314e53b.png" class="latex" alt="$A$" width="13" height="13" /> happening as <img src="http://latex.artofproblemsolving.com/6/f/7/6f70328223696bf019cbd1df694fcae4c01a995d.png" class="latex" alt="$P(A)$" style="vertical-align: -4px" width="40" height="18" />
+</p><p>We should also note that <img src="http://latex.artofproblemsolving.com/a/8/4/a84d7e380ac408ec7c5c582be1c69e9a331365b4.png" class="latex" alt="$P(d(Q, R) &gt; d(R, S)) + P(d(Q, R) &lt; d(R, S)) + P(d(Q, R) = d(R, S)) = 1$" style="vertical-align: -5px" width="591" height="20" />
+</p><p>Also, <img src="http://latex.artofproblemsolving.com/8/9/9/899513bf50452f87fb2c3798837c26c4f1868c49.png" class="latex" alt="$P(d(Q, R) &gt; d(R, S)) = P(d(Q, R) &lt; d(R, S))$" style="vertical-align: -5px" width="367" height="20" /> since <img src="http://latex.artofproblemsolving.com/9/8/6/9866e3a998d628ba0941eb4fea0666ac391d149a.png" class="latex" alt="$Q$" style="vertical-align: -3px" width="13" height="16" /> and <img src="http://latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> are basically the same.
+</p><p>Therefore, what we are trying to find is just <img src="http://latex.artofproblemsolving.com/4/9/a/49a9251dd9fe677fad3b7d3ffc965e0724b515f1.png" class="latex" alt="$\frac{1-P(d(Q, R) = d(R, S))}{2}$" style="vertical-align: -13px" width="208" height="40" /> which can easily be computed when we fix <img src="http://latex.artofproblemsolving.com/e/f/f/eff43e84f8a3bcf7b6965f0a3248bc4d3a9d0cd4.png" class="latex" alt="$R$" width="14" height="12" /> at the top vertex in the <img src="http://latex.artofproblemsolving.com/e/3/2/e32392a746ea62d657e9a0937b80725535192041.png" class="latex" alt="$1-5-5-1$" style="vertical-align: -2px" width="105" height="15" /> structure.
+</p><p>Since all the points are distinct (stated in problem), the conditions are only satisfied where <img src="http://latex.artofproblemsolving.com/9/8/6/9866e3a998d628ba0941eb4fea0666ac391d149a.png" class="latex" alt="$Q$" style="vertical-align: -3px" width="13" height="16" /> and <img src="http://latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" class="latex" alt="$S$" style="vertical-align: -1px" width="14" height="14" /> are at <img src="http://latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png" class="latex" alt="$5$" width="8" height="12" />s of the <img src="http://latex.artofproblemsolving.com/e/3/2/e32392a746ea62d657e9a0937b80725535192041.png" class="latex" alt="$1-5-5-1$" style="vertical-align: -2px" width="105" height="15" /> structure.
+</p><p><img src="http://latex.artofproblemsolving.com/5/9/a/59a380c3e816171a35c48561edefdbe6220500aa.png" class="latex" alt="$P(d(Q, R) = d(R, S)) = 2 \cdot \frac{5}{11} \cdot \frac{4}{10} = \frac{4}{11}$" style="vertical-align: -13px" width="323" height="38" /> since we have to choose one of the <img src="http://latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png" class="latex" alt="$5$" width="8" height="12" /> out of <img src="http://latex.artofproblemsolving.com/c/6/8/c6878713578626763c38433b3f4c8c2205ad0c15.png" class="latex" alt="$11$" style="vertical-align: 0px" width="17" height="12" /> possible vertices and another one of <img src="../../../../latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png" class="latex" alt="$4$" style="vertical-align: 0px" width="9" height="12" /> out of <img src="../../../../latex.artofproblemsolving.com/f/c/6/fc606f7f1e530731ab4f1cc364c01dc64a4455ee.png" class="latex" alt="$10$" style="vertical-align: 0px" width="17" height="13" /> two times.
+</p><p>And the answer is <img src="http://latex.artofproblemsolving.com/0/b/7/0b75407cc841923c78558c3cb81bf0084236abbb.png" class="latex" alt="$\frac{1-\frac{4}{11}}{2} = \boxed{ \textbf{(A) } \frac{7}{22}}$" style="vertical-align: -19px" width="148" height="49" />
+</p><p>~jjaamm
+</p>
+<h2><span class="mw-headline" id="Video_Solution_by_Little_Fermat">Video Solution by Little Fermat</span></h2>
+<p><a rel="nofollow" class="external free" href="https://youtu.be/h2Pf2hvF1wE?si=5rhpccHQjb0-_X_Q&amp;t=5615">https://youtu.be/h2Pf2hvF1wE?si=5rhpccHQjb0-_X_Q&amp;t=5615</a>
+~little-fermat
+</p>
+<h2><span class="mw-headline" id="Video_Solution_by_Math-X">Video Solution by Math-X</span></h2>
+<p><a rel="nofollow" class="external free" href="https://youtu.be/GP-DYudh5qU?si=khqcGMD9llQrHbKz&amp;t=9770">https://youtu.be/GP-DYudh5qU?si=khqcGMD9llQrHbKz&amp;t=9770</a> 
+</p><p>~Math-X
+</p>
+<h2><span class="mw-headline" id="Video_Solution">Video Solution</span></h2>
+<p><a rel="nofollow" class="external free" href="https://youtu.be/4PSrAbrjKVg?si=G24hhBrhUPio9SZD">https://youtu.be/4PSrAbrjKVg?si=G24hhBrhUPio9SZD</a>
+</p><p>~MathProblemSolvingSkills.com 
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="Video_Solution_by_OmegaLearn">Video Solution by OmegaLearn</span></h2>
+<p><a rel="nofollow" class="external free" href="https://youtu.be/Wc6PFNq5PAM">https://youtu.be/Wc6PFNq5PAM</a>
+</p>
+<h2><span class="mw-headline" id="Video_solution_by_MegaMath">Video solution by MegaMath</span></h2>
+<p><a rel="nofollow" class="external free" href="https://www.youtube.com/watch?v=dxYw1wYHid4&amp;t=12s">https://www.youtube.com/watch?v=dxYw1wYHid4&amp;t=12s</a>
+</p><p><a rel="nofollow" class="external free" href="https://www.youtube.com/watch?v=1yLvQ0F5Z-E">https://www.youtube.com/watch?v=1yLvQ0F5Z-E</a>
+</p>
+<h2><span class="mw-headline" id="Video_Solution_by_epicbird08">Video Solution by epicbird08</span></h2>
+<p><a rel="nofollow" class="external free" href="https://youtu.be/s_6q0C0z6Ug">https://youtu.be/s_6q0C0z6Ug</a>
+</p><p>~EpicBird08
+</p>
+<h2><span id="Vide_Solution_by_SpreadTheMathLove(Casework_and_Complementary)"></span><span class="mw-headline" id="Vide_Solution_by_SpreadTheMathLove.28Casework_and_Complementary.29">Vide Solution by SpreadTheMathLove(Casework and Complementary)</span></h2>
+<p><a rel="nofollow" class="external free" href="https://www.youtube.com/watch?v=4FEwxwgbliQ">https://www.youtube.com/watch?v=4FEwxwgbliQ</a>
+</p>
+<h2><span class="mw-headline" id="Video_Solution_2">Video Solution</span></h2>
+<p><a rel="nofollow" class="external free" href="https://youtu.be/bS3tle-jP4g">https://youtu.be/bS3tle-jP4g</a>
+</p><p>~Steven Chen (Professor Chen Education Palace, www.professorchenedu.com)
+</p>
+<h2><span class="mw-headline" id="Video_Solution_by_TheBeautyofMath">Video Solution by TheBeautyofMath</span></h2>
+<p><a rel="nofollow" class="external free" href="https://youtu.be/ZvrlZ2NoH8s">https://youtu.be/ZvrlZ2NoH8s</a>
+</p><p>~IceMatrix
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<table class="wikitable" style="margin:0.5em auto; font-size:95%; border:1px solid black; width:80%;">
+<tbody><tr>
+<td style="background:#ccf;text-align:center;" colspan="3"><b><a href="../2023_AMC_10A.html" title="2023 AMC 10A">2023 AMC 10A</a></b> (<b><a href="../2023_AMC_10A_Problems.html" title="2023 AMC 10A Problems">Problems</a></b> • <b><a href="../2023_AMC_10A_Answer_Key.html" title="2023 AMC 10A Answer Key">Answer Key</a></b> • <a rel="nofollow" class="external text" href="https://artofproblemsolving.com/community/c13">Resources</a>)
+</td></tr>
+<tr>
+<td width="50%" align="center" rowspan="1">Preceded&#160;by<br /><b><a href="Problem_24.html" title="2023 AMC 10A Problems/Problem 24">Problem 24</a></b>
+</td>
+<td width="50%" align="center" rowspan="1">Followed&#160;by<br /><b>Last Problem</b>
+</td></tr>
+<tr>
+<td colspan="3" style="text-align:center;"><a href="Problem_1.html" class="mw-redirect" title="2023 AMC 10A Problems/Problem 1">1</a> <b>•</b> <a href="Problem_2.html" class="mw-redirect" title="2023 AMC 10A Problems/Problem 2">2</a> <b>•</b> <a href="Problem_3.html" class="mw-redirect" title="2023 AMC 10A Problems/Problem 3">3</a> <b>•</b> <a href="Problem_4.html" title="2023 AMC 10A Problems/Problem 4">4</a> <b>•</b> <a href="Problem_5.html" class="mw-redirect" title="2023 AMC 10A Problems/Problem 5">5</a> <b>•</b> <a href="Problem_6.html" title="2023 AMC 10A Problems/Problem 6">6</a> <b>•</b> <a href="Problem_7.html" class="mw-redirect" title="2023 AMC 10A Problems/Problem 7">7</a> <b>•</b> <a href="Problem_8.html" title="2023 AMC 10A Problems/Problem 8">8</a> <b>•</b> <a href="Problem_9.html" class="mw-redirect" title="2023 AMC 10A Problems/Problem 9">9</a> <b>•</b> <a href="Problem_10.html" class="mw-redirect" title="2023 AMC 10A Problems/Problem 10">10</a> <b>•</b> <a href="Problem_11.html" class="mw-redirect" title="2023 AMC 10A Problems/Problem 11">11</a> <b>•</b> <a href="Problem_12.html" title="2023 AMC 10A Problems/Problem 12">12</a> <b>•</b> <a href="Problem_13.html" title="2023 AMC 10A Problems/Problem 13">13</a> <b>•</b> <a href="Problem_14.html" title="2023 AMC 10A Problems/Problem 14">14</a> <b>•</b> <a href="Problem_15.html" title="2023 AMC 10A Problems/Problem 15">15</a> <b>•</b> <a href="Problem_16.html" class="mw-redirect" title="2023 AMC 10A Problems/Problem 16">16</a> <b>•</b> <a href="Problem_17.html" title="2023 AMC 10A Problems/Problem 17">17</a> <b>•</b> <a href="Problem_18.html" title="2023 AMC 10A Problems/Problem 18">18</a> <b>•</b> <a href="Problem_19.html" title="2023 AMC 10A Problems/Problem 19">19</a> <b>•</b> <a href="Problem_20.html" title="2023 AMC 10A Problems/Problem 20">20</a> <b>•</b> <a href="Problem_21.html" title="2023 AMC 10A Problems/Problem 21">21</a> <b>•</b> <a href="Problem_22.html" class="mw-redirect" title="2023 AMC 10A Problems/Problem 22">22</a> <b>•</b> <a href="Problem_23.html" title="2023 AMC 10A Problems/Problem 23">23</a> <b>•</b> <a href="Problem_24.html" title="2023 AMC 10A Problems/Problem 24">24</a> <b>•</b> <a href="Problem_25.html" class="mw-redirect" title="2023 AMC 10A Problems/Problem 25">25</a>
+</td></tr>
+<tr>
+<td colspan="3" style="text-align:center;"><b><a href="../AMC_10_Problems_and_Solutions.html" title="AMC 10 Problems and Solutions"> All AMC 10 Problems and Solutions</a></b>
+</td></tr></tbody></table>
+<table class="wikitable" style="margin:0.5em auto; font-size:95%; border:1px solid black; width:80%;">
+<tbody><tr>
+<td style="background:#ccf;text-align:center;" colspan="2"><b><a href="https://artofproblemsolving.com/wiki/index.php/2023_AMC_12A" title="2023 AMC 12A">2023 AMC 12A</a></b> (<b><a href="https://artofproblemsolving.com/wiki/index.php/2023_AMC_12A_Problems" title="2023 AMC 12A Problems">Problems</a></b> • <b><a href="https://artofproblemsolving.com/wiki/index.php/2023_AMC_12A_Answer_Key" title="2023 AMC 12A Answer Key">Answer Key</a></b> • <a rel="nofollow" class="external text" href="http://www.artofproblemsolving.com/community/c13">Resources</a>)
+</td></tr>
+<tr>
+<td width="50%" align="center" rowspan="1">Preceded&#160;by<br /><b><a href="https://artofproblemsolving.com/wiki/index.php/2023_AMC_12A_Problems/Problem_20" title="2023 AMC 12A Problems/Problem 20">Problem 20</a></b>
+</td>
+<td width="50%" align="center" rowspan="1">Followed&#160;by<br /><b><a href="https://artofproblemsolving.com/wiki/index.php/2023_AMC_12A_Problems/Problem_22" title="2023 AMC 12A Problems/Problem 22">Problem 22</a></b>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align:center;"><a href="https://artofproblemsolving.com/wiki/index.php/2023_AMC_12A_Problems/Problem_1" title="2023 AMC 12A Problems/Problem 1">1</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2023_AMC_12A_Problems/Problem_2" title="2023 AMC 12A Problems/Problem 2">2</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2023_AMC_12A_Problems/Problem_3" title="2023 AMC 12A Problems/Problem 3">3</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2023_AMC_12A_Problems/Problem_4" title="2023 AMC 12A Problems/Problem 4">4</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2023_AMC_12A_Problems/Problem_5" title="2023 AMC 12A Problems/Problem 5">5</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2023_AMC_12A_Problems/Problem_6" title="2023 AMC 12A Problems/Problem 6">6</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2023_AMC_12A_Problems/Problem_7" title="2023 AMC 12A Problems/Problem 7">7</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2023_AMC_12A_Problems/Problem_8" title="2023 AMC 12A Problems/Problem 8">8</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2023_AMC_12A_Problems/Problem_9" title="2023 AMC 12A Problems/Problem 9">9</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2023_AMC_12A_Problems/Problem_10" title="2023 AMC 12A Problems/Problem 10">10</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2023_AMC_12A_Problems/Problem_11" title="2023 AMC 12A Problems/Problem 11">11</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2023_AMC_12A_Problems/Problem_12" title="2023 AMC 12A Problems/Problem 12">12</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2023_AMC_12A_Problems/Problem_13" title="2023 AMC 12A Problems/Problem 13">13</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2023_AMC_12A_Problems/Problem_14" title="2023 AMC 12A Problems/Problem 14">14</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2023_AMC_12A_Problems/Problem_15" title="2023 AMC 12A Problems/Problem 15">15</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2023_AMC_12A_Problems/Problem_16" title="2023 AMC 12A Problems/Problem 16">16</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2023_AMC_12A_Problems/Problem_17" title="2023 AMC 12A Problems/Problem 17">17</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2023_AMC_12A_Problems/Problem_18" title="2023 AMC 12A Problems/Problem 18">18</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2023_AMC_12A_Problems/Problem_19" title="2023 AMC 12A Problems/Problem 19">19</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2023_AMC_12A_Problems/Problem_20" title="2023 AMC 12A Problems/Problem 20">20</a> <b>•</b> <a class="mw-selflink selflink">21</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2023_AMC_12A_Problems/Problem_22" title="2023 AMC 12A Problems/Problem 22">22</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2023_AMC_12A_Problems/Problem_23" title="2023 AMC 12A Problems/Problem 23">23</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2023_AMC_12A_Problems/Problem_24" title="2023 AMC 12A Problems/Problem 24">24</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2023_AMC_12A_Problems/Problem_25" title="2023 AMC 12A Problems/Problem 25">25</a>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align:center;"><b><a href="../AMC_12_Problems_and_Solutions.html" title="AMC 12 Problems and Solutions"> All AMC 12 Problems and Solutions</a></b>
+</td></tr></tbody></table>
+<p>The problems on this page are copyrighted by the <a rel="nofollow" class="external text" href="http://www.maa.org/">Mathematical Association of America</a>'s <a rel="nofollow" class="external text" href="https://maa.org/student-programs/amc/">American Mathematics Competitions</a>. <a href="../File_AMC_logo.html" class="image"><img alt="AMC logo.png" src="../../../../wiki-images.artofproblemsolving.com/thumb/8/8b/AMC_logo.png/50px-AMC_logo.png" width="50" height="43" style="vertical-align: middle" srcset="https://wiki-images.artofproblemsolving.com//thumb/8/8b/AMC_logo.png/75px-AMC_logo.png 1.5x, https://wiki-images.artofproblemsolving.com//8/8b/AMC_logo.png 2x" /></a>
+</p>
+<div style="clear:both;"></div>
+
+<!-- 
+NewPP limit report
+Cached time: 20250411033116
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.136 seconds
+Real time usage: 9.835 seconds
+Preprocessor visited node count: 1575/1000000
+Preprocessor generated node count: 4122/1000000
+Post‐expand include size: 4362/2097152 bytes
+Template argument size: 430/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 27045/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 2460.611      1 -total
+ 12.50%  307.632      1 Template:AMC10_box
+  9.95%  244.949      1 Template:AMC12_box
+  6.30%  154.999      1 Template:MAA_Notice
+  5.48%  134.767      1 Template:Duplicate
+-->
+</div>
+<!-- Saved in parser cache with key wiki-wiki_:pcache:idhash:25667-0!canonical and timestamp 20250411033106 and revision id 231702
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://artofproblemsolving.com/wiki/index.php?title=2023_AMC_12A_Problems/Problem_21&amp;oldid=231702">https://artofproblemsolving.com/wiki/index.php?title=2023_AMC_12A_Problems/Problem_21&amp;oldid=231702</a>"</div>
+
+
+									<div class="catlinks"><div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div></div>
+				
+
+							</div>
+		</div>
+	</div>
+</div>
+
+<!-- search:off -->
+	<div class="clearfix"></div>
+
+	
+	<div id="main-footer" class="no-print">
+		<div class="footer-container">
+			<div class="footer-topRow">
+											<a href="https://artofproblemsolving.com/online">
+							<img class="footer-mainLogo"
+							src="https://artofproblemsolving.com/assets/images/logos/aops-online-footer.svg"/>
+						</a>
+										<div class="footer-wasc">
+						<span>
+							Art of Problem Solving is an
+							<br class="wasc-break"/>
+							<span class="footer-accredited">ACS WASC Accredited School</span>
+						</span>
+						<img class="footer-wascLogo"
+						src="../../../assets/images/logos/wasc.png"/>
+					</div>
+			</div>
+			<div class="footer-links">
+				<div class="footer-col">
+					<div class="footer-colHeader">aops programs</div>
+					<div><a class="link" href="https://artofproblemsolving.comonline/">AoPS Online</a></div>
+					<div><a class="link" href="https://beastacademy.com/">Beast Academy</a></div>
+					<div><a class="link" href="https://aopsacademy.org/">AoPS Academy</a></div>
+				</div>
+
+				<div class="footer-col">
+					<div class="footer-colHeader">About</div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/about">About AoPS</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/staff">Our Team</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/history">Our History</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/careers">Jobs</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/blog">AoPS Blog</a></div>
+				</div>
+
+				<div class="footer-col">
+					<div class="footer-colHeader" style="left:-1px;">Site Info</div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/tos">Terms</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/privacy">Privacy</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/contact">Contact Us</a></div>
+				</div>
+
+				<div class="footer-col social">
+					<div class="footer-colHeader">follow us</div>
+					<div class="footer-social">
+													<a class="link" target="_blank" href="https://www.facebook.com/artofproblemsolving">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/facebook.svg" class="sm-icon"/>
+							</a>
+							<a class="link" target="_blank" href="http://twitter.com/AoPSNews">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/twitter.svg" class="sm-icon"/>
+							</a>
+							<a class="link" target="_blank" href="https://www.pinterest.com/artofproblemsolving/pins/">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/pinterest.svg" class="sm-icon"/>
+							</a>
+											</div>
+				</div>
+									<div class="footer-col subscribe">
+						<div class="footer-colHeader">
+							Subscribe for news and updates
+						</div>
+						<form method="post" action="https://artofproblemsolving.com/mailinglist">
+							<input type="email" class="footer-email" placeholder="Enter e-mail" name="subscribe-email">
+							<input type="hidden" name="new-books" value="on">
+							<input type="hidden" name="classes" value="on">
+							<input type="hidden" name="mathjams" value="on">
+							<input type="submit" class="footer-submit" value="">
+							<div class="footer-submit-arrow">
+								<svg x="0px" y="0px" viewBox="0 0 289 289" enable-background="new 0 0 289 289">
+									<g>
+										<path class="arrow-fill" d="M121.5,220.5c-2.6,0-5.1-1-7.1-2.9c-3.9-3.9-3.9-10.2,0-14.1l58.9-58.9l-58.9-58.9c-3.9-3.9-3.9-10.2,0-14.1c3.9-3.9,10.2-3.9,14.1,0l66,66c3.9,3.9,3.9,10.2,0,14.1l-66,66C126.6,219.5,124.1,220.5,121.5,220.5z"/>
+									</g>
+								</svg>
+							</div>
+						</form>
+					</div>
+							</div>
+			<div class="copyright">
+				<span>&copy; 2025 AoPS Incorporated
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div id="small-footer-wrapper">
+		<div class="footer-container">
+							<a href="https://artofproblemsolving.com/online">
+					<img class="footer-mainLogo"
+					src="https://artofproblemsolving.com/assets/images/logos/aops-online-footer.svg"/>
+				</a>
+						<div class="copyright">
+				&copy; 2025 Art of Problem Solving
+				<div class="copyright-links">
+					<a href="https://artofproblemsolving.com/company">About Us</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/contact">Contact Us</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/company/tos">Terms</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/company/privacy">Privacy</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<form id="registration-form" method="post" action="https://artofproblemsolving.com/user/register.php">
+	<input type="hidden" name="username" value="">
+	<input type="hidden" name="password" value="">
+	<input type="hidden" name="from-login" value="true">
+	</form>
+<div id="print-footer" class="printer">Copyright &copy; 2025 Art of Problem Solving</div>
+
+
+
+<div id="epicfail" class="aops-html-modal-epic-fail" style="display: none">
+	<div class="aops-html-modal-inner-epic-fail">
+		<div class="aops-html-modal-main-epic-fail">
+			<p>Something appears to not have loaded correctly.</p>
+		</div>
+		<div class="aops-html-modal-bottom-epic-fail">
+			<p><a onclick="location.reload(true);return false">Click to refresh</a>.</p>
+		</div>
+	</div>
+</div>
+<link rel="stylesheet" href="../../../assets/css/epic-fail.css">
+
+
+
+
+
+<!-- /search:off -->
+
+
+<!-- copied from contact page index, with edits -->
+<script id="footer-tpl-email-dialog" type="text/x-handlebars-template">
+	<div id="mail-dialog">
+		<h1>Email Art of Problem Solving</h1>
+		<p>
+			<input type="text" id="email" name="email" placeholder="Your email address">
+			<input type="text" id="subject" name="subject" placeholder="Subject of message">
+			<textarea id="message" name="message" placeholder="Enter your message"></textarea>
+			<div style="padding:5px 30px">
+				<input type="checkbox" id="email-copy" name="email_copy">
+				<label for="email-copy" id="email-copy-label">Send a copy to my email address.</label>
+			</div>
+			<div style="padding:5px 30px 20px">
+				<input id="footer-submit-btn" type="submit" class="btn btn-primary" value="Send">
+				<input id="footer-cancel-btn" type="submit" class="btn btn-default" value="Cancel">
+			</div>
+		</p>
+		<p id="email-error"></p>
+	</div>
+</script>
+
+
+<script id="footer-tpl-email-confirm" type="text/x-handlebars-template">
+	<div id="mail-dialog-confirm">
+		<h2>Email Sent</h2>
+		<p>Thank you for your email. We will respond to it soon.</p>
+	</div>
+</script>
+
+<!-- bing -->
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5105596"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","../../../../bat.bing.com/bat.js","uetq");</script><noscript><img src="http://bat.bing.com/action/0?ti=5105596&amp;Ver=2" height="0" width="0" style="display:none; visibility: hidden;" /></noscript>
+
+</body>
+
+<!-- Mirrored from artofproblemsolving.com/wiki/index.php/2023_AMC_10A_Problems/Problem_25 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Apr 2025 04:59:35 GMT -->
+</html>
+

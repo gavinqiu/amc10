@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html>
+	
+<!-- Mirrored from artofproblemsolving.com/wiki/index.php/2021_Fall_AMC_10B_Problems/Problem_18 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Apr 2025 05:00:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+				
+<script>AoPS = {
+	start_time : new Date().getTime()
+};</script>
+
+<script>
+	AoPS.bootstrap_data = [];
+	AoPS.bd = AoPS.bootstrap_data; // Alias!
+	AoPS.session = {"user_id":1,"platform_user_id":"","username":"Anonymous","avatar":"\/\/avatar.artofproblemsolving.com\/avatar_1.png?t=1","email":"","role":"","logged_in":false,"initialized":false,"needs_coppa_approval":false,"admin":false,"national_staff":false,"wikiname":""};
+	AoPS.bd.assetVersion = 1;
+	AoPS.bd.environment = 'production';
+	AoPS.protected_url = 'https://artofproblemsolving.com/';
+	AoPS.aops_url = 'https://artofproblemsolving.com/';
+	AoPS.academy_url = 'https://aopsacademy.org/';
+</script>
+		<!-- GA plugin and Enhanced Ecommerce -->
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','../../../../www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-1905305-1', 'auto', {allowLinker: true}); // GA Property ID
+		ga('send', 'pageview');
+		</script>
+		<!-- End GA plugin and Enhanced Ecommerce -->
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'../../../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer', 'GTM-59JWRGZ')</script>
+		<!-- End Google Tag Manager -->
+
+		<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1">
+		<meta name="referrer" content="origin">
+
+		<meta name="facebook-domain-verification" content="zmmwg7oqqsqvf8ihckwvzoo85b08gx" />
+
+		
+		<link rel="apple-touch-icon" href="../../../../assets.artofproblemsolving.com/images/apple-touch-icon.png">
+		<title>Art of Problem Solving</title>
+
+		
+		<link href="../../../assets/fonts/font-awesome/css/all.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="../../../assets/css/sharedsite.css">
+		<link rel="stylesheet" href="../../../assets/css/navheader.css">
+		<link rel="stylesheet" href="../../../assets/css/footer.css">
+		<link rel="stylesheet" href="../../../assets/css/main-head.css">
+
+					<link rel="icon" href="https://artofproblemsolving.com/online-favicon.ico?v=2">
+		
+		
+		<script>
+  if (!window.console) console = {log: function() {}, dir: function() {}};
+  $$ = function( selector ) { return document.getElementById( selector ); }
+</script>
+
+							<script src="../../../../assets.artofproblemsolving.com/js/jquery360.min.js"></script>
+							<script src="../../../assets/vendor/jquery/3.6.0/jquery-migrate.min.js"></script>
+					<link rel="stylesheet" href="../../../../cdn.jsdelivr.net/npm/katex%400.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+<script defer src="../../../../cdn.jsdelivr.net/npm/katex%400.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+<script defer src="../../../../cdn.jsdelivr.net/npm/katex%400.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '[katex]', right: '[/katex]', display: false},
+			  {left: '[katex display=true]', right: '[/katex]', display: true} 
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+    });
+</script>
+
+<script>
+MathJax = {
+  tex: {
+	inlineMath: [['[mathjax]', '[/mathjax]'], ['\\(', '\\)']],
+	displayMath: [['[mathjax display=true]', '[/mathjax]']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async src="../../../../cdn.jsdelivr.net/npm/mathjax%403/es5/tex-svg.js"> </script>
+
+				<meta charset="UTF-8"/>
+<title>2021 Fall AMC 10B Problems/Problem 18 - AoPS Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"2021_Fall_AMC_10B_Problems/Problem_18","wgTitle":"2021 Fall AMC 10B Problems/Problem 18","wgCurRevisionId":242808,"wgRevisionId":242808,"wgArticleId":22216,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"2021_Fall_AMC_10B_Problems/Problem_18","wgRelevantArticleId":22216,"wgRequestId":"704b2065cc4e1836d7fc5f53","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.aopsp":"ready"});mw.loader.implement("user.tokens@09avpoe",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.aopsp.js"]);});</script>
+<link rel="stylesheet" href="https://artofproblemsolving.com/wiki/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cskins.aopsp&amp;only=styles&amp;skin=aopsp"/>
+<script async="" src="https://artofproblemsolving.com/wiki/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=aopsp"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="https://artofproblemsolving.com/wiki/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=aopsp"/>
+<meta name="generator" content="MediaWiki 1.31.1"/>
+<link rel="shortcut icon" href="https://artofproblemsolving.com/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://artofproblemsolving.com/wiki/opensearch_desc.php" title="AoPS Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://artofproblemsolving.com/wiki/api.php?action=rsd"/>
+<link rel="alternate" type="application/atom+xml" title="AoPS Wiki Atom feed" href="https://artofproblemsolving.com/wiki/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<!--[if lt IE 9]><script src="/wiki/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=aopsp&amp;sync=1"></script><![endif]-->
+			</head>
+		<body class="production mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-2021_Fall_AMC_10B_Problems_Problem_18 rootpage-2021_Fall_AMC_10B_Problems_Problem_18 skin-aopsp action-view resources">
+
+					<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59JWRGZ"
+			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		
+		<div id="page-wrapper">
+
+			<!-- search:off -->
+			
+			<!-- The gray bar at top -->
+			<!-- see shared-site.css -->
+			<div id="top-bar" class="sharedsite-wrapper no-select">
+				<div class="sharedsitebar">
+					<a href="https://artofproblemsolving.com/" class="mobile-title"></a>
+					<div class="sharedsite-links">
+											<a class="site-link main" href="https://artofproblemsolving.com/company">
+												Art of Problem Solving
+						</a>
+						<div class="site">
+													<a class="site-link selected" href="https://artofproblemsolving.com/">
+														<img src="https://artofproblemsolving.com/assets/images/logos/icon-online.svg" class="site-icon">
+								<span class="site-name">AoPS Online</span>
+							</a>
+							<!-- Rich dropdown -->
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-online.svg"/>
+										</div>
+										<div class="site-snippet">
+											Math texts, online classes, and more
+											<br/>for students in grades 5-12.
+										</div>
+										<a target="_blank" class="site-visit aops-primary" href="https://artofproblemsolving.com/">
+											Visit AoPS Online <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://artofproblemsolving.com/store" class="btn btn-primary aops-btn">
+											Books for Grades 5-12
+										</a>
+										<a target="_blank" href="https://artofproblemsolving.com/school" class="btn btn-primary aops-btn">
+											Online Courses
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- End rich dropdown -->
+						</div>
+						<div class="site">
+							<a class="site-link" href="https://beastacademy.com/">
+								<img src="https://artofproblemsolving.com/assets/images/logos/icon-ba.svg" class="site-icon">
+								<span class="site-name">Beast Academy</span>
+							</a>
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-ba.svg"/>
+										</div>
+										<div class="site-snippet">
+											Engaging math books and online learning
+											<br/>for students ages 6-13.
+										</div>
+										<a target="_blank" class="site-visit ba-primary" href="https://beastacademy.com/">
+											Visit Beast Academy <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://beastacademy.com/books" class="btn btn-primary ba-btn">
+											Books for Ages 6-13
+										</a>
+										<a target="_blank" href="https://beastacademy.com/online" class="btn btn-primary ba-btn">
+											Beast Academy Online
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="site">
+							<a class="site-link" href="https://aopsacademy.org/">
+								<img src="https://artofproblemsolving.com/assets/images/logos/icon-academy.svg" class="site-icon">
+								<span class="site-name">AoPS Academy</span>
+							</a>
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-academy.svg"/>
+										</div>
+										<div class="site-snippet">
+											Small live classes for advanced math
+											<br/>and language arts learners in grades 2-12.
+										</div>
+										<a target="_blank" class="site-visit academy-primary" href="https://aopsacademy.org/">
+											Visit AoPS Academy <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://aopsacademy.org/campuses" class="btn btn-primary academy-btn">
+											Find a Physical Campus
+										</a>
+										<a target="_blank" href="https://virtual.aopsacademy.org/" class="btn btn-primary academy-btn">
+											Visit the Virtual Campus
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="header-wrapper" class="no-select">
+				<div class="header-underlay">
+					<div id="header">
+
+						<!-- The white area where main menu options appear -->
+
+						<!-- The menu links -->
+													<div id="main-menubar">
+								<div class="menubar-content">
+									<div class="menubar-logo online">
+										<img class="menubar-hamburger" src="https://artofproblemsolving.com/assets/images/hamburger.svg"/>
+										<a class="logo-img-link" href="https://artofproblemsolving.com/online">
+											<img class="logo-img" src="https://artofproblemsolving.com/assets/images/logos/aops-online.svg"/>
+											<img class="logo-img-mobile" src="https://artofproblemsolving.com/assets/images/logos/aops-online-mobile.svg"/>
+											<img class="logo-img-small" src="https://artofproblemsolving.com/assets/images/logos/aops-online-mobile.svg"/>
+										</a>
+									</div>
+									<div class="menubar-links-outer">
+										<!-- The login links -->
+										<div class="menu-login-wrapper online">
+											
+											<div class="menu-login-item">
+															<div 
+		    id="header-login"
+			class="no-select not-signed-in"
+			style="display:flex">
+
+			<div class="online-login-button solid-rounded-button">Sign&nbsp;In</div><div class="online-register-button">Register</div>
+		</div>
+												</div>
+
+											
+										</div>
+										<div class="menubar-labels online">
+											<div class="menubar-label school">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/school">
+														online school
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+														<!-- These have IDs for A/B testing purposes. T27691 -->
+																												<a id="online-school-menu-schedule" href="https://artofproblemsolving.com/school/schedule"> Class Schedule </a>
+														<a id="online-school-menu-recommmendations" href="https://artofproblemsolving.com/school/recommendations"> Recommendations </a>
+														<a id="online-school-menu-woot-courses" href="https://artofproblemsolving.com/school/woot?gtmlist=School_Nav"> Olympiad Courses </a>
+														<a id="online-school-menu-mathjams" href="https://artofproblemsolving.com/school/mathjams"> Free Sessions </a>
+																																									</div>
+												</div>
+											</div>
+											<div class="menubar-label store">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/store">
+														books<span class="menubar-link-ext">tore </span>
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+																																																								<a href="https://artofproblemsolving.com/store/list/aops-curriculum">AoPS Curriculum</a>
+														<a href="https://artofproblemsolving.com/store/list/beast-academy">Beast Academy</a>
+														<a href="https://artofproblemsolving.com/store/online">Online Books</a>
+														<a href="https://artofproblemsolving.com/store/recommendations">Recommendations</a>
+														<a href="https://artofproblemsolving.com/store/list/other-products">Other Books &amp; Gear</a>
+														<a href="https://artofproblemsolving.com/store/list/all-products">All Products</a>
+														<a href="https://artofproblemsolving.com/store/gift-certificates?gtmlist=Bookstore_Nav">Gift Certificates</a>
+																											</div>
+												</div>
+											</div>
+											<div class="menubar-label community">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/community">
+														community
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+																												<a data-cmty href="https://artofproblemsolving.com/community">Forums</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/c13_contests">Contests</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/search">Search</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/faq">Help</a>
+																																									</div>
+												</div>
+											</div>
+											<div class="menubar-label resources">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/resources">
+														resources
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+														<div class="dropdown-columns">
+															<div class="dropdown-category">
+																<span class="dropdown-category-label">math training & tools</span>
+																<a href="https://artofproblemsolving.com/alcumus">Alcumus</a>
+																<a href="https://artofproblemsolving.com/videos">Videos</a>
+																<a href="https://artofproblemsolving.com/ftw">For the Win!</a>
+																<a href="https://artofproblemsolving.com/mathcounts_trainer">MATHCOUNTS Trainer</a>
+																<a href="https://artofproblemsolving.com/contests/practice">AoPS Practice Contests</a>
+																<a href="https://artofproblemsolving.com/wiki/index.php?title=Main_Page">AoPS Wiki</a>
+																<a href="https://artofproblemsolving.com/texer">LaTeX TeXeR</a>
+																<a href="https://artofproblemsolving.com/polymath">MIT PRIMES/CrowdMath</a>
+																<a href="https://artofproblemsolving.com/keeplearning">Keep Learning</a>
+																<a href="https://beastacademy.com/all-ten">All Ten</a>
+																															</div>
+															<div class="dropdown-column">
+																																<div class="dropdown-category category-in-column">
+																	<span class="dropdown-category-label">contests on aops</span>
+																	<a href="https://artofproblemsolving.com/contests/practice">Practice Math Contests</a>
+																	<a href="https://artofproblemsolving.com/contests/usabo">USABO</a>
+																</div>
+																<div class="dropdown-category category-in-column">
+                                                                                                                                        <span class="dropdown-category-label">news</span>
+                                                                                                                                        <a href="https://artofproblemsolving.com/blog">AoPS Blog</a>
+                                                                                                                                        <a href="https://artofproblemsolving.com/blog/webinars/aopswebinars">Webinars</a>
+                                                                                                                                </div>
+															</div>
+														</div>
+														<div class="dropdown-view-more-link-container">
+															<a href="https://artofproblemsolving.com/resources" class="dropdown-view-more-link">view all <span class="aops-icon">0</span></a>
+														</div>
+													</div>
+												</div>
+											</div>
+																						<div class="menubar-label menu-login-item">
+															<div 
+		    id="header-login"
+			class="no-select not-signed-in"
+			style="display:flex">
+
+			<div class="online-login-button solid-rounded-button">Sign&nbsp;In</div><div class="online-register-button">Register</div>
+		</div>
+												</div>
+																					</div>
+									</div>
+								</div>
+							</div>
+											</div>
+				</div>
+
+								<noscript>
+					<div class="infobar">JavaScript is not enabled. JavaScript is required to fully utilize the site.</div>
+				</noscript>
+
+
+									<div id="breadcrumbs-wrapper">
+						<div id="submenu-icon"></div>
+						<div id="breadcrumbs">
+														<!-- ignore-security-checks -->
+							<div class="title-wrapper"><div class="title"><a href="https://artofproblemsolving.com/wiki">AoPS Wiki</a></div></div>
+														<div class="crumb-wrapper">
+																										<span class="crumb crumb-1">
+																			<!-- ignore-security-checks -->
+										<a href="https://artofproblemsolving.com/resources">Resources</a>
+																		</span>
+																											<i class="aops-font aops-angle-double-right"></i>
+																		<span class="crumb crumb-2">
+																			<!-- ignore-security-checks -->
+										<a href="https://artofproblemsolving.com/wiki">Aops Wiki</a>
+																		</span>
+																											<i class="aops-font aops-angle-double-right"></i>
+																		<span class="crumb crumb-3">
+																			2021 Fall AMC 10B Problems/Problem 18																		</span>
+															</div>
+						</div>
+					</div>
+							</div>
+
+			<!-- search icon script lives in footer.phtml-->
+
+			<!-- /search:off -->
+
+<div id="main-content" class="left-navigation wiki">
+	<div id="side-column-wrapper">
+		<div id="side-column">
+						<div id="content-actions" class="menu open">
+				<div class="submenu">
+					<h1>Page</h1>
+					<div class="submenu-wrapper">
+						<span id="ca-nstab-main" class="selected"><a href="Problem_18.html" title="View the content page " accesskey="c">Article</a></span><span id="ca-talk"><a href="https://artofproblemsolving.com/wiki/index.php/Talk:2021_Fall_AMC_10B_Problems/Problem_18" rel="discussion" title="Discussion about the content page " accesskey="t">Discussion</a></span><span id="ca-viewsource"><a href="https://artofproblemsolving.com/wiki/index.php?title=2021_Fall_AMC_10B_Problems/Problem_18&amp;action=edit" title="This page is protected.&#10;You can view its source " accesskey="e">View source</a></span><span id="ca-history"><a href="https://artofproblemsolving.com/wiki/index.php?title=2021_Fall_AMC_10B_Problems/Problem_18&amp;action=history" title="Past revisions of this page " accesskey="h">History</a></span>					</div>
+				</div>
+			</div>
+			<div id="toolbox" class="menu open">
+				<div class="submenu">
+					<h1>Toolbox</h1>
+					<div class="submenu-wrapper">
+						<span id="n-recentchanges"><a href="../Special_RecentChanges.html" title="A list of recent changes in the wiki " accesskey="r">Recent changes</a></span><span id="n-randompage"><a href="https://artofproblemsolving.com/wiki/index.php/Special:Random" title="Load a random page " accesskey="x">Random page</a></span><span id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></span><span id="t-whatlinkshere"><a href="https://artofproblemsolving.com/wiki/index.php/Special:WhatLinksHere/2021_Fall_AMC_10B_Problems/Problem_18" title="A list of all wiki pages that link here " accesskey="j">What links here</a></span><span id="t-specialpages"><a href="../Special_SpecialPages.html" title="A list of all special pages " accesskey="q">Special pages</a></span>					</div>
+				</div>
+			</div>
+			
+			<div id="search" class="menu open">
+				<h1>Search</h1>
+				<div class="submenu-wrapper" style="margin-bottom:5px;">
+					<form action="https://artofproblemsolving.com/wiki/index.php" id="searchform" class="mw-search">
+						<input type="hidden" name="title" value="Special:Search">
+						<input type="search" name="search" placeholder="Search" value="" accesskey="f" id="searchInput">
+						<div style="margin:0 5px 5px 5px;text-align:right;"><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="btn btn-primary searchButton"/></div>
+					</form>
+				</div>
+			</div>
+
+			<!--
+			<div class="menu open">
+				<h1>Note</h1>
+				<div class="submenu-wrapper" style="padding:10px;color:#444;">
+					Please do not discuss the 2015 AMC 8 Competition on any website until November 25th.
+				</div>
+			</div>
+			-->
+		</div>
+	</div>
+
+	<div id="main-column" style="margin-top:10px">
+				<div class="page-wrapper">
+						<div id="mw-js-message" style="display:none;"></div>
+			<h1 id="firstHeading" class="firstHeading">2021 Fall AMC 10B Problems/Problem 18</h1>
+
+						
+			<div class="mw-body">
+												
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Problem"><span class="tocnumber">1</span> <span class="toctext">Problem</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Solution_1"><span class="tocnumber">2</span> <span class="toctext">Solution 1</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Solution_2_.2815-75-90_triangles.29"><span class="tocnumber">3</span> <span class="toctext">Solution 2 (15-75-90 triangles)</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Solution_3"><span class="tocnumber">4</span> <span class="toctext">Solution 3</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Solution_4_.2830-60-90_Triangles.29"><span class="tocnumber">5</span> <span class="toctext">Solution 4 (30-60-90 Triangles)</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Solution_5"><span class="tocnumber">6</span> <span class="toctext">Solution 5</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Solution_6"><span class="tocnumber">7</span> <span class="toctext">Solution 6</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Solution_7"><span class="tocnumber">8</span> <span class="toctext">Solution 7</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Video_Solution_1_by_Power_of_Logic"><span class="tocnumber">9</span> <span class="toctext">Video Solution 1 by Power of Logic</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Video_Solution_2_by_Interstigation_.28with_some_trigonometry.29"><span class="tocnumber">10</span> <span class="toctext">Video Solution 2 by Interstigation (with some trigonometry)</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Video_Solution_3_by_WhyMath"><span class="tocnumber">11</span> <span class="toctext">Video Solution 3 by WhyMath</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Video_Solution_4_.281_min.29"><span class="tocnumber">12</span> <span class="toctext">Video Solution 4 (1 min)</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Video_Solution_by_TheBeautyofMath"><span class="tocnumber">13</span> <span class="toctext">Video Solution by TheBeautyofMath</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#See_Also"><span class="tocnumber">14</span> <span class="toctext">See Also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Problem">Problem</span></h2>
+<p>Three identical square sheets of paper each with side length <img src="http://latex.artofproblemsolving.com/e/1/7/e17be6cd0c6036497941f1416c6be49264147c64.png" class="latex" alt="$6{ }$" style="vertical-align: -1px" width="11" height="14" /> are stacked on top of each other. The middle sheet is rotated clockwise <img src="http://latex.artofproblemsolving.com/9/1/9/919bf5d461970fc8d905d63704ef763c08594184.png" class="latex" alt="$30^\circ$" width="24" height="13" /> about its center and the top sheet is rotated clockwise <img src="http://latex.artofproblemsolving.com/2/9/f/29fa0a9949f018e121b2093216dd5db13d3abef0.png" class="latex" alt="$60^\circ$" width="24" height="13" /> about its center, resulting in the <img src="http://latex.artofproblemsolving.com/e/2/9/e290f2cba0ba0e11c0b91630da15a408da2fcf1c.png" class="latex" alt="$24$" style="vertical-align: 0px" width="18" height="12" />-sided polygon shown in the figure below. The area of this polygon can be expressed in the form <img src="http://latex.artofproblemsolving.com/b/f/5/bf558bbd380f9ed3c749db2269e17e9467653a22.png" class="latex" alt="$a-b\sqrt{c}$" style="vertical-align: -3px" width="63" height="18" />, where <img src="http://latex.artofproblemsolving.com/c/7/d/c7d457e388298246adb06c587bccd419ea67f7e8.png" class="latex" alt="$a$" style="vertical-align: -1px" width="11" height="10" />, <img src="http://latex.artofproblemsolving.com/8/1/3/8136a7ef6a03334a7246df9097e5bcc31ba33fd2.png" class="latex" alt="$b$" style="vertical-align: -1px" width="10" height="14" />, and <img src="http://latex.artofproblemsolving.com/3/3/7/3372c1cb6d68cf97c2d231acc0b47b95a9ed04cc.png" class="latex" alt="$c$" width="8" height="8" /> are positive integers, and <img src="http://latex.artofproblemsolving.com/3/3/7/3372c1cb6d68cf97c2d231acc0b47b95a9ed04cc.png" class="latex" alt="$c$" width="8" height="8" /> is not divisible by the square of any prime. What is <img src="http://latex.artofproblemsolving.com/2/4/3/24323ad615514d3902fb6720a462f134c52cf8f2.png" class="latex" alt="$a+b+c?$" style="vertical-align: -1px" width="78" height="14" />
+</p>
+<center><img src="http://latex.artofproblemsolving.com/7/e/b/7eb8841b95d6e1c451addf20403c4e540f176116.png" class="latexcenter" alt="[asy] defaultpen(fontsize(8)+0.8); size(150); pair O,A1,B1,C1,A2,B2,C2,A3,B3,C3,A4,B4,C4; real x=45, y=90, z=60; O=origin;  A1=dir(x); A2=dir(x+y); A3=dir(x+2y); A4=dir(x+3y); B1=dir(x-z); B2=dir(x+y-z); B3=dir(x+2y-z); B4=dir(x+3y-z); C1=dir(x-2z); C2=dir(x+y-2z); C3=dir(x+2y-2z); C4=dir(x+3y-2z); draw(A1--A2--A3--A4--A1, gray+0.25+dashed); filldraw(B1--B2--B3--B4--cycle, white, gray+dashed+linewidth(0.25)); filldraw(C1--C2--C3--C4--cycle, white, gray+dashed+linewidth(0.25)); dot(O); pair P1,P2,P3,P4,Q1,Q2,Q3,Q4,R1,R2,R3,R4; P1=extension(A1,A2,B1,B2); Q1=extension(A1,A2,C3,C4);  P2=extension(A2,A3,B2,B3); Q2=extension(A2,A3,C4,C1);  P3=extension(A3,A4,B3,B4); Q3=extension(A3,A4,C1,C2);  P4=extension(A4,A1,B4,B1); Q4=extension(A4,A1,C2,C3);  R1=extension(C2,C3,B2,B3); R2=extension(C3,C4,B3,B4);  R3=extension(C4,C1,B4,B1); R4=extension(C1,C2,B1,B2); draw(A1--P1--B2--R1--C3--Q1--A2); draw(A2--P2--B3--R2--C4--Q2--A3); draw(A3--P3--B4--R3--C1--Q3--A4); draw(A4--P4--B1--R4--C2--Q4--A1); [/asy]" width="252" height="252" /></center>
+<p><img src="http://latex.artofproblemsolving.com/c/8/b/c8bf26c470fe42086760f88dd120d3badba6de5b.png" class="latex" alt="$(\textbf{A})\: 75\qquad(\textbf{B}) \: 93\qquad(\textbf{C}) \: 96\qquad(\textbf{D}) \: 129\qquad(\textbf{E}) \: 147$" style="vertical-align: -5px" width="404" height="20" />
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="Solution_1">Solution 1</span></h2>
+<p><img src="http://latex.artofproblemsolving.com/6/4/f/64f3c31b5b88bfd1d71ed15cecc5de817a573f8e.png" class="latexcenter" alt="[asy] defaultpen(fontsize(8)+0.8); size(100); pair A=(0,0); pair B=(1.732,3); pair C=(3,3); pair D=(3,1.732); draw(A--(0,3)--C--(3,0)--A, lightgray+dashed); draw(A--B--C--A); draw(A--D--C, gray); label(&quot;$A$&quot;,A,W); label(&quot;$B$&quot;,B,N); label(&quot;$C$&quot;,C,NE); label(&quot;$D$&quot;,D,E); label(&quot;$E$&quot;,(0,3),NW); label(&quot;$F$&quot;,(3,0),E); [/asy]" width="168" height="155" />
+The <img src="http://latex.artofproblemsolving.com/e/2/9/e290f2cba0ba0e11c0b91630da15a408da2fcf1c.png" class="latex" alt="$24$" style="vertical-align: 0px" width="18" height="12" />-sided polygon is made out of <img src="http://latex.artofproblemsolving.com/e/2/9/e290f2cba0ba0e11c0b91630da15a408da2fcf1c.png" class="latex" alt="$24$" style="vertical-align: 0px" width="18" height="12" /> shapes like <img src="http://latex.artofproblemsolving.com/8/c/3/8c3a2d2224f7d163b46d702132425d47828bf538.png" class="latex" alt="$\triangle ABC$" style="vertical-align: -4px" width="61" height="18" />. Then <img src="http://latex.artofproblemsolving.com/d/d/8/dd83804064b0917360bb1ef532724bbaa39cf3af.png" class="latex" alt="$\angle BAC=360^\circ/24=15^\circ$" style="vertical-align: -5px" width="194" height="20" />, and <img src="http://latex.artofproblemsolving.com/a/0/0/a0045afef88ba13f3a220421fe2ab778fb2b2a4b.png" class="latex" alt="$\angle EAC = 45^\circ$" style="vertical-align: -1px" width="107" height="15" />, so  <img src="http://latex.artofproblemsolving.com/3/6/3/3638e05f702c99668e2ee4be47c7ba24a3ba3115.png" class="latex" alt="$\angle{EAB} = 30^{\circ}$" style="vertical-align: -1px" width="108" height="15" />. Then <img src="http://latex.artofproblemsolving.com/b/a/5/ba58fbc69553e784cb811d2d5e8e9ca429fa6066.png" class="latex" alt="$EB=AE\tan 30^\circ = \sqrt{3}$" style="vertical-align: -2px" width="190" height="21" />; therefore <img src="http://latex.artofproblemsolving.com/5/0/d/50d772b0172c7549e422fddc9cea28907e29a68d.png" class="latex" alt="$BC=EC-EB=3-\sqrt{3}$" style="vertical-align: -2px" width="215" height="21" />. Thus
+<img src="http://latex.artofproblemsolving.com/9/0/c/90c12e2eb0a1e77c976e4e865368ae083634bdcc.png" class="latexcenter" alt="\[[ABC] = \frac{BC}{EC}\cdot [ACE] = \frac{3-\sqrt{3}}{3}\cdot \frac 92\]" width="282" height="41" />and the required area is <img src="http://latex.artofproblemsolving.com/2/0/d/20dd757c006f7c3c8e490de37383ba019659f058.png" class="latex" alt="$24\cdot[ABC] =108-36\sqrt{3}$" style="vertical-align: -5px" width="202" height="24" />. Finally <img src="http://latex.artofproblemsolving.com/c/6/d/c6d24e8930372cce7f1bbe8ba23d59ab38f120bb.png" class="latex" alt="$108+36+3=\boxed{(\textbf{E})\ 147}$" style="vertical-align: -11px" width="196" height="32" />. 
+~lopkiloinm
+</p><p><br />
+</p>
+<h2><span id="Solution_2_(15-75-90_triangles)"></span><span class="mw-headline" id="Solution_2_.2815-75-90_triangles.29">Solution 2 (15-75-90 triangles)</span></h2>
+<center><img src="http://latex.artofproblemsolving.com/1/e/2/1e28d3773e9fcc7541cb5c53586dfb20929c076d.png" class="latexcenter" alt="[asy] defaultpen(fontsize(8)+0.8); size(150); pair O,A1,B1,C1,A2,B2,C2,A3,B3,C3,A4,B4,C4; real x=45, y=90, z=60; O=origin;  A1=dir(x); A2=dir(x+y); A3=dir(x+2y); A4=dir(x+3y); B1=dir(x-z); B2=dir(x+y-z); B3=dir(x+2y-z); B4=dir(x+3y-z); C1=dir(x-2z); C2=dir(x+y-2z); C3=dir(x+2y-2z); C4=dir(x+3y-2z); draw(A1--A2--A3--A4--A1, gray+0.25+dashed); filldraw(B1--B2--B3--B4--cycle, white, gray+dashed+linewidth(0.25)); filldraw(C1--C2--C3--C4--cycle, white, gray+dashed+linewidth(0.25)); filldraw(O--C3--B2--cycle, white, black+linewidth(0.5)); dot(O); label(&quot;$O$&quot;,O,W); label(&quot;$B$&quot;,C3,N); label(&quot;$C$&quot;,B2,N); label(&quot;$A$&quot;,(0,0.8),S); pair P1,P2,P3,P4,Q1,Q2,Q3,Q4,R1,R2,R3,R4; P1=extension(A1,A2,B1,B2); Q1=extension(A1,A2,C3,C4);  P2=extension(A2,A3,B2,B3); Q2=extension(A2,A3,C4,C1);  P3=extension(A3,A4,B3,B4); Q3=extension(A3,A4,C1,C2);  P4=extension(A4,A1,B4,B1); Q4=extension(A4,A1,C2,C3);  R1=extension(C2,C3,B2,B3); R2=extension(C3,C4,B3,B4);  R3=extension(C4,C1,B4,B1); R4=extension(C1,C2,B1,B2); draw(A1--P1--B2--R1--C3--Q1--A2); draw(A2--P2--B3--R2--C4--Q2--A3); draw(A3--P3--B4--R3--C1--Q3--A4); draw(A4--P4--B1--R4--C2--Q4--A1); [/asy]" width="238" height="252" /></center>
+<p><br />
+</p><p><br />
+Break the <img src="http://latex.artofproblemsolving.com/e/2/9/e290f2cba0ba0e11c0b91630da15a408da2fcf1c.png" class="latex" alt="$24$" style="vertical-align: 0px" width="18" height="12" />-gon as shown so that there are <img src="http://latex.artofproblemsolving.com/e/d/f/edf074831eb5bc9e61d6d6e09f525a86e3068f6a.png" class="latex" alt="$12$" style="vertical-align: 0px" width="17" height="12" /> copies of quadrilateral <img src="http://latex.artofproblemsolving.com/b/8/3/b83178651b2e33b78749f1f1979901705b72e496.png" class="latex" alt="$OBAC$" width="56" height="13" />. We can find the area of this quadrilateral by finding the area of triangle <img src="http://latex.artofproblemsolving.com/1/4/3/14323858397d132fc0169507e1fb72c5ae7ef54d.png" class="latex" alt="$OBC$" width="43" height="12" /> and subtracting the area of triangle <img src="http://latex.artofproblemsolving.com/e/2/a/e2a559986ed5a0ffc5654bd367c29dfc92913c36.png" class="latex" alt="$ABC$" width="42" height="13" />.
+</p><p>The angle from <img src="http://latex.artofproblemsolving.com/5/1/d/51da37d984564162c87710ca27bea422f657fb73.png" class="latex" alt="$O$" width="13" height="12" /> to one of the vertices of the original square is <img src="http://latex.artofproblemsolving.com/2/2/5/225b0225f4cd7f4e67e5d1c0d8e1265fa478b83d.png" class="latex" alt="$45^\circ{}$" style="vertical-align: 0px" width="24" height="13" />, and this point rotates <img src="http://latex.artofproblemsolving.com/5/8/9/5891cee1f54adf326f4914a4121f28088280b380.png" class="latex" alt="$30^\circ{}$" style="vertical-align: -1px" width="28" height="15" />, so the angle that <img src="http://latex.artofproblemsolving.com/2/0/f/20f8f2f1a3ddc6b42fae25a0637e85c747875180.png" class="latex" alt="$OC$" width="28" height="12" /> makes with the horizontal is <img src="http://latex.artofproblemsolving.com/a/4/c/a4ca03e0924526f6ee89dcff48d3c3a89ce9a394.png" class="latex" alt="$75^\circ{}$" style="vertical-align: -1px" width="28" height="15" />.
+</p><p>Let <img src="http://latex.artofproblemsolving.com/9/f/f/9ffb448918db29f2a72f8f87f421b3b3cad18f95.png" class="latex" alt="$D$" style="vertical-align: -1px" width="17" height="14" /> be the intersection of <img src="http://latex.artofproblemsolving.com/b/7/a/b7a762ac8b4e23ffdd778ad6d5a8b97df8c7ce01.png" class="latex" alt="$OA$" width="28" height="13" /> with <img src="http://latex.artofproblemsolving.com/6/c/5/6c52a41dcbd739f1d026c5d4f181438b75b76976.png" class="latex" alt="$BC$" width="28" height="12" />. Since <img src="http://latex.artofproblemsolving.com/e/2/a/e2a559986ed5a0ffc5654bd367c29dfc92913c36.png" class="latex" alt="$ABC$" width="42" height="13" /> and <img src="http://latex.artofproblemsolving.com/1/4/3/14323858397d132fc0169507e1fb72c5ae7ef54d.png" class="latex" alt="$OBC$" width="43" height="12" /> are both isosceles, <img src="http://latex.artofproblemsolving.com/4/6/5/46569d6dd3fa86f698827e8de15b0480e1733d11.png" class="latex" alt="$OD$" width="29" height="12" /> forms a right angle with <img src="http://latex.artofproblemsolving.com/6/c/5/6c52a41dcbd739f1d026c5d4f181438b75b76976.png" class="latex" alt="$BC$" width="28" height="12" />. Furthermore, <img src="http://latex.artofproblemsolving.com/0/8/f/08fad8fe9c03b6e1b3b8b1ced5750fe9349c5ce8.png" class="latex" alt="$\angle DOC = 90^\circ{}-75^\circ{} = 15^\circ{}$" style="vertical-align: -2px" width="207" height="16" />.
+</p>
+<center><img src="http://latex.artofproblemsolving.com/0/8/0/080091f59b2fe1e330417ffefde33d3af9bc542e.png" class="latexcenter" alt="[asy] import olympiad; pair O,C,D; D=(0,4); O=(0,0); C=(1.1,4); draw(O--C--D--cycle); label(&quot;$D$&quot;,D,N); label(&quot;$C$&quot;,C,N); label(&quot;$O$&quot;,O,S); path angle = anglemark(C, O, D); draw(rightanglemark(O, D, C)); [/asy]" width="78" height="252" /></center>
+<p>Note that <img src="http://latex.artofproblemsolving.com/2/0/f/20f8f2f1a3ddc6b42fae25a0637e85c747875180.png" class="latex" alt="$OC$" width="28" height="12" /> is equal to <img src="http://latex.artofproblemsolving.com/0/0/5/005458b4333cedea7a3aa771f6620c976597f9af.png" class="latex" alt="$3\sqrt{2}$" style="vertical-align: -1px" width="33" height="18" /> because it is half the diagonal of the square with side length <img src="http://latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png" class="latex" alt="$6$" width="8" height="12" />. We can now split up the <img src="http://latex.artofproblemsolving.com/4/2/1/4215ac5be49f443a5f6ba0b1e0b62d70ee0addb3.png" class="latex" alt="$15-75-90$" style="vertical-align: 0px" width="98" height="13" /> into <img src="http://latex.artofproblemsolving.com/4/7/c/47c78b85058ee5e17f88e2cde302e48aad826b35.png" class="latex" alt="$30-60-90$" width="98" height="12" /> and <img src="http://latex.artofproblemsolving.com/5/a/6/5a6052de3e070deccfc2ab44091cb6f6c14eeef9.png" class="latex" alt="$15-15-150$" style="vertical-align: 0px" width="107" height="13" /> triangles to find the height and length of the triangle: 
+</p>
+<center><img src="http://latex.artofproblemsolving.com/1/3/9/13966fe2b77cb29b8c1696c395efd6f28df9d52e.png" class="latexcenter" alt="[asy] import olympiad; pair O,C,D,E; D=(0,4); O=(0,0); C=(1.1,4); E=(0,2.1); draw(O--C--D--cycle); label(&quot;$D$&quot;,D,N); label(&quot;$C$&quot;,C,N); label(&quot;$O$&quot;,O,S); label(&quot;$3\sqrt{2}$&quot;,(1.3,2),E); path angle = anglemark(C, O, D); draw(rightanglemark(O, D, C)); draw(C--E); label(&quot;$E$&quot;,E,W); label(&quot;$x$&quot;,(0.5,4),N); label(&quot;$x\sqrt{3}$&quot;,(-0.1,3.2),W); label(&quot;$2x$&quot;,(-0.1,1),W);  [/asy]" width="142" height="252" /></center>
+<p>Now we have use Pythagorean: <img src="http://latex.artofproblemsolving.com/c/2/0/c20442f8d485c2534cc2d206699496197f6dcce1.png" class="latex" alt="$x^2+(x \cdot (2+\sqrt{3}))^2 = 3\sqrt{2}^2 \implies x^2+x^2 \cdot (7+4\sqrt{3}) = 18$" style="vertical-align: -5px" width="463" height="27" />
+<img src="http://latex.artofproblemsolving.com/0/2/6/026adcfcd362ba9d3fdc92685c11d8e41e73ddba.png" class="latex" alt="$\implies x^2 = \frac{18}{8+4\sqrt{3}} = \frac{9}{4+2\sqrt{3}} \implies x^2 = \frac{36-18\sqrt{3}}{4}$" style="vertical-align: -18px" width="428" height="48" />
+</p><p>Now note that <img src="http://latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" /> must be in the form of <img src="http://latex.artofproblemsolving.com/f/8/4/f84cfd8a8233f6800336ca935f895ff9b41f2f6d.png" class="latex" alt="$\frac{a\sqrt{3}-b}{2}$" style="vertical-align: -13px" width="70" height="43" />. Therefore, <img src="http://latex.artofproblemsolving.com/2/2/7/2275bb5b149b920023cce1cebee04af4bda64f6e.png" class="latex" alt="$-2ab = -18 \implies ab=9$" style="vertical-align: -2px" width="199" height="16" />. We can guess that <img src="http://latex.artofproblemsolving.com/6/1/0/610bdd1bd2d51db3fedfa82ded681313614e2878.png" class="latex" alt="$a=b=3$" style="vertical-align: -1px" width="77" height="14" />. Sure enough, <img src="http://latex.artofproblemsolving.com/f/9/e/f9e062511be9f5085ceecfee2c68341a9263dd03.png" class="latex" alt="$3\sqrt{3}^2 +3^2= 36$" style="vertical-align: -2px" width="124" height="24" />, so <img src="http://latex.artofproblemsolving.com/3/a/1/3a131dd86b9400c9d81eb93f141b79473da1f679.png" class="latex" alt="$x = \frac{3\sqrt{3}-3}{2}$" style="vertical-align: -13px" width="105" height="43" />. Then the height of the triangle is <img src="http://latex.artofproblemsolving.com/9/e/9/9e9b62bbbfda096d7b0719b47cbd2a406deb8ee9.png" class="latex" alt="$x \cdot (2+\sqrt{3}) = \frac{3\sqrt{3}+3}{2}$" style="vertical-align: -13px" width="188" height="43" />.
+</p><p>The area of triangle <img src="http://latex.artofproblemsolving.com/1/4/3/14323858397d132fc0169507e1fb72c5ae7ef54d.png" class="latex" alt="$OBC$" width="43" height="12" /> is equal to the length times the height of triangle <img src="http://latex.artofproblemsolving.com/1/4/3/1432798ecb03529aff50881ed85d74fedc320e2a.png" class="latex" alt="$ODC$" width="44" height="12" /> since this triangle has half the area of the full triangle. Therefore the area of triangle <img src="http://latex.artofproblemsolving.com/5/3/8/53876e640a873b3db60c1a05663166f98630798a.png" class="latex" alt="$OBC = \frac{3\sqrt{3}-3}{2} \cdot \frac{3\sqrt{3}+3}{2} = \frac{18}{4}$" style="vertical-align: -13px" width="266" height="43" />.
+</p><p>Now we look at triangle <img src="http://latex.artofproblemsolving.com/e/2/a/e2a559986ed5a0ffc5654bd367c29dfc92913c36.png" class="latex" alt="$ABC$" width="42" height="13" />. <img src="http://latex.artofproblemsolving.com/7/0/c/70c7c06f3d0a4291a361252ee0b20963b2f5f86a.png" class="latex" alt="$\angle OCA = 45^\circ{}$" style="vertical-align: -1px" width="107" height="15" /> because <img src="http://latex.artofproblemsolving.com/2/0/f/20f8f2f1a3ddc6b42fae25a0637e85c747875180.png" class="latex" alt="$OC$" width="28" height="12" /> is the diagonal of a square, and <img src="http://latex.artofproblemsolving.com/3/c/f/3cf72d4dd6847fd821094c422f8dcbde99783d5c.png" class="latex" alt="$\angle COA$" width="55" height="13" /> is <img src="http://latex.artofproblemsolving.com/f/c/4/fc4e3879cf258beba4981e9760b9a386265833e7.png" class="latex" alt="$15^\circ{}$" style="vertical-align: -1px" width="28" height="15" /> as we saw earlier. Therefore, <img src="http://latex.artofproblemsolving.com/a/1/2/a12ba10fbe4b350ec7032a92f05042d2ab918379.png" class="latex" alt="$\angle OAC = \angle OAB = 120^\circ{}$" style="vertical-align: -1px" width="196" height="15" />. Because both these angles are <img src="http://latex.artofproblemsolving.com/a/a/a/aaa4de95cc6371d125d5cf773cdd9f9913dd1d8e.png" class="latex" alt="$120$" style="vertical-align: -1px" width="29" height="14" />, <img src="http://latex.artofproblemsolving.com/3/0/d/30d08d88341bc4d6b85cffaaf23a8c7ef1aa0550.png" class="latex" alt="$\angle BAC = 360-240 = 120$" style="vertical-align: -2px" width="210" height="16" />.
+</p><p>We can now split triangle <img src="http://latex.artofproblemsolving.com/e/2/a/e2a559986ed5a0ffc5654bd367c29dfc92913c36.png" class="latex" alt="$ABC$" width="42" height="13" /> into two congruent <img src="http://latex.artofproblemsolving.com/4/7/c/47c78b85058ee5e17f88e2cde302e48aad826b35.png" class="latex" alt="$30-60-90$" width="98" height="12" /> triangles, and we know the base of each since <img src="http://latex.artofproblemsolving.com/6/8/4/6848b99b96a0797633229f303da60125165ab240.png" class="latex" alt="$BC = 3\sqrt{3}-3$" style="vertical-align: -2px" width="120" height="21" />.
+</p><p>The height of these triangles is <img src="http://latex.artofproblemsolving.com/d/2/c/d2cff6954e8f1cae7eac14fe9d0b2a53aac6b21b.png" class="latex" alt="$\frac{\frac{3\sqrt{3}-3}{2}}{\sqrt{3}} = \frac{3-\sqrt{3}}{2}$" style="vertical-align: -18px" width="135" height="50" />. Therefore the area of this triangle is <img src="http://latex.artofproblemsolving.com/6/2/b/62bc54a77a9176cf83ede98e0005713a9a58169d.png" class="latex" alt="$\frac{3\sqrt{3}-3}{2} \cdot \frac{3-\sqrt{3}}{2} = \frac{12\sqrt{3}-18}{4}$" style="vertical-align: -13px" width="254" height="43" />
+</p><p>Therefore the total area of this segment is <img src="http://latex.artofproblemsolving.com/0/0/e/00e6b3f9bfa9179de10b1b3d9f68e917a9691339.png" class="latex" alt="$\frac{18}{4}-(\frac{12\sqrt{3}-18}{4}) = \frac{36-12\sqrt{3}}{4} = 9-3\sqrt{3}$" style="vertical-align: -13px" width="347" height="43" />. Multiplying by <img src="http://latex.artofproblemsolving.com/e/d/f/edf074831eb5bc9e61d6d6e09f525a86e3068f6a.png" class="latex" alt="$12$" style="vertical-align: 0px" width="17" height="12" /> to find the entire area, the area of the figure is <img src="http://latex.artofproblemsolving.com/9/a/1/9a119b0c2773a040a2ff50c56197435d4527a048.png" class="latex" alt="$108-36\sqrt{3}$" style="vertical-align: -2px" width="94" height="21" /> and the answer is <img src="http://latex.artofproblemsolving.com/5/1/e/51e599bbe242db51c8ec608f3339f147c7655e0b.png" class="latex" alt="$108+36+3 = 147 = \boxed{E}$" style="vertical-align: -6px" width="202" height="25" />
+</p><p><br />
+</p><p>~KingRavi
+</p>
+<h2><span class="mw-headline" id="Solution_3">Solution 3</span></h2>
+<p>First note the useful fact that if <img src="http://latex.artofproblemsolving.com/e/f/f/eff43e84f8a3bcf7b6965f0a3248bc4d3a9d0cd4.png" class="latex" alt="$R$" width="14" height="12" /> is the circumradius of a dodecagon (<img src="http://latex.artofproblemsolving.com/e/d/f/edf074831eb5bc9e61d6d6e09f525a86e3068f6a.png" class="latex" alt="$12$" style="vertical-align: 0px" width="17" height="12" />-gon) the area of the figure is <img src="http://latex.artofproblemsolving.com/0/5/6/056399a2a54fdafcb48be13ccbe512156c680d51.png" class="latex" alt="$3R^2.$" style="vertical-align: -1px" width="37" height="17" /> If we connect the vertices of the <img src="http://latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png" class="latex" alt="$3$" width="8" height="12" /> squares we get a dodecagon. The radius of circumcircle of the dodecagon is simply half the diagonal of the square, which is <img src="http://latex.artofproblemsolving.com/9/b/2/9b24cfbcd24e266f8cafb7435916219ed5441f2f.png" class="latex" alt="$3\sqrt{2}.$" style="vertical-align: -1px" width="37" height="18" /> Thus the area of the dodecagon is <img src="http://latex.artofproblemsolving.com/f/a/e/fae21dfeb6091dab8fe2347861c7e0bceb11ad47.png" class="latex" alt="$3 \cdot (3\sqrt{2})^2 = 3 \cdot 18 = 54.$" style="vertical-align: -5px" width="191" height="24" /> But, the problem asked for the area of the combined figure which was made from the rotated squares. This area is the area of the dodecagon, which was found, subtracting the <img src="http://latex.artofproblemsolving.com/e/d/f/edf074831eb5bc9e61d6d6e09f525a86e3068f6a.png" class="latex" alt="$12$" style="vertical-align: 0px" width="17" height="12" /> isosceles triangles, which are formed when connecting the vertices of the squares to created the dodecagon. To find this area, we need to know the base of the isosceles triangle, call this <img src="http://latex.artofproblemsolving.com/f/c/3/fc3be04db73828946870d3ccc6d122395a4bacf6.png" class="latex" alt="$x.$" width="14" height="8" /> Then, we can use the Law of Cosines on the triangle that is formed from the two vertices of the square and the center of the square. After computing, we get that <img src="http://latex.artofproblemsolving.com/5/2/3/523b3b486bfd51e4e815ec75f7c805a78f54548c.png" class="latex" alt="$x = 3\sqrt{3} -3.$" style="vertical-align: -2px" width="106" height="21" /> Realize that the <img src="http://latex.artofproblemsolving.com/e/d/f/edf074831eb5bc9e61d6d6e09f525a86e3068f6a.png" class="latex" alt="$12$" style="vertical-align: 0px" width="17" height="12" /> isosceles are congruent with an angle measure of <img src="http://latex.artofproblemsolving.com/8/b/0/8b004f98eb40d3b974bf5c0779c9420bab9f3dfc.png" class="latex" alt="$120^{\circ},$" style="vertical-align: -4px" width="42" height="18" /> this means that we can create <img src="../../../../latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png" class="latex" alt="$4$" style="vertical-align: 0px" width="9" height="12" /> congruent equilateral triangles with side length of <img src="http://latex.artofproblemsolving.com/d/a/d/dadf02b79da3d144729bb139c4ab0590bba092bf.png" class="latex" alt="$3\sqrt3 - 3.$" style="vertical-align: -2px" width="72" height="21" /> The area of the equilateral triangle is <img src="http://latex.artofproblemsolving.com/c/c/0/cc02805445160a4ab3d5a2beedd4fca8191818aa.png" class="latex" alt="$\frac{\sqrt{3}}{4} \cdot (3\sqrt{3} -3)^2 =  \frac{\sqrt{3}}{4} \cdot (36 - 18\sqrt{3}) = \frac{36\sqrt{3} - 54}{4}.$" style="vertical-align: -13px" width="408" height="43" /> Thus, the area of all the twelve small equilateral traingles are <img src="http://latex.artofproblemsolving.com/8/f/3/8f368218fcd1af345a285c87a30994db531cc000.png" class="latex" alt="$4 \cdot \frac{36\sqrt{3} - 54}{4} = 36\sqrt{3} - 54$" style="vertical-align: -13px" width="218" height="43" />. Thus, the requested area is <img src="http://latex.artofproblemsolving.com/2/8/f/28f09e0ab37c2bbefb3fd8ed948205e2039b1c16.png" class="latex" alt="$54 - (36\sqrt{3} - 54) = 108 - 36\sqrt{3}.$" style="vertical-align: -5px" width="260" height="24" /> Thus, <img src="http://latex.artofproblemsolving.com/0/3/9/0394821c46c8e9c73a768d4309f9ca967b659a6f.png" class="latex" alt="$a+b+c = 108 + 36 + 3 = 147,$" style="vertical-align: -4px" width="251" height="18" /> so the answer is <img src="http://latex.artofproblemsolving.com/b/5/6/b56141af18b785321c890bb83d7240e4df7140e5.png" class="latex" alt="$\boxed{(\textbf{E})\textbf{147}}.$" style="vertical-align: -11px" width="74" height="32" />
+</p><p>~NH14
+</p>
+<h2><span id="Solution_4_(30-60-90_Triangles)"></span><span class="mw-headline" id="Solution_4_.2830-60-90_Triangles.29">Solution 4 (30-60-90 Triangles)</span></h2>
+<p>To make things simpler, let's take only the original sheet and the 30 degree rotated sheet. Then the diagram is this;
+</p><p><img src="http://latex.artofproblemsolving.com/1/d/1/1d18fa448a9d67e0133a366e5ace7d169451f836.png" class="latexcenter" alt="[asy]  size(10cm,0); path p = box((0,0), (1,1)); draw(p, black + linewidth(2.0pt)); draw(rotate(30,(1/2,1/2))*p,black + linewidth(2.0pt)); /*Rotate 60 degrees*/  [/asy]" width="475" height="475" />
+</p><p>The area of this diagram is the original square plus the area of the four triangles that 'jut' out of the square. Because the square is rotated <img src="http://latex.artofproblemsolving.com/e/7/3/e73393067e6d6e401a5354accc7a730c7a2977aa.png" class="latex" alt="$30^{\circ}$" width="24" height="13" />, each triangle is a 30-60-90 triangle. Similarly, the triangles that are bounded on the inside of the original square outside of the rotated square are also congruent 30-60-90 triangles. Noting this, we can do some labelling:
+</p><p><img src="http://latex.artofproblemsolving.com/9/c/d/9cd2cf7a32b282cd81ea1059fb9218a0b425d1df.png" class="latexcenter" alt="[asy]  size(10cm,0); path p = box((0,0), (1,1)); draw(p, black + linewidth(2.0pt)); draw(rotate(30,(1/2,1/2))*p,black + linewidth(2.0pt)); /*Rotate 60 degrees*/ label(&quot;$y$&quot;,(0.1,-0.05)); label(&quot;$x$&quot;,(0.4,0.05)); label(&quot;$y\sqrt{3}$&quot;,(0.8,-0.05)); label(&quot;$\frac{x}{2}$&quot;,(0.22,-0.12)); label(&quot;$\frac{x\sqrt{3}}{2}$&quot;,(0.5,-0.15)); label(&quot;$2y$&quot;,(0.8,0.15)); label(&quot;$y$&quot;,(1.05,0.1)); label(&quot;$\frac{x}{2}$&quot;,(1.12,0.22));  [/asy]" width="475" height="478" />
+</p><p>Since the side lengths of the squares must be the same, and they are both 6, we have a system of equations;
+<img src="http://latex.artofproblemsolving.com/7/a/2/7a22ed6b2792c6e6060f9e191dd39c0bca789e17.png" class="latexcenter" alt="\[y+x+y\sqrt{3} = 6\]" width="130" height="20" />
+<img src="http://latex.artofproblemsolving.com/8/2/4/824bd2dad1bac1009e31fa02d89ebc4ee2bdb625.png" class="latexcenter" alt="\[\frac{x\sqrt{3}}{2} + 2y + \frac{x}{2} = 6\]" width="147" height="41" />
+</p><p>We solve this to get <img src="http://latex.artofproblemsolving.com/1/0/c/10cd5e6914eb88ab1a66b1a234567b8b1ca3188f.png" class="latex" alt="$x = 6-2\sqrt{3}$" style="vertical-align: -2px" width="101" height="21" /> and <img src="http://latex.artofproblemsolving.com/4/a/a/4aac7780c7b281730438c6b861d48b72a1255b5a.png" class="latex" alt="$y = 3-\sqrt{3}$" style="vertical-align: -4px" width="91" height="23" />.
+</p><p>The area of each triangle is <img src="http://latex.artofproblemsolving.com/3/2/e/32eb800e1e4a383650205f470036cfcedb109fbe.png" class="latex" alt="$\frac{x}{2} \cdot \frac{x\sqrt{3}}{2} \cdot \frac{1}{2}  = 6\sqrt{3} - 9$" style="vertical-align: -13px" width="183" height="43" /> by plugging in <img src="http://latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" />.
+</p><p>The rotated 60 degree square is the same thing as rotating it 30 degrees counterclockwise, so it's triangles that jut out of the square will be congruent to the triangles we have found, and therefore they will have the same area.
+</p><p>Unfortunately, when drawing all three squares, we see the two triangles overlap; take the very top for example.
+</p><p><img src="http://latex.artofproblemsolving.com/f/1/6/f16ee002ef8b937fe059cd2d08ae91a2002615af.png" class="latexcenter" alt="[asy] import olympiad; size(10cm); pair A,B,C,D,E,F,G; A = (0.211,0); B=(0.3657,0); C = (0.63397,0); D = (0.789,0); E = (0.31666,0.1823); F=(0.5,0.077); G=(0.68334,0.1823); draw((0,0)--(1,0),black+linewidth(2pt)); draw(A--E--C--cycle); draw(B--D--G--cycle); label(&quot;$A$&quot;,A,S); label(&quot;$B$&quot;,B,S); label(&quot;$C$&quot;,C,S); label(&quot;$D$&quot;,D,S); label(&quot;$E$&quot;,E,N); label(&quot;$F$&quot;,F,N); label(&quot;$G$&quot;,G,N); [/asy]" width="475" height="132" />
+</p><p>The area of this shape is twice the area of each of the triangles that we have already found minus the area of the small triangle that is overlapped by the two by PIE. Now we only need to find the area of <img src="http://latex.artofproblemsolving.com/a/a/0/aa0d900a99b36ad12e0f1987d730f1f16cd5ea36.png" class="latex" alt="$\bigtriangleup BCF$" style="vertical-align: -4px" width="61" height="18" />.
+</p><p><img src="http://latex.artofproblemsolving.com/d/a/b/dab1f9504870cbdaa14c4fbd21228c509bff346d.png" class="latex" alt="$\angle GBD \cong \angle ECA \cong 30^{\circ}$" style="vertical-align: -2px" width="189" height="16" /> and by symmetry <img src="http://latex.artofproblemsolving.com/a/a/0/aa0d900a99b36ad12e0f1987d730f1f16cd5ea36.png" class="latex" alt="$\bigtriangleup BCF$" style="vertical-align: -4px" width="61" height="18" /> is isosceles, so it is a 30-30-120 triangle. If we draw a perpendicular, we split it into two 30-60-90 triangles;
+</p><p><img src="http://latex.artofproblemsolving.com/0/c/2/0c25434b9a0f4f8f006dc23cc1f6dd3c27858cbf.png" class="latexcenter" alt="[asy] import olympiad; size(10cm); pair A,B,C,D,E,F,G; A = (0.211,0); B=(0.3657,0); C = (0.63397,0); D = (0.789,0); E = (0.31666,0.1823); F=(0.5,0.077); G=(0.68334,0.1823); draw((0,0)--(1,0),black+linewidth(2pt)); draw(A--E--C--cycle); draw(B--D--G--cycle); draw(F--(0.5,0)); label(&quot;$A$&quot;,A,S); label(&quot;$B$&quot;,B,S); label(&quot;$C$&quot;,C,S); label(&quot;$D$&quot;,D,S); label(&quot;$E$&quot;,E,N); label(&quot;$F$&quot;,F,N); label(&quot;$G$&quot;,G,N); label(&quot;$H$&quot;,(0.5,0),S); [/asy]" width="475" height="132" />
+</p><p>By symmetry, the distance from A to the edge of the square is equal to the distance from D to the edge of the square is equal to <img src="http://latex.artofproblemsolving.com/0/9/2/092e364e1d9d19ad5fffb0b46ef4cc7f2da02c1c.png" class="latex" alt="$y$" style="vertical-align: -4px" width="11" height="13" />. AC = BD = <img src="http://latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" />, and the side length of the square is 6, so we use PIE to obtain <img src="http://latex.artofproblemsolving.com/0/8/8/0889f32cf8515ca23817e4ba3a4bcffde66e48f3.png" class="latexcenter" alt="\[x+x-BC = 6-y-y \implies BC = 12 - 6\sqrt{3}\]" width="367" height="20" />
+To find the height of <img src="http://latex.artofproblemsolving.com/d/1/f/d1f154f3138bf003e2a37bff6738cbb673d12b11.png" class="latex" alt="$\bigtriangleup BFC$" width="59" height="13" />, we see that <img src="http://latex.artofproblemsolving.com/8/7/3/873919d51f99e22755908ef78a9e8ee9a9dfde25.png" class="latex" alt="$HC = \frac{BC}{2} = 6-3\sqrt{3}$" style="vertical-align: -13px" width="179" height="39" />. Then by 30-60-90 triangles, <img src="http://latex.artofproblemsolving.com/5/a/0/5a0f02543d40f448d9c236004b4c556c621277f3.png" class="latex" alt="$HF = \frac{HC}{\sqrt{3}} = 2\sqrt{3} - 3$" style="vertical-align: -18px" width="181" height="44" />. Finally, the area of <img src="http://latex.artofproblemsolving.com/f/6/9/f6965663b9af8a0bf0f2dd6bea461d7474e69305.png" class="latex" alt="$\bigtriangleup BFC = \frac{BC \cdot HF}{2} = 21\sqrt{3}-36$" style="vertical-align: -13px" width="269" height="39" />.
+</p><p>Putting it all together, the area of the entire diagram is the area of the square plus four of these triangle-triangle intersections. The area of these intersections by PIE is <img src="http://latex.artofproblemsolving.com/4/3/4/4343de45cabc00ed71694b584baa6e34601b6f7d.png" class="latex" alt="$2 \cdot [ACE] - [BFC] = 12\sqrt{3}-18-(21\sqrt{3}-36) = 18-9\sqrt{3}$" style="vertical-align: -5px" width="476" height="24" />. 
+Therefore the total area is <img src="http://latex.artofproblemsolving.com/9/a/9/9a9cda38563325d64c3a1067c30fdf7c30599eb7.png" class="latex" alt="$36 + 4 \cdot(18-9\sqrt{3}) = 36 + 72 - 36 \sqrt{3} = 108 - 36\sqrt{3}$" style="vertical-align: -5px" width="416" height="24" />.
+</p><p>Thus <img src="http://latex.artofproblemsolving.com/3/9/b/39b589997a327f8077f2cc782200d8f1393258dc.png" class="latex" alt="$a + b + c = 108+36+3 = 147 = \boxed{\textbf{(E) }147}$" style="vertical-align: -11px" width="343" height="30" />.
+</p><p>~KingRavi
+</p>
+<h2><span class="mw-headline" id="Solution_5">Solution 5</span></h2>
+<p>As shown in <a href="https://artofproblemsolving.com/wiki/index.php/File:2021_AMC_12B_(Nov)_Problem_15,_sol.png" title="File:2021 AMC 12B (Nov) Problem 15, sol.png">Image:2021_AMC_12B_(Nov)_Problem_15,_sol.png</a>, all 12 vertices of three squares form a regular dodecagon (12-gon).
+Denote by <img src="http://latex.artofproblemsolving.com/5/1/d/51da37d984564162c87710ca27bea422f657fb73.png" class="latex" alt="$O$" width="13" height="12" /> the center of this dodecagon.
+</p><p>Hence, <img src="http://latex.artofproblemsolving.com/6/2/4/62448989cbf4d04b69e2165b76900b1cad9511e5.png" class="latex" alt="$\angle AOB = \frac{360^\circ}{12} = 30^\circ$" style="vertical-align: -13px" width="171" height="39" />.
+</p><p>Because the length of a side of a square is 6, <img src="http://latex.artofproblemsolving.com/8/3/9/839a4a8b2ae11a16e23e03487b818b417e44c2ba.png" class="latex" alt="$AO = 3 \sqrt{2}$" style="vertical-align: -2px" width="87" height="21" />.
+</p><p>Hence, <img src="http://latex.artofproblemsolving.com/1/5/d/15d11596fa042e57e728e71f84c33f6a88557831.png" class="latex" alt="$AB = 2 AO \sin \frac{\angle AOB}{2} = 3 \left( \sqrt{3} - 1 \right)$" style="vertical-align: -13px" width="293" height="39" />.
+</p><p>We notice that <img src="http://latex.artofproblemsolving.com/f/6/5/f65be8c3ac8a6ca1edab74f1a92e7d49310aa1e2.png" class="latex" alt="$\angle MAB = \angle MBA = 30^\circ$" style="vertical-align: -1px" width="198" height="15" />.
+Hence, <img src="http://latex.artofproblemsolving.com/b/f/1/bf138ca3db7044da8f9fdccaaee1f44b1cc27d7a.png" class="latex" alt="$AM = \frac{AB}{2\cos \angle MAB} = 3 - \sqrt{3}$" style="vertical-align: -13px" width="243" height="39" />.
+</p><p>Therefore, the area of the region that three squares cover is
+<img src="http://latex.artofproblemsolving.com/a/0/6/a068e1fdf82040116a0fc68f38a988271000e12b.png" class="latexcenter" alt="\begin{align*} &amp;  \ [ABCDEFGHIJKL] - 12[MAB] \\ &amp; = 12 [OAB] - 12 [MAB] \\ &amp; = 12 \cdot \frac{1}{2} OA \cdot OB \sin \angle AOB - 12 \cdot \frac{1}{2} MA \cdot MB \sin \angle AMB \\ &amp; = 6 OA^2 \sin \angle AOB - 6 MA^2 \sin \angle AMB \\ &amp; = 108 - 36\sqrt{3} \end{align*}" width="452" height="141" />
+</p><p>Therefore, the answer is <img src="http://latex.artofproblemsolving.com/4/c/9/4c9f73eff9b8366f58cf4bc3888da183fcc89be8.png" class="latex" alt="$\boxed{\textbf{(E) }147}$" style="vertical-align: -11px" width="74" height="30" />.
+</p><p>~Steven Chen (www.professorchenedu.com)
+</p><p>~stjwyl (adjusted for readability aka minor edits)
+</p><p>Note: If you have square brakets around a specified polygon (i.e. [ABCD]), it means the writer is referring to the area of that polygon.
+</p>
+<h2><span class="mw-headline" id="Solution_6">Solution 6</span></h2>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:302px;"><a href="https://artofproblemsolving.com/wiki/index.php/File:Drawing_Split_into_12_pieces.png" class="image"><img alt="Drawing Split into 12 pieces.png" src="https://wiki-images.artofproblemsolving.com//thumb/5/56/Drawing_Split_into_12_pieces.png/300px-Drawing_Split_into_12_pieces.png" width="300" height="225" class="thumbimage" srcset="https://wiki-images.artofproblemsolving.com//thumb/5/56/Drawing_Split_into_12_pieces.png/450px-Drawing_Split_into_12_pieces.png 1.5x, https://wiki-images.artofproblemsolving.com//thumb/5/56/Drawing_Split_into_12_pieces.png/600px-Drawing_Split_into_12_pieces.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="https://artofproblemsolving.com/wiki/index.php/File:Drawing_Split_into_12_pieces.png" class="internal" title="Enlarge"></a></div></div></div></div></div>
+<p>First, we can separate the shape into 12 congruent kites.  The area of the figure can be determined by finding the area of one kite and multiplying it by 12.  In order to to get the area of one kite, we need to find its diagonals, shown in blue.  
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:302px;"><a href="https://artofproblemsolving.com/wiki/index.php/File:Shorter_Diagonal.png" class="image"><img alt="Shorter Diagonal.png" src="https://wiki-images.artofproblemsolving.com//thumb/9/97/Shorter_Diagonal.png/300px-Shorter_Diagonal.png" width="300" height="225" class="thumbimage" srcset="https://wiki-images.artofproblemsolving.com//thumb/9/97/Shorter_Diagonal.png/450px-Shorter_Diagonal.png 1.5x, https://wiki-images.artofproblemsolving.com//thumb/9/97/Shorter_Diagonal.png/600px-Shorter_Diagonal.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="https://artofproblemsolving.com/wiki/index.php/File:Shorter_Diagonal.png" class="internal" title="Enlarge"></a></div></div></div></div></div>
+<p>We notice that angle FCE is <img src="http://latex.artofproblemsolving.com/4/a/7/4a767cc4dfbca8d3d6084679ec596694be98e1f8.png" class="latex" alt="$\frac{360^\circ}{12} = 30^\circ$" style="vertical-align: -13px" width="87" height="38" />. Also, we know that CD is half of AB, so it has a length of 3.  Now, we can find the lengths of FC and FD using the 30-60-90 triangle.  We find that FC is <img src="http://latex.artofproblemsolving.com/e/4/5/e455d80f4657b1112ba302a6e2c42e9c81f780ee.png" class="latex" alt="$2\sqrt{3}$" style="vertical-align: -1px" width="33" height="18" /> and FD is <img src="http://latex.artofproblemsolving.com/6/c/7/6c77cf4b63af80bfbc6a9ad9b4b9e8e549e77d78.png" class="latex" alt="$\sqrt{3}$" style="vertical-align: -1px" width="24" height="18" />.  Since FC is congruent to CE, CE is also <img src="http://latex.artofproblemsolving.com/e/4/5/e455d80f4657b1112ba302a6e2c42e9c81f780ee.png" class="latex" alt="$2\sqrt{3}$" style="vertical-align: -1px" width="33" height="18" />.  Using this information, we can conclude that ED is <img src="http://latex.artofproblemsolving.com/d/7/9/d794dfbb408fd64b08677e7eaf117c58329ee697.png" class="latex" alt="$2\sqrt{3}-3$" style="vertical-align: -1px" width="64" height="18" />.
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:302px;"><a href="https://artofproblemsolving.com/wiki/index.php/File:Copy_of_Shorter_Diagonal.png" class="image"><img alt="Copy of Shorter Diagonal.png" src="https://wiki-images.artofproblemsolving.com//thumb/7/76/Copy_of_Shorter_Diagonal.png/300px-Copy_of_Shorter_Diagonal.png" width="300" height="225" class="thumbimage" srcset="https://wiki-images.artofproblemsolving.com//thumb/7/76/Copy_of_Shorter_Diagonal.png/450px-Copy_of_Shorter_Diagonal.png 1.5x, https://wiki-images.artofproblemsolving.com//thumb/7/76/Copy_of_Shorter_Diagonal.png/600px-Copy_of_Shorter_Diagonal.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="https://artofproblemsolving.com/wiki/index.php/File:Copy_of_Shorter_Diagonal.png" class="internal" title="Enlarge"></a></div></div></div></div></div>
+<p>Now, we can find the shorter diagonal by using the Pythagorean theorem:
+<img src="http://latex.artofproblemsolving.com/e/6/9/e69c584e5b0cf6c956a17c88bb1216200e42aba8.png" class="latexcenter" alt="\begin{align*} &amp; {\rm FC}^2 =  \sqrt{3}^2 + (2\sqrt{3}-3)^2 \\ &amp; {\rm FC} = \sqrt{24-  12\sqrt{3}} \end{align*}" width="194" height="66" />
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:302px;"><a href="https://artofproblemsolving.com/wiki/index.php/File:Longer_Diagonal.png" class="image"><img alt="Longer Diagonal.png" src="https://wiki-images.artofproblemsolving.com//thumb/5/5d/Longer_Diagonal.png/300px-Longer_Diagonal.png" width="300" height="225" class="thumbimage" srcset="https://wiki-images.artofproblemsolving.com//thumb/5/5d/Longer_Diagonal.png/450px-Longer_Diagonal.png 1.5x, https://wiki-images.artofproblemsolving.com//thumb/5/5d/Longer_Diagonal.png/600px-Longer_Diagonal.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="https://artofproblemsolving.com/wiki/index.php/File:Longer_Diagonal.png" class="internal" title="Enlarge"></a></div></div></div></div></div>
+<p>We can find the longer diagonal of the kite by looking at one of the square sheets of paper.  We know that the side of the square has a length of 6, so the diagonal of the square must be <img src="http://latex.artofproblemsolving.com/b/8/1/b81097ac54e434963766001e47caa1dcd88003fd.png" class="latex" alt="$6\sqrt{2}$" style="vertical-align: -1px" width="33" height="18" />.  The longer diagonal of the kite is half of this length, so it has a length of <img src="http://latex.artofproblemsolving.com/0/0/5/005458b4333cedea7a3aa771f6620c976597f9af.png" class="latex" alt="$3\sqrt{2}$" style="vertical-align: -1px" width="33" height="18" />.
+</p><p>The area of the entire figure is 
+<img src="http://latex.artofproblemsolving.com/d/e/5/de50f1feccacbc5560acc11a25fc4ed5ac412420.png" class="latexcenter" alt="\begin{align*} &amp; = 12 \cdot\frac{{\rm d_1*d_2}}{2} \\ &amp; = 12 \cdot\frac{3\sqrt{2}\cdot\sqrt{24-  12\sqrt{3}}}{2} \\ &amp; = 12 \cdot\frac{6\sqrt{12-  6\sqrt{3}}}{2} \\ &amp; = 36 \sqrt{12-  6\sqrt{3}} \end{align*}" width="199" height="177" />
+</p><p>Now we can use algebra to make our answer look a little nicer.
+<img src="http://latex.artofproblemsolving.com/1/d/d/1dd3c778af61128646da6d0e59f496295698c2ae.png" class="latexcenter" alt="\begin{align*} &amp; a-\sqrt{b} = \sqrt{12-  6\sqrt{3}} \\ &amp; (a-\sqrt{b})^2 = (\sqrt{12-  6\sqrt{3}})^2 \\ &amp; a^2-2a\sqrt{b}+b = 12 - 6\sqrt{3}\\ &amp;\\ &amp;a^2+b = 12 \\ &amp;2a\sqrt{b} = 6\sqrt{3} \\ &amp; a = 3, b = 3 \\ &amp;\\ &amp;  a-\sqrt{b} = \sqrt{12-  6\sqrt{3}} = 3 - \sqrt{3} \end{align*}" width="250" height="274" />
+</p><p>The area of the entire region is <img src="http://latex.artofproblemsolving.com/f/4/b/f4bd49164952298c14ea820fbff00b0a1b4f64a4.png" class="latex" alt="$36(3 - \sqrt{3})$" style="vertical-align: -5px" width="90" height="24" />, or <img src="http://latex.artofproblemsolving.com/8/8/6/88673452468f32df8b7c1db51e7eb6c19cb1d7b2.png" class="latex" alt="$108 - 36\sqrt{3}$" style="vertical-align: -2px" width="94" height="21" />.  
+</p><p>Therefore, <img src="http://latex.artofproblemsolving.com/7/5/8/75831c84fe1e7ce75cc582dd17c1348d52eeae0b.png" class="latex" alt="$a + b + c = 108 + 36+ 3 = 147 = \boxed{E}$" style="vertical-align: -6px" width="296" height="25" />.
+</p><p>~JavaWhiz12
+</p>
+<h2><span class="mw-headline" id="Solution_7">Solution 7</span></h2>
+<p>Let <img src="http://latex.artofproblemsolving.com/5/1/d/51da37d984564162c87710ca27bea422f657fb73.png" class="latex" alt="$O$" width="13" height="12" /> be the center of the polygon, <img src="../../../../latex.artofproblemsolving.com/0/1/9/019e9892786e493964e145e7c5cf7b700314e53b.png" class="latex" alt="$A$" width="13" height="13" /> be the bottom right corner of the first square, <img src="http://latex.artofproblemsolving.com/c/3/3/c3355896da590fc491a10150a50416687626d7cc.png" class="latex" alt="$C$" width="14" height="12" /> be the next vertex to the left of <img src="../../../../latex.artofproblemsolving.com/0/1/9/019e9892786e493964e145e7c5cf7b700314e53b.png" class="latex" alt="$A$" width="13" height="13" />, and <img src="http://latex.artofproblemsolving.com/5/d/1/5d1e4485dc90c450e8c76826516c1b2ccb8fce16.png" class="latex" alt="$M$" width="19" height="12" /> be the midpoint between <img src="../../../../latex.artofproblemsolving.com/0/1/9/019e9892786e493964e145e7c5cf7b700314e53b.png" class="latex" alt="$A$" width="13" height="13" /> and <img src="../../../../latex.artofproblemsolving.com/f/f/5/ff5fb3d775862e2123b007eb4373ff6cc1a34d4e.png" class="latex" alt="$B$" width="14" height="12" />, where <img src="../../../../latex.artofproblemsolving.com/f/f/5/ff5fb3d775862e2123b007eb4373ff6cc1a34d4e.png" class="latex" alt="$B$" width="14" height="12" /> is the bottom left corner of the first square. Note that because there are three <img src="http://latex.artofproblemsolving.com/6/a/7/6a7dfa8a2a90d521b2b03f5b82a1fb9f85dce88c.png" class="latex" alt="$90^{\circ}$" width="24" height="13" /> squares separated by <img src="http://latex.artofproblemsolving.com/0/b/1/0b13ea9a744495079bf22cedce2036dc575866a9.png" class="latex" alt="$\frac{90^{\circ}}{3} = 30^{\circ}$" style="vertical-align: -13px" width="82" height="39" />, each side of the 24-sided polygon is equal in length, meaning to calculate the area of the whole polygon, we find the area of <img src="http://latex.artofproblemsolving.com/c/1/c/c1cc5715cc8fee0b7740831f3cdd0dfdc6d524eb.png" class="latex" alt="$\bigtriangleup OAC$" width="58" height="13" /> and multiply by 24.
+</p><p><br />
+To find <img src="http://latex.artofproblemsolving.com/5/0/2/502341de6808ecbfa806a7a8faa05a96535d1b7d.png" class="latex" alt="$[\bigtriangleup OAC]$" style="vertical-align: -5px" width="70" height="20" />, we already know the height <img src="http://latex.artofproblemsolving.com/f/5/2/f52dc1e762632cf00f0400d50f16db470e1d4406.png" class="latex" alt="$\overline{OM}$" width="34" height="15" /> is the sidelength of the square over <img src="../../../../latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png" class="latex" alt="$2$" width="8" height="12" />, or <img src="http://latex.artofproblemsolving.com/d/c/4/dc478c79b6b434a8021871fa646cd3bf10598826.png" class="latex" alt="$\frac{6}{2}=3$" style="vertical-align: -12px" width="46" height="37" />, so we just need the length of the base <img src="http://latex.artofproblemsolving.com/1/2/5/12517bbc31cb9026c71299b7a0d232d07e60f284.png" class="latex" alt="$\overline{AC}$" style="vertical-align: -1px" width="30" height="18" />. Notice that <img src="http://latex.artofproblemsolving.com/e/a/4/ea498172dff875bfe24899a758de8163fde58554.png" class="latex" alt="$\bigtriangleup OCM$" style="vertical-align: -4px" width="66" height="18" /> is a <img src="http://latex.artofproblemsolving.com/4/7/c/47c78b85058ee5e17f88e2cde302e48aad826b35.png" class="latex" alt="$30-60-90$" width="98" height="12" /> triangle since <img src="http://latex.artofproblemsolving.com/1/6/0/160579ef4415386f0725e7ad3f0f10f8e74f121d.png" class="latex" alt="$\angle COM = \frac{360^{\circ}}{12} = 30^{\circ}$" style="vertical-align: -13px" width="176" height="39" />, so <img src="http://latex.artofproblemsolving.com/a/6/e/a6ef5a11fcaceaa6c035b60d11bd35530da9bd8d.png" class="latex" alt="$\overline{CM} = \frac{\overline{OM}}{\sqrt{3}} = \frac{3}{\sqrt{3}} = \sqrt{3}$" style="vertical-align: -18px" width="199" height="47" />. Then <img src="http://latex.artofproblemsolving.com/c/e/5/ce5ac70f55442961b075af35ab61ac5bf8e696ad.png" class="latex" alt="$\overline{AC} = \overline{AM} - \overline{CM} = \frac{6}{2} - \sqrt{3} = 3 - \sqrt{3}$" style="vertical-align: -13px" width="307" height="38" />, so 
+<img src="http://latex.artofproblemsolving.com/9/b/0/9b089749dff4dbbe7b26e0eb35fb5dc43f003781.png" class="latexcenter" alt="\begin{align*} &amp; [\bigtriangleup AOC] = \frac{1}{2} \cdot \overline{OM} \cdot \overline{AC} \\ &amp; = \frac{1}{2} (3)(3 - \sqrt{3}) \\ &amp; = \frac{9 - 3\sqrt{3}}{2} \end{align*}" width="192" height="128" />
+</p><p>Then the whole area of the polygon is <img src="http://latex.artofproblemsolving.com/8/a/3/8a35e86c1838830b06db138cc9e9e1e387c8e8e8.png" class="latex" alt="$\frac{9 - 3\sqrt{3}}{2} \cdot 24 = 108 - 36\sqrt{3}$" style="vertical-align: -13px" width="218" height="43" />. The desired solution is then <img src="http://latex.artofproblemsolving.com/d/e/5/de58643c919193a359eb8ad8e312fc67d47d940b.png" class="latex" alt="$108 + 36 + 3 = 147$" style="vertical-align: -2px" width="152" height="15" />, so the answer is <img src="http://latex.artofproblemsolving.com/3/6/9/3695148beddcc3fc6784f3cc0ad52cfb0c9f255d.png" class="latex" alt="$\boxed{\textbf{(E) 147}}$" style="vertical-align: -11px" width="76" height="30" />.
+</p><p>~Tacozxyt
+</p>
+<h2><span class="mw-headline" id="Video_Solution_1_by_Power_of_Logic">Video Solution 1 by Power of Logic</span></h2>
+<p><a rel="nofollow" class="external text" href="http://youtu.be/i8h8cq_WBjA">~math2718281828459</a>
+</p>
+<h2><span id="Video_Solution_2_by_Interstigation_(with_some_trigonometry)"></span><span class="mw-headline" id="Video_Solution_2_by_Interstigation_.28with_some_trigonometry.29">Video Solution 2 by Interstigation (with some trigonometry)</span></h2>
+<p><a rel="nofollow" class="external free" href="https://www.youtube.com/watch?v=8GgGXsB3yjU">https://www.youtube.com/watch?v=8GgGXsB3yjU</a>
+</p><p>~Interstigation
+</p>
+<h2><span class="mw-headline" id="Video_Solution_3_by_WhyMath">Video Solution 3 by WhyMath</span></h2>
+<p><a rel="nofollow" class="external free" href="https://youtu.be/kP3jD1-aVzY">https://youtu.be/kP3jD1-aVzY</a>
+</p><p>~savannahsolver
+</p>
+<h2><span id="Video_Solution_4_(1_min)"></span><span class="mw-headline" id="Video_Solution_4_.281_min.29">Video Solution 4 (1 min)</span></h2>
+<p><a rel="nofollow" class="external free" href="https://youtu.be/oKPQh9lU0X4">https://youtu.be/oKPQh9lU0X4</a>
+</p>
+<h2><span class="mw-headline" id="Video_Solution_by_TheBeautyofMath">Video Solution by TheBeautyofMath</span></h2>
+<p><a rel="nofollow" class="external free" href="https://youtu.be/YD9J394zeig">https://youtu.be/YD9J394zeig</a>
+</p><p>~IceMatrix
+</p>
+<h2><span class="mw-headline" id="See_Also">See Also</span></h2>
+<table class="wikitable" style="margin:0.5em auto; font-size:95%; border:1px solid black; width:80%;">
+<tbody><tr>
+<td style="background:#ccf;text-align:center;" colspan="3"><b><a href="../2021_Fall_AMC_10B.html" title="2021 Fall AMC 10B">2021 Fall AMC 10B</a></b> (<b><a href="../2021_Fall_AMC_10B_Problems.html" title="2021 Fall AMC 10B Problems">Problems</a></b> • <b><a href="../2021_Fall_AMC_10B_Answer_Key.html" title="2021 Fall AMC 10B Answer Key">Answer Key</a></b> • <a rel="nofollow" class="external text" href="https://artofproblemsolving.com/community/c13">Resources</a>)
+</td></tr>
+<tr>
+<td width="50%" align="center" rowspan="1">Preceded&#160;by<br /><b><a href="Problem_17.html" title="2021 Fall AMC 10B Problems/Problem 17">Problem 17</a></b>
+</td>
+<td width="50%" align="center" rowspan="1">Followed&#160;by<br /><b><a href="Problem_19.html" title="2021 Fall AMC 10B Problems/Problem 19">Problem 19</a></b>
+</td></tr>
+<tr>
+<td colspan="3" style="text-align:center;"><a href="Problem_1.html" class="mw-redirect" title="2021 Fall AMC 10B Problems/Problem 1">1</a> <b>•</b> <a href="Problem_2.html" class="mw-redirect" title="2021 Fall AMC 10B Problems/Problem 2">2</a> <b>•</b> <a href="Problem_3.html" title="2021 Fall AMC 10B Problems/Problem 3">3</a> <b>•</b> <a href="Problem_4.html" class="mw-redirect" title="2021 Fall AMC 10B Problems/Problem 4">4</a> <b>•</b> <a href="Problem_5.html" class="mw-redirect" title="2021 Fall AMC 10B Problems/Problem 5">5</a> <b>•</b> <a href="Problem_6.html" title="2021 Fall AMC 10B Problems/Problem 6">6</a> <b>•</b> <a href="Problem_7.html" class="mw-redirect" title="2021 Fall AMC 10B Problems/Problem 7">7</a> <b>•</b> <a href="Problem_8.html" class="mw-redirect" title="2021 Fall AMC 10B Problems/Problem 8">8</a> <b>•</b> <a href="Problem_9.html" title="2021 Fall AMC 10B Problems/Problem 9">9</a> <b>•</b> <a href="Problem_10.html" title="2021 Fall AMC 10B Problems/Problem 10">10</a> <b>•</b> <a href="Problem_11.html" title="2021 Fall AMC 10B Problems/Problem 11">11</a> <b>•</b> <a href="Problem_12.html" class="mw-redirect" title="2021 Fall AMC 10B Problems/Problem 12">12</a> <b>•</b> <a href="Problem_13.html" title="2021 Fall AMC 10B Problems/Problem 13">13</a> <b>•</b> <a href="Problem_14.html" class="mw-redirect" title="2021 Fall AMC 10B Problems/Problem 14">14</a> <b>•</b> <a href="Problem_15.html" title="2021 Fall AMC 10B Problems/Problem 15">15</a> <b>•</b> <a href="Problem_16.html" title="2021 Fall AMC 10B Problems/Problem 16">16</a> <b>•</b> <a href="Problem_17.html" title="2021 Fall AMC 10B Problems/Problem 17">17</a> <b>•</b> <a class="mw-selflink selflink">18</a> <b>•</b> <a href="Problem_19.html" title="2021 Fall AMC 10B Problems/Problem 19">19</a> <b>•</b> <a href="Problem_20.html" title="2021 Fall AMC 10B Problems/Problem 20">20</a> <b>•</b> <a href="Problem_21.html" class="mw-redirect" title="2021 Fall AMC 10B Problems/Problem 21">21</a> <b>•</b> <a href="Problem_22.html" title="2021 Fall AMC 10B Problems/Problem 22">22</a> <b>•</b> <a href="Problem_23.html" title="2021 Fall AMC 10B Problems/Problem 23">23</a> <b>•</b> <a href="Problem_24.html" class="mw-redirect" title="2021 Fall AMC 10B Problems/Problem 24">24</a> <b>•</b> <a href="Problem_25.html" title="2021 Fall AMC 10B Problems/Problem 25">25</a>
+</td></tr>
+<tr>
+<td colspan="3" style="text-align:center;"><b><a href="../AMC_10_Problems_and_Solutions.html" title="AMC 10 Problems and Solutions"> All AMC 10 Problems and Solutions</a></b>
+</td></tr></tbody></table>
+<p>The problems on this page are copyrighted by the <a rel="nofollow" class="external text" href="http://www.maa.org/">Mathematical Association of America</a>'s <a rel="nofollow" class="external text" href="https://maa.org/student-programs/amc/">American Mathematics Competitions</a>. <a href="../File_AMC_logo.html" class="image"><img alt="AMC logo.png" src="../../../../wiki-images.artofproblemsolving.com/thumb/8/8b/AMC_logo.png/50px-AMC_logo.png" width="50" height="43" style="vertical-align: middle" srcset="https://wiki-images.artofproblemsolving.com//thumb/8/8b/AMC_logo.png/75px-AMC_logo.png 1.5x, https://wiki-images.artofproblemsolving.com//8/8b/AMC_logo.png 2x" /></a>
+</p>
+<div style="clear:both;"></div>
+
+<!-- 
+NewPP limit report
+Cached time: 20250408155944
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.128 seconds
+Real time usage: 9.836 seconds
+Preprocessor visited node count: 1650/1000000
+Preprocessor generated node count: 3960/1000000
+Post‐expand include size: 2387/2097152 bytes
+Template argument size: 308/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 36250/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  441.767      1 -total
+ 67.44%  297.939      1 Template:MAA_Notice
+ 32.52%  143.684      1 Template:AMC10_box
+-->
+</div>
+<!-- Saved in parser cache with key wiki-wiki_:pcache:idhash:22216-0!canonical and timestamp 20250408155935 and revision id 242808
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://artofproblemsolving.com/wiki/index.php?title=2021_Fall_AMC_10B_Problems/Problem_18&amp;oldid=242808">https://artofproblemsolving.com/wiki/index.php?title=2021_Fall_AMC_10B_Problems/Problem_18&amp;oldid=242808</a>"</div>
+
+
+									<div class="catlinks"><div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div></div>
+				
+
+							</div>
+		</div>
+	</div>
+</div>
+
+<!-- search:off -->
+	<div class="clearfix"></div>
+
+	
+	<div id="main-footer" class="no-print">
+		<div class="footer-container">
+			<div class="footer-topRow">
+											<a href="https://artofproblemsolving.com/online">
+							<img class="footer-mainLogo"
+							src="https://artofproblemsolving.com/assets/images/logos/aops-online-footer.svg"/>
+						</a>
+										<div class="footer-wasc">
+						<span>
+							Art of Problem Solving is an
+							<br class="wasc-break"/>
+							<span class="footer-accredited">ACS WASC Accredited School</span>
+						</span>
+						<img class="footer-wascLogo"
+						src="../../../assets/images/logos/wasc.png"/>
+					</div>
+			</div>
+			<div class="footer-links">
+				<div class="footer-col">
+					<div class="footer-colHeader">aops programs</div>
+					<div><a class="link" href="https://artofproblemsolving.comonline/">AoPS Online</a></div>
+					<div><a class="link" href="https://beastacademy.com/">Beast Academy</a></div>
+					<div><a class="link" href="https://aopsacademy.org/">AoPS Academy</a></div>
+				</div>
+
+				<div class="footer-col">
+					<div class="footer-colHeader">About</div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/about">About AoPS</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/staff">Our Team</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/history">Our History</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/careers">Jobs</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/blog">AoPS Blog</a></div>
+				</div>
+
+				<div class="footer-col">
+					<div class="footer-colHeader" style="left:-1px;">Site Info</div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/tos">Terms</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/privacy">Privacy</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/contact">Contact Us</a></div>
+				</div>
+
+				<div class="footer-col social">
+					<div class="footer-colHeader">follow us</div>
+					<div class="footer-social">
+													<a class="link" target="_blank" href="https://www.facebook.com/artofproblemsolving">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/facebook.svg" class="sm-icon"/>
+							</a>
+							<a class="link" target="_blank" href="http://twitter.com/AoPSNews">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/twitter.svg" class="sm-icon"/>
+							</a>
+							<a class="link" target="_blank" href="https://www.pinterest.com/artofproblemsolving/pins/">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/pinterest.svg" class="sm-icon"/>
+							</a>
+											</div>
+				</div>
+									<div class="footer-col subscribe">
+						<div class="footer-colHeader">
+							Subscribe for news and updates
+						</div>
+						<form method="post" action="https://artofproblemsolving.com/mailinglist">
+							<input type="email" class="footer-email" placeholder="Enter e-mail" name="subscribe-email">
+							<input type="hidden" name="new-books" value="on">
+							<input type="hidden" name="classes" value="on">
+							<input type="hidden" name="mathjams" value="on">
+							<input type="submit" class="footer-submit" value="">
+							<div class="footer-submit-arrow">
+								<svg x="0px" y="0px" viewBox="0 0 289 289" enable-background="new 0 0 289 289">
+									<g>
+										<path class="arrow-fill" d="M121.5,220.5c-2.6,0-5.1-1-7.1-2.9c-3.9-3.9-3.9-10.2,0-14.1l58.9-58.9l-58.9-58.9c-3.9-3.9-3.9-10.2,0-14.1c3.9-3.9,10.2-3.9,14.1,0l66,66c3.9,3.9,3.9,10.2,0,14.1l-66,66C126.6,219.5,124.1,220.5,121.5,220.5z"/>
+									</g>
+								</svg>
+							</div>
+						</form>
+					</div>
+							</div>
+			<div class="copyright">
+				<span>&copy; 2025 AoPS Incorporated
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div id="small-footer-wrapper">
+		<div class="footer-container">
+							<a href="https://artofproblemsolving.com/online">
+					<img class="footer-mainLogo"
+					src="https://artofproblemsolving.com/assets/images/logos/aops-online-footer.svg"/>
+				</a>
+						<div class="copyright">
+				&copy; 2025 Art of Problem Solving
+				<div class="copyright-links">
+					<a href="https://artofproblemsolving.com/company">About Us</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/contact">Contact Us</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/company/tos">Terms</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/company/privacy">Privacy</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<form id="registration-form" method="post" action="https://artofproblemsolving.com/user/register.php">
+	<input type="hidden" name="username" value="">
+	<input type="hidden" name="password" value="">
+	<input type="hidden" name="from-login" value="true">
+	</form>
+<div id="print-footer" class="printer">Copyright &copy; 2025 Art of Problem Solving</div>
+
+
+
+<div id="epicfail" class="aops-html-modal-epic-fail" style="display: none">
+	<div class="aops-html-modal-inner-epic-fail">
+		<div class="aops-html-modal-main-epic-fail">
+			<p>Something appears to not have loaded correctly.</p>
+		</div>
+		<div class="aops-html-modal-bottom-epic-fail">
+			<p><a onclick="location.reload(true);return false">Click to refresh</a>.</p>
+		</div>
+	</div>
+</div>
+<link rel="stylesheet" href="../../../assets/css/epic-fail.css">
+
+
+
+
+
+<!-- /search:off -->
+
+
+<!-- copied from contact page index, with edits -->
+<script id="footer-tpl-email-dialog" type="text/x-handlebars-template">
+	<div id="mail-dialog">
+		<h1>Email Art of Problem Solving</h1>
+		<p>
+			<input type="text" id="email" name="email" placeholder="Your email address">
+			<input type="text" id="subject" name="subject" placeholder="Subject of message">
+			<textarea id="message" name="message" placeholder="Enter your message"></textarea>
+			<div style="padding:5px 30px">
+				<input type="checkbox" id="email-copy" name="email_copy">
+				<label for="email-copy" id="email-copy-label">Send a copy to my email address.</label>
+			</div>
+			<div style="padding:5px 30px 20px">
+				<input id="footer-submit-btn" type="submit" class="btn btn-primary" value="Send">
+				<input id="footer-cancel-btn" type="submit" class="btn btn-default" value="Cancel">
+			</div>
+		</p>
+		<p id="email-error"></p>
+	</div>
+</script>
+
+
+<script id="footer-tpl-email-confirm" type="text/x-handlebars-template">
+	<div id="mail-dialog-confirm">
+		<h2>Email Sent</h2>
+		<p>Thank you for your email. We will respond to it soon.</p>
+	</div>
+</script>
+
+<!-- bing -->
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5105596"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","../../../../bat.bing.com/bat.js","uetq");</script><noscript><img src="http://bat.bing.com/action/0?ti=5105596&amp;Ver=2" height="0" width="0" style="display:none; visibility: hidden;" /></noscript>
+
+</body>
+<!-- Cached 20250408201922 -->
+
+<!-- Mirrored from artofproblemsolving.com/wiki/index.php/2021_Fall_AMC_10B_Problems/Problem_18 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Apr 2025 05:00:21 GMT -->
+</html>
+

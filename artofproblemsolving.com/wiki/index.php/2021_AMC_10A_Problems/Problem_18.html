@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html>
+	
+<!-- Mirrored from artofproblemsolving.com/wiki/index.php/2021_AMC_10A_Problems/Problem_18 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Apr 2025 05:00:30 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+				
+<script>AoPS = {
+	start_time : new Date().getTime()
+};</script>
+
+<script>
+	AoPS.bootstrap_data = [];
+	AoPS.bd = AoPS.bootstrap_data; // Alias!
+	AoPS.session = {"user_id":1,"platform_user_id":"","username":"Anonymous","avatar":"\/\/avatar.artofproblemsolving.com\/avatar_1.png?t=1","email":"","role":"","logged_in":false,"initialized":false,"needs_coppa_approval":false,"admin":false,"national_staff":false,"wikiname":""};
+	AoPS.bd.assetVersion = 1;
+	AoPS.bd.environment = 'production';
+	AoPS.protected_url = 'https://artofproblemsolving.com/';
+	AoPS.aops_url = 'https://artofproblemsolving.com/';
+	AoPS.academy_url = 'https://aopsacademy.org/';
+</script>
+		<!-- GA plugin and Enhanced Ecommerce -->
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','../../../../www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-1905305-1', 'auto', {allowLinker: true}); // GA Property ID
+		ga('send', 'pageview');
+		</script>
+		<!-- End GA plugin and Enhanced Ecommerce -->
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'../../../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer', 'GTM-59JWRGZ')</script>
+		<!-- End Google Tag Manager -->
+
+		<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1">
+		<meta name="referrer" content="origin">
+
+		<meta name="facebook-domain-verification" content="zmmwg7oqqsqvf8ihckwvzoo85b08gx" />
+
+		
+		<link rel="apple-touch-icon" href="../../../../assets.artofproblemsolving.com/images/apple-touch-icon.png">
+		<title>Art of Problem Solving</title>
+
+		
+		<link href="../../../assets/fonts/font-awesome/css/all.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="../../../assets/css/sharedsite.css">
+		<link rel="stylesheet" href="../../../assets/css/navheader.css">
+		<link rel="stylesheet" href="../../../assets/css/footer.css">
+		<link rel="stylesheet" href="../../../assets/css/main-head.css">
+
+					<link rel="icon" href="https://artofproblemsolving.com/online-favicon.ico?v=2">
+		
+		
+		<script>
+  if (!window.console) console = {log: function() {}, dir: function() {}};
+  $$ = function( selector ) { return document.getElementById( selector ); }
+</script>
+
+							<script src="../../../../assets.artofproblemsolving.com/js/jquery360.min.js"></script>
+							<script src="../../../assets/vendor/jquery/3.6.0/jquery-migrate.min.js"></script>
+					<link rel="stylesheet" href="../../../../cdn.jsdelivr.net/npm/katex%400.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+<script defer src="../../../../cdn.jsdelivr.net/npm/katex%400.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+<script defer src="../../../../cdn.jsdelivr.net/npm/katex%400.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '[katex]', right: '[/katex]', display: false},
+			  {left: '[katex display=true]', right: '[/katex]', display: true} 
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+    });
+</script>
+
+<script>
+MathJax = {
+  tex: {
+	inlineMath: [['[mathjax]', '[/mathjax]'], ['\\(', '\\)']],
+	displayMath: [['[mathjax display=true]', '[/mathjax]']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async src="../../../../cdn.jsdelivr.net/npm/mathjax%403/es5/tex-svg.js"> </script>
+
+				<meta charset="UTF-8"/>
+<title>2021 AMC 12A Problems/Problem 18 - AoPS Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"2021_AMC_12A_Problems/Problem_18","wgTitle":"2021 AMC 12A Problems/Problem 18","wgCurRevisionId":230405,"wgRevisionId":230405,"wgArticleId":19793,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Intermediate Algebra Problems"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"2021_AMC_12A_Problems/Problem_18","wgRelevantArticleId":19793,"wgRequestId":"123e83189bcf0d494a7b0f50","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"2021_AMC_10A_Problems/Problem_18","wgInternalRedirectTargetUrl":"/wiki/index.php/2021_AMC_12A_Problems/Problem_18"});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","skins.aopsp":"ready"});mw.loader.implement("user.tokens@09avpoe",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.action.view.redirect","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.aopsp.js"]);});</script>
+<link rel="stylesheet" href="https://artofproblemsolving.com/wiki/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cskins.aopsp&amp;only=styles&amp;skin=aopsp"/>
+<script async="" src="https://artofproblemsolving.com/wiki/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=aopsp"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="https://artofproblemsolving.com/wiki/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=aopsp"/>
+<meta name="generator" content="MediaWiki 1.31.1"/>
+<link rel="shortcut icon" href="https://artofproblemsolving.com/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://artofproblemsolving.com/wiki/opensearch_desc.php" title="AoPS Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://artofproblemsolving.com/wiki/api.php?action=rsd"/>
+<link rel="alternate" type="application/atom+xml" title="AoPS Wiki Atom feed" href="https://artofproblemsolving.com/wiki/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://artofproblemsolving.com/wiki/index.php/2021_AMC_12A_Problems/Problem_18"/>
+<!--[if lt IE 9]><script src="/wiki/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=aopsp&amp;sync=1"></script><![endif]-->
+			</head>
+		<body class="production mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-2021_AMC_12A_Problems_Problem_18 rootpage-2021_AMC_12A_Problems_Problem_18 skin-aopsp action-view resources">
+
+					<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59JWRGZ"
+			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		
+		<div id="page-wrapper">
+
+			<!-- search:off -->
+			
+			<!-- The gray bar at top -->
+			<!-- see shared-site.css -->
+			<div id="top-bar" class="sharedsite-wrapper no-select">
+				<div class="sharedsitebar">
+					<a href="https://artofproblemsolving.com/" class="mobile-title"></a>
+					<div class="sharedsite-links">
+											<a class="site-link main" href="https://artofproblemsolving.com/company">
+												Art of Problem Solving
+						</a>
+						<div class="site">
+													<a class="site-link selected" href="https://artofproblemsolving.com/">
+														<img src="https://artofproblemsolving.com/assets/images/logos/icon-online.svg" class="site-icon">
+								<span class="site-name">AoPS Online</span>
+							</a>
+							<!-- Rich dropdown -->
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-online.svg"/>
+										</div>
+										<div class="site-snippet">
+											Math texts, online classes, and more
+											<br/>for students in grades 5-12.
+										</div>
+										<a target="_blank" class="site-visit aops-primary" href="https://artofproblemsolving.com/">
+											Visit AoPS Online <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://artofproblemsolving.com/store" class="btn btn-primary aops-btn">
+											Books for Grades 5-12
+										</a>
+										<a target="_blank" href="https://artofproblemsolving.com/school" class="btn btn-primary aops-btn">
+											Online Courses
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- End rich dropdown -->
+						</div>
+						<div class="site">
+							<a class="site-link" href="https://beastacademy.com/">
+								<img src="https://artofproblemsolving.com/assets/images/logos/icon-ba.svg" class="site-icon">
+								<span class="site-name">Beast Academy</span>
+							</a>
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-ba.svg"/>
+										</div>
+										<div class="site-snippet">
+											Engaging math books and online learning
+											<br/>for students ages 6-13.
+										</div>
+										<a target="_blank" class="site-visit ba-primary" href="https://beastacademy.com/">
+											Visit Beast Academy <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://beastacademy.com/books" class="btn btn-primary ba-btn">
+											Books for Ages 6-13
+										</a>
+										<a target="_blank" href="https://beastacademy.com/online" class="btn btn-primary ba-btn">
+											Beast Academy Online
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="site">
+							<a class="site-link" href="https://aopsacademy.org/">
+								<img src="https://artofproblemsolving.com/assets/images/logos/icon-academy.svg" class="site-icon">
+								<span class="site-name">AoPS Academy</span>
+							</a>
+							<div class="site-dropdown-wrapper">
+								<div class="site-dropdown">
+									<div class="site-info">
+										<div class="site-logo">
+											<img src="https://artofproblemsolving.com/assets/images/logos/aops-academy.svg"/>
+										</div>
+										<div class="site-snippet">
+											Small live classes for advanced math
+											<br/>and language arts learners in grades 2-12.
+										</div>
+										<a target="_blank" class="site-visit academy-primary" href="https://aopsacademy.org/">
+											Visit AoPS Academy <span class="aops-font">‚</span>
+										</a>
+									</div>
+									<div class="site-quick-nav">
+										<a target="_blank" href="https://aopsacademy.org/campuses" class="btn btn-primary academy-btn">
+											Find a Physical Campus
+										</a>
+										<a target="_blank" href="https://virtual.aopsacademy.org/" class="btn btn-primary academy-btn">
+											Visit the Virtual Campus
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="header-wrapper" class="no-select">
+				<div class="header-underlay">
+					<div id="header">
+
+						<!-- The white area where main menu options appear -->
+
+						<!-- The menu links -->
+													<div id="main-menubar">
+								<div class="menubar-content">
+									<div class="menubar-logo online">
+										<img class="menubar-hamburger" src="https://artofproblemsolving.com/assets/images/hamburger.svg"/>
+										<a class="logo-img-link" href="https://artofproblemsolving.com/online">
+											<img class="logo-img" src="https://artofproblemsolving.com/assets/images/logos/aops-online.svg"/>
+											<img class="logo-img-mobile" src="https://artofproblemsolving.com/assets/images/logos/aops-online-mobile.svg"/>
+											<img class="logo-img-small" src="https://artofproblemsolving.com/assets/images/logos/aops-online-mobile.svg"/>
+										</a>
+									</div>
+									<div class="menubar-links-outer">
+										<!-- The login links -->
+										<div class="menu-login-wrapper online">
+											
+											<div class="menu-login-item">
+															<div 
+		    id="header-login"
+			class="no-select not-signed-in"
+			style="display:flex">
+
+			<div class="online-login-button solid-rounded-button">Sign&nbsp;In</div><div class="online-register-button">Register</div>
+		</div>
+												</div>
+
+											
+										</div>
+										<div class="menubar-labels online">
+											<div class="menubar-label school">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/school">
+														online school
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+														<!-- These have IDs for A/B testing purposes. T27691 -->
+																												<a id="online-school-menu-schedule" href="https://artofproblemsolving.com/school/schedule"> Class Schedule </a>
+														<a id="online-school-menu-recommmendations" href="https://artofproblemsolving.com/school/recommendations"> Recommendations </a>
+														<a id="online-school-menu-woot-courses" href="https://artofproblemsolving.com/school/woot?gtmlist=School_Nav"> Olympiad Courses </a>
+														<a id="online-school-menu-mathjams" href="https://artofproblemsolving.com/school/mathjams"> Free Sessions </a>
+																																									</div>
+												</div>
+											</div>
+											<div class="menubar-label store">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/store">
+														books<span class="menubar-link-ext">tore </span>
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+																																																								<a href="https://artofproblemsolving.com/store/list/aops-curriculum">AoPS Curriculum</a>
+														<a href="https://artofproblemsolving.com/store/list/beast-academy">Beast Academy</a>
+														<a href="https://artofproblemsolving.com/store/online">Online Books</a>
+														<a href="https://artofproblemsolving.com/store/recommendations">Recommendations</a>
+														<a href="https://artofproblemsolving.com/store/list/other-products">Other Books &amp; Gear</a>
+														<a href="https://artofproblemsolving.com/store/list/all-products">All Products</a>
+														<a href="https://artofproblemsolving.com/store/gift-certificates?gtmlist=Bookstore_Nav">Gift Certificates</a>
+																											</div>
+												</div>
+											</div>
+											<div class="menubar-label community">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/community">
+														community
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+																												<a data-cmty href="https://artofproblemsolving.com/community">Forums</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/c13_contests">Contests</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/search">Search</a>
+														<a data-cmty href="https://artofproblemsolving.com/community/faq">Help</a>
+																																									</div>
+												</div>
+											</div>
+											<div class="menubar-label resources">
+												<div class="menubar-label-link-outer">
+													<a class="menubar-label-link " href="https://artofproblemsolving.com/resources">
+														resources
+													</a>
+												</div>
+												<div class="menubar-dropdown">
+													<div class="triangle"></div>
+													<div class="dropdown-content">
+														<div class="dropdown-columns">
+															<div class="dropdown-category">
+																<span class="dropdown-category-label">math training & tools</span>
+																<a href="https://artofproblemsolving.com/alcumus">Alcumus</a>
+																<a href="https://artofproblemsolving.com/videos">Videos</a>
+																<a href="https://artofproblemsolving.com/ftw">For the Win!</a>
+																<a href="https://artofproblemsolving.com/mathcounts_trainer">MATHCOUNTS Trainer</a>
+																<a href="https://artofproblemsolving.com/contests/practice">AoPS Practice Contests</a>
+																<a href="https://artofproblemsolving.com/wiki/index.php?title=Main_Page">AoPS Wiki</a>
+																<a href="https://artofproblemsolving.com/texer">LaTeX TeXeR</a>
+																<a href="https://artofproblemsolving.com/polymath">MIT PRIMES/CrowdMath</a>
+																<a href="https://artofproblemsolving.com/keeplearning">Keep Learning</a>
+																<a href="https://beastacademy.com/all-ten">All Ten</a>
+																															</div>
+															<div class="dropdown-column">
+																																<div class="dropdown-category category-in-column">
+																	<span class="dropdown-category-label">contests on aops</span>
+																	<a href="https://artofproblemsolving.com/contests/practice">Practice Math Contests</a>
+																	<a href="https://artofproblemsolving.com/contests/usabo">USABO</a>
+																</div>
+																<div class="dropdown-category category-in-column">
+                                                                                                                                        <span class="dropdown-category-label">news</span>
+                                                                                                                                        <a href="https://artofproblemsolving.com/blog">AoPS Blog</a>
+                                                                                                                                        <a href="https://artofproblemsolving.com/blog/webinars/aopswebinars">Webinars</a>
+                                                                                                                                </div>
+															</div>
+														</div>
+														<div class="dropdown-view-more-link-container">
+															<a href="https://artofproblemsolving.com/resources" class="dropdown-view-more-link">view all <span class="aops-icon">0</span></a>
+														</div>
+													</div>
+												</div>
+											</div>
+																						<div class="menubar-label menu-login-item">
+															<div 
+		    id="header-login"
+			class="no-select not-signed-in"
+			style="display:flex">
+
+			<div class="online-login-button solid-rounded-button">Sign&nbsp;In</div><div class="online-register-button">Register</div>
+		</div>
+												</div>
+																					</div>
+									</div>
+								</div>
+							</div>
+											</div>
+				</div>
+
+								<noscript>
+					<div class="infobar">JavaScript is not enabled. JavaScript is required to fully utilize the site.</div>
+				</noscript>
+
+
+									<div id="breadcrumbs-wrapper">
+						<div id="submenu-icon"></div>
+						<div id="breadcrumbs">
+														<!-- ignore-security-checks -->
+							<div class="title-wrapper"><div class="title"><a href="https://artofproblemsolving.com/wiki">AoPS Wiki</a></div></div>
+														<div class="crumb-wrapper">
+																										<span class="crumb crumb-1">
+																			<!-- ignore-security-checks -->
+										<a href="https://artofproblemsolving.com/resources">Resources</a>
+																		</span>
+																											<i class="aops-font aops-angle-double-right"></i>
+																		<span class="crumb crumb-2">
+																			<!-- ignore-security-checks -->
+										<a href="https://artofproblemsolving.com/wiki">Aops Wiki</a>
+																		</span>
+																											<i class="aops-font aops-angle-double-right"></i>
+																		<span class="crumb crumb-3">
+																			2021 AMC 12A Problems/Problem 18																		</span>
+															</div>
+						</div>
+					</div>
+							</div>
+
+			<!-- search icon script lives in footer.phtml-->
+
+			<!-- /search:off -->
+
+<div id="main-content" class="left-navigation wiki">
+	<div id="side-column-wrapper">
+		<div id="side-column">
+						<div id="content-actions" class="menu open">
+				<div class="submenu">
+					<h1>Page</h1>
+					<div class="submenu-wrapper">
+						<span id="ca-nstab-main" class="selected"><a href="https://artofproblemsolving.com/wiki/index.php/2021_AMC_12A_Problems/Problem_18" title="View the content page " accesskey="c">Article</a></span><span id="ca-talk" class="new"><a href="https://artofproblemsolving.com/wiki/index.php?title=Talk:2021_AMC_12A_Problems/Problem_18&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) " accesskey="t">Discussion</a></span><span id="ca-viewsource"><a href="https://artofproblemsolving.com/wiki/index.php?title=2021_AMC_12A_Problems/Problem_18&amp;action=edit" title="This page is protected.&#10;You can view its source " accesskey="e">View source</a></span><span id="ca-history"><a href="https://artofproblemsolving.com/wiki/index.php?title=2021_AMC_12A_Problems/Problem_18&amp;action=history" title="Past revisions of this page " accesskey="h">History</a></span>					</div>
+				</div>
+			</div>
+			<div id="toolbox" class="menu open">
+				<div class="submenu">
+					<h1>Toolbox</h1>
+					<div class="submenu-wrapper">
+						<span id="n-recentchanges"><a href="../Special_RecentChanges.html" title="A list of recent changes in the wiki " accesskey="r">Recent changes</a></span><span id="n-randompage"><a href="https://artofproblemsolving.com/wiki/index.php/Special:Random" title="Load a random page " accesskey="x">Random page</a></span><span id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></span><span id="t-whatlinkshere"><a href="https://artofproblemsolving.com/wiki/index.php/Special:WhatLinksHere/2021_AMC_12A_Problems/Problem_18" title="A list of all wiki pages that link here " accesskey="j">What links here</a></span><span id="t-specialpages"><a href="../Special_SpecialPages.html" title="A list of all special pages " accesskey="q">Special pages</a></span>					</div>
+				</div>
+			</div>
+			
+			<div id="search" class="menu open">
+				<h1>Search</h1>
+				<div class="submenu-wrapper" style="margin-bottom:5px;">
+					<form action="https://artofproblemsolving.com/wiki/index.php" id="searchform" class="mw-search">
+						<input type="hidden" name="title" value="Special:Search">
+						<input type="search" name="search" placeholder="Search" value="" accesskey="f" id="searchInput">
+						<div style="margin:0 5px 5px 5px;text-align:right;"><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="btn btn-primary searchButton"/></div>
+					</form>
+				</div>
+			</div>
+
+			<!--
+			<div class="menu open">
+				<h1>Note</h1>
+				<div class="submenu-wrapper" style="padding:10px;color:#444;">
+					Please do not discuss the 2015 AMC 8 Competition on any website until November 25th.
+				</div>
+			</div>
+			-->
+		</div>
+	</div>
+
+	<div id="main-column" style="margin-top:10px">
+				<div class="page-wrapper">
+						<div id="mw-js-message" style="display:none;"></div>
+			<h1 id="firstHeading" class="firstHeading">2021 AMC 12A Problems/Problem 18</h1>
+
+						
+			<div class="mw-body">
+													<div id="contentSub"><span class="mw-redirectedfrom">(Redirected from <a href="https://artofproblemsolving.com/wiki/index.php?title=2021_AMC_10A_Problems/Problem_18&amp;redirect=no" class="mw-redirect" title="2021 AMC 10A Problems/Problem 18">2021 AMC 10A Problems/Problem 18</a>)</span></div>
+								
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><dl><dd><i>The following problem is from both the <a href="Problem_18.html" class="mw-redirect" title="2021 AMC 10A Problems/Problem 18">2021 AMC 10A #18</a> and <a class="mw-selflink selflink">2021 AMC 12A #18</a>, so both problems redirect to this page.</i></dd></dl>
+<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Problem"><span class="tocnumber">1</span> <span class="toctext">Problem</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Solution_1_.28Intuitive.29"><span class="tocnumber">2</span> <span class="toctext">Solution 1 (Intuitive)</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Solution_2_.28Specific.29"><span class="tocnumber">3</span> <span class="toctext">Solution 2 (Specific)</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Solution_3_.28Generalized.29"><span class="tocnumber">4</span> <span class="toctext">Solution 3 (Generalized)</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Solution_4_.28Generalized.29"><span class="tocnumber">5</span> <span class="toctext">Solution 4 (Generalized)</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Solution_5_.28Quick.2C_Dirty.2C_and_Frantic_Last_Hope.29"><span class="tocnumber">6</span> <span class="toctext">Solution 5 (Quick, Dirty, and Frantic Last Hope)</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Solution_6_.28Rushed_Generalization.29"><span class="tocnumber">7</span> <span class="toctext">Solution 6 (Rushed Generalization)</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Solution_7_.28Generalized.29"><span class="tocnumber">8</span> <span class="toctext">Solution 7 (Generalized)</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Video_Solution_by_Hawk_Math"><span class="tocnumber">9</span> <span class="toctext">Video Solution by Hawk Math</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Video_Solution_by_North_America_Math_Contest_Go_Go_Go_Through_Induction"><span class="tocnumber">10</span> <span class="toctext">Video Solution by North America Math Contest Go Go Go Through Induction</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Video_Solution_by_Punxsutawney_Phil"><span class="tocnumber">11</span> <span class="toctext">Video Solution by Punxsutawney Phil</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Video_Solution_by_OmegaLearn_.28Using_Functions_and_Manipulations.29"><span class="tocnumber">12</span> <span class="toctext">Video Solution by OmegaLearn (Using Functions and Manipulations)</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Video_Solution_by_TheBeautyofMath"><span class="tocnumber">13</span> <span class="toctext">Video Solution by TheBeautyofMath</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Video_Solution_.28Quick_and_Easy.29"><span class="tocnumber">14</span> <span class="toctext">Video Solution (Quick and Easy)</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#See_also"><span class="tocnumber">15</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Problem">Problem</span></h2>
+<p>Let <img src="http://latex.artofproblemsolving.com/b/b/2/bb2c93730dbb48558bb3c4738c956c4e8f816437.png" class="latex" alt="$f$" style="vertical-align: -3px" width="10" height="16" /> be a function defined on the set of positive rational numbers with the property that <img src="http://latex.artofproblemsolving.com/9/c/c/9cc5be73e521bf7c63dc524bf3d5d0e704574047.png" class="latex" alt="$f(a\cdot b)=f(a)+f(b)$" style="vertical-align: -4px" width="168" height="18" /> for all positive rational numbers <img src="http://latex.artofproblemsolving.com/c/7/d/c7d457e388298246adb06c587bccd419ea67f7e8.png" class="latex" alt="$a$" style="vertical-align: -1px" width="11" height="10" /> and <img src="http://latex.artofproblemsolving.com/8/1/3/8136a7ef6a03334a7246df9097e5bcc31ba33fd2.png" class="latex" alt="$b$" style="vertical-align: -1px" width="10" height="14" />. Suppose that <img src="http://latex.artofproblemsolving.com/b/b/2/bb2c93730dbb48558bb3c4738c956c4e8f816437.png" class="latex" alt="$f$" style="vertical-align: -3px" width="10" height="16" /> also has the property that <img src="http://latex.artofproblemsolving.com/4/4/5/4451973174c1a8a3dd865765391105bc84289242.png" class="latex" alt="$f(p)=p$" style="vertical-align: -4px" width="67" height="18" /> for every prime number <img src="http://latex.artofproblemsolving.com/3/6/f/36f73fc1312ee0349b3f3a0f3bd9eb5504339011.png" class="latex" alt="$p$" style="vertical-align: -3px" width="10" height="11" />. For which of the following numbers <img src="http://latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" /> is <img src="http://latex.artofproblemsolving.com/6/c/3/6c3f454ff06ec13f6d6c7c85957b07840049a0cc.png" class="latex" alt="$f(x)&lt;0$" style="vertical-align: -4px" width="68" height="18" />?
+</p><p><img src="http://latex.artofproblemsolving.com/6/2/3/6237dc0232c20d9318315fb22909d71416c5e50e.png" class="latex" alt="$\textbf{(A) }\frac{17}{32} \qquad \textbf{(B) }\frac{11}{16} \qquad \textbf{(C) }\frac79 \qquad \textbf{(D) }\frac76\qquad \textbf{(E) }\frac{25}{11}$" style="vertical-align: -13px" width="399" height="38" />
+</p>
+<h2><span id="Solution_1_(Intuitive)"></span><span class="mw-headline" id="Solution_1_.28Intuitive.29">Solution 1 (Intuitive)</span></h2>
+<p>From the answer choices, note that
+<img src="http://latex.artofproblemsolving.com/c/f/f/cffe9a153e7e5e64b379b51e74fc726f07f555d2.png" class="latexcenter" alt="\begin{align*} f(25)&amp;=f\left(\frac{25}{11}\cdot11\right) \\ &amp;=f\left(\frac{25}{11}\right)+f(11) \\ &amp;=f\left(\frac{25}{11}\right)+11. \end{align*}" width="192" height="142" />
+On the other hand, we have
+<img src="http://latex.artofproblemsolving.com/7/0/7/70783d5c7b08a0cff697adefea2be1ce02cd503d.png" class="latexcenter" alt="\begin{align*} f(25)&amp;=f(5\cdot5) \\ &amp;=f(5)+f(5) \\ &amp;=5+5 \\ &amp;=10. \end{align*}" width="155" height="89" />
+Equating the expressions for <img src="http://latex.artofproblemsolving.com/a/a/e/aae511b5e3ba7a4d43750f0caee38f965e7fe423.png" class="latex" alt="$f(25)$" style="vertical-align: -5px" width="45" height="20" /> produces <img src="http://latex.artofproblemsolving.com/7/5/d/75dd247640b31ebb610e0aaf126b85241e964327.png" class="latexcenter" alt="\[f\left(\frac{25}{11}\right)+11=10,\]" width="148" height="43" /> from which <img src="http://latex.artofproblemsolving.com/d/1/7/d179115134b4fe7240fdaf360ccde8f5b2fab353.png" class="latex" alt="$f\left(\frac{25}{11}\right)=-1.$" style="vertical-align: -17px" width="113" height="43" /> Therefore, the answer is <img src="http://latex.artofproblemsolving.com/1/e/1/1e1a68f40ba92cff2dc60b4cf5722c42f6fa5fdb.png" class="latex" alt="$\boxed{\textbf{(E) }\frac{25}{11}}.$" style="vertical-align: -18px" width="70" height="48" />
+</p><p><u><b>Remark</b></u>
+</p><p>Similarly, we can find the outputs of <img src="http://latex.artofproblemsolving.com/b/b/2/bb2c93730dbb48558bb3c4738c956c4e8f816437.png" class="latex" alt="$f$" style="vertical-align: -3px" width="10" height="16" /> at the inputs of the other answer choices:
+<img src="http://latex.artofproblemsolving.com/f/5/d/f5d2c6de952538ab042aa3513e8e21cd87e7c961.png" class="latexcenter" alt="\begin{alignat*}{10} &amp;\textbf{(A)} \qquad &amp;&amp; f\left(\frac{17}{32}\right) \quad &amp;&amp; = \quad &amp;&amp; 7 \\  &amp;\textbf{(B)} \qquad &amp;&amp; f\left(\frac{11}{16}\right) \quad &amp;&amp; = \quad &amp;&amp; 3 \\  &amp;\textbf{(C)} \qquad &amp;&amp; f\left(\frac{7}{9}\right) \quad &amp;&amp; = \quad &amp;&amp; 1 \\  &amp;\textbf{(D)} \qquad &amp;&amp; f\left(\frac{7}{6}\right) \quad &amp;&amp; = \quad &amp;&amp; 2 \end{alignat*}" width="185" height="191" />
+Alternatively, refer to Solutions 2 and 4 for the full processes.
+</p><p>~Lemonie ~awesomediabrine ~MRENTHUSIASM
+</p>
+<h2><span id="Solution_2_(Specific)"></span><span class="mw-headline" id="Solution_2_.28Specific.29">Solution 2 (Specific)</span></h2>
+<p>We know that <img src="http://latex.artofproblemsolving.com/6/3/f/63f23260d3c7208b0a5628e73e3e6d44f138e8e2.png" class="latex" alt="$f(p) = f(p \cdot 1) = f(p) + f(1)$" style="vertical-align: -4px" width="227" height="18" />. By transitive, we have <img src="http://latex.artofproblemsolving.com/4/6/e/46e0ce77d78cf2c7ebd55121e94271edb0c2c5fd.png" class="latexcenter" alt="\[f(p) = f(p) + f(1).\]" width="151" height="18" />
+Subtracting <img src="http://latex.artofproblemsolving.com/3/e/e/3ee4d848be5a5de8e4a59a62b13f783619e92c0c.png" class="latex" alt="$f(p)$" style="vertical-align: -4px" width="32" height="18" /> from both sides gives <img src="http://latex.artofproblemsolving.com/4/f/9/4f96300165206856a362c083a1cb41a0ed64f209.png" class="latex" alt="$0 = f(1).$" style="vertical-align: -4px" width="70" height="18" />
+Also
+<img src="http://latex.artofproblemsolving.com/6/e/c/6ecc6b0d5ad8e58eb436e0df1f88a8c3d4e5f1ac.png" class="latexcenter" alt="\[f(2)+f\left(\frac{1}{2}\right)=f(1)=0 \implies 2+f\left(\frac{1}{2}\right)=0 \implies f\left(\frac{1}{2}\right) = -2\]" width="501" height="43" />
+<img src="http://latex.artofproblemsolving.com/4/2/d/42d125cac45ee3bfe2b5c9740a154268363d6289.png" class="latexcenter" alt="\[f(3)+f\left(\frac{1}{3}\right)=f(1)=0 \implies 3+f\left(\frac{1}{3}\right)=0 \implies f\left(\frac{1}{3}\right) = -3\]" width="501" height="43" />
+<img src="http://latex.artofproblemsolving.com/5/f/e/5feb78c9665b9d473e56fc8bc309458f1c0f6f4e.png" class="latexcenter" alt="\[f(11)+f\left(\frac{1}{11}\right)=f(1)=0 \implies 11+f\left(\frac{1}{11}\right)=0 \implies f\left(\frac{1}{11}\right) = -11\]" width="555" height="43" />
+In <img src="http://latex.artofproblemsolving.com/a/4/6/a46f6af01fcf3bb5f6cac2316bc4de9bb3906bec.png" class="latex" alt="$\textbf{(A)}$" style="vertical-align: -5px" width="31" height="18" /> we have <img src="http://latex.artofproblemsolving.com/e/2/b/e2bf28c05ddb00473e01d374c9af2a7569743755.png" class="latex" alt="$f\left(\frac{17}{32}\right)=17+5f\left(\frac{1}{2}\right)=17-5(2)=7$" style="vertical-align: -17px" width="319" height="43" />.
+</p><p>In <img src="http://latex.artofproblemsolving.com/b/7/1/b7193f66028e13f331d53ff5e6942c4b05587465.png" class="latex" alt="$\textbf{(B)}$" style="vertical-align: -4px" width="27" height="17" /> we have <img src="http://latex.artofproblemsolving.com/3/a/c/3acc83531b6efd052fc5387ccfb3be42e3a757c5.png" class="latex" alt="$f\left(\frac{11}{16}\right)=11+4f\left(\frac{1}{2}\right)=11-4(2)=3$" style="vertical-align: -17px" width="319" height="43" />.
+</p><p>In <img src="http://latex.artofproblemsolving.com/1/6/9/169b8d69bd74a91e72ec43123070d770633a340a.png" class="latex" alt="$\textbf{(C)}$" style="vertical-align: -4px" width="27" height="17" /> we have <img src="http://latex.artofproblemsolving.com/f/5/8/f5859422bdf072d81d0abc8a366634c1369438ea.png" class="latex" alt="$f\left(\frac{7}{9}\right)=7+2f\left(\frac{1}{3}\right)=7-2(3)=1$" style="vertical-align: -17px" width="291" height="43" />.
+</p><p>In <img src="http://latex.artofproblemsolving.com/b/3/0/b305929a95b53f14a0ad53eba1d8560626e1f28b.png" class="latex" alt="$\textbf{(D)}$" style="vertical-align: -4px" width="28" height="17" /> we have <img src="http://latex.artofproblemsolving.com/1/7/a/17a87bf9915a618d86c960f53523b68796b2b3d7.png" class="latex" alt="$f\left(\frac{7}{6}\right)=7+f\left(\frac{1}{2}\right)+f\left(\frac{1}{3}\right)=7-2-3=2$" style="vertical-align: -17px" width="366" height="43" />.
+</p><p>In <img src="http://latex.artofproblemsolving.com/7/5/e/75e41e3cd48cee2c6866cfbb4386a8e99d3482f5.png" class="latex" alt="$\textbf{(E)}$" style="vertical-align: -4px" width="26" height="17" /> we have <img src="http://latex.artofproblemsolving.com/d/f/2/df2f8480e4dab422341c9b716d847650b0b87407.png" class="latex" alt="$f\left(\frac{25}{11}\right)=10+f\left(\frac{1}{11}\right)=10-11=-1$" style="vertical-align: -18px" width="321" height="45" />.
+</p><p>Thus, our answer is <img src="http://latex.artofproblemsolving.com/7/b/f/7bf32ed4c88f98c5b85e526278fc49231705d9c9.png" class="latex" alt="$\boxed{\textbf{(E) }\frac{25}{11}}$" style="vertical-align: -18px" width="67" height="48" />.
+</p><p>~JHawk0224 ~awesomediabrine
+</p>
+<h2><span id="Solution_3_(Generalized)"></span><span class="mw-headline" id="Solution_3_.28Generalized.29">Solution 3 (Generalized)</span></h2>
+<p>Consider the rational <img src="http://latex.artofproblemsolving.com/0/8/4/084079bf1d54500f3c59257a7ec3467932b72ba2.png" class="latex" alt="$\frac{a}{b}$" style="vertical-align: -12px" width="12" height="33" />, for <img src="http://latex.artofproblemsolving.com/e/9/b/e9bdf3e496517e8f8742f81dd774be1f93cf6e8c.png" class="latex" alt="$a,b$" style="vertical-align: -3px" width="25" height="16" /> integers. We have <img src="http://latex.artofproblemsolving.com/6/d/9/6d9219ee4fc57186c22ddba90ec1c41c7f1fa48c.png" class="latex" alt="$f(a)=f\left(\frac{a}{b}\cdot b\right)=f\left(\frac{a}{b}\right)+f(b)$" style="vertical-align: -12px" width="255" height="33" />. So <img src="http://latex.artofproblemsolving.com/f/4/8/f481bf7a716a66b2d68b6d2db37d33f1169e7058.png" class="latex" alt="$f\left(\frac{a}{b}\right)=f(a)-f(b)$" style="vertical-align: -12px" width="161" height="33" />. Let <img src="http://latex.artofproblemsolving.com/3/6/f/36f73fc1312ee0349b3f3a0f3bd9eb5504339011.png" class="latex" alt="$p$" style="vertical-align: -3px" width="10" height="11" /> be a prime. Notice that <img src="http://latex.artofproblemsolving.com/c/c/5/cc50e2afbc813a69ee967862c698c2d1261e25bc.png" class="latex" alt="$f(p^k)=kf(p)$" style="vertical-align: -4px" width="109" height="20" />. And <img src="http://latex.artofproblemsolving.com/4/4/5/4451973174c1a8a3dd865765391105bc84289242.png" class="latex" alt="$f(p)=p$" style="vertical-align: -4px" width="67" height="18" />. So if <img src="http://latex.artofproblemsolving.com/4/f/9/4f920bc70078bac852eb3396a905de08ce82e615.png" class="latex" alt="$a=p_1^{a_1}p_2^{a_2}\cdots p_k^{a_k}$" style="vertical-align: -4px" width="130" height="17" />, <img src="http://latex.artofproblemsolving.com/9/8/d/98d1181dbba2d1f491023cc7a5ed8c5ef38b9fa4.png" class="latex" alt="$f(a)=a_1p_1+a_2p_2+\cdots+a_kp_k$" style="vertical-align: -5px" width="251" height="20" />. We simply need this to be greater than what we have for <img src="http://latex.artofproblemsolving.com/0/b/0/0b041c557e15a9393c58bfeedd30d3c93f5c7de8.png" class="latex" alt="$f(b)$" style="vertical-align: -4px" width="31" height="18" />. Notice that for answer choices <img src="http://latex.artofproblemsolving.com/7/7/c/77c424de5d5f3492e50759cd335f377fd9baf91d.png" class="latex" alt="$\textbf{(A)},\textbf{(B)},\textbf{(C)},$" style="vertical-align: -5px" width="109" height="18" /> and <img src="http://latex.artofproblemsolving.com/b/3/0/b305929a95b53f14a0ad53eba1d8560626e1f28b.png" class="latex" alt="$\textbf{(D)}$" style="vertical-align: -4px" width="28" height="17" />, the numerator has fewer prime factors than the denominator, and so they are less likely to work. We check <img src="http://latex.artofproblemsolving.com/7/5/e/75e41e3cd48cee2c6866cfbb4386a8e99d3482f5.png" class="latex" alt="$\textbf{(E)}$" style="vertical-align: -4px" width="26" height="17" /> first, and it works, therefore the answer is <img src="http://latex.artofproblemsolving.com/7/b/f/7bf32ed4c88f98c5b85e526278fc49231705d9c9.png" class="latex" alt="$\boxed{\textbf{(E) }\frac{25}{11}}$" style="vertical-align: -18px" width="67" height="48" />.  
+</p><p>~yofro
+</p>
+<h2><span id="Solution_4_(Generalized)"></span><span class="mw-headline" id="Solution_4_.28Generalized.29">Solution 4 (Generalized)</span></h2>
+<p>We derive the following properties of <img src="http://latex.artofproblemsolving.com/b/4/1/b4181a762d816ecb36d8d732e1d956c26da1c681.png" class="latex" alt="$f:$" style="vertical-align: -3px" width="19" height="16" />
+</p>
+<ol style="margin-left: 1.5em;">
+  <li>By induction, we have <img src="http://latex.artofproblemsolving.com/4/e/3/4e3062e59cb07627a57262c0c86260d6b724da02.png" class="latexcenter" alt="\[f\left(\prod_{k=1}^{n}a_k\right)=\sum_{k=1}^{n}f(a_k)\]" width="180" height="53" /> for all positive rational numbers <img src="http://latex.artofproblemsolving.com/b/e/a/bea4d576937a04ec200b1037fc8ee33e8f744cb1.png" class="latex" alt="$a_k$" style="vertical-align: -2px" width="16" height="10" /> and positive integers <img src="http://latex.artofproblemsolving.com/b/d/9/bd923e41635af40a1abe58f230732f2280b0723a.png" class="latex" alt="$n.$" width="14" height="8" /> <p>
+Since positive powers are just repeated multiplication of the base, it follows that <img src="http://latex.artofproblemsolving.com/4/8/4/4846105e97d9d8724f9391330c9660b24b69197c.png" class="latexcenter" alt="\[f\left(a^n\right)=f\left(\prod_{k=1}^{n}a\right)=\sum_{k=1}^{n}f(a)=nf(a)\]" width="304" height="53" /> for all positive rational numbers <img src="http://latex.artofproblemsolving.com/c/7/d/c7d457e388298246adb06c587bccd419ea67f7e8.png" class="latex" alt="$a$" style="vertical-align: -1px" width="11" height="10" /> and positive integers <img src="http://latex.artofproblemsolving.com/b/d/9/bd923e41635af40a1abe58f230732f2280b0723a.png" class="latex" alt="$n.$" width="14" height="8" /></p></li><p class="mw-empty-elt">
+  </p><li>For all positive rational numbers <img src="http://latex.artofproblemsolving.com/7/c/8/7c8acfd7d5ee559262593701b8dbd02e43ad96e3.png" class="latex" alt="$a,$" style="vertical-align: -3px" width="13" height="11" /> we have <img src="http://latex.artofproblemsolving.com/8/2/e/82e9641518faa14cb627219137d5fd481ca90882.png" class="latexcenter" alt="\[f(a)=f(a\cdot1)=f(a)+f(1),\]" width="234" height="18" /> from which <img src="http://latex.artofproblemsolving.com/5/2/6/526a725b4271a47f3db05f2be411b29d5433d9b5.png" class="latex" alt="$f(1)=0.$" style="vertical-align: -4px" width="71" height="18" /></li><p class="mw-empty-elt">
+  </p><li>For all positive rational numbers <img src="http://latex.artofproblemsolving.com/7/c/8/7c8acfd7d5ee559262593701b8dbd02e43ad96e3.png" class="latex" alt="$a,$" style="vertical-align: -3px" width="13" height="11" /> we have <img src="http://latex.artofproblemsolving.com/e/5/a/e5ab38519f7da37db5261d9bd1b4eaf404a1c793.png" class="latexcenter" alt="\[f(a)+f\left(\frac1a\right)=f\left(a\cdot\frac1a\right)=f(1)=0,\]" width="306" height="43" /> from which <img src="http://latex.artofproblemsolving.com/2/8/d/28d7b93b92bf60461aacee3cd3ce0c420fe15fb8.png" class="latex" alt="$f\left({\frac 1a}\right)=-f(a).$" style="vertical-align: -18px" width="134" height="45" /></li><p class="mw-empty-elt">
+</p></ol>
+<p>For all positive integers <img src="http://latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png" class="latex" alt="$x$" style="vertical-align: -1px" width="12" height="10" /> and <img src="http://latex.artofproblemsolving.com/8/d/1/8d1d002db36c51a77f8fbc6314e96756fc793e28.png" class="latex" alt="$y,$" style="vertical-align: -3px" width="13" height="11" /> suppose <img src="http://latex.artofproblemsolving.com/7/b/2/7b265acc14ec7a8fc7b864bb63a31df52199e9d9.png" class="latex" alt="$\prod_{k=1}^{m}p_k^{d_k}$" style="vertical-align: -23px" width="53" height="53" /> and <img src="http://latex.artofproblemsolving.com/e/c/1/ec18bf210f9774790a687e6fae7b4ff18d506be4.png" class="latex" alt="$\prod_{k=1}^{n}q_k^{e_k}$" style="vertical-align: -23px" width="52" height="53" /> are their respective prime factorizations. We get
+<img src="http://latex.artofproblemsolving.com/5/e/1/5e1d5c6bc13403a9e9233606bf733d9079264da5.png" class="latexcenter" alt="\begin{align*} f\left(\frac xy\right)&amp;=f(x)+f\left(\frac 1y\right) \\ &amp;=f(x)-f(y) &amp;&amp; \hspace{10mm}\text{by Property 3} \\ &amp;=f\left(\prod_{k=1}^{m}p_k^{d_k}\right)-f\left(\prod_{k=1}^{n}q_k^{e_k}\right) \\ &amp;=\left[\sum_{k=1}^{m}f\left(p_k^{d_k}\right)\right]-\left[\sum_{k=1}^{n}f\left(q_k^{e_k}\right)\right] &amp;&amp; \hspace{10mm}\text{by Property 1} \\ &amp;=\left[\sum_{k=1}^{m}d_k f\left(p_k\right)\right]-\left[\sum_{k=1}^{n}e_k f\left(q_k\right)\right] &amp;&amp; \hspace{10mm}\text{by Property 1} \\ &amp;=\left[\sum_{k=1}^{m}d_k p_k \right]-\left[\sum_{k=1}^{n}e_k q_k \right]. \end{align*}" width="488" height="310" />
+We apply <img src="http://latex.artofproblemsolving.com/b/b/2/bb2c93730dbb48558bb3c4738c956c4e8f816437.png" class="latex" alt="$f$" style="vertical-align: -3px" width="10" height="16" /> to each fraction in the answer choices:
+<img src="http://latex.artofproblemsolving.com/b/b/4/bb48430477b1cff40b23f4b66b2e8d4a7eb3b275.png" class="latexcenter" alt="\begin{alignat*}{10} &amp;\textbf{(A)} \qquad &amp;&amp; f\left(\frac{17}{32}\right) \quad &amp;&amp; = \quad &amp;&amp; f\left(\frac{17^1}{2^5}\right) \quad &amp;&amp; = \quad &amp;&amp; [1(17)]-[5(2)] \quad &amp;&amp; = \quad &amp;&amp; 7 \\  &amp;\textbf{(B)} \qquad &amp;&amp; f\left(\frac{11}{16}\right) \quad &amp;&amp; = \quad &amp;&amp; f\left(\frac{11^1}{2^4}\right) \quad &amp;&amp; = \quad &amp;&amp; [1(11)]-[4(2)] \quad &amp;&amp; = \quad &amp;&amp; 3 \\  &amp;\textbf{(C)} \qquad &amp;&amp; f\left(\frac{7}{9}\right) \quad &amp;&amp; = \quad &amp;&amp; f\left(\frac{7^1}{3^2}\right)  \quad &amp;&amp; = \quad &amp;&amp; [1(7)]-[2(3)]  \quad &amp;&amp; = \quad &amp;&amp; 1 \\  &amp;\textbf{(D)} \qquad &amp;&amp; f\left(\frac{7}{6}\right) \quad &amp;&amp; = \quad &amp;&amp; f\left(\frac{7^1}{2^1\cdot3^1}\right) \quad &amp;&amp; = \quad &amp;&amp; [1(7)]-[1(2)+1(3)] \quad &amp;&amp; = \quad &amp;&amp; 2 \\ &amp;\textbf{(E)} \qquad &amp;&amp; f\left(\frac{25}{11}\right) \quad &amp;&amp; = \quad &amp;&amp; f\left(\frac{5^2}{11^1}\right) \quad &amp;&amp; = \quad &amp;&amp; [2(5)]-[1(11)] \quad &amp;&amp; = \quad &amp;&amp; {-}1 \end{alignat*}" width="554" height="243" />
+Therefore, the answer is <img src="http://latex.artofproblemsolving.com/1/e/1/1e1a68f40ba92cff2dc60b4cf5722c42f6fa5fdb.png" class="latex" alt="$\boxed{\textbf{(E) }\frac{25}{11}}.$" style="vertical-align: -18px" width="70" height="48" />
+</p><p>~MRENTHUSIASM
+</p>
+<h2><span id="Solution_5_(Quick,_Dirty,_and_Frantic_Last_Hope)"></span><span class="mw-headline" id="Solution_5_.28Quick.2C_Dirty.2C_and_Frantic_Last_Hope.29">Solution 5 (Quick, Dirty, and Frantic Last Hope)</span></h2>
+<p>Note that answer choices <img src="http://latex.artofproblemsolving.com/a/4/6/a46f6af01fcf3bb5f6cac2316bc4de9bb3906bec.png" class="latex" alt="$\textbf{(A)}$" style="vertical-align: -5px" width="31" height="18" /> through <img src="http://latex.artofproblemsolving.com/b/3/0/b305929a95b53f14a0ad53eba1d8560626e1f28b.png" class="latex" alt="$\textbf{(D)}$" style="vertical-align: -4px" width="28" height="17" /> are <img src="http://latex.artofproblemsolving.com/5/d/4/5d4d7bee2ce4f4dc89536836bce638e56a37ab37.png" class="latex" alt="$\frac{\text{prime}}{\text{composite}},$" style="vertical-align: -17px" width="83" height="41" /> whereas <img src="http://latex.artofproblemsolving.com/7/5/e/75e41e3cd48cee2c6866cfbb4386a8e99d3482f5.png" class="latex" alt="$\textbf{(E)}$" style="vertical-align: -4px" width="26" height="17" /> is <img src="http://latex.artofproblemsolving.com/0/3/2/0325b2f1dcfe86ca65f5c1a03cb82fe95766a5e6.png" class="latex" alt="$\frac{\text{composite}}{\text{prime}}.$" style="vertical-align: -17px" width="83" height="41" /> Because the functional equation is related to primes, we hope that the uniqueness of answer choice <img src="http://latex.artofproblemsolving.com/7/b/f/7bf32ed4c88f98c5b85e526278fc49231705d9c9.png" class="latex" alt="$\boxed{\textbf{(E) }\frac{25}{11}}$" style="vertical-align: -18px" width="67" height="48" /> is enough.
+</p><p>~OliverA
+</p>
+<h2><span id="Solution_6_(Rushed_Generalization)"></span><span class="mw-headline" id="Solution_6_.28Rushed_Generalization.29">Solution 6 (Rushed Generalization)</span></h2>
+<p>If f(a <img src="http://latex.artofproblemsolving.com/8/f/1/8f1fb66751f2ee2626c75303485dba473c39a2f2.png" class="latex" alt="$\cdot$" style="vertical-align: 3px" width="3" height="2" /> b) = f(a) + f(b), and if f(p) = p, then f(p <img src="http://latex.artofproblemsolving.com/8/f/1/8f1fb66751f2ee2626c75303485dba473c39a2f2.png" class="latex" alt="$\cdot$" style="vertical-align: 3px" width="3" height="2" /> p) = 2p. You can do this multiple times (Ex: f(p^3) = 3p). You can quickly assume then, that f(p^n) = np. Thus the answer choices can then be rewritten as the product of a prime and another prime to the negative power. Answer choices A-C are straightforward. For D, you can rewrite <img src="http://latex.artofproblemsolving.com/4/3/b/43ba19be0e30b99142416ebfbe17670437c8453e.png" class="latex" alt="$\frac{1}{6}$" style="vertical-align: -12px" width="11" height="37" /> as <img src="http://latex.artofproblemsolving.com/2/f/9/2f960094315d60883495f9b74148e17487ee9584.png" class="latex" alt="$\frac{1}{2}$" style="vertical-align: -12px" width="11" height="37" /> <img src="http://latex.artofproblemsolving.com/8/f/1/8f1fb66751f2ee2626c75303485dba473c39a2f2.png" class="latex" alt="$\cdot$" style="vertical-align: 3px" width="3" height="2" /> <img src="http://latex.artofproblemsolving.com/4/e/1/4e1965f8d70832ded66434c75a7bd52b75090af0.png" class="latex" alt="$\frac{1}{3}$" style="vertical-align: -12px" width="11" height="37" />. When you get to E, you get f(25) + f(<img src="http://latex.artofproblemsolving.com/9/5/1/95187b90a61ece6bde465b8f0d9c2432c63539cc.png" class="latex" alt="$\frac{1}{11}$" style="vertical-align: -13px" width="20" height="37" />), which is 10 - 11, which is -1. So the answer is <img src="http://latex.artofproblemsolving.com/7/b/f/7bf32ed4c88f98c5b85e526278fc49231705d9c9.png" class="latex" alt="$\boxed{\textbf{(E) }\frac{25}{11}}$" style="vertical-align: -18px" width="67" height="48" />
+</p><p>~Zeeshan12
+</p>
+<h2><span id="Solution_7_(Generalized)"></span><span class="mw-headline" id="Solution_7_.28Generalized.29">Solution 7 (Generalized)</span></h2>
+<p>Note that for each of the answer choices we can multiply the fractions by their denominators to be left with only the numerator and also have the prime factorization of the denominators, then set the function equal to the numerator. This will be shown throughout the solution.
+</p><p>For answer choice <img src="http://latex.artofproblemsolving.com/6/4/5/64564a9362d05bd427a021f39cf38bb46b55d397.png" class="latex" alt="$\text{(A) }\dfrac{17}{32}$" style="vertical-align: -13px" width="55" height="38" />, we have <img src="http://latex.artofproblemsolving.com/a/a/d/aad18251f9f18bd83b28eb4669e3661eb8dac86e.png" class="latex" alt="$f\left(\dfrac{17}{32}\right)$" style="vertical-align: -18px" width="64" height="45" />. Now, we can set up an equation by multiplying <img src="http://latex.artofproblemsolving.com/4/1/d/41d1ddeeee547cad15baaeb544bd64c2af00f163.png" class="latex" alt="$\dfrac{17}{32}$" style="vertical-align: -12px" width="20" height="37" /> by <img src="http://latex.artofproblemsolving.com/4/f/4/4f4b8590f8aa9f9894b3891dd5dede0e354fa04e.png" class="latex" alt="$32$" width="17" height="12" /> and setting it equal to <img src="http://latex.artofproblemsolving.com/b/7/6/b7616a230c77f0d9a577e5bca01aa06f1c35c457.png" class="latex" alt="$17$" style="vertical-align: 0px" width="18" height="12" />. This will give <img src="http://latex.artofproblemsolving.com/8/a/a/8aa729ce374790b09d804c8d56f97dfa3a642d34.png" class="latex" alt="$f\left(32\cdot\dfrac{17}{32}\right)=f(17)\rightarrow f(32)+f\left(\dfrac{17}{32}\right)=f(17)$" style="vertical-align: -18px" width="386" height="45" />. Our goal is to find <img src="http://latex.artofproblemsolving.com/a/a/d/aad18251f9f18bd83b28eb4669e3661eb8dac86e.png" class="latex" alt="$f\left(\dfrac{17}{32}\right)$" style="vertical-align: -18px" width="64" height="45" />, therefore we must find <img src="http://latex.artofproblemsolving.com/f/d/c/fdc6df4508422009178181908386851f32510d24.png" class="latex" alt="$f(32)$" style="vertical-align: -5px" width="45" height="20" /> and <img src="http://latex.artofproblemsolving.com/d/e/2/de2141d27a98f06c57c224f683532129743d1f81.png" class="latex" alt="$f(17)$" style="vertical-align: -5px" width="45" height="20" />. Since <img src="http://latex.artofproblemsolving.com/4/4/5/4451973174c1a8a3dd865765391105bc84289242.png" class="latex" alt="$f(p)=p$" style="vertical-align: -4px" width="67" height="18" /> for any prime <img src="http://latex.artofproblemsolving.com/3/6/f/36f73fc1312ee0349b3f3a0f3bd9eb5504339011.png" class="latex" alt="$p$" style="vertical-align: -3px" width="10" height="11" />, <img src="http://latex.artofproblemsolving.com/0/4/6/046dc3af7c968275a806a729bb0b19b0af067043.png" class="latex" alt="$f(17)=17$" style="vertical-align: -5px" width="87" height="20" />. Taking the prime factorization of <img src="http://latex.artofproblemsolving.com/4/f/4/4f4b8590f8aa9f9894b3891dd5dede0e354fa04e.png" class="latex" alt="$32$" width="17" height="12" /> gives <img src="http://latex.artofproblemsolving.com/5/b/7/5b7f45c960c681827d5d03d7b3c30811d3bfd77f.png" class="latex" alt="$2^5$" width="15" height="15" />, so <img src="http://latex.artofproblemsolving.com/3/f/f/3ff105f0fa492f45386e153d91d2bb898898efd0.png" class="latex" alt="$f(32)=f(2\cdot2\cdot2\cdot2\cdot2)=f(2)+f(2)+f(2)+f(2)+f(2)=5f(2)=5\cdot2=10$" style="vertical-align: -5px" width="641" height="20" />. Therefore, <img src="http://latex.artofproblemsolving.com/2/7/c/27c03f3f01ed2f7ab256f4fee2a2e17c18e5c97f.png" class="latex" alt="$10+f\left(\dfrac{17}{32}\right)=17$" style="vertical-align: -18px" width="147" height="45" /> and <img src="http://latex.artofproblemsolving.com/3/d/0/3d051971094e470890a9f83a316b8e80f3c55c02.png" class="latex" alt="$f\left(\dfrac{17}{32}\right)=7$" style="vertical-align: -18px" width="97" height="45" />
+</p><p><img src="http://latex.artofproblemsolving.com/a/0/3/a03a66ee93de6dc1a444d1ca2fd80c30652da72e.png" class="latex" alt="$\text{(B) }\dfrac{11}{16}$" style="vertical-align: -13px" width="54" height="38" />: <img src="http://latex.artofproblemsolving.com/7/1/a/71a1a4033f7a4e13f3e12d9c98dec5cc0ae0d1f4.png" class="latex" alt="$f\left(\dfrac{11}{16}\right)\rightarrow f\left(16\cdot\dfrac{11}{16}\right)=f(11)$" style="vertical-align: -18px" width="253" height="45" />
+<img src="http://latex.artofproblemsolving.com/c/2/e/c2e0b087522125a76e1ffac3a339ae6a2daf6a15.png" class="latex" alt="$\rightarrow f(16)+f\left(\dfrac{11}{16}\right)=11\rightarrow 4f(2)+f\left(\dfrac{11}{16}\right)=11$" style="vertical-align: -18px" width="393" height="45" />
+<img src="http://latex.artofproblemsolving.com/c/9/7/c97da45af71c95ab070f1ac2e9fe920681969ee8.png" class="latex" alt="$\rightarrow f\left(\dfrac{11}{16}\right)=3$" style="vertical-align: -18px" width="121" height="45" />
+</p><p><img src="http://latex.artofproblemsolving.com/a/6/a/a6a3ffc5f1a958ac87bc216f2991a853e130b68d.png" class="latex" alt="$\text{(C) }\dfrac{7}{9}$" style="vertical-align: -13px" width="45" height="38" />: <img src="http://latex.artofproblemsolving.com/d/f/1/df1a5a856cef957ac43933c9c64dc2d472e512d7.png" class="latex" alt="$f\left(\dfrac{7}{9}\right)\rightarrow f\left(9\cdot\dfrac{7}{9}\right)=f(7)$" style="vertical-align: -18px" width="217" height="45" />
+<img src="http://latex.artofproblemsolving.com/0/1/b/01b1ef21f5cd17fdeb268c4d7aeeff5e6a2db19e.png" class="latex" alt="$\rightarrow f(9)+f\left(\dfrac{7}{9}\right)=7\rightarrow 2f(3)+f\left(\dfrac{7}{9}\right)=7$" style="vertical-align: -18px" width="348" height="45" />
+<img src="http://latex.artofproblemsolving.com/c/e/9/ce9b82c5e1a86b0d697d582b90e83ee1763cd0ec.png" class="latex" alt="$\rightarrow f\left(\dfrac{7}{9}\right)=1$" style="vertical-align: -18px" width="112" height="45" />
+</p><p><img src="http://latex.artofproblemsolving.com/5/f/a/5fa7e9174cf63ba310a97d204313ad97ad903c83.png" class="latex" alt="$\text{(D) }\dfrac{7}{6}$" style="vertical-align: -13px" width="46" height="38" />: <img src="http://latex.artofproblemsolving.com/6/5/d/65dca41462bb260f844400aa032d25f28a211f63.png" class="latex" alt="$f\left(\dfrac{7}{6}\right)\rightarrow f\left(6\cdot\dfrac{7}{6}\right)=f(7)$" style="vertical-align: -18px" width="217" height="45" />
+<img src="http://latex.artofproblemsolving.com/5/3/d/53deaa95ce6fd76470e39de74ec1e2b305a39c46.png" class="latex" alt="$\rightarrow f(6)+f\left(\dfrac{7}{6}\right)=7\rightarrow f(2)+f(3)+f\left(\dfrac{7}{6}\right)=7$" style="vertical-align: -18px" width="395" height="45" />
+<img src="http://latex.artofproblemsolving.com/5/c/5/5c5791d06d9e0e54fed2be3dbc1ea19cf138a027.png" class="latex" alt="$\rightarrow f\left(\dfrac{7}{6}\right)=2$" style="vertical-align: -18px" width="112" height="45" />
+</p><p><img src="http://latex.artofproblemsolving.com/8/8/9/889d9a0c20d8bad8c00dd3dfcb73f1a932cf403f.png" class="latex" alt="$\text{(E) }\dfrac{25}{11}$" style="vertical-align: -13px" width="54" height="38" />: <img src="http://latex.artofproblemsolving.com/5/9/0/5905f065f38aad915f4db63140710c7c51bafb70.png" class="latex" alt="$f\left(\dfrac{25}{11}\right)\rightarrow f\left(11\cdot\dfrac{25}{11}\right)=f(25)$" style="vertical-align: -18px" width="253" height="45" />
+<img src="http://latex.artofproblemsolving.com/5/3/d/53d6e4170cda99863889baaeb9dfff69093d9c5b.png" class="latex" alt="$\rightarrow f(11)+f\left(\dfrac{25}{11}\right)=2f(5)\rightarrow 11+f\left(\dfrac{25}{11}\right)=10$" style="vertical-align: -18px" width="393" height="45" />
+<img src="http://latex.artofproblemsolving.com/2/2/2/222eed7b0d1ee36b6bff654a23071afe85f7e158.png" class="latex" alt="$\rightarrow f\left(\dfrac{25}{11}\right)=-1$" style="vertical-align: -18px" width="135" height="45" />
+</p><p>Therefore, the answer is <img src="http://latex.artofproblemsolving.com/6/4/0/640b05726675d570feb3ba63b2309ae4536af7e9.png" class="latex" alt="$\boxed{\text{(E) }\dfrac{25}{11}}$" style="vertical-align: -19px" width="65" height="49" />
+</p><p>Note: The general strategy here was the setting up of equations to find <img src="http://latex.artofproblemsolving.com/c/9/6/c96dd6ec1dc4ad7520fbdc78fcdbec9edd068d0c.png" class="latex" alt="$f(x)$" style="vertical-align: -4px" width="34" height="18" />. By setting it equal to <img src="http://latex.artofproblemsolving.com/1/a/c/1acc6639de4f1c620680bec4adf3e668f4db723f.png" class="latex" alt="$f(a)$" style="vertical-align: -4px" width="33" height="18" /> where <img src="http://latex.artofproblemsolving.com/c/7/d/c7d457e388298246adb06c587bccd419ea67f7e8.png" class="latex" alt="$a$" style="vertical-align: -1px" width="11" height="10" /> was an integer, we could take the prime factorization to find the value of <img src="http://latex.artofproblemsolving.com/1/a/c/1acc6639de4f1c620680bec4adf3e668f4db723f.png" class="latex" alt="$f(a)$" style="vertical-align: -4px" width="33" height="18" /> and also set up an equation involving <img src="http://latex.artofproblemsolving.com/4/5/5/455536f5192222adbbc7cf94424d4c2d0ae06ea9.png" class="latex" alt="$f(\text{denominator})$" style="vertical-align: -5px" width="118" height="20" /> because the denominator was also an integer, therefore we could take the prime factorization and find its value
+</p><p>~Tacos_are_yummy_1
+</p>
+<h2><span class="mw-headline" id="Video_Solution_by_Hawk_Math">Video Solution by Hawk Math</span></h2>
+<p><a rel="nofollow" class="external free" href="https://www.youtube.com/watch?v=dvlTA8Ncp58">https://www.youtube.com/watch?v=dvlTA8Ncp58</a>
+</p>
+<h2><span class="mw-headline" id="Video_Solution_by_North_America_Math_Contest_Go_Go_Go_Through_Induction">Video Solution by North America Math Contest Go Go Go Through Induction</span></h2>
+<p><a rel="nofollow" class="external free" href="https://www.youtube.com/watch?v=ffX0fTgJN0w&amp;list=PLexHyfQ8DMuKqltG3cHT7Di4jhVl6L4YJ&amp;index=12">https://www.youtube.com/watch?v=ffX0fTgJN0w&amp;list=PLexHyfQ8DMuKqltG3cHT7Di4jhVl6L4YJ&amp;index=12</a>
+</p>
+<h2><span class="mw-headline" id="Video_Solution_by_Punxsutawney_Phil">Video Solution by Punxsutawney Phil</span></h2>
+<p><a rel="nofollow" class="external free" href="https://youtu.be/8gGcj95rlWY">https://youtu.be/8gGcj95rlWY</a>
+</p>
+<h2><span id="Video_Solution_by_OmegaLearn_(Using_Functions_and_Manipulations)"></span><span class="mw-headline" id="Video_Solution_by_OmegaLearn_.28Using_Functions_and_Manipulations.29">Video Solution by OmegaLearn (Using Functions and Manipulations)</span></h2>
+<p><a rel="nofollow" class="external free" href="https://youtu.be/aGv99CLzguE">https://youtu.be/aGv99CLzguE</a>
+</p><p>~ pi_is_3.14
+</p>
+<h2><span class="mw-headline" id="Video_Solution_by_TheBeautyofMath">Video Solution by TheBeautyofMath</span></h2>
+<p><a rel="nofollow" class="external free" href="https://youtu.be/IUJ_A9KiLEE">https://youtu.be/IUJ_A9KiLEE</a>
+</p><p>~IceMatrix
+</p>
+<h2><span id="Video_Solution_(Quick_and_Easy)"></span><span class="mw-headline" id="Video_Solution_.28Quick_and_Easy.29">Video Solution (Quick and Easy)</span></h2>
+<p><a rel="nofollow" class="external free" href="https://youtu.be/NbAu_STtcvA">https://youtu.be/NbAu_STtcvA</a>
+</p><p>~Education, the Study of Everything
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<table class="wikitable" style="margin:0.5em auto; font-size:95%; border:1px solid black; width:80%;">
+<tbody><tr>
+<td style="background:#ccf;text-align:center;" colspan="3"><b><a href="../2021_AMC_10A.html" title="2021 AMC 10A">2021 AMC 10A</a></b> (<b><a href="../2021_AMC_10A_Problems.html" title="2021 AMC 10A Problems">Problems</a></b> • <b><a href="../2021_AMC_10A_Answer_Key.html" title="2021 AMC 10A Answer Key">Answer Key</a></b> • <a rel="nofollow" class="external text" href="https://artofproblemsolving.com/community/c13">Resources</a>)
+</td></tr>
+<tr>
+<td width="50%" align="center" rowspan="1">Preceded&#160;by<br /><b><a href="Problem_17.html" class="mw-redirect" title="2021 AMC 10A Problems/Problem 17">Problem 17</a></b>
+</td>
+<td width="50%" align="center" rowspan="1">Followed&#160;by<br /><b><a href="Problem_19.html" title="2021 AMC 10A Problems/Problem 19">Problem 19</a></b>
+</td></tr>
+<tr>
+<td colspan="3" style="text-align:center;"><a href="Problem_1.html" title="2021 AMC 10A Problems/Problem 1">1</a> <b>•</b> <a href="Problem_2.html" title="2021 AMC 10A Problems/Problem 2">2</a> <b>•</b> <a href="Problem_3.html" class="mw-redirect" title="2021 AMC 10A Problems/Problem 3">3</a> <b>•</b> <a href="Problem_4.html" title="2021 AMC 10A Problems/Problem 4">4</a> <b>•</b> <a href="Problem_5.html" title="2021 AMC 10A Problems/Problem 5">5</a> <b>•</b> <a href="Problem_6.html" title="2021 AMC 10A Problems/Problem 6">6</a> <b>•</b> <a href="Problem_7.html" class="mw-redirect" title="2021 AMC 10A Problems/Problem 7">7</a> <b>•</b> <a href="Problem_8.html" class="mw-redirect" title="2021 AMC 10A Problems/Problem 8">8</a> <b>•</b> <a href="Problem_9.html" class="mw-redirect" title="2021 AMC 10A Problems/Problem 9">9</a> <b>•</b> <a href="Problem_10.html" class="mw-redirect" title="2021 AMC 10A Problems/Problem 10">10</a> <b>•</b> <a href="Problem_11.html" title="2021 AMC 10A Problems/Problem 11">11</a> <b>•</b> <a href="Problem_12.html" class="mw-redirect" title="2021 AMC 10A Problems/Problem 12">12</a> <b>•</b> <a href="Problem_13.html" title="2021 AMC 10A Problems/Problem 13">13</a> <b>•</b> <a href="Problem_14.html" class="mw-redirect" title="2021 AMC 10A Problems/Problem 14">14</a> <b>•</b> <a href="Problem_15.html" title="2021 AMC 10A Problems/Problem 15">15</a> <b>•</b> <a href="Problem_16.html" class="mw-redirect" title="2021 AMC 10A Problems/Problem 16">16</a> <b>•</b> <a href="Problem_17.html" class="mw-redirect" title="2021 AMC 10A Problems/Problem 17">17</a> <b>•</b> <a href="Problem_18.html" class="mw-redirect" title="2021 AMC 10A Problems/Problem 18">18</a> <b>•</b> <a href="Problem_19.html" title="2021 AMC 10A Problems/Problem 19">19</a> <b>•</b> <a href="Problem_20.html" title="2021 AMC 10A Problems/Problem 20">20</a> <b>•</b> <a href="Problem_21.html" title="2021 AMC 10A Problems/Problem 21">21</a> <b>•</b> <a href="Problem_22.html" title="2021 AMC 10A Problems/Problem 22">22</a> <b>•</b> <a href="Problem_23.html" class="mw-redirect" title="2021 AMC 10A Problems/Problem 23">23</a> <b>•</b> <a href="Problem_24.html" title="2021 AMC 10A Problems/Problem 24">24</a> <b>•</b> <a href="Problem_25.html" title="2021 AMC 10A Problems/Problem 25">25</a>
+</td></tr>
+<tr>
+<td colspan="3" style="text-align:center;"><b><a href="../AMC_10_Problems_and_Solutions.html" title="AMC 10 Problems and Solutions"> All AMC 10 Problems and Solutions</a></b>
+</td></tr></tbody></table>
+<table class="wikitable" style="margin:0.5em auto; font-size:95%; border:1px solid black; width:80%;">
+<tbody><tr>
+<td style="background:#ccf;text-align:center;" colspan="2"><b><a href="https://artofproblemsolving.com/wiki/index.php/2021_AMC_12A" title="2021 AMC 12A">2021 AMC 12A</a></b> (<b><a href="https://artofproblemsolving.com/wiki/index.php/2021_AMC_12A_Problems" title="2021 AMC 12A Problems">Problems</a></b> • <b><a href="https://artofproblemsolving.com/wiki/index.php/2021_AMC_12A_Answer_Key" title="2021 AMC 12A Answer Key">Answer Key</a></b> • <a rel="nofollow" class="external text" href="http://www.artofproblemsolving.com/community/c13">Resources</a>)
+</td></tr>
+<tr>
+<td width="50%" align="center" rowspan="1">Preceded&#160;by<br /><b><a href="https://artofproblemsolving.com/wiki/index.php/2021_AMC_12A_Problems/Problem_17" title="2021 AMC 12A Problems/Problem 17">Problem 17</a></b>
+</td>
+<td width="50%" align="center" rowspan="1">Followed&#160;by<br /><b><a href="https://artofproblemsolving.com/wiki/index.php/2021_AMC_12A_Problems/Problem_19" title="2021 AMC 12A Problems/Problem 19">Problem 19</a></b>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align:center;"><a href="https://artofproblemsolving.com/wiki/index.php/2021_AMC_12A_Problems/Problem_1" title="2021 AMC 12A Problems/Problem 1">1</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2021_AMC_12A_Problems/Problem_2" title="2021 AMC 12A Problems/Problem 2">2</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2021_AMC_12A_Problems/Problem_3" title="2021 AMC 12A Problems/Problem 3">3</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2021_AMC_12A_Problems/Problem_4" title="2021 AMC 12A Problems/Problem 4">4</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2021_AMC_12A_Problems/Problem_5" title="2021 AMC 12A Problems/Problem 5">5</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2021_AMC_12A_Problems/Problem_6" title="2021 AMC 12A Problems/Problem 6">6</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2021_AMC_12A_Problems/Problem_7" title="2021 AMC 12A Problems/Problem 7">7</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2021_AMC_12A_Problems/Problem_8" title="2021 AMC 12A Problems/Problem 8">8</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2021_AMC_12A_Problems/Problem_9" title="2021 AMC 12A Problems/Problem 9">9</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2021_AMC_12A_Problems/Problem_10" title="2021 AMC 12A Problems/Problem 10">10</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2021_AMC_12A_Problems/Problem_11" title="2021 AMC 12A Problems/Problem 11">11</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2021_AMC_12A_Problems/Problem_12" title="2021 AMC 12A Problems/Problem 12">12</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2021_AMC_12A_Problems/Problem_13" title="2021 AMC 12A Problems/Problem 13">13</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2021_AMC_12A_Problems/Problem_14" title="2021 AMC 12A Problems/Problem 14">14</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2021_AMC_12A_Problems/Problem_15" title="2021 AMC 12A Problems/Problem 15">15</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2021_AMC_12A_Problems/Problem_16" title="2021 AMC 12A Problems/Problem 16">16</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2021_AMC_12A_Problems/Problem_17" title="2021 AMC 12A Problems/Problem 17">17</a> <b>•</b> <a class="mw-selflink selflink">18</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2021_AMC_12A_Problems/Problem_19" title="2021 AMC 12A Problems/Problem 19">19</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2021_AMC_12A_Problems/Problem_20" title="2021 AMC 12A Problems/Problem 20">20</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2021_AMC_12A_Problems/Problem_21" title="2021 AMC 12A Problems/Problem 21">21</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2021_AMC_12A_Problems/Problem_22" title="2021 AMC 12A Problems/Problem 22">22</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2021_AMC_12A_Problems/Problem_23" title="2021 AMC 12A Problems/Problem 23">23</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2021_AMC_12A_Problems/Problem_24" title="2021 AMC 12A Problems/Problem 24">24</a> <b>•</b> <a href="https://artofproblemsolving.com/wiki/index.php/2021_AMC_12A_Problems/Problem_25" title="2021 AMC 12A Problems/Problem 25">25</a>
+</td></tr>
+<tr>
+<td colspan="2" style="text-align:center;"><b><a href="../AMC_12_Problems_and_Solutions.html" title="AMC 12 Problems and Solutions"> All AMC 12 Problems and Solutions</a></b>
+</td></tr></tbody></table>
+<p>The problems on this page are copyrighted by the <a rel="nofollow" class="external text" href="http://www.maa.org/">Mathematical Association of America</a>'s <a rel="nofollow" class="external text" href="https://maa.org/student-programs/amc/">American Mathematics Competitions</a>. <a href="../File_AMC_logo.html" class="image"><img alt="AMC logo.png" src="../../../../wiki-images.artofproblemsolving.com/thumb/8/8b/AMC_logo.png/50px-AMC_logo.png" width="50" height="43" style="vertical-align: middle" srcset="https://wiki-images.artofproblemsolving.com//thumb/8/8b/AMC_logo.png/75px-AMC_logo.png 1.5x, https://wiki-images.artofproblemsolving.com//8/8b/AMC_logo.png 2x" /></a>
+</p>
+<div style="clear:both;"></div>
+
+<!-- 
+NewPP limit report
+Cached time: 20250410223845
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.105 seconds
+Real time usage: 6.860 seconds
+Preprocessor visited node count: 1345/1000000
+Preprocessor generated node count: 3636/1000000
+Post‐expand include size: 4397/2097152 bytes
+Template argument size: 427/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 26655/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 2575.824      1 -total
+ 10.88%  280.334      1 Template:MAA_Notice
+ 10.08%  259.543      1 Template:AMC12_box
+  4.92%  126.769      1 Template:Duplicate
+  4.49%  115.657      1 Template:AMC10_box
+-->
+</div>
+<!-- Saved in parser cache with key wiki-wiki_:pcache:idhash:19793-0!canonical and timestamp 20250410223839 and revision id 230405
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://artofproblemsolving.com/wiki/index.php?title=2021_AMC_12A_Problems/Problem_18&amp;oldid=230405">https://artofproblemsolving.com/wiki/index.php?title=2021_AMC_12A_Problems/Problem_18&amp;oldid=230405</a>"</div>
+
+
+									<div class="catlinks"><div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="../Special_Categories.html" title="Special:Categories">Category</a>: <ul><li><a href="https://artofproblemsolving.com/wiki/index.php/Category:Intermediate_Algebra_Problems" title="Category:Intermediate Algebra Problems">Intermediate Algebra Problems</a></li></ul></div></div></div>
+				
+
+							</div>
+		</div>
+	</div>
+</div>
+
+<!-- search:off -->
+	<div class="clearfix"></div>
+
+	
+	<div id="main-footer" class="no-print">
+		<div class="footer-container">
+			<div class="footer-topRow">
+											<a href="https://artofproblemsolving.com/online">
+							<img class="footer-mainLogo"
+							src="https://artofproblemsolving.com/assets/images/logos/aops-online-footer.svg"/>
+						</a>
+										<div class="footer-wasc">
+						<span>
+							Art of Problem Solving is an
+							<br class="wasc-break"/>
+							<span class="footer-accredited">ACS WASC Accredited School</span>
+						</span>
+						<img class="footer-wascLogo"
+						src="../../../assets/images/logos/wasc.png"/>
+					</div>
+			</div>
+			<div class="footer-links">
+				<div class="footer-col">
+					<div class="footer-colHeader">aops programs</div>
+					<div><a class="link" href="https://artofproblemsolving.comonline/">AoPS Online</a></div>
+					<div><a class="link" href="https://beastacademy.com/">Beast Academy</a></div>
+					<div><a class="link" href="https://aopsacademy.org/">AoPS Academy</a></div>
+				</div>
+
+				<div class="footer-col">
+					<div class="footer-colHeader">About</div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/about">About AoPS</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/staff">Our Team</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/history">Our History</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/careers">Jobs</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/blog">AoPS Blog</a></div>
+				</div>
+
+				<div class="footer-col">
+					<div class="footer-colHeader" style="left:-1px;">Site Info</div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/tos">Terms</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/company/privacy">Privacy</a></div>
+					<div><a class="link" href="https://artofproblemsolving.com/contact">Contact Us</a></div>
+				</div>
+
+				<div class="footer-col social">
+					<div class="footer-colHeader">follow us</div>
+					<div class="footer-social">
+													<a class="link" target="_blank" href="https://www.facebook.com/artofproblemsolving">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/facebook.svg" class="sm-icon"/>
+							</a>
+							<a class="link" target="_blank" href="http://twitter.com/AoPSNews">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/twitter.svg" class="sm-icon"/>
+							</a>
+							<a class="link" target="_blank" href="https://www.pinterest.com/artofproblemsolving/pins/">
+								<img src="https://artofproblemsolving.com/assets/images/socialmedia/pinterest.svg" class="sm-icon"/>
+							</a>
+											</div>
+				</div>
+									<div class="footer-col subscribe">
+						<div class="footer-colHeader">
+							Subscribe for news and updates
+						</div>
+						<form method="post" action="https://artofproblemsolving.com/mailinglist">
+							<input type="email" class="footer-email" placeholder="Enter e-mail" name="subscribe-email">
+							<input type="hidden" name="new-books" value="on">
+							<input type="hidden" name="classes" value="on">
+							<input type="hidden" name="mathjams" value="on">
+							<input type="submit" class="footer-submit" value="">
+							<div class="footer-submit-arrow">
+								<svg x="0px" y="0px" viewBox="0 0 289 289" enable-background="new 0 0 289 289">
+									<g>
+										<path class="arrow-fill" d="M121.5,220.5c-2.6,0-5.1-1-7.1-2.9c-3.9-3.9-3.9-10.2,0-14.1l58.9-58.9l-58.9-58.9c-3.9-3.9-3.9-10.2,0-14.1c3.9-3.9,10.2-3.9,14.1,0l66,66c3.9,3.9,3.9,10.2,0,14.1l-66,66C126.6,219.5,124.1,220.5,121.5,220.5z"/>
+									</g>
+								</svg>
+							</div>
+						</form>
+					</div>
+							</div>
+			<div class="copyright">
+				<span>&copy; 2025 AoPS Incorporated
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div id="small-footer-wrapper">
+		<div class="footer-container">
+							<a href="https://artofproblemsolving.com/online">
+					<img class="footer-mainLogo"
+					src="https://artofproblemsolving.com/assets/images/logos/aops-online-footer.svg"/>
+				</a>
+						<div class="copyright">
+				&copy; 2025 Art of Problem Solving
+				<div class="copyright-links">
+					<a href="https://artofproblemsolving.com/company">About Us</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/contact">Contact Us</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/company/tos">Terms</a>
+					&nbsp;•&nbsp;
+					<a href="https://artofproblemsolving.com/company/privacy">Privacy</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<form id="registration-form" method="post" action="https://artofproblemsolving.com/user/register.php">
+	<input type="hidden" name="username" value="">
+	<input type="hidden" name="password" value="">
+	<input type="hidden" name="from-login" value="true">
+	</form>
+<div id="print-footer" class="printer">Copyright &copy; 2025 Art of Problem Solving</div>
+
+
+
+<div id="epicfail" class="aops-html-modal-epic-fail" style="display: none">
+	<div class="aops-html-modal-inner-epic-fail">
+		<div class="aops-html-modal-main-epic-fail">
+			<p>Something appears to not have loaded correctly.</p>
+		</div>
+		<div class="aops-html-modal-bottom-epic-fail">
+			<p><a onclick="location.reload(true);return false">Click to refresh</a>.</p>
+		</div>
+	</div>
+</div>
+<link rel="stylesheet" href="../../../assets/css/epic-fail.css">
+
+
+
+
+
+<!-- /search:off -->
+
+
+<!-- copied from contact page index, with edits -->
+<script id="footer-tpl-email-dialog" type="text/x-handlebars-template">
+	<div id="mail-dialog">
+		<h1>Email Art of Problem Solving</h1>
+		<p>
+			<input type="text" id="email" name="email" placeholder="Your email address">
+			<input type="text" id="subject" name="subject" placeholder="Subject of message">
+			<textarea id="message" name="message" placeholder="Enter your message"></textarea>
+			<div style="padding:5px 30px">
+				<input type="checkbox" id="email-copy" name="email_copy">
+				<label for="email-copy" id="email-copy-label">Send a copy to my email address.</label>
+			</div>
+			<div style="padding:5px 30px 20px">
+				<input id="footer-submit-btn" type="submit" class="btn btn-primary" value="Send">
+				<input id="footer-cancel-btn" type="submit" class="btn btn-default" value="Cancel">
+			</div>
+		</p>
+		<p id="email-error"></p>
+	</div>
+</script>
+
+
+<script id="footer-tpl-email-confirm" type="text/x-handlebars-template">
+	<div id="mail-dialog-confirm">
+		<h2>Email Sent</h2>
+		<p>Thank you for your email. We will respond to it soon.</p>
+	</div>
+</script>
+
+<!-- bing -->
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5105596"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","../../../../bat.bing.com/bat.js","uetq");</script><noscript><img src="http://bat.bing.com/action/0?ti=5105596&amp;Ver=2" height="0" width="0" style="display:none; visibility: hidden;" /></noscript>
+
+</body>
+
+<!-- Mirrored from artofproblemsolving.com/wiki/index.php/2021_AMC_10A_Problems/Problem_18 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Apr 2025 05:00:30 GMT -->
+</html>
+
