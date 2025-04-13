@@ -16,10 +16,10 @@
 
 @font-face {
 	font-family: "AoPS";
-	src: url("https://artofproblemsolving.com/assets/fonts/aops/new_aops.eot");
-	src: url("https://artofproblemsolving.com/assets/fonts/aops/new_aops.eot") format("embedded-opentype"),
-		url("https://artofproblemsolving.com/assets/fonts/aops/new_aops.woff") format("woff"),
-		url("https://artofproblemsolving.com/assets/fonts/aops/new_aops.ttf") format("truetype");
+	src: url("/assets/fonts/aops/new_aops.eot");
+	src: url("/assets/fonts/aops/new_aops.eot") format("embedded-opentype"),
+		url("/assets/fonts/aops/new_aops.woff") format("woff"),
+		url("/assets/fonts/aops/new_aops.ttf") format("truetype");
 	font-weight: normal;
 	font-style: normal;
 	-khtml-user-select: none;
